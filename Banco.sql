@@ -2,11 +2,15 @@ create table Aluno(
 codigo int primary key indentity(1,1) not null,
 ra char(5) not null,
 nome varchar(50) not null,
+nomeUsu varchar(50) not null,
+senha varchar(50) not null
 )
 
 create table Professor(
 codigo int primary key indentity(1,1) not null,
 nome varchar(50) not null
+nomeUsu varchar(50) not null,
+senha varchar(50) not null
 )
 
 create table Sala(
@@ -59,5 +63,3 @@ nota int not null,
 constraint fkAlunoProjeto foreign key(codAluno) references Aluno(codigo),
 constraint fkProjeto foreign key(codProjeto) references Projeto(codigo)
 )
-
-
