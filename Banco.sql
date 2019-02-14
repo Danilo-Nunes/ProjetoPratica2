@@ -2,11 +2,15 @@ create table Aluno(
 codigo int primary key indentity(1,1) not null,
 ra char(5) not null,
 nome varchar(50) not null,
+nomeUsu varchar(50) not null,
+senha varchar(50) not null
 )
 
 create table Professor(
 codigo int primary key indentity(1,1) not null,
 nome varchar(50) not null
+nomeUsu varchar(50) not null,
+senha varchar(50) not null
 )
 
 create table Sala(
@@ -25,39 +29,22 @@ constraint fkcodAluno foreign key(codAluno) references Aluno(codigo),
 constraint fkSala foreign key(codSala) references Sala(codigo)
 )
 
-create table Prova(
+create table Atividade(
 codigo int primary key indentity(1,1) not null,
 numero int not null,
 codSala int not null,
-dataProva datetime not null,
-constraint fkSalaProva foreign key(codSala) references Sala(codigo)
+dataAtividade datetime not null,
+constraint fkSalaAtividade foreign key(codSala) references Sala(codigo)
 )
 
 
-create table Projeto( //ESTEBAN AJUDOU A FAZER ESSA TABELA
-codigo int primary key indentity(1,1) not null,
-numero int not null,
-codSala int not null,
-dataEntrega datetime not null,
-constraint fkSalaProva foreign key(codSala) references Sala(codigo)
-)
-
-create table AlunoProva(
+create table AlunoAtividade(
 codAluno int not null,
-codProva int not null,
+codAtividade int not null,
 peso int not null,
 nota int not null,
 constraint fkAluno foreign key(codAluno) references Aluno(codigo),
-constraint fkProva foreign key(codProva) references Prova(codigo)
-)
-
-create table AlunoProjeto(
-codAluno int not null,
-codProjeto int not null,
-peso int not null,
-nota int not null,
-constraint fkAlunoProjeto foreign key(codAluno) references Aluno(codigo),
-constraint fkProjeto foreign key(codProjeto) references Projeto(codigo)
+constraint fkAtividade foreign key(codAtividade) references Atividade(codigo)
 )
 
 
