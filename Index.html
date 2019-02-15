@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Teste</title>
+        <link rel='stylesheet' href='index.css'>
+    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <body>
+        <ul class='aba'>
+            <li><img class='icon' src="img/bell.png"></li>
+            <li><img class='icon' src="img/user.png"></li>
+            <li><img class='icon' src="img/checklist.png"></li>
+            <li><img class='icon' src="img/classroom.png"></li>
+            <li><img class='icon' src="img/calendario.png"></li>
+        </ul>
+        <img id='menu' class='menuIcon' src='img/menu.png'>
+        <script type="text/javascript">
+            var menu = false;
+            $(".menuIcon").click(function(){
+                if(!menu){
+                    $(".aba").css("margin-left", "-10");
+                    $("#menu").attr('src', 'img/exit.png');
+                    menu = true;
+                }
+                else
+                {
+                    $(".aba").css("margin-left", "-1000");
+                    $("#menu").attr('src', 'img/menu.png'); 
+                    menu = false;
+                }
+            })
+        </script>
+    </body>
+</html>
