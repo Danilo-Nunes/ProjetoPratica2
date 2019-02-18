@@ -1,3 +1,7 @@
+body
+{
+    background-color: #364DB2;
+}
 .icon
 {
     transition: 0.7s;
@@ -33,7 +37,7 @@
     margin:-10px;
     margin-left: -1000px;
     padding:10px;
-    background:#FFDA19;
+    background:#FFDF80;
     float:left;
     transition: 0.2s;
     /* z-index: 99999; */
