@@ -9,28 +9,29 @@
 
     <body>
         <ul class='aba'>
-            <li><img class='icon' src="img/bell.png"></li>
-            <li><img class='icon' src="img/user.png"></li>
-            <li><img class='icon' src="img/checklist.png"></li>
-            <li><img class='icon' src="img/classroom.png"></li>
-            <li><img class='icon' src="img/calendario.png"></li>
+            <li><img class='icon' src="img/icons/bell.png"></li>
+            <li><img class='icon' src="img/icons/user.png"></li>
+            <li><img class='icon' src="img/icons/checklist.png"></li>
+            <li><img class='icon' src="img/icons/classroom.png"></li>
+            <li><img class='icon' src="img/icons/calendario.png"></li>
         </ul>      
-        <img id='menu' class='menuIcon' src='img/menu.png'>
+        <img id='menu' class='menuIcon' src='img/icons/menu.png'>
         <br>
-        <input type='text' class='pesquisa' value=' '>
-        <img class='pesquisaIcon' src='img/search.png'>
+        <input id='pesq' type='text' class='pesquisa' value=' '>
+        <img id='pesqIcon' class='pesquisaIcon' src='img/icons/search.png'>
+        <div class='texto'>(Insert Texto Aqui)</div>
         <script type="text/javascript">
             var menu = false;
             $(".menuIcon").click(function(){
                 if(!menu){
                     $(".aba").css("margin-left", "-10");
-                    $("#menu").attr('src', 'img/exit.png');
+                    $("#menu").attr('src', 'img/icons/exit.png');
                     menu = true;
                 }
                 else
                 {
                     $(".aba").css("margin-left", "-1000");
-                    $("#menu").attr('src', 'img/menu.png'); 
+                    $("#menu").attr('src', 'img/icons/menu.png'); 
                     menu = false;
                 }
             })
