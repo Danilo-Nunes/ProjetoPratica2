@@ -48,3 +48,59 @@ body
     transition: 0.2s;
     /* z-index: 99999; */
 }
+
+#menu 
+{
+	position: relative;
+	top: -350px;
+	margin: 0;
+	padding: 0;
+	margin-top: 350px;
+	background: rgba(44, 62, 80, 1);
+	width: 100%;
+}
+
+
+
+#menu li
+{
+	list-style: none;
+	display: inline-block;
+}
+
+#menu li a
+{
+	text-decoration: none;
+	position: relative;
+	color: #2ce2e2;
+	font-size: 50px;
+	font-weight: 300;
+	font-family: "Text Me One", sans-serif;
+	display: block;
+	overflow: hidden;
+	transition: 0.7s;
+	padding: 14px 30px;
+	border-bottom: 4px solid #ff9430;
+	margin-right: 30px;
+	/*text-transform: uppercase;*/
+}
+
+
+#menu li a:before
+{
+	content: '';
+	position: absolute;
+	bottom: 0px;
+	transition: 0.4s;
+	
+}
+
+#menu li a:hover
+{
+		
+	background: rgba(76, 96, 124, 1);
+	border-bottom: 4px solid #ff3059;
+}
+
+
+
