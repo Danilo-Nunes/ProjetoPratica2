@@ -1,13 +1,14 @@
 body
 {
-    background-color: #364DB2;
+    background-color: #151E45;
+    color:ghostwhite;
 }
 .icon
 {
     transition: 0.3s;
-    width:90%;
+    width:60%;
     margin-bottom: 10px;
-    margin-left: 15px;
+    margin-left: 0px;
     margin-top: 10px;
     padding: 20px;
     
@@ -16,8 +17,9 @@ body
 {
     float: left;
     position: relative;
-    width:5%;
-    margin-left: 15px; 
+    width:3%;
+    margin-left: 15px;
+    margin-top: 15px; 
     transition: 0.5s;
 }
 .exitIcon
@@ -43,8 +45,33 @@ body
     margin:-10px;
     margin-left: -1000px;
     padding:10px;
-    background:#FFDF80;
+    background:#FFC51A;
     float:left;
     transition: 0.2s;
     /* z-index: 99999; */
+}
+.pesquisa
+{
+    background-color: #599125;
+    border-radius: 20px;
+    height: 50px;
+    width: 500px;
+    border: 4px solid #467819;
+    color: ghostwhite;
+    font-size: 20px;
+    position: fixed;
+    left: 500px;
+    /* background-image: url('img/search.png'); */
+    outline: none;
+}
+
+.pesquisaIcon
+{
+    width:2.7%;
+    position: absolute;
+    left:948px;
+    background:#599125;
+    border: 3px solid #467819;
+    border-radius:22px;
+    top:26px;
 }
