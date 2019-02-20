@@ -47,4 +47,14 @@ constraint fkAluno foreign key(codAluno) references Aluno(codigo),
 constraint fkAtividade foreign key(codAtividade) references Atividade(codigo)
 )
 
+create table Comunicado(
+codComunicado int primary key indentity(1,1) not null,
+codSala int not null,
+texto varchar(500) not null,
+assunto varchar(50) not null,
+constraint fkSala foreign key (codSala) references Sala(codigo)
+)
+
+
+
 
