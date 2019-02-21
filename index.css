@@ -20,11 +20,18 @@ body
     float: left;
     position: fixed;
     width:3%;
+    padding: 8px;
     margin-left: 15px;
+    border: 4px solid #2C3F91;
+    border-radius: 20px;
     margin-top: 15px; 
-    transition: 0.7s;
+    transition: 0.5s;
 }
 
+.menuIcon:hover{
+    background-color: #2C3F91;
+    border-color: white;
+}
 .icon:hover
 {
     transform: rotate(180deg);
@@ -65,6 +72,7 @@ body
     background-color:#151E45;
     height: 100px;
     list-style: none;
+    border: 4px solid #2C3F91 ;
     width:100%;
     margin-left: -10px;
     margin-top:-10px;
@@ -74,11 +82,11 @@ body
 {
     width:2.7%;
     position: fixed;
-    left:948px;
+    left:950px;
     background:#4461DE;
     border: 3px solid #39405E;
     border-radius:22px;
-    top:17px;
+    top:19px;
     transition:0.7s;
 }
 .pesquisaIcon:hover {
