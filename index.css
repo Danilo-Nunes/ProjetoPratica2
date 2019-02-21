@@ -1,7 +1,8 @@
 body
 {
     background-color: #586391;
-    color:ghostwhite;
+    color:azure;
+    font-family: Arial, Century, Comic Sans;
 }
 .icon
 {
@@ -102,12 +103,23 @@ body
 }
 .footer
 {
-    float: left;
+    text-align: center;
+    position:fixed;
     margin:0;
     background-color:#151E45;
     height: 100px;
     list-style: none;
     width:100%;
+    bottom:0;
     margin-left: -10px;
-    margin-top:-10px;
+}
+.footer a{
+    text-decoration: none;
+    color: yellowgreen;
+}
+
+.logo{
+    position: fixed;
+    right:10;
+    margin-top:20px;
 }
