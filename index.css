@@ -6,11 +6,11 @@ body
 .icon
 {
     position: relative;
-    transition: 0.5s;
+    transition: 0.9s;
     width:60%;
     margin-bottom: 10px;
     margin-left: 0px;
-    margin-top: 2.5px;
+    margin-top: 15px;
     padding: 20px;
     
 }
@@ -33,16 +33,17 @@ body
 }
 .icon:hover
 {
-    transform: rotate(180deg);
+    transform: rotate(360deg);
 }
 
 .aba
 {
-    width:9%;
+    width:8%;
     list-style: none;
     position: fixed;
     height: 105%;
     margin:-10px;
+    margin-right: -10px;
     margin-left: -1000px;
     padding:10px;
     background:#FFC51A;
