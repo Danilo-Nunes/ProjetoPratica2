@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Teste</title>
+        <link rel='stylesheet' href='index.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <body>
+        <ul class='aba'>
+            <li><img class='icon' src="img/icons/bell.png"></li>
+            <li><img class='icon' src="img/icons/user.png"></li>
+            <li><img class='icon' src="img/icons/checklist.png"></li>
+            <li><img class='icon' src="img/icons/classroom.png"></li>
+            <li><img class='icon' src="img/icons/calendario.png"></li>
+        </ul>      
+        <img id='menu' class='menuIcon' src='img/icons/menu.png'>
+        <br>
+        <input id='pesq' type='text' class='pesquisa' value=' '>
+        <img id='pesqIcon' class='pesquisaIcon' src='img/icons/search.png'>
+
+        <div class="carrosel">
+            <ul>
+                <li>
+                    <div class="carrosel-container">
+                        <img src="" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="carrosel-container">
+                        <img src="" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="carrosel-container">
+                      <img src="" alt="">
+                     </div>
+                </li>
+                <li>
+                    <div class="carrosel-container">
+                         <img src="" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="carrosel-container">
+                         <img src="" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class='texto'>(Insert Texto Aqui)</div>
+        <script type="text/javascript">
+            var menu = false;
+            $(".menuIcon").click(function(){
+                if(!menu){
+                    $(".aba").css("margin-left", "-10");
+                    $("#menu").attr('src', 'img/icons/exit.png');
+                    menu = true;
+                }
+                else
+                {
+                    $(".aba").css("margin-left", "-1000");
+                    $("#menu").attr('src', 'img/icons/menu.png'); 
+                    menu = false;
+                }
+            })
+        </script>
+    </body>
+</html>
