@@ -156,7 +156,7 @@ animation-play-state: paused;
 .footer
 {
     position: relative;
-    bottom: 0;
+    bottom: 0;  
     background: var(--daniloBlue);
     border: 2px midnightblue;
     width:  100%;
