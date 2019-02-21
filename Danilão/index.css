@@ -1,6 +1,6 @@
 :root
 {
-    --daniloBlue: #151E45;
+    --daniloBlue: #586391;
 }
 
 
@@ -155,5 +155,10 @@ animation-play-state: paused;
 
 .footer
 {
-    background: 
+    position: relative;
+    bottom: 0;
+    background: var(--daniloBlue);
+    border: 2px midnightblue;
+    width:  100%;
+    height: 10%;
 }
