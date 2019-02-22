@@ -19,7 +19,7 @@ body
 .icon
 { 
     position: relative;
-    transition: 0.5s;
+    transition: 0.2s;
     width:60%;
     margin-bottom: 10px;
     margin-left: 0px;
@@ -219,7 +219,8 @@ body
     background-color: ghostwhite;
     border:           8px double midnightblue;
     margin:           3%; 
-    padding:          3%; 
+    padding:          3%;
+    color:	      midnightblue;
 }
 
 .infoBox h1
