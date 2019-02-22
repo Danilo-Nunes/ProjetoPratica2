@@ -211,9 +211,21 @@ body
 
 .infoBox
 {
-    left: 70%;
-    padding: 5%;
-    border: 2px dotted black;
+    position:         absolute;
+    left:             50%;
+    top:              18%;
     background-color: ghostwhite;
-    font-family: Baskerville Old Face;
+    border:           8px double midnightblue;
+    margin:           3%; 
+    padding:          3%; 
+}
+
+.infoBox h1
+{   
+    color: midnightblue;
+}
+
+.infoBox h1
+{     
+    font-family:      Baskerville Old Face;
 }
