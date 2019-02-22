@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>DarkBoard</title>
+        <!-- <link rel='stylesheet' href='index.css'> -->
+        <link rel='stylesheet' href='Arroz.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <body>        
+        
+        <ul class='aba'>
+            <li><img class='icon' src="img/icons/bell.png" title='Notificacoes'></li>
+            <li><img class='icon' src="img/icons/user.png" title='Usuario'></li>
+            <li><img class='icon' src="img/icons/checklist.png" title='Tarefas'></li>
+            <li><img class='icon' src="img/icons/classroom.png" title='Salas'></li>
+            <li><img class='icon' src="img/icons/calendario.png" title='Calendario'></li>
+        </ul>
+        
+        <ul class='menu'>      
+            <li><img id='menu' class='menuIcon' src='img/icons/menu.png' title='Menu'></li>
+            <br>
+           <li><input id='pesq' type='text' class='pesquisa' value=' '></li>
+            <li><img id='pesqIcon' class='pesquisaIcon' src='img/icons/search.png'></li>
+            <li class='logo'>(Insert Logo Aqui)</li>
+        </ul>
+
+        <div class="carrosel">
+            <ul>
+                <li>
+                    <div class="carrosel-container">
+                        <img src="" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="carrosel-container">
+                        <img src="" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="carrosel-container">
+                      <img src="" alt="">
+                     </div>
+                </li>
+                <li>
+                    <div class="carrosel-container">
+                         <img src="" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="carrosel-container">
+                         <img src="" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <footer class='footer'><div>Icons from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"  title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div><br>
+            Criado por João Victor Javitti Alves e Danilo de Oliveira Nunes, Direitos Reservados
+         </footer>
+
+        <script type="text/javascript">
+            var menu = false;
+            $(".menuIcon").click(function(){
+                if(!menu){
+                    $(".aba").css("margin-left", "-10");
+                    $("#menu").attr('src', 'img/icons/exit.png');
+                    $(".menuIcon").css("margin-left", "150");
+                    menu = true;
+                }
+                else
+                {
+                    $(".aba").css("margin-left", "-1000");
+                    $("#menu").attr('src', 'img/icons/menu.png'); 
+                    $(".menuIcon").css("margin-left", "15");
+                    menu = false;
+                }
+            })
+        </script>
+    </body>
+</html>

@@ -1,3 +1,14 @@
+/* :root
+{
+    --daniloBlue: #586391;
+}
+
+body
+{
+    background-color: var(--daniloBlue);
+    color:ghostwhite;
+} */
+
 body
 {
     background-color: #586391;
@@ -35,6 +46,7 @@ body
     background-color: #2C3F91;
     border-color: white;
 }
+
 .icon:hover
 {
     transform: rotate(360deg);
@@ -55,20 +67,22 @@ body
     transition: 0.5s;
     /* z-index: 99999; */
 }
+
 .pesquisa
 {
     background-color: #4461DE;
     border-radius: 20px;
     height: 50px;
-    width: 500px;
+    width: 39%;
     border: 4px solid #39405E;
     color: ghostwhite;
     font-size: 20px;
     position: fixed;
-    left: 500px;
+    left: 27.5%;
     /* background-image: url('img/search.png'); */
     outline: none;
 }
+
 .menu
 {
     float: left;
@@ -79,13 +93,13 @@ body
     width:100%;
     margin-left: -10px;
     margin-top:-10px;
-
 }
+
 .pesquisaIcon
 {
     width:2.7%;
     position: fixed;
-    left:948px;
+    left:64%;
     background:#4461DE;
     border: 4px solid #39405E;
     padding:1px;
@@ -93,9 +107,12 @@ body
     top:15px;
     transition:0.7s;
 }
-.pesquisaIcon:hover {
+
+.pesquisaIcon:hover 
+{
 	filter: invert(100%);
 }
+
 .texto
 {
     position: relative;
@@ -104,25 +121,95 @@ body
     width:500px;
     font-size: 30px;
 }
+
 .footer
 {
     text-align: center;
     position:fixed;
     margin:0;
     background-color:#151E45;
-    height: 100px;
+    height: 7%;
     list-style: none;
     width:100%;
     bottom:0;
     margin-left: -10px;
 }
-.footer a{
+
+.footer a
+{
     text-decoration: none;
     color: yellowgreen;
 }
 
-.logo{
+.logo
+{
     position: fixed;
     right:10;
     margin-top:20px;
+}
+
+.carrosel, .carrosel ul
+{
+    height:      400px;
+    position:    absolute;
+    left:        8%;
+    top:         -15px;
+    width:       9000px;
+    list-style:  none;
+    margin-left: -50px;
+    transition:  left .3s linear;
+    animation:   slide-animation 25s infinite;
+}
+
+.carrosel, .carrosel ul :hover
+{
+    animation-play-state: paused;
+}
+
+@keyframes slide-animation
+{
+    20%{left: 0}
+    25%{left: -600px}
+    45%{left: -600px}
+    50%{left: -1200px}
+    70%{left: -1200px}
+    75%{left: -1800px}
+    98%{left: -1800px}
+    100%{left: 0px}
+}
+
+.carrosel
+{
+    position:   absolute;
+    width:      30%;
+    margin:     auto;
+    overflow:   hidden;
+    margin-top: 6%;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.50);
+}
+
+.carrosel, .carrosel li
+{
+    display:  inline-block;
+    height:   400px;
+    /*float: left;*/
+    position: relative;
+    width:    600px;
+}
+
+.carrosel-container
+{
+    margin:  0 auto;
+    padding: 0;
+    width:   600px;
+}
+
+.carrosel-container img
+{
+    width: 100%;
+}
+
+.infoBox
+{
+
 }
