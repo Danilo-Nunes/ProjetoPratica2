@@ -13,11 +13,11 @@ body
 {
     background-color: #586391;
     color:azure;
-    font-family: Arial, Century, Comic Sans;
+    font-family: Arial, Century Gothic, Baskerville Old Face;
 }
 
 .icon
-{
+{ 
     position: relative;
     transition: 0.9s;
     width:60%;
@@ -152,7 +152,7 @@ body
 {
     height:      400px;
     position:    absolute;
-    left:        8%;
+    left:        9%;
     top:         -15px;
     width:       9000px;
     list-style:  none;
@@ -211,5 +211,9 @@ body
 
 .infoBox
 {
-
+    left: 70%;
+    padding: 5%;
+    border: 2px dotted black;
+    background-color: ghostwhite;
+    font-family: Baskerville Old Face;
 }
