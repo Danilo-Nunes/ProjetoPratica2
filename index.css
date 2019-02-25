@@ -202,7 +202,9 @@ number{
     border-radius:25px;
     font-size:15px;
     padding:5px;
+    padding-right: 8px;
+    padding-left: 8px;
     position:relative;
-    left:80px;
+    left:75px;
     bottom:100px;
 }
