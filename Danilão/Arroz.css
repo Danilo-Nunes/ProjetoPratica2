@@ -143,11 +143,14 @@ body
     color: yellowgreen;
 }
 
-.logo
-{
+.logo{
     position: fixed;
-    right:10;
-    margin-top:20px;
+    right:-350px;
+    margin-top:-15px;
+}
+
+.logo img{
+    width:20%;
 }
 
 
