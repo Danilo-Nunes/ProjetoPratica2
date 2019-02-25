@@ -14,6 +14,7 @@ body
     background-color: #586391;
     color:azure;
     font-family: Arial, Century Gothic, Baskerville Old Face;
+    overflow: hidden;
 }
 
 .icon
