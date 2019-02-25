@@ -196,3 +196,13 @@ body
     padding: 0;
     width:   600px;
 }
+
+number{
+    background:red;
+    border-radius:25px;
+    font-size:15px;
+    padding:5px;
+    position:relative;
+    left:80px;
+    bottom:100px;
+}
