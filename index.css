@@ -196,3 +196,15 @@ body
     padding: 0;
     width:   600px;
 }
+
+number{
+    background:red;
+    border-radius:25px;
+    font-size:15px;
+    padding:5px;
+    padding-right: 8px;
+    padding-left: 8px;
+    position:relative;
+    left:75px;
+    bottom:100px;
+}

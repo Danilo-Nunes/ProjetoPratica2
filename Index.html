@@ -9,10 +9,10 @@
 
     <body>
         <footer class='footer'><div>Icons from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"  title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div><br>
-        (Insert Logo Here)<br><br>Criado por João Victor Javitti Alves e Danilo de Oliveira Nunes, Direitos Reservados
+    Criado por João Victor Javitti Alves e Danilo de Oliveira Nunes, Direitos Reservados
         </footer>
         <ul class='aba'>
-            <li><img class='icon' src="img/icons/bell.png" title='Notificacoes'></li>
+            <li><img class='icon' src="img/icons/bell.png" title='Notificacoes'><number>15</number></li>
             <li><img class='icon' src="img/icons/user.png" title='Usuario'></li>
             <li><img class='icon' src="img/icons/checklist.png" title='Tarefas'></li>
             <li><img class='icon' src="img/icons/classroom.png" title='Salas'></li>
@@ -26,6 +26,23 @@
             <li class='logo'><a href='#'><img src='img/logo.png'></a></li>
         </ul>
         <script type="text/javascript">
+
+            var not =0;
+
+            if(not == 0)
+            {
+                $("number").hide();
+            }
+            else if(not < 10)
+            {
+                $("number").html(not);
+            }
+            else
+            {
+                $("number").html(not)
+                $("number").css('padding-right', '5px');
+                $("number").css('padding-left', '5px');
+            }
             var menu = false;
             $(".menuIcon").click(function(){
                 if(!menu){
