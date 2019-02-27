@@ -55,6 +55,32 @@ assunto varchar(50) not null,
 constraint fkSala foreign key (codSala) references Sala(codigo)
 )
 
+create table Compromissos(
+codCompromisso int primary key indentity(1,1) not null,
+texto varchar(500) not null,
+dataComp datetime not null,
+codAluno int not null,
+constraint fkAlunoComp foreign key (codAluno) references Aluno(codigo)
+)
+
+create proc SalaAlunos
+@codSala int
+as
+select * from Aluno where codAluno in (select codAluno from AlunoSala where codSala = @codSala)
+
+create proc SalasAluno
+@codAluno int
+as
+select * from Sala where codSala in (select codSala from AlunoSala where codAluno = @codAluno)
+
+create proc ComunicadoAluno
+@codAluno int
+as
+select * from Comunicado where codSala in (select codSala from AlunoSala where codAluno = @codAluno)
+
+
+
+
 
 
 

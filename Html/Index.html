@@ -1,9 +1,9 @@
 <html>
     <head>
         <title>Teste</title>
-        <link rel='stylesheet' href='index.css'>
+        <link rel='stylesheet' href='../css/index.css'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel='shortcut icon' href='img/icon.ico' sizes="1000x1000">
+        <link rel='shortcut icon' href='../img/icon.ico' sizes="1000x1000">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
     </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -13,18 +13,18 @@
     Criado por João Victor Javitti Alves e Danilo de Oliveira Nunes, Direitos Reservados
         </footer>
         <ul class='aba'>
-            <li><img class='icon' src="img/icons/bell.png" title='Notificacoes'><number>15</number></li>
-            <li><img class='icon' src="img/icons/user.png" title='Usuario'></li>
-            <li><img class='icon' src="img/icons/checklist.png" title='Tarefas'></li>
-            <li><img class='icon' src="img/icons/classroom.png" title='Salas'></li>
-            <li><img class='icon' src="img/icons/calendario.png" title='Calendario'></li>
+            <li><img class='icon' src="../img/icons/bell.png" title='Notificacoes'><number>15</number></li>
+            <li><img class='icon' src="../img/icons/user.png" title='Usuario'></li>
+            <li><img class='icon' src="../img/icons/checklist.png" title='Tarefas'></li>
+            <li><img class='icon' src="../img/icons/classroom.png" title='Salas'></li>
+            <li><img class='icon' src="../img/icons/calendario.png" title='Calendario'></li>
         </ul>
         <ul class='menu'>      
-            <li><img id='menu' class='menuIcon' src='img/icons/menu.png' title='Menu'></li>
+            <li><img id='menu' class='menuIcon' src='../img/icons/menu.png' title='Menu'></li>
             <br>
            <li><input id='pesq' type='text' class='pesquisa' value=' '></li>
-            <li><img id='pesqIcon' class='pesquisaIcon' src='img/icons/search.png'></li>
-            <li class='logo'><a href='#'><img src='img/logo.png'></a></li>
+            <li><img id='pesqIcon' class='pesquisaIcon' src='../img/icons/search.png'></li>
+            <li class='logo'><a href='#'><img src='../img/logo.png'></a></li>
         </ul>
         <script type="text/javascript">
 
@@ -48,14 +48,14 @@
             $(".menuIcon").click(function(){
                 if(!menu){
                     $(".aba").css("margin-left", "-10");
-                    $("#menu").attr('src', 'img/icons/exit.png');
-                    $(".menuIcon").css("margin-left", "200");
+                    $("#menu").attr('src', '../img/icons/exit.png');
+                    $(".menuIcon").css("margin-left", "150");
                     menu = true;
                 }
                 else
                 {
                     $(".aba").css("margin-left", "-1000");
-                    $("#menu").attr('src', 'img/icons/menu.png'); 
+                    $("#menu").attr('src', '../img/icons/menu.png'); 
                     $(".menuIcon").css("margin-left", "15");
                     menu = false;
                 }
