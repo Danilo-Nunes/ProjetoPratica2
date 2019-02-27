@@ -1,3 +1,14 @@
+/* :root
+{
+    --daniloBlue: #586391;
+}
+
+body
+{
+    background-color: var(--daniloBlue);
+    color:ghostwhite;
+} */
+
 body
 {
     background-color: #586391;
@@ -200,6 +211,28 @@ body
     margin:  0 auto;
     padding: 0;
     width:   600px;
+}
+
+.infoBox
+{
+    position:         absolute;
+    left:             50%;
+    top:              18%;
+    background-color: ghostwhite;
+    border:           8px double midnightblue;
+    margin:           3%; 
+    padding:          2.8%;
+    color:	      midnightblue;
+}
+
+.infoBox h1
+{   
+    color: midnightblue;
+}
+
+.infoBox h1
+{     
+    font-family:      Baskerville Old Face;
 }
 
 number{
