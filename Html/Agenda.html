@@ -35,9 +35,7 @@
                 </ul>
 
                 <div class='agenda'>
-                    <ul>
-                        <li>Aniversário - 25/08 - 14:00 <button>Apagar</button><button>Concluída</button></li>
-                    </ul>
+                    
                 </div>
 
         
@@ -46,6 +44,9 @@
                 <script type="text/javascript">
                     var ev  = false;
                     var not = 0;
+                    // var evento = "Aniversário";
+                    // var data = "25/08";
+                    // var hora = "14:00";
 
                     $('#data').focusin(function(){
                         document.getElementById('data').value = "";
@@ -59,15 +60,15 @@
                         }
                     });
 
-                    function Suicidio()
-                    {
-                        alert('Nada');
-                    }
 
-                    // if(!ev)
-                    // {
-                    //     $(".agenda").html("Nada programado por enquanto");
-                    // }
+                    if(!ev)
+                    {
+                        $(".agenda").html("Nada programado por enquanto");
+                    }
+                    else
+                    {
+                        $(".agenda").html(`<ul><li>${evento} - ${data} - ${hora} <button>Apagar</button><button>Concluída</button></li> </ul>`);
+                    }
         
                     if(not == 0)
                     {
