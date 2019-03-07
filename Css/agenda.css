@@ -23,7 +23,7 @@
     margin-bottom: 20px;
 }
 
-.agenda ul li button{
+.agenda ul li .btn{
     height: 100px;
     font-size:50px;
     margin-left: 5px;
@@ -34,7 +34,7 @@
     transition:0.2s;
 }
 
-.agenda ul li button:hover{
+.agenda ul li .btn:hover{
     background-color: #2F4296;
     border-color:white;
     color:white; 
