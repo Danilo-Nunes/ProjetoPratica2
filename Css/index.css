@@ -113,6 +113,7 @@ body
     border-radius:25px;
     top:15px;
     transition:0.7s;
+    pointer-events: auto;
 }
 
 .pesquisaIcon:hover 
