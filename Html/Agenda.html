@@ -29,26 +29,44 @@
                     <li class='logo'><a href='#'><img src='../img/logo.png'></a></li>
                 </ul>
                 <ul class='inserc'>
-                    <li><input class='input' type="text" id='evento'></li> 
-                    <li><input class='input' type='text' id='data' value='DD / MM / AA - HH / MM'></li>
-                    <li><button class='btnInsec'>Inserir</button></li>
+                    <li>Evento: <input class='input' type="text" id='evento'></li>
+                    <li>Data:<input class='input' type='text' id='data' value='DD/MM/AAAA - HH:MM'></li> 
+                    <!-- <li>Ano: <input type='text' class='input' id='ano'></li>
+                    <li>Mês: <select class='input' id='mes' onfocus="ChecarAno()" onchange='Dia(this)'>
+                            <option></option>
+                            <option value='1'>Janeiro</option>
+                            <option value='2'>Fevereiro</option>
+                            <option value='3'>Março</option>
+                            <option value='4'>Abril</option> 
+                            <option value='5'>Maio</option>
+                            <option value='6'>Junho</option>     
+                            <option value='7'>Julho</option>
+                            <option value='8'>Agosto</option> 
+                            <option value='9'>Setembro</option>
+                            <option value='10'>Outubro</option> 
+                            <option value='11'>Novembro</option>
+                            <option value='12'>Dezembro</option></select></li>
+                    <li>Dia:<select class='input' id='dia'><option></option></select></li>
+                    <li>Horas: <input class='inputSmall' type='number' min='0' max='23'></li>
+                    <li>Minutos: <input class='inputSmall' type='number' min='0' max='59'></li> -->
+                    <li><button class='btnInsec' onclick="Inserir()">Inserir</button>*</li>
                 </ul>
 
-                <div class='agenda'>
-                    
+                <div class='agenda' id='agenda'>
                 </div>
-
         
                
                 
                 <script type="text/javascript">
                     var ev  = true;
+                    var numeroEventos = 5;
                     var not = 0;
                     var evento = "Aniversário";
                     var data = "25/08";
                     var hora = "14:00";
 
                     $('#data').focusin(function(){
+                        if(document.getElementById('data').value =="DD/MM/AAAA - HH:MM")
                         document.getElementById('data').value = "";
                     });
 
@@ -56,7 +74,7 @@
                         var d = document.getElementById('data');
                         if(d.value == "")
                         {
-                            d.value = "DD / MM / AA - HH / MM";
+                            d.value = "DD/MM/AAAA - HH:MM";
                         }
                     });
 
@@ -67,7 +85,9 @@
                     }
                     else
                     {
-                        $(".agenda").html(`<ul><li>${evento} - ${data} - ${hora} <button class='btn'>Apagar</button><button class='btn'>Concluída</button></li> </ul>`);
+                        for(i = 0; i < numeroEventos; i++)
+                           document.getElementById("agenda").innerHTML += (`<ul><li>${evento} - ${data} - ${hora} <button class='btn'>Apagar</button><button class='btn'>Concluída</button></li> </ul>`);
+                        document.getElementById("agenda").innerHTML+= "*Desconsidere que o tempo é relativo";
                     }
         
                     if(not == 0)
@@ -100,6 +120,178 @@
                             menu = false;
                         }
                     })
+
+                    function Dia(sel)
+                    {                       
+                        $('#dia').css("display", "inline");
+                        switch(sel.value)
+                        {
+                            case "2":
+                            {
+                                ano = document.getElementById("ano").value;
+                                var df;
+                                console.log(ano);
+                                if(ano%4 == 0 && ano%100 != 0 || ano%400 == 0)
+                                    df = 29;
+                                else
+                                    df = 28;
+                                for(i = 1; i <= df; i++)
+                                    $('#dia').append(new Option(i, i));
+                            }
+                            break;
+                            case "4":
+                            case "6":
+                            case"9":
+                            case "11":
+                            {
+                                for(i = 1; i < 31; i++)
+                                    $('#dia').append(new Option(i, i));
+                            }
+                            break;
+                            case "1":
+                            case "3":
+                            case"5":
+                            case "7":
+                            case "8":
+                            case "10":
+                            case"12":
+                            {
+                                for(i = 1; i <= 31; i++)
+                                    $('#dia').append(new Option(i, i));
+                            }
+                        }
+                    }
+                    function ChecarAno()
+                    {
+                        tacertu = true;
+                        ano = document.getElementById('ano').value;
+                        if(ano == "")
+                            tacertu = false;     
+                        d = new Date();
+
+                        if(isNaN(ano))
+                            tacertu = false;
+                        if(d.getYear() > ano - 1900)
+                            tacertu = false;
+
+
+                        if(tacertu == false)
+                        {
+                            $("#ano").val("");
+                            $("#ano").focus();
+                            alert('Digite um Ano válido');
+
+                        }
+
+                    }
+
+                    function Inserir()
+                    {
+                        tacertu = true;
+                        ano = document.getElementById('data').value.substring(6,10);
+                        
+                        if(ano == "")
+                            tacertu = false;     
+                        d = new Date();
+
+                        if(isNaN(ano))
+                            tacertu = false;
+                        if(d.getYear() > ano - 1900)
+                            tacertu = false;
+
+                        mes = document.getElementById('data').value.substring(3,5);
+
+                        if(mes == "")
+                            tacertu = false;
+
+                        if(isNaN(mes))
+                            tacertu = false;
+
+                        if(d.getMonth()+1 > mes && d.getYear() >= ano - 1900)
+                            tacertu = false;
+
+                        if(mes > 12)
+                            tacertu = false;
+
+                        dia = document.getElementById('data').value.substring(0, 2);
+
+                        if(dia = "")
+                            tacertu = false;
+
+                        if(isNaN(dia))
+                            tacertu = false;
+                        if(d.getDate() > dia && d.getMonth()+1 >= mes && d.getYear() >= ano - 1900)
+                            tacertu = false;
+                        
+                        switch(mes)
+                        {
+                            case "2":
+                            {
+                                ano = document.getElementById("ano").value;
+                                var df;
+                                console.log(ano);
+                                if(ano%4 == 0 && ano%100 != 0 || ano%400 == 0)
+                                   if(dia > 29)
+                                    tacertu = false;
+                                else
+                                if(dia > 28)
+                                    tacertu = false;
+                            }
+                            break;
+                            case "4":
+                            case "6":
+                            case"9":
+                            case "11":
+                            {
+                                if(dia > 30)
+                                tacertu = false;
+                            }
+                            break;
+                            case "1":
+                            case "3":
+                            case"5":
+                            case "7":
+                            case "8":
+                            case "10":
+                            case"12":
+                            {
+                                if(dia > 31)
+                                tacertu = false;
+                            }
+                        }
+
+
+                        hora = document.getElementById('data').value.substring(13, 15);
+                        if(hora == "")
+                            tacertu = false;
+
+                        if(isNaN(hora))
+                            tacertu = false;
+
+                        if(hora > 23)
+                            tacertu = false;
+
+                        min = document.getElementById("data").value.substring(17,19);
+                        if(min == "")
+                            tacertu = false;
+
+                        if(isNaN(min))
+                            tacertu = false;
+
+                        if(min > 59)
+                            tacertu = false;
+
+                        if(tacertu == false)
+                        {
+                            $("#data").val("");
+                            $("#data").focus();
+                            alert('Digite uma data válida');
+                        }
+
+                        
+
+
+                    }
                 </script>
             </body>
 </html>
