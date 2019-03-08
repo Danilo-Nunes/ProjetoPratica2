@@ -1,0 +1,39 @@
+.salas
+{
+    position: absolute;
+    float: left;
+    top: 15%;
+    left: 9.5%;
+    padding: 17% 39%;
+    background: ghostwhite;
+    border: 10px double midnightblue;
+}
+
+.sala
+{
+    top: 4%;
+    position: absolute;
+    float: left;
+    left: 2%;
+    width: 95%;
+    height: 250px;        
+    text-align: center;
+    border: 5px solid midnightblue;
+}
+
+.nome
+{
+    color: Black;
+    font-family: Baskerville Old Face;
+    float: left;
+}
+
+div img
+{
+    border-left: 5px solid midnightblue;
+    float: right;
+    max-width: 250px;
+    min-width: 250px;
+    max-height: 250px;
+    min-height: 250px;
+}
