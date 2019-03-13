@@ -1,0 +1,75 @@
+body{
+    background-color:#26394a;
+    text-align: center;
+    font-family: Segoe Print;
+}
+
+#CadastroSuper{
+    text-align: center;
+    background-color: #5d7b97;
+    border: solid 4px black;
+    position: fixed;
+    margin-left: 500px;
+    margin-top: 100px; 
+    border-radius: 15px;
+    width:550px;
+    height: 550px;
+    /* #364757; */
+}
+#CadastroSuper .lbA{
+    position:fixed;
+    left:550px;
+    top:115px;
+}
+
+#CadastroSuper .lbP{
+    position:fixed;
+    left:980px;
+    top:115px;
+}
+
+#Cadastro{
+    background-color: #a3c4e3;
+    border: solid 4px black;
+    border-radius: 10px;
+    position:fixed;
+    margin-top: 100px;
+    margin-left: 475px;
+    /* opacity: 0; */
+    height: 550px;
+    width: 600px;
+    transition: 0.8s;
+}
+
+#Cadastro .AnimacaoA{
+    /* -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s; */
+    border-color: red;
+    margin-left: 50px;
+}
+
+#Cadastro .AnimacaoP{
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    margin-left: 900px;
+}
+
+.rbA
+{
+    position: fixed;
+    bottom: 650px;
+    left:530px;
+}
+
+.rbP
+{
+    position: fixed;
+    bottom: 650px;
+    left:960px;
+}

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Cadastro - Darkboard</title>
+        <link rel='stylesheet' href='../css/cadastro.css'>
+        <link rel='shortcut icon' href='../img/icon.ico' sizes="1000x1000">
+    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <body>
+        <div id='Cadastro'>
+            
+        </div>
+        <div id='CadastroSuper'>
+            <input type='radio' onchange='Animacao("A")' name='rb' id='aluno' class='rbA' value='Aluno'><label class='lbA'>Aluno</label>
+            <input type='radio' onchange='Animacao("P")' name='rb' id='professor' class='rbP' value='Professor'><label class='lbP'>Professor</label>
+            <img src='../img/icons/user.png' style="margin-top:19px;">
+        </div>
+        <script>
+            var show = false;
+            function Animacao(Letra)
+            {
+                if(Letra == "A")
+                    $("#Cadastro").css("margin-left", "50px")
+                else
+                    $("#Cadastro").css("margin-left","900px")
+            }
+        </script>
+
+    </body>
+</html>
