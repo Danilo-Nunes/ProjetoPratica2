@@ -7,33 +7,39 @@
     padding: 17% 39%;
     background: ghostwhite;
     border: 10px double midnightblue;
+    overflow-y: scroll;
 }
 
 .sala
-{
-    top: 4%;
-    position: absolute;
-    float: left;
-    left: 2%;
-    width: 95%;
-    height: 250px;        
-    text-align: center;
+{   
+    width: 95%;    
+    position: absolute; 
+    height: 250px;     
     border: 5px solid midnightblue;
+    margin-bottom: 250px;
 }
 
 .nome
-{
+{   
+    text-align: center;
     color: Black;
-    font-family: Baskerville Old Face;
-    float: left;
+    font-family: Baskerville Old Face;    
 }
 
-div img
+.img
 {
+    right: 250px;
+    position: absolute;
     border-left: 5px solid midnightblue;
     float: right;
     max-width: 250px;
     min-width: 250px;
     max-height: 250px;
     min-height: 250px;
+    transition:0.2s;
+}
+
+.img:hover
+{   
+    border-color:ghostwhite;
 }
