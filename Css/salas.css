@@ -29,9 +29,9 @@
 .img
 {
     right: 250px;
-    position: absolute;
     border-left: 5px solid midnightblue;
     float: right;
+    background: url("https://cdna.artstation.com/p/assets/images/images/010/031/280/large/alexey-skorov-japanese-classroom-001-interior-044-3-1.jpg?1522180170");
     max-width: 250px;
     min-width: 250px;
     max-height: 250px;
@@ -41,5 +41,5 @@
 
 .img:hover
 {   
-    border-color:ghostwhite;
+    border-color: lightskyblue;
 }
