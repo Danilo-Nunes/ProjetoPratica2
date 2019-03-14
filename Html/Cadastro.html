@@ -68,8 +68,16 @@
                         obj.nomeUsu = $("#usuario").val();
                         obj.senha = Encripta($("#senha").val());
                         obj.email = $("#email").val();
-                        obj.img = $("#file-input").prop('files')[0].name;
+                        if($("#file-input").prop('files')[0] == undefined)
+                        {
+                            obj.img = "user.png";
+                        }
+                        else
+                            obj.img = $("#file-input").prop('files')[0].name;
                         console.log(obj);
+
+
+                        alert("Cadastrado com Sucesso");
                     }
                     else{
                         alert("Senhas não coincidem");
