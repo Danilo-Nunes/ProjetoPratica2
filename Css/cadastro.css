@@ -37,28 +37,45 @@ body{
     margin-left: 475px;
     opacity: 0;
     height: 550px;
-    width: 600px;
+    color:#211B11;
+    width: 510px;
     transition: 0.8s;
+    text-align:left;
+    font-size:30px;
 }
 
-#Cadastro .AnimacaoA{
-    /* -webkit-transition: 3s;
-    -moz-transition: 3s;
-    -ms-transition: 3s;
-    -o-transition: 3s;
-    transition: 3s; */
-    border-color: red;
-    margin-left: 50px;
+#Cadastro ul{
+    list-style: none;
 }
 
-#Cadastro .AnimacaoP{
-    -webkit-transition: 3s;
-    -moz-transition: 3s;
-    -ms-transition: 3s;
-    -o-transition: 3s;
-    transition: 3s;
-    margin-left: 900px;
+#Cadastro ul li{
+    margin-top: -7.5px;
+    margin-bottom: 0px;;
 }
+
+#Cadastro button{
+    margin-top: 10px;
+    height: 50px;
+    width: 150px;
+    margin-left:125px;
+    border: solid;
+    font-family: Brush Script MT;
+    font-size: 30px;
+    background-color: #61A6E8;
+    transition: 0.5s;
+}
+#Cadastro button:hover{
+    color: white;
+    background-color: #2A4763;
+}
+
+.input{
+    border-radius: 10px;
+    font-size: 30px;
+    background-color: #A0F0EC;
+    border-color:#7EBDBA;
+}
+
 
 .rbA
 {
@@ -72,4 +89,16 @@ body{
     position: fixed;
     bottom: 650px;
     left:960px;
+}
+
+.image-upload > input
+{
+    display: none;
+}
+
+#avatar{
+    margin-top: 20px;
+    border-radius: 50%;
+    height: 512px;
+    width: 512px;
 }
