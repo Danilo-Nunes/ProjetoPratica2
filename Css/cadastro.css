@@ -1,5 +1,10 @@
 body{
-    background-color:#26394a;
+    /* background-color:#26394a; */
+    background: url("../img/planosDeFundo/01.jpg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     text-align: center;
     font-family: Segoe Print;
 }
