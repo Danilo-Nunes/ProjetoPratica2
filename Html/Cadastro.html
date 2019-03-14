@@ -5,24 +5,125 @@
         <link rel='shortcut icon' href='../img/icon.ico' sizes="1000x1000">
     </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='../JavaScript/cripto.js'></script>
     <body>
         <div id='Cadastro'>
+            <ul>
+               <li> Nome Completo:</li>
+               <li><input class='input' type='text' id='nome'></li>
+               <li> Nome de Usuário:</li>
+               <li><input class='input' type='text' id='usuario'></li>
+               <li>Senha</li>
+               <li><input class='input' type='password' id='senha'></li>
+               <li>Confirme a Senha</li>
+               <li><input class='input' type='password' id='Csenha'></li>
+               <li>Email:</li>
+               <li><input class='input' type='text' id='email'></li>
+               <li><button onclick='Cadastro()'>Cadastre-se</button></li>
+            </ul>
             
         </div>
         <div id='CadastroSuper'>
             <input type='radio' onchange='Animacao("A")' name='rb' id='aluno' class='rbA' value='Aluno'><label class='lbA'>Aluno</label>
             <input type='radio' onchange='Animacao("P")' name='rb' id='professor' class='rbP' value='Professor'><label class='lbP'>Professor</label>
-            <img src='../img/icons/user.png' style="margin-top:19px;">
+            <div class='image-upload'>
+                <label for='file-input'>
+                    <div id='imagemLocal'>
+                        <img src='../img/icons/user.png' id='avatar'>
+                    </div>
+                </label>
+                <input type='file' onchange='TrocaImg(this.files)' id='file-input'>
+            </div>
+
         </div>
         <script>
             var show = false;
             function Animacao(Letra)
             {
+                Limpar();
                 if(Letra == "A")
-                    $("#Cadastro").css("margin-left", "50px")
+                    $("#Cadastro").css("margin-left", "20px")
                 else
-                    $("#Cadastro").css("margin-left","900px")
+                    $("#Cadastro").css("margin-left","1040px")
+
+                    $("#Cadastro").css("opacity", "100")
             }
+
+            function Cadastro()
+            {
+                if($("#nome").val()!="" && $("#usuario").val() != "" &&$("#senha").val()!=""&&$("#email").val()!="")
+                {
+                    if($("#senha").val() == $("#Csenha").val())
+                    {
+                        var obj = new Object();
+                        if($('#aluno').is(':checked'))
+                        {
+                            obj.tab = "Aluno";
+                        }
+                        else{
+                            obj.tab = "Professor";
+                        }
+                        
+                        obj.nomeComp = $("#nome").val();
+                        obj.nomeUsu = $("#usuario").val();
+                        obj.senha = Encripta($("#senha").val());
+                        obj.email = $("#email").val();
+                        if($("#file-input").prop('files')[0] == undefined)
+                        {
+                            obj.img = "user.png";
+                        }
+                        else
+                            obj.img = $("#file-input").prop('files')[0].name;
+                        console.log(obj);
+
+
+                        alert("Cadastrado com Sucesso");
+                    }
+                    else{
+                        alert("Senhas não coincidem");
+                    }
+                }
+                else{
+                    alert("Valores necessários não fornecidos");
+                }
+            }
+
+            function Limpar()
+            {
+                $(".input").val("");
+            }
+
+            function TrocaImg(files)
+            {
+                var imgLocal = document.getElementById('imagemLocal')
+                var file = files[0];
+
+                img = document.createElement("img");
+
+                if(file != null)
+                {
+                    img.file = file;
+                    var reader = new FileReader();
+                    reader.onload = (function(aImg) {return function(e) {aImg.src = e.target.result;};})(img);
+                    reader.readAsDataURL(file);
+                }
+                else
+                {
+                    img.src = "../img/icons/user.png";
+                }
+
+                img.id = 'avatar';
+                
+
+                imgLocal.innerHTML = '';
+
+                imgLocal.appendChild(img);
+
+                
+            }
+
+
+
         </script>
 
     </body>
