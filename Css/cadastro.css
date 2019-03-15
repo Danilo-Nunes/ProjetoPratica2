@@ -5,6 +5,7 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover; */
     background-size: cover;
+    color: snow;
     text-align: center;
     font-family: Segoe Print;
 }
@@ -24,13 +25,13 @@ body{
 #CadastroSuper .lbA{
     position:fixed;
     left:550px;
-    top:115px;
+    bottom: 615px;
 }
 
 #CadastroSuper .lbP{
     position:fixed;
     left:980px;
-    top:115px;
+    bottom: 615px;
 }
 
 #Cadastro{
@@ -85,14 +86,14 @@ body{
 .rbA
 {
     position: fixed;
-    bottom: 650px;
+    bottom: 620px;
     left:530px;
 }
 
 .rbP
 {
     position: fixed;
-    bottom: 650px;
+    bottom: 620px;
     left:960px;
 }
 
@@ -106,4 +107,8 @@ body{
     border-radius: 50%;
     height: 512px;
     width: 512px;
+}
+a{
+    text-decoration: none;
+    color: yellowgreen;
 }

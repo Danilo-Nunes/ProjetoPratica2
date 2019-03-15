@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src='../JavaScript/cripto.js'></script>
     <body>
+            Já está cadastrado? <a href='Login.html'>Logue-se Aqui!</a>
         <div id='Cadastro'>
             <ul>
                <li> Nome Completo:</li>
@@ -23,6 +24,7 @@
             </ul>
             
         </div>
+        
         <div id='CadastroSuper'>
             <input type='radio' onchange='Animacao("A")' name='rb' id='aluno' class='rbA' value='Aluno'><label class='lbA'>Aluno</label>
             <input type='radio' onchange='Animacao("P")' name='rb' id='professor' class='rbP' value='Professor'><label class='lbP'>Professor</label>
@@ -77,7 +79,7 @@
                         console.log(obj);
 
 
-                        alert("Cadastrado com Sucesso");
+                        location.href='Home.html';
                     }
                     else{
                         alert("Senhas não coincidem");
