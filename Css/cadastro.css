@@ -1,9 +1,9 @@
 body{
     background-color:#5D5DA4;
-    /* background: url("../img/planosDeFundo/01.jpg") no-repeat; */
-    -webkit-background-size: cover;
+    background: url("../img/planosDeFundo/01.jpg") no-repeat;
+    /* -webkit-background-size: cover;
     -moz-background-size: cover;
-    -o-background-size: cover;
+    -o-background-size: cover; */
     background-size: cover;
     text-align: center;
     font-family: Segoe Print;
