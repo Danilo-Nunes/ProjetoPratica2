@@ -20,26 +20,38 @@
 }
 
 .nome
-{   
+{  
+    font-size: 16px;    
+    float: center;
     text-align: center;
     color: Black;
     font-family: Baskerville Old Face;    
 }
 
+.p
+{
+    display: inline;
+    float: left;
+    position: relative;
+    top: 40%;
+    left: 15%;
+}
+
 .img
 {
-    right: 250px;
+    display: inline;
+    right: 245px;
     border-left: 5px solid midnightblue;
     float: right;
     background: url("https://cdna.artstation.com/p/assets/images/images/010/031/280/large/alexey-skorov-japanese-classroom-001-interior-044-3-1.jpg?1522180170");
     max-width: 250px;
     min-width: 250px;
-    max-height: 250px;
+    max-height: 250x;
     min-height: 250px;
     transition:0.2s;
 }
 
 .img:hover
 {   
-    border-color: lightskyblue;
+    border-color: #4461DE;
 }
