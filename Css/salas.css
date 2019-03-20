@@ -1,27 +1,36 @@
 .salas
 {
     position: absolute;
-    float: left;
+    /* float: left; */
     top: 15%;
-    left: 9.5%;
-    padding: 17% 39%;
+    left: 9.5%;    
     background: ghostwhite;
     border: 10px double midnightblue;
     overflow-y: scroll;
+    height: 72%;
+    width: 80%;
 }
 
-.sala
-{   
-    width: 95%;    
-    position: absolute; 
-    height: 250px;     
-    border: 5px solid midnightblue;
-    margin-bottom: 250px;
+.salas ul
+{    
+    list-style: none;
+    margin-top: 14%;
+}
+
+.salas ul li
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 270px; 
 }
 
 .nome
 {  
-    font-size: 16px;    
+    font-size: 16px;
+    position: relative;
+    top: 40%;    
     float: center;
     text-align: center;
     color: Black;
@@ -29,24 +38,27 @@
 }
 
 .p
-{
-    display: inline;
+{   
+    border: 5px solid midnightblue;
+    border-right: none;
+    position: absolute;
+    height: 250px;
+    width: calc(95% - 250px);
     float: left;
-    position: relative;
-    top: 40%;
-    left: 15%;
 }
 
 .img
 {
-    display: inline;
-    right: 245px;
-    border-left: 5px solid midnightblue;
-    float: right;
+    position: absolute;
+    border: 5px solid midnightblue;
+    float: left;
+    left: calc(95% - 250px);
     background: url("https://cdna.artstation.com/p/assets/images/images/010/031/280/large/alexey-skorov-japanese-classroom-001-interior-044-3-1.jpg?1522180170");
+    background-size: cover; 
+    background-repeat: no-repeat;
     max-width: 250px;
     min-width: 250px;
-    max-height: 250x;
+    max-height: 250px;
     min-height: 250px;
     transition:0.2s;
 }
