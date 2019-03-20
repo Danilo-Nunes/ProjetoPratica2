@@ -1,0 +1,69 @@
+.mural
+{
+    position: absolute;
+    /* float: left; */
+    top: 15%;
+    left: 9.5%;    
+    background: ghostwhite;
+    border: 10px double midnightblue;
+    overflow-y: scroll;
+    height: 72%;
+    width: 80%;
+}
+
+.mural ul
+{    
+    list-style: none;
+    margin-top: 8%;
+}
+
+.mural ul li
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 140px; 
+}
+
+.nome
+{  
+    font-size: 16px;
+    position: relative;
+    top: 30%;    
+    float: center;
+    text-align: center;
+    color: Black;
+    font-family: Baskerville Old Face;    
+}
+
+.p
+{   
+    border: 5px solid midnightblue;
+    border-right: none;
+    position: absolute;
+    height: 120px;
+    width: calc(95% - 120px);
+    float: left;
+}
+
+.img
+{
+    position: absolute;
+    border: 5px solid midnightblue;
+    float: left;
+    left: calc(95% - 120px);
+    background: url('../img/chico.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    max-width: 120px;
+    min-width: 120px;
+    max-height: 120px;
+    min-height: 120px;
+    transition:0.2s;
+}
+
+.img:hover
+{   
+    border-color: #4461DE;
+}
