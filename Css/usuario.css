@@ -1,0 +1,47 @@
+.usuario{
+    text-align: center;
+    border: solid black 4px;
+    border-radius: 15px;
+    width: 700px;
+    height: 600px;
+    position:fixed;
+    top:110px;  
+    left: 25.5%;
+    background-color: #101633;
+    font-family: DejaVu Sans Light;
+}
+
+.usuario ul{
+    font-size: 20px;
+    text-align: left;
+    list-style: none;
+}
+
+.usuario ul li{
+    margin-bottom: 35px;
+}
+
+.avatar
+{
+    margin-top:5px;
+    width: 30%;
+    margin-left: 20px;
+}
+
+.usuario .nome{
+    margin-top: 0px;
+    font-family: Freestyle Script;
+    font-size:30px;
+    text-decoration: none;
+}
+
+.desc{
+    background-color: #17365c;
+    border-radius: 15px;
+    border: black 4px solid;
+    height: 175px;
+}
+
+.desc p{
+    text-align: left;
+}
