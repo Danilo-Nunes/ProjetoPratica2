@@ -13,7 +13,7 @@
 
 .usuario ul{
     font-size: 20px;
-    text-align: left;
+    text-align:center;
     list-style: none;
 }
 
@@ -30,6 +30,7 @@
 
 .usuario .nome{
     margin-top: 0px;
+    margin-left:15px;
     font-family: Freestyle Script;
     font-size:30px;
     text-decoration: none;
