@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <title>Comunicado</title>
+    <link rel='stylesheet' href='../css/index.css'>
+    <link rel='stylesheet' href='../css/comunicado.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='shortcut icon' href='../img/icon.ico' sizes="1000x1000">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body>
+    <footer class='footer'>
+        <div>Icons from
+            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
+            <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+                target="_blank">CC 3.0 BY</a>
+        </div>
+        <br> Criado por João Victor Javitti Alves e Danilo de Oliveira Nunes, Direitos Reservados
+    </footer>
+
+    <ul class='aba'>
+        <a href='#'>
+            <li>
+                <img class='icon' src="../img/icons/bell.png" title='Notificacoes'>
+                <number></number>
+            </li>
+        </a>
+        <a href='#'>
+            <li>
+                <img class='icon' src="../img/icons/user.png" title='Usuario'>
+            </li>
+        </a>
+        <a href='Agenda.html'>
+            <li>
+                <img class='icon' src="../img/icons/checklist.png" title='Tarefas'>
+            </li>
+        </a>
+        <a href='Salas.html'>
+            <li>
+                <img class='icon' src="../img/icons/classroom.png" title='Salas'>
+            </li>
+        </a>
+        <a href='#'>
+            <li>
+                <img class='icon' src="../img/icons/calendario.png" title='Calendario'>
+            </li>
+        </a>
+    </ul>
+
+    <ul class='menu'>
+        <li>
+            <img id='menu' class='menuIcon' src='../img/icons/menu.png' title='Menu'>
+        </li>
+        <br>
+        <li>
+            <input id='pesq' type='text' class='pesquisa' value=' '>
+        </li>
+        <li>
+            <img id='pesqIcon' class='pesquisaIcon' src='../img/icons/search.png'>
+        </li>
+        <li class='logo'>
+            <a href='#'>
+                <img src='../img/logo.png'>
+            </a>
+        </li>
+    </ul>
+
+
+    <div class="comunicado">
+        <p class="nome">ARROZZZ</p>
+        <div class="img"></div>
+        <p class="professor">Professor: Chico(não o bento)</p> 
+        <p class="descricao"></p>                   
+    </div>
+
+
+    <script type="text/javascript">
+
+        var not = 0;
+
+        if (not == 0) {
+            $("number").hide();
+        }
+        else if (not < 10) {
+            $("number").html(not);
+        }
+        else {
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
+        }
+        var menu = false;
+        $(".menuIcon").click(function () {
+            if (!menu) {
+                $(".aba").css("margin-left", "-10");
+                $("#menu").attr('src', '../img/icons/exit.png');
+                $(".menuIcon").css("margin-left", "150");
+                menu = true;
+            }
+            else {
+                $(".aba").css("margin-left", "-1000");
+                $("#menu").attr('src', '../img/icons/menu.png');
+                $(".menuIcon").css("margin-left", "15");
+                menu = false;
+            }
+        })
+    </script>
+</body>
+
+</html>

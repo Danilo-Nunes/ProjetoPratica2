@@ -1,0 +1,63 @@
+.comunicado
+{
+    position: absolute;
+    /* float: left; */
+    top: 15%;
+    left: 9.5%;    
+    background: ghostwhite;
+    border: 10px double midnightblue;
+    overflow-y: scroll;
+    height: 74%;
+    width: 80%;
+}
+
+.nome
+{
+    font-size: 24px;
+    position: relative;
+    top: 2%;    
+    float: center;
+    text-align: center;
+    color: midnightblue;
+    font-family: Baskerville Old Face; 
+}
+
+.img
+{
+    position: absolute;
+    border: 5px solid midnightblue;
+    float: left;
+    left: 2%;
+    top: 12%;
+    background: url("../img/chico.png");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    max-width: 250px;
+    min-width: 250px;
+    max-height: 250px;
+    min-height: 250px;
+    transition:0.2s;
+}
+
+.img:hover
+{   
+    border-color: #4461DE;
+}
+
+.professor
+{  
+    font-size: 18px;
+    position: absolute;
+    top: 10%;    
+    left: calc(250px + 5%);
+    float: left;
+    text-align: center;
+    color: Black;
+    font-family: Baskerville Old Face;    
+}
+
+.descricao
+{   
+    position: absolute;      
+    float: left;
+}
