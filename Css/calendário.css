@@ -8,6 +8,37 @@
     font-size: 20px;
 }
 
+.calendario .info ul
+{
+    list-style: none;
+    margin-left:-38px;
+    text-align: center;
+    margin-top: -2.5px;
+    border: black 0.2px solid;
+    width:250px;
+    height: 100%;
+}
+
+
+.calendario ul li 
+{
+    border: black 0.2px solid;
+    width: 250px;
+    line-height: 30px;
+}
+.calendario ul li .header
+{
+    border: black 0.2px solid;
+    background-color: #C7B9E5;
+    font-size:22px;
+    line-height: 40px;
+}
+
+.eventos ul{
+    background-color: red;
+}
+
 body{
     background-color: #DDCEFF;
 }
+

@@ -12,13 +12,23 @@
     <body>
 
             <div class='calendario'>
-                    <!-- <div class='info'>
+                    <div class='info'>
+                        <ul id='salas'>
+                            <li class='header'><div class='header'><input type='checkbox' onchange='ChecarTodos()'>Todos</div></li>
+                            <li><input id='Sala1' type='checkbox'>Sala1</li>
+                            <li><input id='Sala2' type='checkbox'>Sala2</li>
+                            <li><input id='Sala3' type='checkbox'>Sala3</li>
+                            <li><input id='Sala4' type='checkbox'>Sala4</li>
+                            <li><input id='Sala5' type='checkbox'>Sala5</li>
+                        </ul>
+                    </div>
+                        
+                    <div class='eventos'>
+                        <ul id='ev'>
+                            <li class='header'>a</li>
+                        </ul>
         
                     </div>
-        
-                    <div class='eventos'>
-        
-                    </div> -->
                 </div>
         
                
@@ -45,6 +55,9 @@
         
         
         <script type="text/javascript">
+
+            var qtdSalas = 5;
+            var td = false;
 
             var not =0;
 
@@ -78,6 +91,26 @@
                     menu = false;
                 }
             })
+
+            function ChecarTodos()
+            {
+                if(!td)
+                {
+                    for(i = 1; i <= 5; i++)
+                    {
+                    $("#Sala" + i).prop("checked",true)
+                    }
+                    td = true;
+                }
+                else
+                {
+                    for(i = 1; i <= 5; i++)
+                    {
+                    $("#Sala" + i).prop("checked",false)
+                    } 
+                    td = false;
+                }
+            }
         </script>
     </body>
 </html>
