@@ -22,9 +22,15 @@
 
 .calendario ul li 
 {
-    border: black 0.2px solid;
+    /* border: black 0.2px solid; */
+    display:inline-block;
     width: 250px;
     line-height: 30px;
+    margin-bottom: 2.5px;
+}
+.calendario ul li:hover
+{
+    background-color: #C7B9E5;
 }
 .calendario ul li .header
 {
@@ -32,6 +38,7 @@
     background-color: #C7B9E5;
     font-size:22px;
     line-height: 40px;
+    margin-bottom: 0px;
 }
 
 .eventos ul{
