@@ -6,8 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='shortcut icon' href='../img/icon.ico' sizes="1000x1000">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src='../JavaScript/Index.js'></script>
     </head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
 
     <body>
 
@@ -58,7 +60,7 @@
 
             var qtdSalas = 5;
             var td = false;
-
+            
             var not =0;
 
             if(not == 0)
@@ -75,22 +77,7 @@
                 $("number").css('padding-right', '5px');
                 $("number").css('padding-left', '5px');
             }
-            var menu = false;
-            $(".menuIcon").click(function(){
-                if(!menu){
-                    $(".aba").css("margin-left", "-10");
-                    $("#menu").attr('src', '../img/icons/exit.png');
-                    $(".menuIcon").css("margin-left", "150");
-                    menu = true;
-                }
-                else
-                {
-                    $(".aba").css("margin-left", "-1000");
-                    $("#menu").attr('src', '../img/icons/menu.png'); 
-                    $(".menuIcon").css("margin-left", "15");
-                    menu = false;
-                }
-            })
+
 
             function Checar(num)
             {
@@ -107,6 +94,23 @@
                         $("#Sala" + i).prop("checked",!ch)
                     }
             }
+
+            var menu = false;
+            $(".menuIcon").click(function(){
+                if(!menu){
+                    $(".aba").css("margin-left", "-10");
+                    $("#menu").attr('src', '../img/icons/exit.png');
+                    $(".menuIcon").css("margin-left", "150");
+                    menu = true;
+                }
+                else
+                {
+                    $(".aba").css("margin-left", "-1000");
+                    $("#menu").attr('src', '../img/icons/menu.png'); 
+                    $(".menuIcon").css("margin-left", "15");
+                    menu = false;
+                }
+            })
         </script>
     </body>
 </html>

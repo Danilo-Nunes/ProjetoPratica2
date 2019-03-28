@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='shortcut icon' href='../img/icon.ico' sizes="1000x1000">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src='../JavaScript/Index.js'></script>
+
     </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -46,7 +48,7 @@
 
         <script>
 
-            window.onload = function()
+            window.onload += function()
             {
                 if(sessionStorage.getItem("User") != null)
                     user = sessionStorage.getItem("User");
@@ -57,23 +59,6 @@
                 $("#nome").prop("innerHTML", user)
             }
 
-
-        var not =0;
-
-            if(not == 0)
-            {
-                $("number").hide();
-            }
-            else if(not < 10)
-            {
-                $("number").html(not);
-            }
-            else
-            {
-                $("number").html(not)
-                $("number").css('padding-right', '5px');
-                $("number").css('padding-left', '5px');
-            }
             var menu = false;
             $(".menuIcon").click(function(){
                 if(!menu){
@@ -90,6 +75,7 @@
                     menu = false;
                 }
             })
+
         </script>
     </body>
 </html>
