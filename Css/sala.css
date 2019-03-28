@@ -129,7 +129,7 @@
     border: 5px solid midnightblue;
     float: left;
     left: calc(95% - 120px);
-    background: url('../img/chico.png');
+    background: url('../img/icons/user.png');
     background-size: cover; 
     background-repeat: no-repeat;
     max-width: 120px;

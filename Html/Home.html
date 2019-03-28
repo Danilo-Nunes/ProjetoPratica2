@@ -14,11 +14,11 @@
         </footer>
 
         <ul class='aba'>
-                <a href='#'><li><img class='icon' src="../img/icons/bell.png" title='Notificacoes'><number></number></li></a>
+                <a><li><img class='icon' src="../img/icons/bell.png" title='Notificacoes'><number></number></li></a>
                 <a onclick="IrPraUsu()"><li><img class='icon' src="../img/icons/user.png" title='Usuario'></li></a>
                 <a href='Agenda.html'><li><img class='icon' src="../img/icons/checklist.png" title='Tarefas'></li></a>
-                <a href='#'><li><img class='icon' src="../img/icons/classroom.png" title='Salas'></li></a>
-                <a href='#'><li><img class='icon' src="../img/icons/calendario.png" title='Calendario'></li></a>
+                <a href='Salas.html'><li><img class='icon' src="../img/icons/classroom.png" title='Salas'></li></a>
+                <a href='Calendário.html'><li><img class='icon' src="../img/icons/calendario.png" title='Calendario'></li></a>
         </ul>
 
         <ul class='menu'>      
@@ -110,7 +110,7 @@
 
             function IrPraUsu()
             {
-                if(sessionStorage.getItem("User") != null)
+                if(sessionStorage.getItem("User") != null || localStorage.getItem("User") != null)
                     location.href='Usuario.html';
                 else
                     location.href='Cadastro.html';
