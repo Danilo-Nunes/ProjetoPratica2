@@ -16,7 +16,7 @@
             <div class='calendario'>
                     <div class='info'>
                         <ul id='salas'>
-                            <li class='header'><div class='header'><input type='checkbox' onchange='ChecarTodos()'>Todos</div></li>
+                            <li class='header' onclick='ChecarTodos()'><div class='header'><input type='checkbox' id='Todos' onchange='ChecarTodos()'>Todos</div></li>
                             <li onclick='Checar(1)'><input id='Sala1' type='checkbox'>Sala1</li>
                             <li onclick='Checar(2)'><input id='Sala2' type='checkbox'>Sala2</li>
                             <li onclick='Checar(3)'><input id='Sala3' type='checkbox'>Sala3</li>
@@ -59,7 +59,6 @@
         <script type="text/javascript">
 
             var qtdSalas = 5;
-            var td = false;
             
             var not =0;
 
@@ -81,18 +80,17 @@
 
             function Checar(num)
             {
-               var ch = $("#Sala" + num).prop("checked");
-               $("#Sala" + num).prop("checked", !ch);
+               $("#Sala" + num).prop("checked", ! $("#Sala" + num).prop("checked"));
             }
 
             function ChecarTodos()
             {
-                
-                    for(i = 1; i <= 5; i++)
-                    {
-                        var ch =  $("#Sala" + i).prop("checked");
-                        $("#Sala" + i).prop("checked",!ch)
-                    }
+                $("#Todos").prop("checked", !$("#Todos").prop("checked"))
+                for(i = 1; i <= 5; i++)
+                {
+                    $("#Sala" + i).prop("checked", $("#Todos").prop("checked"));
+                }
+               
             }
 
             var menu = false;
