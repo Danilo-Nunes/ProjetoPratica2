@@ -4,7 +4,7 @@
     /* float: left; */
     top: 15%;
     left: 9.5%;    
-    background: ghostwhite;
+    background-image: url("../img/planosDeFundo/3.jpg");
     border: 10px double midnightblue;
     overflow-y: scroll;
     height: 74%;
@@ -40,6 +40,7 @@
 .p
 {   
     border: 5px solid midnightblue;
+    background-color: ghostwhite;
     border-right: none;
     position: absolute;
     height: 250px;
