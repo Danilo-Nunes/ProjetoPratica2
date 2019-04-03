@@ -1,0 +1,70 @@
+.salas
+{
+    position: absolute;
+    /* float: left; */
+    top: 15%;
+    left: 9.5%;    
+    background-image: url("../img/planosDeFundo/3.jpg");
+    border: 10px double midnightblue;
+    overflow-y: scroll;
+    height: 74%;
+    width: 80%;
+}
+
+.salas ul
+{    
+    list-style: none;
+    margin-top: 14%;
+}
+
+.salas ul li
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 270px; 
+}
+
+.nome
+{  
+    font-size: 16px;
+    position: relative;
+    top: 40%;    
+    float: center;
+    text-align: center;
+    color: Black;
+    font-family: Baskerville Old Face;    
+}
+
+.p
+{   
+    border: 5px solid midnightblue;
+    background-color: ghostwhite;
+    border-right: none;
+    position: absolute;
+    height: 250px;
+    width: calc(95% - 250px);
+    float: left;
+}
+
+.img
+{
+    position: absolute;
+    border: 5px solid midnightblue;
+    float: left;
+    left: calc(95% - 250px);
+    background: url("https://cdna.artstation.com/p/assets/images/images/010/031/280/large/alexey-skorov-japanese-classroom-001-interior-044-3-1.jpg?1522180170");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    max-width: 250px;
+    min-width: 250px;
+    max-height: 250px;
+    min-height: 250px;
+    transition:0.2s;
+}
+
+.img:hover
+{   
+    border-color: #4461DE;
+}
