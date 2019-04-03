@@ -17,28 +17,21 @@
             <div class='calendario'>
                     <div class='info'>
                         <ul id='salas'>
-                            <li class='header' onclick='ChecarTodos()'><div class='header'><input type='checkbox' id='Todos' onchange='ChecarTodos()'>Todos</div></li>
-                            <li onclick='Checar(1)'>
-                                <input id='Sala1' type='checkbox' onchange="Checar(1)">Sala1
-                            </li>
-                            <li onclick='Checar(2)'>
-                                <input id='Sala2' type='checkbox'onchange="Checar(2)">Sala2
-                            </li>
-                            <li onclick='Checar(3)'>
-                                <input id='Sala3' type='checkbox'onchange="Checar(3)">Sala3
-                            </li>
-                            <li onclick='Checar(4)'>
-                                <input id='Sala4' type='checkbox'onchange="Checar(4)">Sala4
-                            </li>
-                            <li onclick='Checar(5)'>
-                                <input id='Sala5' type='checkbox'onchange="Checar(5)">Sala5
+                            <li class='header' onclick='ChecarTodos()'>
+                                <div class='header'>
+                                    <input type='checkbox' id='Todos' onchange='ChecarTodos()'>Todos
+                                </div>
                             </li>
                         </ul>
                     </div>
                         
                     <div class='eventos'>
                         <ul id='ev'>
-                            <li class='header'>a</li>
+                            <li><div class='circleEV'></div>
+                                <p>
+                                    <grande>25</grande>  <text>AGO/DOM</text><horario>13:40</horario><text><grande>Aniversário</grande></text>
+                                </p>
+                            </li>
                         </ul>
         
                     </div>
@@ -69,7 +62,26 @@
         
         <script type="text/javascript">
 
-            var qtdSalas = 5;
+            var cores = [];
+
+            window.onload = function(){
+             cores = [];
+                var qtdSalas = 5;
+
+                for(i = 1; i <= qtdSalas; i++)
+                {
+                    document.getElementById("salas").innerHTML += `<li onclick='Checar(${i})'> <input id='Sala${i}' type='checkbox' onchange='Checar(${i})'>Sala${i}<div id='circle${i}' class='circle'></div></li>`
+                    var cor = Cor();
+                    $("#circle" + i).css("background-color" , cor);
+                    cores.push(cor);
+                }
+
+                console.log(cores);
+            }
+
+
+
+
             
             var not =0;
 
@@ -120,6 +132,18 @@
                     menu = false;
                 }
             })
+
+            function Cor() {
+                var letras = '0123456789ABCDEF';
+                var cor = '#';
+                do{
+                    for (var i = 0; i < 6; i++) {
+                        cor += letras[Math.floor(Math.random() * 16)];
+                    }
+                }
+                while(cor == '#C7B9E5');
+                return cor;
+            }
         </script>
     </body>
 </html>
