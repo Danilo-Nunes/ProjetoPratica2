@@ -8,6 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src='../JavaScript/Index.js'></script>
+                
     </head>
     
 
@@ -17,11 +18,21 @@
                     <div class='info'>
                         <ul id='salas'>
                             <li class='header' onclick='ChecarTodos()'><div class='header'><input type='checkbox' id='Todos' onchange='ChecarTodos()'>Todos</div></li>
-                            <li onclick='Checar(1)'><input id='Sala1' type='checkbox'>Sala1</li>
-                            <li onclick='Checar(2)'><input id='Sala2' type='checkbox'>Sala2</li>
-                            <li onclick='Checar(3)'><input id='Sala3' type='checkbox'>Sala3</li>
-                            <li onclick='Checar(4)'><input id='Sala4' type='checkbox'>Sala4</li>
-                            <li onclick='Checar(5)'><input id='Sala5' type='checkbox'>Sala5</li>
+                            <li onclick='Checar(1)'>
+                                <input id='Sala1' type='checkbox' onchange="Checar(1)">Sala1
+                            </li>
+                            <li onclick='Checar(2)'>
+                                <input id='Sala2' type='checkbox'onchange="Checar(2)">Sala2
+                            </li>
+                            <li onclick='Checar(3)'>
+                                <input id='Sala3' type='checkbox'onchange="Checar(3)">Sala3
+                            </li>
+                            <li onclick='Checar(4)'>
+                                <input id='Sala4' type='checkbox'onchange="Checar(4)">Sala4
+                            </li>
+                            <li onclick='Checar(5)'>
+                                <input id='Sala5' type='checkbox'onchange="Checar(5)">Sala5
+                            </li>
                         </ul>
                     </div>
                         
