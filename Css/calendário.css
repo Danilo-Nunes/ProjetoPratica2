@@ -26,11 +26,26 @@
     display:inline-block;
     width: 250px;
     line-height: 30px;
-    margin-bottom: 2.5px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .calendario ul li:hover
 {
     background-color: #C7B9E5;
+}
+
+.calendario ul li input
+{
+    border: red;
+}
+
+.chb
+{
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
 }
 .calendario ul li .header
 {
