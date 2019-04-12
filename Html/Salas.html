@@ -15,18 +15,38 @@
     <footer class='footer'>
         <div>Icons from
             <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
-            <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
-                target="_blank">CC 3.0 BY</a>
+            <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
         </div>
         <br> Criado por João Victor Javitti Alves e Danilo de Oliveira Nunes, Direitos Reservados
     </footer>
 
     <ul class='aba'>
-        <a><li><img class='icon' src="../img/icons/bell.png" title='Notificacoes'><number></number></li></a>
-        <a onclick="IrPraUsu()"><li><img class='icon' src="../img/icons/user.png" title='Usuario'></li></a>
-        <a href='Home.html'><li><img class='icon' src="../img/icons/Home.png" title='Home'></li></a>
-        <a href='Agenda.html'><li><img class='icon' src="../img/icons/checklist.png" title='Tarefas'></li></a>
-        <a href='Calendário.html'><li><img class='icon' src="../img/icons/calendario.png" title='Calendario'></li></a>
+        <a>
+            <li>
+                <img class='icon' src="../img/icons/bell.png" title='Notificacoes'>
+                <number></number>
+            </li>
+        </a>
+        <a onclick="IrPraUsu()">
+            <li>
+                <img class='icon' src="../img/icons/user.png" title='Usuario'>
+            </li>
+        </a>
+        <a href='Home.html'>
+            <li>
+                <img class='icon' src="../img/icons/Home.png" title='Home'>
+            </li>
+        </a>
+        <a href='Agenda.html'>
+            <li>
+                <img class='icon' src="../img/icons/checklist.png" title='Tarefas'>
+            </li>
+        </a>
+        <a href='Calendário.html'>
+            <li>
+                <img class='icon' src="../img/icons/calendario.png" title='Calendario'>
+            </li>
+        </a>
     </ul>
 
     <ul class='menu'>
@@ -41,7 +61,7 @@
             <img id='pesqIcon' class='pesquisaIcon' src='../img/icons/search.png'>
         </li>
         <li class='logo'>
-            <a href='#'>
+            <a href='Home.html'>
                 <img src='../img/logo.png'>
             </a>
         </li>
@@ -57,7 +77,7 @@
                 <div class="img">
                 </div>
             </li>
-            <li  onclick='IrPraSala("nomeSala")'>
+            <li onclick='IrPraSala("nomeSala")'>
                 <div class="p">
                     <p class="nome">ARROZZZ</p>
                 </div>
@@ -69,10 +89,38 @@
 
 
     <script type="text/javascript">
-
-        function IrPraSala(nomeSala)
-        {
+        function IrPraSala(nomeSala) {
             location.href = "Sala.html";
+        }
+
+        var menu = false;
+        $(".menuIcon").click(function () {
+            if (!menu) {
+                $(".aba").css("margin-left", "-10");
+                $("#menu").attr('src', '../img/icons/exit.png');
+                $(".menuIcon").css("margin-left", "150");
+                menu = true;
+            }
+            else {
+                $(".aba").css("margin-left", "-1000");
+                $("#menu").attr('src', '../img/icons/menu.png');
+                $(".menuIcon").css("margin-left", "15");
+                menu = false;
+            }
+        })
+
+        var not = 0;
+
+        if (not == 0) {
+            $("number").hide();
+        }
+        else if (not < 10) {
+            $("number").html(not);
+        }
+        else {
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
         }
     </script>
 </body>
