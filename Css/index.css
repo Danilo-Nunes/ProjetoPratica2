@@ -36,7 +36,7 @@ body
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
-  
+
 .icon
 { 
     position: relative;
@@ -179,7 +179,6 @@ body
     width:17%;
 }
 
-
 number{
     background:red;
     border-radius:25px;
@@ -191,8 +190,6 @@ number{
     left:75px;
     bottom:100px;
 }
-
-
 
 .tarefas
 {
