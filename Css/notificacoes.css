@@ -1,4 +1,4 @@
-.salas
+.mural
 {
     position: absolute;
     /* float: left; */
@@ -11,60 +11,65 @@
     width: 80%;
 }
 
-.salas ul
+.mural ul
 {    
     list-style: none;
-    margin-top: 14%;
+    margin-top: 8%;
 }
 
-.salas ul li
+.mural ul li
 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 80%;
-    margin-bottom: 270px; 
+    margin-bottom: 140px; 
 }
 
-.nome
+.mural ul li .p .nome
 {  
     font-size: 16px;
     position: relative;
-    top: 40%;    
+    top: 30%;    
     float: center;
     text-align: center;
     color: Black;
     font-family: Baskerville Old Face;    
 }
 
-.p
+.mural ul li .p
 {   
     border: 5px solid midnightblue;
     background-color: ghostwhite;
     border-right: none;
     position: absolute;
-    height: 250px;
-    width: calc(95% - 250px);
+    height: 120px;
+    width: calc(95% - 120px);
     float: left;
+    transition:0.2s;
 }
 
-.img
+.mural ul li .img
 {
     position: absolute;
     border: 5px solid midnightblue;
     float: left;
-    left: calc(95% - 250px);
-    background: url("https://cdna.artstation.com/p/assets/images/images/010/031/280/large/alexey-skorov-japanese-classroom-001-interior-044-3-1.jpg?1522180170");
+    left: calc(95% - 120px);
+    background: url('../img/icons/user.png');
     background-size: cover; 
     background-repeat: no-repeat;
-    max-width: 250px;
-    min-width: 250px;
-    max-height: 250px;
-    min-height: 250px;
+    max-width: 120px;
+    min-width: 120px;
+    max-height: 120px;
+    min-height: 120px;
     transition:0.2s;
 }
 
-.img:hover
+.mural ul li .img:hover
 {   
+    border-color: #4461DE;
+}
+.mural ul li .p:hover
+{
     border-color: #4461DE;
 }

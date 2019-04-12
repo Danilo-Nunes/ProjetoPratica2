@@ -4,7 +4,7 @@
     /* float: left; */
     top: 15%;
     left: 9.5%;    
-    background-image: url("../img/planosDeFundo/3.jpg");
+    background: ghostwhite;
     border: 10px double midnightblue;
     overflow-y: scroll;
     height: 74%;
@@ -116,13 +116,11 @@
 .mural ul li .p
 {   
     border: 5px solid midnightblue;
-    background-color: ghostwhite;
     border-right: none;
     position: absolute;
     height: 120px;
     width: calc(95% - 120px);
     float: left;
-    transition:0.2s;
 }
 
 .mural ul li .img
@@ -143,9 +141,5 @@
 
 .mural ul li .img:hover
 {   
-    border-color: #4461DE;
-}
-.mural ul li .p:hover
-{
     border-color: #4461DE;
 }
