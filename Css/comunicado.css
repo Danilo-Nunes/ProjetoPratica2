@@ -27,7 +27,7 @@
     float: left;
     left: 2%;
     top: 14%;
-    background: url("../img/chico.png");
+    background: url("../img/icons/user.png");
     background-size: cover; 
     background-repeat: no-repeat;
     max-width: 250px;
@@ -68,9 +68,10 @@
 
 .descricao
 {   
-    position: relative;      
+    position: absolute;      
     float: left;
     margin-left: 3%;
+    margin-top: 8%;
     max-width: 95%;
     text-align: justify;
     color: Black;

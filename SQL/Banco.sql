@@ -80,8 +80,16 @@ create proc ComunicadoAluno
 as
 select * from Comunicado where codSala in (select codSala from AlunoSala where codAluno = @codAluno)
 
-
-
+--?
+CREATE TABLE [dbo].[Aluno]
+(
+[id] INT IDENTITY (1, 1) NOT NULL PRIMARY KEY,
+[ra] CHAR (5) NOT NULL,
+[nome] VARCHAR (50) NOT NULL,
+[usuario] VARCHAR(30) NOT NULL,
+[senha] VARCHAR(30) NOT NULL,
+[email] VARCHAR(40) NOT NULL,
+)
 
 
 
