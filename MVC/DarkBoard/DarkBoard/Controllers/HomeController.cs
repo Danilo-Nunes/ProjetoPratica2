@@ -10,8 +10,9 @@ namespace DarkBoard.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Index()
+        public ActionResult Index(string Id)
         {
+            ViewBag.id = Id;
             return View();
         }
 
@@ -20,10 +21,11 @@ namespace DarkBoard.Controllers
             return View();
         }
 
-        public ActionResult Login()
+        public ActionResult Login(string msg)
         {
             UsuarioDAO dao = new UsuarioDAO();
-            ViewBag.usuarios = dao;
+            ViewBag.usuarios = dao.Lista();
+            ViewBag.msg = msg;
             return View();
         }
     }

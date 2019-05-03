@@ -14,4 +14,10 @@
         <h1>Página inicial do projeto</h1>
     </div>
 </body>
+<script>
+    window.onload = function () {
+        if ("@ViewBag.id" == "")
+            window.location.href = "@Url.Action("Login","Home")";
+    }
+</script>
 </html>

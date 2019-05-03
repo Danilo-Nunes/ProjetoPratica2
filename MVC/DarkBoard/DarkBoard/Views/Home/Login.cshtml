@@ -13,18 +13,33 @@
 </head>
 <body>
     <div>
-        Nome de Usuário:
-        <input class='input' required="required" type='text' id="usu" name='usu.NomeUsu'>
-        Senha
-        <input class='input' required="required" type='password' id="senha" name='usu.Senha'>
-        <button onclick="Logar()">Logar</button>
+        <form action="/Usuario/Logar" id="form" method="post">
+            Nome de Usuário:
+            <input class='input' required="required" type='text' id="usu" name='usu.NomeUsu'>
+            Senha
+            <input class='input' required="required" type='password' id="senha" name='usu.Senha'>
+            <input type="submit" value="Logar" />
+        </form>
     </div>
     <script>
+        var user = [];
+        
         function Logar() {
-            @{ 
-
-            }
+            
         }
+
+        window.onload = function () {
+            if ("@ViewBag.msg" != "")
+                alert("@ViewBag.msg");
+        }
+
+
+           
+
+
+        
+
+        
     </script>
 </body>
 </html>
