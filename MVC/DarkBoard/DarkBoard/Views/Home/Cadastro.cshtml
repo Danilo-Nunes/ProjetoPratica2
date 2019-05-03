@@ -4,30 +4,37 @@
 }
 
 <h2>Cadastro</h2>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<form action="/Usuario/Adiciona" method="post">
-    <ul style="list-style:none;">
-        <li> Nome Completo:</li>
-        <li><input class='input' type='text' name='usu.nome'></li>
-        <li> Nome de Usuário:</li>
-        <li><input class='input' type='text' name='usu.usuario'></li>
-        <li>Senha</li>
-        <li><input class='input' type='password' id="senha"  name='usu.senha'></li>
-        <li>Confirme a Senha</li>
-        <li><input class='input' type='password' id="Csenha" name='senha'></li>
-        <li>Email:</li>
-        <li><input class='input' type='text' nome='usu.email'></li>
-        <li><input type='radio' onchange='Animacao("A")' name='rb' id='aluno' class='rbA' value='Aluno'><label class='lbA'>Aluno</label></li>
-        <li><input type='radio' onchange='Animacao("P")' name='rb' id='professor' class='rbP' value='Professor'>
-        <label class='lbP'>Professor</label></li>
-        <li><input type="submit" value="Cadastrar"></li>
-    </ul>
+<form action="/Usuario/Adiciona" id="form" method="post">
+    
+         Nome Completo:
+        <input class='input' required="required" type='text' id="nome" name='usu.Nome'>
+         Nome de Usuário:
+        <input class='input' required="required" type='text' id="usu" name='usu.NomeUsu'>
+        Senha
+        <input class='input' required="required" type='password' id="senha"  name='usu.Senha'>
+       Confirme a Senha
+        <input class='input' required="required" type='password'  id="Csenha" name='senha'>
+        Email:
+        <input class='input' required="required" type='text' id="email" name='usu.Email'>
+        <input type='radio' onchange='Animacao("A")' name='usu.Cargo' id='aluno' class='rbA' value='A'><label class='lbA'>Aluno</label>
+        <input type='radio' onchange='Animacao("P")' name='usu.Cargo' id='professor' class='rbP' value='P'>
+        <label class='lbP'>Professor</label>
+        <input type="submit" value="Cadastrar">
 </form>
 
 <script>
-    function Cadastrar() {
-        if ($(".senha").val == $(".Csenha").val)
-            $("form").submit();
-    }
+
+    $("#form").submit(function (e) {
+        var senha = $("#senha").val();
+        var cSenha = $("#Csenha").val();
+        if (senha != cSenha) {
+            e.preventDefault();
+            alert("Senhas não coincidem");
+            $("#senha").val() = "";
+            $("#Csenha").val() = "";
+        }
+    });
 </script>
 

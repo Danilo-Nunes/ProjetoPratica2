@@ -7,13 +7,13 @@ using DarkBoard.Models;
 
 namespace DarkBoard.DAO
 {
-    public class ProfessorDAO
+    public class UsuarioDAO
     {
         public void Adiciona(Usuario prof)
         {
             using (var context = new SalaContext())
             {
-                context.Professor.Add(prof);
+                context.Usuario.Add(prof);
                 context.SaveChanges();
             }
         }
@@ -21,24 +21,34 @@ namespace DarkBoard.DAO
         {
             using (var contexto = new SalaContext())
             {
-                return contexto.Professor.ToList();
+                return contexto.Usuario.ToList();
             }
         }
 
-        public Usuario BuscaPorCodigo(int codigo)
+        public Usuario BuscaPorId(int codigo)
         {
             using (var contexto = new SalaContext())
             {
-                return contexto.Professor
-                .Where(p => p.Codigo == codigo)
+                return contexto.Usuario
+                .Where(p => p.Id == codigo)
                 .FirstOrDefault();
             }
         }
-        public void Atualiza(Usuario Professor)
+
+        public Usuario BuscaPorNome(string usu)
         {
             using (var contexto = new SalaContext())
             {
-                contexto.Entry(Professor).State = EntityState.Modified;
+                return contexto.Usuario
+                .Where(p => p.NomeUsu == usu)
+                .FirstOrDefault();
+            }
+        }
+        public void Atualiza(Usuario Usuario)
+        {
+            using (var contexto = new SalaContext())
+            {
+                contexto.Entry(Usuario).State = EntityState.Modified;
                 contexto.SaveChanges();
             }
         }

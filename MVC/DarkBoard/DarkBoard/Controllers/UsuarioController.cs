@@ -16,9 +16,11 @@ namespace DarkBoard.Controllers
             return View();
         }
 
-        public ActionResult Adiciona(Usuario usu, string rb, string senha)
+        public ActionResult Adiciona(Usuario usu)
         {
             usu.Senha = Criptografia.Criptografar(usu.Senha);
+            UsuarioDAO dao = new UsuarioDAO();
+            dao.Adiciona(usu);
             return RedirectToAction("Index", "Home");
         }
     }

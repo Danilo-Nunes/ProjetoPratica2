@@ -9,11 +9,10 @@ namespace DarkBoard.DAO
 {
     public class SalaContext : DbContext
     {
-        public DbSet<Usuario> Aluno { get; set; }
-        public DbSet<Usuario> Professor { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=regulus;Initial Catalog=PR118207;User ID=pr118207;Password=pr118207");
+            optionsBuilder.UseSqlServer("Data Source=regulus;Initial Catalog=PR118207;User ID=PR118207;Password=PR118207");
         }
     }
 }
