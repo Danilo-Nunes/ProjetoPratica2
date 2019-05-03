@@ -5,3 +5,29 @@
 
 <h2>Cadastro</h2>
 
+<form action="/Usuario/Adiciona" method="post">
+    <ul style="list-style:none;">
+        <li> Nome Completo:</li>
+        <li><input class='input' type='text' name='usu.nome'></li>
+        <li> Nome de Usuário:</li>
+        <li><input class='input' type='text' name='usu.usuario'></li>
+        <li>Senha</li>
+        <li><input class='input' type='password' id="senha"  name='usu.senha'></li>
+        <li>Confirme a Senha</li>
+        <li><input class='input' type='password' id="Csenha" name='senha'></li>
+        <li>Email:</li>
+        <li><input class='input' type='text' nome='usu.email'></li>
+        <li><input type='radio' onchange='Animacao("A")' name='rb' id='aluno' class='rbA' value='Aluno'><label class='lbA'>Aluno</label></li>
+        <li><input type='radio' onchange='Animacao("P")' name='rb' id='professor' class='rbP' value='Professor'>
+        <label class='lbP'>Professor</label></li>
+        <li><input type="submit" value="Cadastrar"></li>
+    </ul>
+</form>
+
+<script>
+    function Cadastrar() {
+        if ($(".senha").val == $(".Csenha").val)
+            $("form").submit();
+    }
+</script>
+
