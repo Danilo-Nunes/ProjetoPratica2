@@ -19,5 +19,6 @@ namespace DarkBoard.Models
         [Required, StringLength(40)]
         public string Email { get; set; }
         public char Cargo { get; set; }
+        public byte Img { get; set; }
     }
 }

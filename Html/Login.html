@@ -27,30 +27,7 @@
             </div>
         </div>
         <script type="text/javascript">
-            function Login()
-            {
-                if(!($("#user").val() == "" || $("#senha").val() == "" ))
-                {
-                    var obj = new Object();
-                    obj.user = $("#user").val();
-                    obj.senha = Encripta($("#senha").val());
-                    console.log(obj);
-
-                    if($("#lembrar").prop("checked"))
-                        localStorage.setItem("User", obj.user);
-
-                    sessionStorage.setItem("User", obj.user);
-
-                    //sessionStorage.clear();//Apagar Deps
-                    //localStorage.clear();//Apagar Deps
-                    
-                    location.href='Home.html';
-
-                }
-                else{
-                    alert("Valores necessários não inseridos");
-                }
-            }
+           
         </script>
     </body>
 </html>
