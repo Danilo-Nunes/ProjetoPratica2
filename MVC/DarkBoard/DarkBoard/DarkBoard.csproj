@@ -170,6 +170,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Estilos\Cadastro.css" />
     <Content Include="Estilos\Login.css" />
+    <Content Include="Estilos\Usuario.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
@@ -206,6 +207,7 @@
     <Content Include="Views\Home\Cadastro.cshtml" />
     <Content Include="Views\Usuario\Adiciona.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Usuario.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

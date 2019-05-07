@@ -33,7 +33,7 @@
                 <number></number>
             </li>
         </a>
-        <a>
+        <a href="Usuario/@ViewBag.Usu.Id">
             <li>@{ 
                 var base64 = Convert.ToBase64String(ViewBag.Usu.Img);
                 var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
@@ -44,17 +44,17 @@
                      title='Usuario'>
             </li>
         </a>
-        <a href='Agenda.html'>
+        <a href='Agenda'>
             <li>
                 <img class='icon' src="@Url.Content("~/img/icons/checklist.png")" title='Tarefas'>
             </li>
         </a>
-        <a href='Salas.html'>
+        <a href='Salas'>
             <li>
                 <img class='icon' src="@Url.Content("~/img/icons/classroom.png")" title='Salas'>
             </li>
         </a>
-        <a href='Calendário.html'>
+        <a href='Calendário'>
             <li>
                 <img class='icon' src="@Url.Content("~/img/icons/calendario.png")" title='Calendario'>
             </li>
