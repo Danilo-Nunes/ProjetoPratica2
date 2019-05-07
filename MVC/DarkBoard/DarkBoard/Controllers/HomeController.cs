@@ -25,15 +25,14 @@ namespace DarkBoard.Controllers
             return View();
         }
 
-        public ActionResult Cadastro()
+        public ActionResult Cadastro(string msg)
         {
+            ViewBag.msg = msg;
             return View();
         }
 
         public ActionResult Login(string msg)
         {
-            UsuarioDAO dao = new UsuarioDAO();
-            ViewBag.usuarios = dao.Lista();
             ViewBag.msg = msg;
             return View();
         }

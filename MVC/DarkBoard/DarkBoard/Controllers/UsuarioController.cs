@@ -19,12 +19,14 @@ namespace DarkBoard.Controllers
 
         public ActionResult Adiciona(Usuario usu)
         {
+            UsuarioDAO dao = new UsuarioDAO();
+            if(dao.BuscaPorNome(usu.NomeUsu) != null)
+                return RedirectToAction("Cadastro", new RouteValueDictionary(new { controller = "Home", action = "Cadastro", msg = "Nome indisponivel" }));
             var file = Request.Files[0];
             byte[] imageBytes = new byte[file.InputStream.Length + 1];          
             file.InputStream.Read(imageBytes, 0, imageBytes.Length);
             usu.Img = imageBytes;
-            usu.Senha = Criptografia.Criptografar(usu.Senha);
-            UsuarioDAO dao = new UsuarioDAO();
+            usu.Senha = Criptografia.Criptografar(usu.Senha);            
             dao.Adiciona(usu);
             return RedirectToAction("Login", new RouteValueDictionary(new { controller = "Home", action = "Login", msg = "" }));
         }

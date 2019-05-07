@@ -39,8 +39,9 @@
                 var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
             }
                 <img class='icon' src="@imgSrc" style="border-radius: 50%;
-    height: 90px;
-    width: 90px;" title='Usuario'>
+                                                       height: 90px;
+                                                       width: 90px;"
+                     title='Usuario'>
             </li>
         </a>
         <a href='Agenda.html'>
@@ -127,6 +128,7 @@
 
     <script type="text/javascript">
         var menu = false;
+        localStorage.setItem("User", @ViewBag.Usu.Id);
         $(".menuIcon").click(function () {
             if (!menu) {
                 $(".aba").css("margin-left", "-10");
