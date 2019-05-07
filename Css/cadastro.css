@@ -25,13 +25,13 @@ body{
 #CadastroSuper .lbA{
     position:fixed;
     left:550px;
-    bottom: 615px;
+    bottom: 600px;
 }
 
 #CadastroSuper .lbP{
     position:fixed;
     left:980px;
-    bottom: 615px;
+    bottom: 600px;
 }
 
 #Cadastro{
@@ -39,7 +39,7 @@ body{
     border: solid 4px black;
     border-radius: 10px;
     position:fixed;
-    margin-top: 100px;
+    margin-top: 118px;
     margin-left: 475px;
     opacity: 0;
     height: 550px;

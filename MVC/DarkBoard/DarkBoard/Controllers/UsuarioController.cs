@@ -19,6 +19,10 @@ namespace DarkBoard.Controllers
 
         public ActionResult Adiciona(Usuario usu)
         {
+            var file = Request.Files[0];
+            byte[] imageBytes = new byte[file.InputStream.Length + 1];          
+            file.InputStream.Read(imageBytes, 0, imageBytes.Length);
+            usu.Img = imageBytes;
             usu.Senha = Criptografia.Criptografar(usu.Senha);
             UsuarioDAO dao = new UsuarioDAO();
             dao.Adiciona(usu);

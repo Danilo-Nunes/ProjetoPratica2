@@ -34,8 +34,13 @@
             </li>
         </a>
         <a>
-            <li>
-                <img class='icon' src="@Url.Content("~/img/icons/user.png")" title='Usuario'>
+            <li>@{ 
+                var base64 = Convert.ToBase64String(ViewBag.Usu.Img);
+                var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+            }
+                <img class='icon' src="@imgSrc" style="border-radius: 50%;
+    height: 90px;
+    width: 90px;" title='Usuario'>
             </li>
         </a>
         <a href='Agenda.html'>
@@ -155,8 +160,5 @@
 
 </html>
 <script>
-    window.onload = function () {
-        if ("@ViewBag.id" == "")
-            window.location.href = "@Url.Action("Login","Home")";
-    }
+    
 </script>

@@ -15,6 +15,11 @@ body {
     font-family: Arial, Century Gothic, Baskerville Old Face;
     overflow: hidden;
 }
+#usu {
+    border-radius: 50%;
+    height: 512px;
+    width: 512px;
+}
 
 .icon {
     position: relative;
