@@ -22,8 +22,10 @@
         }
 
 .avatar {
-    margin-top: 5px;
-    width: 30%;
+    margin-top: -20px;
+    border-radius:50px;
+    width: 136px;
+    height:136px;
     margin-left: 20px;
 }
 
@@ -31,7 +33,7 @@
     margin-top: 0px;
     margin-left: 15px;
     font-family: Freestyle Script;
-    font-size: 30px;
+    font-size: 40px;
     text-decoration: none;
 }
 
@@ -41,7 +43,9 @@
     border: black 4px solid;
     height: 175px;
 }
-
-    .desc p {
-        text-align: left;
-    }
+.image-upload > input {
+    display: none;
+}
+.desc p {
+   text-align: left;
+ }

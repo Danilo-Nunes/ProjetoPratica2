@@ -169,6 +169,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Estilos\Cadastro.css" />
+    <Content Include="Estilos\Index.css" />
     <Content Include="Estilos\Login.css" />
     <Content Include="Estilos\Usuario.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -208,6 +209,8 @@
     <Content Include="Views\Usuario\Adiciona.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Usuario.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Agenda.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
