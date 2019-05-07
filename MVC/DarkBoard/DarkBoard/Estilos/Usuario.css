@@ -49,3 +49,11 @@
 .desc p {
    text-align: left;
  }
+
+.Edit {
+    filter: invert(100%);
+    height:8%;
+    margin-top:10px;
+    position:fixed;
+    left:980px;
+}
