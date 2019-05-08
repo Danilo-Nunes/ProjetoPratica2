@@ -6,7 +6,8 @@ nomeUsu varchar(50) not null,
 cargo char(1) not null,
 senha varchar(50) not null,
 img varchar(100) not null,
-email varchar(50) not null
+email varchar(50) not null,
+descricao varchar(1000) not null
 )
 
 

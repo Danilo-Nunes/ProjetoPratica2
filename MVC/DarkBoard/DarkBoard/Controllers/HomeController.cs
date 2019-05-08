@@ -51,5 +51,19 @@ namespace DarkBoard.Controllers
             return View();
 
         }
+
+        public ActionResult Agenda(string id)
+        {
+            if (id == null)
+                return /*RedirectToAction("Login");*/ View();
+
+            UsuarioDAO dao = new UsuarioDAO();
+
+            Usuario usuario = dao.BuscaPorId(int.Parse(id));
+
+            ViewBag.Usu = usuario;
+
+            return View();
+        }
     }
 }

@@ -1,4 +1,8 @@
-﻿<html>
+﻿@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
 <head>
     <title>Usuario - Darkboard</title>
     <link href="~/Estilos/Home.css" rel="stylesheet" />
@@ -12,38 +16,33 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <body>
-    <footer class='footer'>
-        <div>Icons from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div><br>
-        Criado por João Victor Javitti Alves e Danilo de Oliveira Nunes, Direitos Reservados
-    </footer>
-
-    <ul class='aba'>
-        <a><li><img class='icon' src="../img/icons/bell.png" title='Notificacoes'><number></number></li></a>
-        <a href='Agenda.html'><li><img class='icon' src="../img/icons/checklist.png" title='Tarefas'></li></a>
-        <a href='Home.html'><li><img class='icon' src="../img/icons/Home.png" title='Home'></li></a>
-        <a href='Salas.html'><li><img class='icon' src="../img/icons/classroom.png" title='Salas'></li></a>
-        <a href='Calendário.html'><li><img class='icon' src="../img/icons/calendario.png" title='Calendario'></li></a>
-    </ul>
-
-    <ul class='menu'>
-        <li><img id='menu' class='menuIcon' src='../img/icons/menu.png' title='Menu'></li>
-        <br>
-        <li><input id='pesq' type='text' class='pesquisa' value=' '></li>
-        <li><img id='pesqIcon' class='pesquisaIcon' src='../img/icons/search.png'></li>
-        <li class='logo'><a href='#'><img src='../img/logo.png'></a></li>
-    </ul>
+    
     @{
         var base64 = Convert.ToBase64String(ViewBag.Usu.Img);
         var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
     }
     <div class='usuario'>
         <p class='nome' id='nome'>@ViewBag.Usu.NomeUsu</p>
-        <img class='avatar' src='@imgSrc'>
+        <div class='image-upload'>
+            <label for='file-input'>
+                <div id='imagemLocal'>
+                    <img style="margin-top: -20px;
+                         border-radius:150px;
+                         width: 210px;
+                         height:210px;
+                         margin-left: 20px;" src='@imgSrc'>
+                </div>
+            </label>
+            <input type='file' accept="image/png, image/jpeg, image/gif" name="file" onchange='TrocaImg(this.files)' id='file-input'>
+        </div>
+
 
         <ul class='Info'>
             <li id='nomeComp'>@ViewBag.Usu.Nome</li>
             <li id='email'>@ViewBag.Usu.Email</li>
         </ul>
+
+        <img class="Edit" src="@Url.Content("~/img/icons/edit.png")" />
         <div class='desc'>
             Descrição:
             <p>(Insert uma linda descrição Aqui)</p>
@@ -52,22 +51,21 @@
 
     <script>
 
-        var menu = false;
+        localStorage.setItem("User", @ViewBag.Usu.Id);
         $(".menuIcon").click(function () {
             if (!menu) {
                 $(".aba").css("margin-left", "-10");
-                $("#menu").attr('src', '../img/icons/exit.png');
+                $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
                 $(".menuIcon").css("margin-left", "150");
                 menu = true;
             }
             else {
                 $(".aba").css("margin-left", "-1000");
-                $("#menu").attr('src', '../img/icons/menu.png');
+                $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
                 $(".menuIcon").css("margin-left", "15");
                 menu = false;
             }
         })
-
 
         var not = 0;
 
@@ -81,6 +79,32 @@
             $("number").html(not)
             $("number").css('padding-right', '5px');
             $("number").css('padding-left', '5px');
+        }
+
+        function TrocaImg(files) {
+            var imgLocal = document.getElementById('imagemLocal')
+            var file = files[0];
+
+            var form = document.getElementById('file-form');
+
+            img = document.createElement("img");
+
+            if (file != null) {
+                img.file = file;
+                var reader = new FileReader();
+                reader.onload = (function (aImg) { return function (e) { aImg.src = e.target.result; }; })(img);
+                reader.readAsDataURL(file);
+            }
+            else {
+                img.src = "@imgSrc";
+            }
+
+            img.style = 'margin-top: -20px; border-radius:150px; width: 210px; height: 210px; margin-left: 20px;';
+
+
+            imgLocal.innerHTML = '';
+
+            imgLocal.appendChild(img);
         }
 
     </script>
