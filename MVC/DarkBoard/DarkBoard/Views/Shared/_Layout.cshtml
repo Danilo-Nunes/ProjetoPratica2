@@ -2,7 +2,7 @@
 <head>
     <title>Darkboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='shortcut icon' href='../img/icon.ico' sizes="1000x1000">
+    <link rel='shortcut icon' href='@Url.Content("~/img/icon.ico")' sizes="1000x1000">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src='../JavaScript/Index.js'></script>
     <link href="~/Estilos/Home.css" rel="stylesheet" />
@@ -69,7 +69,7 @@
             <img id='pesqIcon' class='pesquisaIcon' src='@Url.Content("~/img/icons/search.png")'>
         </li>
         <li class='logo'>
-            <a href='Home.html'>
+            <a href='/Home/Index/@ViewBag.Usu.Id'>
                 <img src='@Url.Content("~/img/logo.png")'>
             </a>
         </li>

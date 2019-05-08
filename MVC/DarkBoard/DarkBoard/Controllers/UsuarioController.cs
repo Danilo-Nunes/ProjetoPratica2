@@ -56,5 +56,22 @@ namespace DarkBoard.Controllers
 
             return RedirectToAction("Index", new RouteValueDictionary(new { controller = "Home", action = "Index", Id = usuario.Id.ToString()}));
         }
+
+        public ActionResult Atualiza(Usuario usuario)
+        {
+            var file = Request.Files[0];         
+            UsuarioDAO dao = new UsuarioDAO();
+            Usuario usu = dao.BuscaPorId(usuario.Id);
+            if (file.ContentLength > 0)
+            {
+                byte[] imageBytes = new byte[file.InputStream.Length + 1];
+                file.InputStream.Read(imageBytes, 0, imageBytes.Length);
+                usu.Img = imageBytes;
+            }
+            usu.Descricao = usuario.Descricao;
+            dao.Atualiza(usu);
+            return RedirectToAction("Usuario", new RouteValueDictionary(new { controller = "Home", action = "Usuario", Id = usuario.Id.ToString() }));
+
+        }
     }
 }

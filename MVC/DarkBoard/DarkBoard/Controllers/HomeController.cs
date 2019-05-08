@@ -12,7 +12,8 @@ namespace DarkBoard.Controllers
     {
         // GET: Home
         public ActionResult Index(string Id)
-        {      
+        {
+            Id = "9";
             if (Id == null)
                 return RedirectToAction("Login");
 
@@ -54,10 +55,14 @@ namespace DarkBoard.Controllers
 
         public ActionResult Agenda(string id)
         {
+            id = "9";
             if (id == null)
-                return /*RedirectToAction("Login");*/ View();
+                return RedirectToAction("Login");
 
             UsuarioDAO dao = new UsuarioDAO();
+            CompromissoDAO d = new CompromissoDAO();
+
+            ViewBag.Compromissos = d.BuscaPorUsuario(int.Parse(id));
 
             Usuario usuario = dao.BuscaPorId(int.Parse(id));
 

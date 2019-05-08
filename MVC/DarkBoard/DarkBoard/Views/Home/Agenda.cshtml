@@ -3,50 +3,169 @@
     ViewBag.Title = "Agenda";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Agenda</h2>
+<link href="~/Estilos/Agenda.css" rel="stylesheet" />
+<form method="post" action="/Compromisso/Adiciona"
+<ul class='inserc'>
+    <li>Evento: <input class='input' name="comp.Texto" type="text" id='evento'></li>
+    <li>Data:<input class='input' name="comp.DataComp" type='text' id='data' value='DD/MM/AAAA HH:MM'></li>
+    <input name="comp.CodUsuario" style="display:none" value="@ViewBag.Usu.Id" />
+    <li><input type="submit" class='btnInsec' value="Inserir*"></li>
+</ul>
+</form>
+
+<div class='agenda' id='agenda'>
+    <ul>
+        @foreach (var comp in ViewBag.Compromissos)
+        {
+            <li><div class="textoEvento">@comp.Texto - @comp.DataComp.ToString()</div>
+            <div class="botao"><button class='btn'>Concluída</button></div></li>
+        }
+    </ul>
+</div>
+
+
+
 <script type="text/javascript">
+    var not = 0;
 
-            var not = 0;
+    $('#data').focusin(function () {
+        if (document.getElementById('data').value == "DD/MM/AAAA HH:MM")
+            document.getElementById('data').value = "";
+    });
 
-            if (not == 0) {
-                $("number").hide();
-            }
-            else if (not < 10) {
-                $("number").html(not);
-            }
-            else {
-                $("number").html(not)
-                $("number").css('padding-right', '5px');
-                $("number").css('padding-left', '5px');
-            }
-            var menu = false;
-            $(".menuIcon").click(function () {
-                if (!menu) {
-                    $(".aba").css("margin-left", "-10");
-                    $("#menu").attr('src', '../img/icons/exit.png');
-                    $(".menuIcon").css("margin-left", "150");
-                    menu = true;
+    $('#data').focusout(function () {
+        var d = document.getElementById('data');
+        if (d.value == "") {
+            d.value = "DD/MM/AAAA HH:MM";
+        }
+    });
+
+    if (not == 0) {
+        $("number").hide();
+    }
+    else if (not < 10) {
+        $("number").html(not);
+    }
+    else {
+        $("number").html(not)
+        $("number").css('padding-right', '5px');
+        $("number").css('padding-left', '5px');
+    }
+    var menu = false;
+    $(".menuIcon").click(function () {
+        if (!menu) {
+            $(".aba").css("margin-left", "-10");
+            $("#menu").attr('src', '../img/icons/exit.png');
+            $(".menuIcon").css("margin-left", "150");
+            menu = true;
+        }
+        else {
+            $(".aba").css("margin-left", "-1000");
+            $("#menu").attr('src', '../img/icons/menu.png');
+            $(".menuIcon").css("margin-left", "15");
+            menu = false;
+        }
+    })
+
+
+    function Inserir() {
+        tacertu = true;
+        ano = document.getElementById('data').value.substring(6, 10);
+
+        if (ano == "")
+            tacertu = false;
+        d = new Date();
+
+        if (isNaN(ano))
+            tacertu = false;
+        if (d.getYear() > ano - 1900)
+            tacertu = false;
+
+        mes = document.getElementById('data').value.substring(3, 5);
+
+        if (mes == "")
+            tacertu = false;
+
+        if (isNaN(mes))
+            tacertu = false;
+
+        if (d.getMonth() + 1 > mes && d.getYear() >= ano - 1900)
+            tacertu = false;
+
+        if (mes > 12)
+            tacertu = false;
+
+        dia = document.getElementById('data').value.substring(0, 2);
+
+        if (dia = "")
+            tacertu = false;
+
+        if (isNaN(dia))
+            tacertu = false;
+        if (d.getDate() > dia && d.getMonth() + 1 >= mes && d.getYear() >= ano - 1900)
+            tacertu = false;
+
+        switch (mes) {
+            case "2":
+                {
+                    ano = document.getElementById("ano").value;
+                    var df;
+                    console.log(ano);
+                    if (ano % 4 == 0 && ano % 100 != 0 || ano % 400 == 0)
+                        if (dia > 29)
+                            tacertu = false;
+                        else
+                            if (dia > 28)
+                                tacertu = false;
                 }
-                else {
-                    $(".aba").css("margin-left", "-1000");
-                    $("#menu").attr('src', '../img/icons/menu.png');
-                    $(".menuIcon").css("margin-left", "15");
-                    menu = false;
+                break;
+            case "4":
+            case "6":
+            case "9":
+            case "11":
+                {
+                    if (dia > 30)
+                        tacertu = false;
                 }
-            })
+                break;
+            case "1":
+            case "3":
+            case "5":
+            case "7":
+            case "8":
+            case "10":
+            case "12":
+                {
+                    if (dia > 31)
+                        tacertu = false;
+                }
+        }
 
 
-            var not = 0;
+        hora = document.getElementById('data').value.substring(13, 15);
+        if (hora == "")
+            tacertu = false;
 
-            if (not == 0) {
-                $("number").hide();
-            }
-            else if (not < 10) {
-                $("number").html(not);
-            }
-            else {
-                $("number").html(not)
-                $("number").css('padding-right', '5px');
-                $("number").css('padding-left', '5px');
-            }
+        if (isNaN(hora))
+            tacertu = false;
+
+        if (hora > 23)
+            tacertu = false;
+
+        min = document.getElementById("data").value.substring(17, 19);
+        if (min == "")
+            tacertu = false;
+
+        if (isNaN(min))
+            tacertu = false;
+
+        if (min > 59)
+            tacertu = false;
+
+        if (tacertu == false) {
+            $("#data").val("");
+            $("#data").focus();
+            alert('Digite uma data válida');
+        }
+    }
 </script>

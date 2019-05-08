@@ -6,7 +6,7 @@
     height: 75.7%;
     position: fixed;
     top: 110px;
-    left: 25.5%;
+    left: 27.5%;
     background-color: #101633;
     font-family: DejaVu Sans Light;
 }
@@ -38,22 +38,29 @@
 }
 
 .desc {
+    text-align: left;
+    z-index: 0;
     background-color: #17365c;
     border-radius: 15px;
-    border: black 4px solid;
-    height: 175px;
+    border: black 3px solid;
+    height: 183px;
+    font-size: 20px;
+    position: relative;
+    left: -5px;
+    width: 650px;
+    color: white;
 }
 .image-upload > input {
     display: none;
 }
-.desc p {
-   text-align: left;
- }
+
 
 .Edit {
+    z-index: 1;
     filter: invert(100%);
-    height:8%;
-    margin-top:10px;
-    position:fixed;
-    left:980px;
+    height: 6%;
+    margin-top: -10px;
+    position: fixed;
+    bottom: 260px;
+    left: 1030px;
 }

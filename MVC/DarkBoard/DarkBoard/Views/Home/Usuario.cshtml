@@ -8,9 +8,7 @@
     <link href="~/Estilos/Home.css" rel="stylesheet" />
     <link href="~/Estilos/Usuario.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='shortcut icon' href='../img/icon.ico' sizes="1000x1000">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src='../JavaScript/Index.js'></script>
 
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -22,35 +20,58 @@
         var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
     }
     <div class='usuario'>
-        <p class='nome' id='nome'>@ViewBag.Usu.NomeUsu</p>
-        <div class='image-upload'>
-            <label for='file-input'>
-                <div id='imagemLocal'>
-                    <img style="margin-top: -20px;
+        <form action="/Usuario/Atualiza" id="form" method="post" enctype = "multipart/form-data">
+            <p class='nome' id='nome'>@ViewBag.Usu.NomeUsu</p>
+            <div class='image-upload'>
+                <label for='file-input'>
+                    <div id='imagemLocal'>
+                        <img style="margin-top: -20px;
                          border-radius:150px;
                          width: 210px;
                          height:210px;
                          margin-left: 20px;" src='@imgSrc'>
-                </div>
-            </label>
-            <input type='file' accept="image/png, image/jpeg, image/gif" name="file" onchange='TrocaImg(this.files)' id='file-input'>
-        </div>
+                    </div>
+                </label>
+                <input type='file' accept="image/png, image/jpeg, image/gif" name="file" onchange='TrocaImg(this.files)' id='file-input'>
+            </div>
 
 
-        <ul class='Info'>
-            <li id='nomeComp'>@ViewBag.Usu.Nome</li>
-            <li id='email'>@ViewBag.Usu.Email</li>
-        </ul>
+            <ul class='Info'>
+                <li id='nomeComp'>@ViewBag.Usu.Nome</li>
+                <li id='email'>@ViewBag.Usu.Email</li>
+            </ul>
 
-        <img class="Edit" src="@Url.Content("~/img/icons/edit.png")" />
-        <div class='desc'>
-            Descrição:
-            <p>(Insert uma linda descrição Aqui)</p>
-        </div>
+            <img class="Edit" src="@Url.Content("~/img/icons/edit.png")" />
+
+            <textarea readonly="readonly" name="usuario.Descricao" id="desc" class='desc'>
+                @if (ViewBag.Usu.Descricao != null)
+                {
+                    @ViewBag.Usu.Descricao
+                }
+                else
+                {
+                     <text>(Insert uma descrição aqui)</text>
+                }
+            </textarea>
+            <input name="usuario.Id" style="display:none;" value="@ViewBag.Usu.Id" />
+        </form>
     </div>
 
     <script>
-
+        var editando = false;
+        $(".Edit").click(function () {
+            if (!editando) {
+                $("#desc").prop("readonly", false);
+                $(".desc").focus();
+                $(".desc").val("");
+                $(".Edit").attr('src', '@Url.Content("~/img/icons/save.png")');
+                editando = true;
+            }
+            else {
+                console.log($("#desc").val());
+                $("#form").submit();
+            }
+        })
         localStorage.setItem("User", @ViewBag.Usu.Id);
         $(".menuIcon").click(function () {
             if (!menu) {
