@@ -172,6 +172,7 @@
     <Content Include="Estilos\Cadastro.css" />
     <Content Include="Estilos\Index.css" />
     <Content Include="Estilos\Login.css" />
+    <Content Include="Estilos\Salas.css" />
     <Content Include="Estilos\Usuario.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -190,13 +191,17 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Criptografia.cs" />
+    <Compile Include="DAO\AlunoSalaDBO.cs" />
     <Compile Include="DAO\CompromissoDAO.cs" />
+    <Compile Include="DAO\SalaDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="DAO\SalaContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AlunoSala.cs" />
     <Compile Include="Models\Compromisso.cs" />
+    <Compile Include="Models\Sala.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -215,6 +220,7 @@
     <Content Include="Views\Home\Usuario.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Agenda.cshtml" />
+    <Content Include="Views\Home\Salas.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

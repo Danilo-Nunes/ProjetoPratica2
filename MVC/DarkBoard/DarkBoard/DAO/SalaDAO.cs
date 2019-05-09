@@ -6,57 +6,57 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DarkBoard.DAO
 {
-    public class CompromissoDAO
+    public class SalaDAO
     {
-        public void Adiciona(Compromisso comp)
+        public void Adiciona(Sala comp)
         {
             using (var context = new SalaContext())
             {
-                context.Compromisso.Add(comp);
+                context.Sala.Add(comp);
                 context.SaveChanges();
             }
         }
-        public IList<Compromisso> Lista()
+        public IList<Sala> Lista()
         {
             using (var contexto = new SalaContext())
             {
-                return contexto.Compromisso.ToList();
+                return contexto.Sala.ToList();
             }
         }
 
-        public Compromisso BuscaPorId(int codigo)
+        public Sala BuscaPorId(int codigo)
         {
             using (var contexto = new SalaContext())
             {
-                return contexto.Compromisso
+                return contexto.Sala
                 .Where(p => p.Id == codigo)
                 .FirstOrDefault();
             }
         }
 
-        public IList<Compromisso> BuscaPorUsuario(int id)
+        public IList<Sala> BuscaPorProfessor(int id)
         {
             using (var contexto = new SalaContext())
             {
-                return contexto.Compromisso
-                .Where(p => p.CodUsuario == id)
+                return contexto.Sala
+                .Where(p => p.CodProfessor == id)
                 .ToList();
             }
         }
-        public void Atualiza(Compromisso Compromisso)
+        public void Atualiza(Sala Sala)
         {
             using (var contexto = new SalaContext())
             {
-                contexto.Entry(Compromisso).State = EntityState.Modified;
+                contexto.Entry(Sala).State = EntityState.Modified;
                 contexto.SaveChanges();
             }
         }
 
-        public void Remove(Compromisso compromisso)
+        public void Remove(Sala Sala)
         {
             using (var contexto = new SalaContext())
             {
-                contexto.Remove(contexto.Compromisso.Single(a => a.Id == compromisso.Id));
+                contexto.Remove(contexto.Sala.Single(a => a.Id == Sala.Id));
                 contexto.SaveChanges();
             }
         }
