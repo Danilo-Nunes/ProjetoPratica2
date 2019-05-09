@@ -14,14 +14,29 @@
 </form>
 
 <div class='agenda' id='agenda'>
-    <ul>
-        @foreach (var comp in ViewBag.Compromissos)
-        {
-            <li><div class="textoEvento">@comp.Texto - @comp.DataComp.ToString()</div>
-            <div class="botao"><button class='btn'>Concluída</button></div></li>
-        }
-    </ul>
-</div>
+    @if (ViewBag.Compromissos.Count > 0)
+    {
+        <ul>
+
+            @foreach (var comp in ViewBag.Compromissos)
+            {
+            <li>
+                <div class="textoEvento">@comp.Texto - @comp.DataComp.ToString()</div>
+                <form method="post" action="/Compromisso/Remove">
+                    <input name="comp.Id" value="@comp.Id" style="display:none;" />
+                    <input name="comp.CodUsuario" style="display:none" value="@ViewBag.Usu.Id" />
+                    <div class="botao"><input type="submit" value="Concluída!" class='btn'></div>
+                </form>
+            </li>
+            }                   
+        </ul>
+    }
+    else
+    {
+        <text>Nada Programado por enquanto!</text>
+    }
+    </div>
+
 
 
 
@@ -52,20 +67,20 @@
         $("number").css('padding-left', '5px');
     }
     var menu = false;
-    $(".menuIcon").click(function () {
-        if (!menu) {
-            $(".aba").css("margin-left", "-10");
-            $("#menu").attr('src', '../img/icons/exit.png');
-            $(".menuIcon").css("margin-left", "150");
-            menu = true;
-        }
-        else {
-            $(".aba").css("margin-left", "-1000");
-            $("#menu").attr('src', '../img/icons/menu.png');
-            $(".menuIcon").css("margin-left", "15");
-            menu = false;
-        }
-    })
+     $(".menuIcon").click(function () {
+            if (!menu) {
+                $(".aba").css("margin-left", "-10");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+                $(".menuIcon").css("margin-left", "150");
+                menu = true;
+            }
+            else {
+                $(".aba").css("margin-left", "-1000");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+                $(".menuIcon").css("margin-left", "15");
+                menu = false;
+            }
+        })
 
 
     function Inserir() {

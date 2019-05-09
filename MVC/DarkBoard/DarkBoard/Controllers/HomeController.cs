@@ -13,7 +13,6 @@ namespace DarkBoard.Controllers
         // GET: Home
         public ActionResult Index(string Id)
         {
-            Id = "9";
             if (Id == null)
                 return RedirectToAction("Login");
 
@@ -55,7 +54,6 @@ namespace DarkBoard.Controllers
 
         public ActionResult Agenda(string id)
         {
-            id = "9";
             if (id == null)
                 return RedirectToAction("Login");
 
@@ -70,5 +68,24 @@ namespace DarkBoard.Controllers
 
             return View();
         }
+
+        public ActionResult Salas(string id)
+        {
+            id = "9";
+            if (id == null)
+                return RedirectToAction("Login");
+            UsuarioDAO dao = new UsuarioDAO();
+            AlunoSalaDBO d = new AlunoSalaDBO();
+            SalaDAO DAO = new SalaDAO();
+
+            IList<AlunoSala> salasAux = d.BuscaPorSalas(int.Parse(id));
+
+            Usuario usuario = dao.BuscaPorId(int.Parse(id));
+
+            ViewBag.Usu = usuario;
+
+            return View();
+        }
     }
+
 }

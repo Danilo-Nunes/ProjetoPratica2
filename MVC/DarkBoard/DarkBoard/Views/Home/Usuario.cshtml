@@ -20,7 +20,7 @@
         var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
     }
     <div class='usuario'>
-        <form action="/Usuario/Atualiza" id="form" method="post" enctype = "multipart/form-data">
+        <form action="/Usuario/Atualiza" id="form" method="post" enctype="multipart/form-data">
             <p class='nome' id='nome'>@ViewBag.Usu.NomeUsu</p>
             <div class='image-upload'>
                 <label for='file-input'>
@@ -32,7 +32,7 @@
                          margin-left: 20px;" src='@imgSrc'>
                     </div>
                 </label>
-                <input type='file' accept="image/png, image/jpeg, image/gif" name="file" onchange='TrocaImg(this.files)' id='file-input'>
+                <input type='file' disabled="disabled" accept="image/png, image/jpeg, image/gif" name="file" onchange='TrocaImg(this.files)' id='file-input'>
             </div>
 
 
@@ -42,6 +42,7 @@
             </ul>
 
             <img class="Edit" src="@Url.Content("~/img/icons/edit.png")" />
+            <img class="Exit" src="@Url.Content("~/img/icons/logout.png")" />
 
             <textarea readonly="readonly" name="usuario.Descricao" id="desc" class='desc'>
                 @if (ViewBag.Usu.Descricao != null)
@@ -62,6 +63,7 @@
         $(".Edit").click(function () {
             if (!editando) {
                 $("#desc").prop("readonly", false);
+                $('#file-input').removeAttr('disabled');
                 $(".desc").focus();
                 $(".desc").val("");
                 $(".Edit").attr('src', '@Url.Content("~/img/icons/save.png")');
@@ -71,6 +73,10 @@
                 console.log($("#desc").val());
                 $("#form").submit();
             }
+        })
+
+        $(".Exit").click(function () {
+            window.location = "/Home/Login/"
         })
         localStorage.setItem("User", @ViewBag.Usu.Id);
         $(".menuIcon").click(function () {

@@ -16,5 +16,12 @@ namespace DarkBoard.Controllers
             dao.Adiciona(comp);
             return RedirectToAction("Agenda", new RouteValueDictionary(new { controller = "Home", action = "Agenda", Id = comp.CodUsuario.ToString() }));
         }
+
+        public ActionResult Remove(Compromisso comp)
+        {
+            CompromissoDAO dao = new CompromissoDAO();
+            dao.Remove(comp);
+            return RedirectToAction("Agenda", new RouteValueDictionary(new { controller = "Home", action = "Agenda", Id = comp.CodUsuario.ToString() }));
+        }
     }
 }
