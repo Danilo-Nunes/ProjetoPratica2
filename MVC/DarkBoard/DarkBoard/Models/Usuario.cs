@@ -8,26 +8,17 @@ namespace DarkBoard.Models
 {
     public class Usuario
     {
-        int codigo;
-        string nome, usuario, senha, email;
 
-        public Usuario(int codigo, string ra, string nome, string usuario, string senha, string email)
-        {
-            this.codigo = codigo;
-            this.nome = nome;
-            this.usuario = usuario;
-            this.senha = senha;
-            this.email = email;
-        }
-
-        public int Codigo { get => codigo; set => codigo = value; }
-        [Required, StringLength(50)]
-        public string Nome { get => nome; set => nome = value; }
+        public int Id { get; set; }        
+        public string Nome { get; set; }
         [Required, StringLength(30)]
-        public string NomeUsuario { get => usuario; set => usuario = value; }
+        public string NomeUsu { get; set; }
         [Required, StringLength(30)]
-        public string Senha { get => senha; set => senha = value; }
+        public string Senha { get; set; }
         [Required, StringLength(40)]
-        public string Email { get => email; set => email = value; }
+        public string Email { get; set; }
+        public char Cargo { get; set; }
+        public byte[] Img { get; set; }
+        public string Descricao { get; set; }
     }
 }

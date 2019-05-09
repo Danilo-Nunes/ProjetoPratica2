@@ -33,24 +33,6 @@
                 <ul class='inserc'>
                     <li>Evento: <input class='input' type="text" id='evento'></li>
                     <li>Data:<input class='input' type='text' id='data' value='DD/MM/AAAA - HH:MM'></li> 
-                    <!-- <li>Ano: <input type='text' class='input' id='ano'></li>
-                    <li>Mês: <select class='input' id='mes' onfocus="ChecarAno()" onchange='Dia(this)'>
-                            <option></option>
-                            <option value='1'>Janeiro</option>
-                            <option value='2'>Fevereiro</option>
-                            <option value='3'>Março</option>
-                            <option value='4'>Abril</option> 
-                            <option value='5'>Maio</option>
-                            <option value='6'>Junho</option>     
-                            <option value='7'>Julho</option>
-                            <option value='8'>Agosto</option> 
-                            <option value='9'>Setembro</option>
-                            <option value='10'>Outubro</option> 
-                            <option value='11'>Novembro</option>
-                            <option value='12'>Dezembro</option></select></li>
-                    <li>Dia:<select class='input' id='dia'><option></option></select></li>
-                    <li>Horas: <input class='inputSmall' type='number' min='0' max='23'></li>
-                    <li>Minutos: <input class='inputSmall' type='number' min='0' max='59'></li> -->
                     <li><button class='btnInsec' onclick="Inserir()">Inserir</button>*</li>
                 </ul>
 
@@ -123,70 +105,7 @@
                         }
                     })
 
-                    function Dia(sel)
-                    {                       
-                        $('#dia').css("display", "inline");
-                        switch(sel.value)
-                        {
-                            case "2":
-                            {
-                                ano = document.getElementById("ano").value;
-                                var df;
-                                console.log(ano);
-                                if(ano%4 == 0 && ano%100 != 0 || ano%400 == 0)
-                                    df = 29;
-                                else
-                                    df = 28;
-                                for(i = 1; i <= df; i++)
-                                    $('#dia').append(new Option(i, i));
-                            }
-                            break;
-                            case "4":
-                            case "6":
-                            case"9":
-                            case "11":
-                            {
-                                for(i = 1; i < 31; i++)
-                                    $('#dia').append(new Option(i, i));
-                            }
-                            break;
-                            case "1":
-                            case "3":
-                            case"5":
-                            case "7":
-                            case "8":
-                            case "10":
-                            case"12":
-                            {
-                                for(i = 1; i <= 31; i++)
-                                    $('#dia').append(new Option(i, i));
-                            }
-                        }
-                    }
-                    function ChecarAno()
-                    {
-                        tacertu = true;
-                        ano = document.getElementById('ano').value;
-                        if(ano == "")
-                            tacertu = false;     
-                        d = new Date();
-
-                        if(isNaN(ano))
-                            tacertu = false;
-                        if(d.getYear() > ano - 1900)
-                            tacertu = false;
-
-
-                        if(tacertu == false)
-                        {
-                            $("#ano").val("");
-                            $("#ano").focus();
-                            alert('Digite um Ano válido');
-
-                        }
-
-                    }
-
+                    
                     function Inserir()
                     {
                         tacertu = true;
@@ -288,31 +207,8 @@
                             $("#data").val("");
                             $("#data").focus();
                             alert('Digite uma data válida');
-                        }
-
-                        
-
-
+                        }                  
                     }
-
-
-            
-            var not =0;
-
-            if(not == 0)
-            {
-                $("number").hide();
-            }
-            else if(not < 10)
-            {
-                $("number").html(not);
-            }
-            else
-            {
-                $("number").html(not)
-                $("number").css('padding-right', '5px');
-                $("number").css('padding-left', '5px');
-            }
                 </script>
             </body>
 </html>

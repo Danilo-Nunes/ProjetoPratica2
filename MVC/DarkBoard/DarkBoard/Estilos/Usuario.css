@@ -1,0 +1,66 @@
+﻿.usuario {
+    text-align: center;
+    border: solid black 4px;
+    border-radius: 15px;
+    width: 40%;
+    height: 75.7%;
+    position: fixed;
+    top: 110px;
+    left: 27.5%;
+    background-color: #101633;
+    font-family: DejaVu Sans Light;
+}
+
+    .usuario ul {
+        font-size: 20px;
+        text-align: center;
+        list-style: none;
+    }
+
+        .usuario ul li {
+            margin-bottom: 35px;
+        }
+
+.avatar {
+    margin-top: -20px;
+    border-radius:50px;
+    width: 136px;
+    height:136px;
+    margin-left: 20px;
+}
+
+.usuario .nome {
+    margin-top: 0px;
+    margin-left: 15px;
+    font-family: Freestyle Script;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.desc {
+    text-align: left;
+    z-index: 0;
+    background-color: #17365c;
+    border-radius: 15px;
+    border: black 3px solid;
+    height: 183px;
+    font-size: 20px;
+    position: relative;
+    left: -5px;
+    width: 650px;
+    color: white;
+}
+.image-upload > input {
+    display: none;
+}
+
+
+.Edit {
+    z-index: 1;
+    filter: invert(100%);
+    height: 6%;
+    margin-top: -10px;
+    position: fixed;
+    bottom: 260px;
+    left: 1030px;
+}

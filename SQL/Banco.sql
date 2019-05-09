@@ -1,95 +1,87 @@
-create table Aluno(
+create table Usuario(
 codigo int primary key identity(1,1) not null,
 ra char(5) not null,--?
 nome varchar(50) not null,
 nomeUsu varchar(50) not null,
+cargo char(1) not null,
 senha varchar(50) not null,
-email varchar(50) not null
+img varchar(100) not null,
+email varchar(50) not null,
+descricao varchar(1000) not null
 )
 
-create table Professor(
-codigo int primary key identity(1,1) not null,
-nome varchar(50) not null,
-nomeUsu varchar(50) not null,
-senha varchar(50) not null,
-email varchar(50) not null
-)
+
 
 create table Sala(
-codigo int primary key identity(1,1) not null,
+id int primary key identity(1,1) not null,
 nome varchar(50) not null,
-codProfessor int not null,
-constraint fkcodProf foreign key(codProfessor) references Professor(codigo)
+codUsuario int not null,
+constraint fkcodProf foreign key(codUsuario) references Usuario(id)
 )
 
-create table AlunoSala(
-codAluno int not null,
+create table UsuarioSala(
+codUsuario int not null,
 codSala int not null,
 media int not null,
 faltas int not null,
-constraint fkcodAluno foreign key(codAluno) references Aluno(codigo),
-constraint fkSala foreign key(codSala) references Sala(codigo)
+constraint fkcodUsuario foreign key(codUsuario) references Usuario(id),
+constraint fkSala foreign key(codSala) references Sala(id)
 )
 
 create table Atividade(
-codigo int primary key identity(1,1) not null,
+id int primary key identity(1,1) not null,
 numero int not null,
 codSala int not null,
 dataAtividade datetime not null,
-constraint fkSalaAtividade foreign key(codSala) references Sala(codigo)
+constraint fkSalaAtividade foreign key(codSala) references Sala(id)
 )
 
 
-create table AlunoAtividade(
-codAluno int not null,
+
+
+create table UsuarioAtividade(
+codUsuario int not null,
 codAtividade int not null,
 peso int not null,
 nota int not null,
-constraint fkAluno foreign key(codAluno) references Aluno(codigo),
-constraint fkAtividade foreign key(codAtividade) references Atividade(codigo)
+constraint fkUsuario foreign key(codUsuario) references Usuario(id),
+constraint fkAtividade foreign key(codAtividade) references Atividade(id)
 )
 
 create table Comunicado(
-codComunicado int primary key identity(1,1) not null,
+id int primary key identity(1,1) not null,
 codSala int not null,
 texto varchar(500) not null,
 assunto varchar(50) not null,
-constraint fkSala foreign key (codSala) references Sala(codigo)
+constraint fkSalaComun foreign key (codSala) references Sala(codigo)
 )
 
-create table Compromissos(
-codCompromisso int primary key identity(1,1) not null,
+
+
+create table Compromisso(
+id int primary key identity(1,1) not null,
 texto varchar(500) not null,
 dataComp datetime not null,
-codAluno int not null,
-constraint fkAlunoComp foreign key (codAluno) references Aluno(codigo)
+codUsuario int not null,
+constraint fkUsuarioComp foreign key (codUsuario) references Usuario(codigo)
 )
 
-create proc SalaAlunos
+create proc SalaUsuario
 @codSala int
 as
-select * from Aluno where codigo in (select codAluno from AlunoSala where codSala = @codSala)
+select * from Usuario where codigo in (select codUsuario from UsuarioSala where codSala = @codSala)
 
-create proc SalasAluno
-@codAluno int
+create proc SalasUsuario
+@codUsuario int
 as
-select * from Sala where codigo in (select codSala from AlunoSala where codAluno = @codAluno)
+select * from Sala where codigo in (select codSala from UsuarioSala where codUsuario = @codUsuario)
 
-create proc ComunicadoAluno
-@codAluno int
+create proc ComunicadoUsuario
+@codUsuario int
 as
-select * from Comunicado where codSala in (select codSala from AlunoSala where codAluno = @codAluno)
+select * from Comunicado where codSala in (select codSala from UsuarioSala where codUsuario = @codUsuario)
 
---?
-CREATE TABLE [dbo].[Aluno]
-(
-[id] INT IDENTITY (1, 1) NOT NULL PRIMARY KEY,
-[ra] CHAR (5) NOT NULL,
-[nome] VARCHAR (50) NOT NULL,
-[usuario] VARCHAR(30) NOT NULL,
-[senha] VARCHAR(30) NOT NULL,
-[email] VARCHAR(40) NOT NULL,
-)
+
 
 
 

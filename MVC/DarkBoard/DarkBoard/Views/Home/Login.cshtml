@@ -1,0 +1,48 @@
+﻿<html>
+<head>
+    <title>Login - Darkboard</title>
+    <link rel='stylesheet' href='../css/login.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='shortcut icon' href='@Url.Content("~/img/icon.ico")' sizes="1000x1000">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='../JavaScript/cripto.js'></script>
+    <link href="~/Estilos/Login.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <p>
+        Não tem Conta?
+        <a href="/Home/Cadastro">Cadastre-se Aqui!</a>
+    </p>
+    <div class='frmLogin'>
+        <label>Login</label><br>
+        <img class='logo' src='../img/logo.png'>
+        <form action="/Usuario/Logar" id="form" method="post">
+            <div class='info'>
+
+                <ul>
+                    <li>Username:</li>
+                    <li>Senha:</li>
+                    <li><input required="required" name="usu.NomeUsu" type='text' id='user' class='input'></li>
+                    <li><input required="required" name="usu.Senha" type='password' id='senha' class='input'></li>
+                </ul>
+
+            </div>
+            <div class='butons'>
+
+                <input class="button" type="submit" value="Logar!">
+                @*<div class="lemb">
+                    <input type='checkbox' id='lembrar'>Não me Esqueça!
+                </div>*@
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+        $(window).ready(function () {
+
+            if ("@ViewBag.msg" != "")
+                alert("@ViewBag.msg");
+        });
+    </script>
+</body>
+</html>
