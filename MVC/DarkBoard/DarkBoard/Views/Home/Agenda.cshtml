@@ -6,8 +6,8 @@
 <link href="~/Estilos/Agenda.css" rel="stylesheet" />
 <form method="post" action="/Compromisso/Adiciona"
 <ul class='inserc'>
-    <li>Evento: <input class='input' name="comp.Texto" type="text" id='evento'></li>
-    <li>Data:<input class='input' name="comp.DataComp" type='text' id='data' value='DD/MM/AAAA HH:MM'></li>
+    <li>Evento: <input required="required" class='input' name="comp.Texto" type="text" id='evento'></li>
+    <li>Data:<input required="required" class='input' name="comp.DataComp" type='text' id='data' value='DD/MM/AAAA HH:MM'></li>
     <input name="comp.CodUsuario" style="display:none" value="@ViewBag.Usu.Id" />
     <li><input type="submit" class='btnInsec' value="Inserir*"></li>
 </ul>
@@ -23,8 +23,8 @@
             <li>
                 <div class="textoEvento">@comp.Texto - @comp.DataComp.ToString()</div>
                 <form method="post" action="/Compromisso/Remove">
-                    <input name="comp.Id" value="@comp.Id" style="display:none;" />
-                    <input name="comp.CodUsuario" style="display:none" value="@ViewBag.Usu.Id" />
+                    <input required="required" name="comp.Id" value="@comp.Id" style="display:none;" />
+                    <input required="required" name="comp.CodUsuario" style="display:none" value="@ViewBag.Usu.Id" />
                     <div class="botao"><input type="submit" value="Concluída!" class='btn'></div>
                 </form>
             </li>

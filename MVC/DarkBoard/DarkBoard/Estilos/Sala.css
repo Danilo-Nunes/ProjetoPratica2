@@ -1,0 +1,137 @@
+﻿.mural {
+    position: absolute;
+    /* float: left; */
+    top: 15%;
+    left: 9.5%;
+    background: ghostwhite;
+    border: 10px double midnightblue;
+    overflow-y: scroll;
+    height: 74%;
+    width: 60%;
+    color:midnightblue;
+    text-align:center;
+}
+
+    .mural ul {
+        list-style: none;
+        margin-top: 8%;
+    }
+
+        .mural ul li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 80%;
+            margin-bottom: 140px;
+        }
+
+.classe {
+    position: absolute;
+    top: 15%;
+    left: 71%;
+    background: ghostwhite;
+    border: 10px double midnightblue;
+    height: 74%;
+    width: 26%;
+}
+
+    .classe .img {
+        position: absolute;
+        border: 5px solid midnightblue;
+        float: center;
+        top: 4%;
+        left: 5%;
+        background: url("https://cdna.artstation.com/p/assets/images/images/010/031/280/large/alexey-skorov-japanese-classroom-001-interior-044-3-1.jpg?1522180170");
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-width: 200px;
+        min-width: 200px;
+        max-height: 200px;
+        min-height: 200px;
+        transition: 0.2s;
+    }
+
+    .classe .nome {
+        font-family: 'Century Gothic';
+        font-size: 24px;
+        color: midnightblue;
+        position: absolute;
+        float: left;
+        top: 230px;
+        left: 6%;
+    }
+
+    .classe .img:hover {
+        border-color: #4461DE;
+    }
+
+    .classe .alunos {
+        font-family: 'Baskerville Old Face';
+        color: black;
+        font-size: 20px;
+        position: absolute;
+        float: left;
+        top: 280px;
+        left: 6%;
+    }
+
+    .classe .professor {
+        font-family: 'Baskerville Old Face';
+        color: black;
+        font-size: 20px;
+        position: absolute;
+        float: left;
+        top: 330px;
+        left: 6%;
+    }
+
+    .classe .trabalhos {
+        font-family: 'Baskerville Old Face';
+        color: black;
+        font-size: 20px;
+        position: absolute;
+        float: left;
+        top: 380px;
+        left: 6%;
+    }
+
+.mural ul li .p .nome {
+    font-size: 16px;
+    position: relative;
+    top: 30%;
+    float: center;
+    text-align: center;
+    color: Black;
+    font-family: Baskerville Old Face;
+}
+
+.mural ul li .p {
+    border: 5px solid midnightblue;
+    border-right: none;
+    position: absolute;
+    height: 120px;
+    width: calc(95% - 120px);
+    float: left;
+}
+
+.mural ul li .img {
+    position: absolute;
+    border: 5px solid midnightblue;
+    float: left;
+    left: calc(95% - 120px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 120px;
+    min-width: 120px;
+    max-height: 120px;
+    min-height: 120px;
+    transition: 0.2s;
+}
+
+    .mural ul li .img:hover {
+        border-color: #4461DE;
+    }
+
+.mural ul li .p:hover {
+    border-color: #4461DE;
+}

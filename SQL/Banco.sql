@@ -71,10 +71,10 @@ create proc SalaUsuario
 as
 select * from Usuario where codigo in (select codUsuario from UsuarioSala where codSala = @codSala)
 
-create proc SalasUsuario
+alter proc SalasUsuario
 @codUsuario int
 as
-select * from Sala where codigo in (select codSala from UsuarioSala where codUsuario = @codUsuario)
+select * from Sala where id in (select codSala from AlunoSala where codAluno = @codUsuario)
 
 create proc ComunicadoUsuario
 @codUsuario int

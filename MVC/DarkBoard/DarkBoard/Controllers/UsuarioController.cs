@@ -52,9 +52,9 @@ namespace DarkBoard.Controllers
                 return RedirectToAction("Login", new RouteValueDictionary(new { controller = "Home", action = "Login", msg = "Senha Incorreta" }));
 
 
+            Session["usu"] = usuario.Id;
 
-
-            return RedirectToAction("Index", new RouteValueDictionary(new { controller = "Home", action = "Index", Id = usuario.Id.ToString()}));
+            return Redirect((string)Session["Pagina"]);
         }
 
         public ActionResult Atualiza(Usuario usuario)

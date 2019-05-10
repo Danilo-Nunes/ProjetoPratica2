@@ -28,7 +28,7 @@
                 <number></number>
             </li>
         </a>
-        <a href="/Home/Usuario/@ViewBag.Usu.Id">
+        <a href="/Home/Usuario">
             <li>
                 @{
                     var base64 = Convert.ToBase64String(ViewBag.Usu.Img);
@@ -40,17 +40,17 @@
                      title='Usuario'>
             </li>
         </a>
-        <a href='/Home/Agenda/@ViewBag.Usu.Id'>
+        <a href='/Home/Agenda'>
             <li>
                 <img class='icon' src="@Url.Content("~/img/icons/checklist.png")" title='Tarefas'>
             </li>
         </a>
-        <a href='/Home/Salas/@ViewBag.Usu.Id'>
+        <a href='/Home/Salas'>
             <li>
                 <img class='icon' src="@Url.Content("~/img/icons/classroom.png")" title='Salas'>
             </li>
         </a>
-        <a href='/Home/Calendário/@ViewBag.Usu.Id'>
+        <a href='/Home/Calendário'>
             <li>
                 <img class='icon' src="@Url.Content("~/img/icons/calendario.png")" title='Calendario'>
             </li>
@@ -69,7 +69,7 @@
             <img id='pesqIcon' class='pesquisaIcon' src='@Url.Content("~/img/icons/search.png")'>
         </li>
         <li class='logo'>
-            <a href='/Home/Index/@ViewBag.Usu.Id'>
+            <a href='/Home/Index'>
                 <img src='@Url.Content("~/img/logo.png")'>
             </a>
         </li>

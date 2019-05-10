@@ -59,13 +59,12 @@
     </div>
 
     <script>
+        var default_value = document.getElementById("desc").defaultValue;
         var editando = false;
         $(".Edit").click(function () {
             if (!editando) {
                 $("#desc").prop("readonly", false);
                 $('#file-input').removeAttr('disabled');
-                $(".desc").focus();
-                $(".desc").val("");
                 $(".Edit").attr('src', '@Url.Content("~/img/icons/save.png")');
                 editando = true;
             }
@@ -74,11 +73,17 @@
                 $("#form").submit();
             }
         })
+        $("#desc").focus(function () {
+            $("#desc").val("");
+        })
 
+        $("#desc").focusout(function () {
+            if ($("#desc").val() == "")
+                $("#desc").val(default_value);
+        })
         $(".Exit").click(function () {
             window.location = "/Home/Login/"
         })
-        localStorage.setItem("User", @ViewBag.Usu.Id);
         $(".menuIcon").click(function () {
             if (!menu) {
                 $(".aba").css("margin-left", "-10");

@@ -10,5 +10,6 @@ namespace DarkBoard.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public int CodProfessor { get; set; }
+        public int QtdAlunos { get; set; }
     }
 }
