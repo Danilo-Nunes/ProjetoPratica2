@@ -79,7 +79,7 @@
     font-size: 18px;
 }
 
-.entregar
+.criar
 {
     position: absolute;
     border: 5px solid midnightblue;
@@ -99,12 +99,12 @@
     line-height: 2.5em;
 }
 
-.entregar:hover
+.criar:hover
 {   
     border-color: #2C3F91;
 }
 
-.voltar
+.cancelar
 {
     position: absolute;
     border: 5px solid midnightblue;
@@ -118,13 +118,13 @@
     top: calc(19% + 330px);    
     margin-top: 2%;
     /* padding: 2% 0; */
-    background-image: url("../img/icons/back-arrow.png");
+    background-image: url("../img/icons/cancel.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position-x: 50%;
+    background-position-x: 52%;
 }
 
-.entregar:voltar
+.cancelar:voltar
 {   
     border-color: #2C3F91;
 }
