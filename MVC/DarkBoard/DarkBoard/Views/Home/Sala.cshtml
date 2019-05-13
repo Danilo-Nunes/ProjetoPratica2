@@ -44,7 +44,16 @@
     <p class="nome">@ViewBag.Sala.Nome</p>
     <p class="alunos">Alunos: @ViewBag.Sala.QtdAlunos</p>
     <p class="professor">Professor: @ViewBag.Professor.Nome</p>
-    <p class="trabalhos">Trabalhos pendentes: X</p>
+    @{int n = 0;
+    foreach(var at in ViewBag.Atividades)
+    {
+        if (at.Concluida == "N")
+        {
+            n++;
+        }
+    }
+    }
+    <p class="trabalhos">Trabalhos pendentes: @n</p>
 </div>
 
 <script>

@@ -14,6 +14,8 @@ namespace DarkBoard.DAO
         public DbSet<Sala> Sala { get; set; }
         public DbSet<AlunoSala> AlunoSala { get; set; }
         public DbSet<Comunicado> Comunicado { get; set; }
+        public DbSet<Atividade> Atividade { get; set; }
+        public DbSet<UsuarioAtividade> UsuarioAtividade { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source=regulus;Initial Catalog=PR118207;User ID=PR118207;Password=PR118207");

@@ -85,14 +85,18 @@ namespace DarkBoard.Controllers
         [AutorizacaoFilterAttribute]
         public ActionResult Sala(string id)
         {
+            if (id == null)
+                return RedirectToAction("Salas");
             UsuarioDAO dao = new UsuarioDAO();
             SalaDAO d = new SalaDAO();
             ComunicadoDAO dAO = new ComunicadoDAO();
+            UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
 
             Sala sala = d.BuscaPorId(int.Parse(id));
             Usuario usuario = dao.BuscaPorId((int)Session["usu"]);
 
             ViewBag.Usu = usuario;
+            ViewBag.Atividades = usuarioAtividadeDAO.BuscaPorAtividade(usuario.Id);
             ViewBag.Sala = sala;
             ViewBag.Professor = dao.BuscaPorId(sala.CodProfessor);
             ViewBag.Comunicados = dAO.BuscaPorSala(sala.Id);

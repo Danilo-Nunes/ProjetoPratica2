@@ -194,9 +194,11 @@
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Criptografia.cs" />
     <Compile Include="DAO\AlunoSalaDBO.cs" />
+    <Compile Include="DAO\AtividadeDAO.cs" />
     <Compile Include="DAO\CompromissoDAO.cs" />
     <Compile Include="DAO\ComunicadoDAO.cs" />
     <Compile Include="DAO\SalaDAO.cs" />
+    <Compile Include="DAO\UsuarioAtividadeDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="DAO\SalaContext.cs" />
     <Compile Include="Filtros\AutorizacaoFilterAttribute.cs" />
@@ -204,6 +206,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AlunoSala.cs" />
+    <Compile Include="Models\Atividade.cs" />
+    <Compile Include="Models\UsuarioAtividade.cs" />
     <Compile Include="Models\Compromisso.cs" />
     <Compile Include="Models\Comunicado.cs" />
     <Compile Include="Models\Sala.cs" />
