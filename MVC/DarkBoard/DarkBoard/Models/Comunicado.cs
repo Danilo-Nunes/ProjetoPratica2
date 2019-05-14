@@ -12,6 +12,5 @@ namespace DarkBoard.Models
         public int CodSala { get; set; }
         public string Texto { get; set; }
         public string Assunto { get; set; }
-
     }
 }

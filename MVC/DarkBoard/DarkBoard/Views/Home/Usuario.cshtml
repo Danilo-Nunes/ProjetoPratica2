@@ -99,7 +99,7 @@
             }
         })
 
-        var not = 0;
+        var not = @ViewBag.Not;
 
         if (not == 0) {
             $("number").hide();
@@ -111,32 +111,6 @@
             $("number").html(not)
             $("number").css('padding-right', '5px');
             $("number").css('padding-left', '5px');
-        }
-
-        function TrocaImg(files) {
-            var imgLocal = document.getElementById('imagemLocal')
-            var file = files[0];
-
-            var form = document.getElementById('file-form');
-
-            img = document.createElement("img");
-
-            if (file != null) {
-                img.file = file;
-                var reader = new FileReader();
-                reader.onload = (function (aImg) { return function (e) { aImg.src = e.target.result; }; })(img);
-                reader.readAsDataURL(file);
-            }
-            else {
-                img.src = "@imgSrc";
-            }
-
-            img.style = 'margin-top: -20px; border-radius:150px; width: 210px; height: 210px; margin-left: 20px;';
-
-
-            imgLocal.innerHTML = '';
-
-            imgLocal.appendChild(img);
         }
 
     </script>

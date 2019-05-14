@@ -27,14 +27,13 @@
             </text>
     }
 
-<script type="text/javascript">
+            <script type="text/javascript">
     function VaiPra(id) {
         location.href = "/Home/Sala/" + id;
     }
 
 
-
-    var menu = false;
+ var menu = false;
         localStorage.setItem("User", @ViewBag.Usu.Id);
         $(".menuIcon").click(function () {
             if (!menu) {
@@ -51,7 +50,7 @@
             }
         })
 
-        var not = 0;
+        var not = @ViewBag.Not;
 
         if (not == 0) {
             $("number").hide();
@@ -64,7 +63,7 @@
             $("number").css('padding-right', '5px');
             $("number").css('padding-left', '5px');
         }
-</script>
+            </script>
 
 
 

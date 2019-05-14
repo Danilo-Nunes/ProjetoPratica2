@@ -41,8 +41,6 @@
 
 
 <script type="text/javascript">
-    var not = 0;
-
     $('#data').focusin(function () {
         if (document.getElementById('data').value == "DD/MM/AAAA HH:MM")
             document.getElementById('data').value = "";
@@ -55,19 +53,9 @@
         }
     });
 
-    if (not == 0) {
-        $("number").hide();
-    }
-    else if (not < 10) {
-        $("number").html(not);
-    }
-    else {
-        $("number").html(not)
-        $("number").css('padding-right', '5px');
-        $("number").css('padding-left', '5px');
-    }
-    var menu = false;
-     $(".menuIcon").click(function () {
+     var menu = false;
+        localStorage.setItem("User", @ViewBag.Usu.Id);
+        $(".menuIcon").click(function () {
             if (!menu) {
                 $(".aba").css("margin-left", "-10");
                 $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
@@ -81,6 +69,20 @@
                 menu = false;
             }
         })
+
+        var not = @ViewBag.Not;
+
+        if (not == 0) {
+            $("number").hide();
+        }
+        else if (not < 10) {
+            $("number").html(not);
+        }
+        else {
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
+        }
 
 
     function Inserir() {

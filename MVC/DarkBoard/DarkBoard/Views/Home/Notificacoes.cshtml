@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Notificacoes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Estilos/Notificacoes.css" rel="stylesheet" />
+<div class="mural">
+    @{    
+        var c = ViewBag.Comuns;
+        if (c.Count > 0)
+        {
+            for (int i = 0; i < c.Count; i++)
+            {
+                var base64 = Convert.ToBase64String(ViewBag.Prof[i].Img);
+                var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                <ul>
+                    <li>
+                        <div class="p" onclick="location.href='/Home/Comunicado/@c[i].Id'">
+                            <p class="nome">@c[i].Assunto</p>
+                        </div>
+                        <img class="img" src ="@imgSrc">
+                    </li>
+                </ul>
+           }
+       }
+       else
+       {
+            <text>Nenhuma Notificação</text>
+       }
+     }
+</div>
+

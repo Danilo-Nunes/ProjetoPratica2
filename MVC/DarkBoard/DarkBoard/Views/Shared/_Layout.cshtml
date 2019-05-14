@@ -4,8 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='shortcut icon' href='@Url.Content("~/img/icon.ico")' sizes="1000x1000">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src='../JavaScript/Index.js'></script>
-    <link href="~/Estilos/Home.css" rel="stylesheet" />
+    @*<link href="~/Estilos/Home.css" rel="stylesheet" />*@
+    <link href="~/Estilos/Index.css" rel="stylesheet" />
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -22,7 +22,7 @@
     </footer>
 
     <ul class='aba'>
-        <a>
+        <a href="/Home/Notificacoes">
             <li>
                 <img class='icon' src="@Url.Content("~/img/icons/bell.png")" title='Notificacoes'>
                 <number></number>
@@ -50,11 +50,11 @@
                 <img class='icon' src="@Url.Content("~/img/icons/classroom.png")" title='Salas'>
             </li>
         </a>
-        <a href='/Home/Calendário'>
+        @*<a href='/Home/Calendário'>
             <li>
                 <img class='icon' src="@Url.Content("~/img/icons/calendario.png")" title='Calendario'>
             </li>
-        </a>
+        </a>*@
     </ul>
 
     <ul class='menu'>

@@ -39,8 +39,31 @@ namespace DarkBoard.DAO
             using (var contexto = new SalaContext())
             {
                 return contexto.Comunicado
-                .Where(p => p.CodSala == id)
+                .Where(p => p.CodSala == id).OrderByDescending(x => x.Id)
                 .ToList();
+            }
+        }
+        public int QtdPorUsuario(int id)
+        {
+            using (var contexto = new SalaContext())
+            {
+                return (from p in contexto.Comunicado
+                        join x in contexto.ComunicadoAluno on p.Id equals x.CodComunicado
+                        where x.CodAluno == id
+                        where x.Visto == "N"
+                        select p).Count();
+            }
+        }
+
+        public IList<Comunicado> BuscaPorUsuario(int id)
+        {
+            using (var contexto = new SalaContext())
+            {
+                return (from p in contexto.Comunicado
+                        join x in contexto.ComunicadoAluno on p.Id equals x.CodComunicado
+                        where x.CodAluno == id
+                        where x.Visto == "N"
+                        select p).OrderByDescending(x => x.Id).ToList();
             }
         }
         public void Atualiza(Comunicado Comunicado)

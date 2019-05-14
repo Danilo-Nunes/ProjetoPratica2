@@ -44,6 +44,17 @@ namespace DarkBoard.DAO
                 .FirstOrDefault();
             }
         }
+
+        public Usuario BuscaPorSala(int id)
+        {
+            using (var contexto = new SalaContext())
+            {
+                return (from p in contexto.Usuario
+                        join e in contexto.Sala on p.Id equals e.CodProfessor
+                        where e.Id == id
+                        select p).First();
+            }
+        }
         public void Atualiza(Usuario Usuario)
         {
             using (var contexto = new SalaContext())

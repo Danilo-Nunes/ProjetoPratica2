@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using DarkBoard.Models;
+using DarkBoard.DAO;
 using System.Web.Mvc;
 
 namespace DarkBoard.Filtros
@@ -13,6 +15,7 @@ namespace DarkBoard.Filtros
             //base.OnActionExecuting(filterContext);
             object usuario = filterContext.HttpContext.Session["usu"];
             filterContext.HttpContext.Session.Add("Pagina", filterContext.HttpContext.Request.Url.OriginalString);
+            
             // se o usuario não estiver logado
             if (usuario == null)
             {
@@ -22,6 +25,11 @@ namespace DarkBoard.Filtros
                 new { controller = "Home", action = "Login" }
                 )
                 );
+            }
+            else
+            {
+                ComunicadoDAO comum = new ComunicadoDAO();
+                filterContext.HttpContext.Session["not"] = comum.QtdPorUsuario((int)usuario);
             }
         }
     }

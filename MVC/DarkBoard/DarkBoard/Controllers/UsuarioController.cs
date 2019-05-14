@@ -51,9 +51,9 @@ namespace DarkBoard.Controllers
             if(usuario.Senha != Criptografia.Criptografar(usu.Senha))
                 return RedirectToAction("Login", new RouteValueDictionary(new { controller = "Home", action = "Login", msg = "Senha Incorreta" }));
 
-
+            ComunicadoDAO d = new ComunicadoDAO();
             Session["usu"] = usuario.Id;
-
+            Session["not"] = d.QtdPorUsuario(usuario.Id);
             return Redirect((string)Session["Pagina"]);
         }
 

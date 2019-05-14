@@ -30,35 +30,35 @@
     </div>
 </div>
 <script>
- var menu = false;
+  var menu = false;
         localStorage.setItem("User", @ViewBag.Usu.Id);
         $(".menuIcon").click(function () {
-        if (!menu) {
-        $(".aba").css("margin-left", "-10");
-        $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
-        $(".menuIcon").css("margin-left", "150");
-        menu = true;
-        }
-        else {
-        $(".aba").css("margin-left", "-1000");
-        $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
-        $(".menuIcon").css("margin-left", "15");
-        menu = false;
-        }
+            if (!menu) {
+                $(".aba").css("margin-left", "-10");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+                $(".menuIcon").css("margin-left", "150");
+                menu = true;
+            }
+            else {
+                $(".aba").css("margin-left", "-1000");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+                $(".menuIcon").css("margin-left", "15");
+                menu = false;
+            }
         })
 
-        var not = 0;
+        var not = @ViewBag.Not;
 
         if (not == 0) {
-        $("number").hide();
+            $("number").hide();
         }
         else if (not < 10) {
-        $("number").html(not);
+            $("number").html(not);
         }
         else {
-        $("number").html(not)
-        $("number").css('padding-right', '5px');
-        $("number").css('padding-left', '5px');
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
         }
-    </script>
+</script>
 
