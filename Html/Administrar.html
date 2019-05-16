@@ -1,10 +1,10 @@
 <html>
 
 <head>
-    <title>Criar</title>
+    <title>Administrar</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel='stylesheet' href='../css/index.css'>
-    <link rel='stylesheet' href='../css/criar.css'>
+    <link rel='stylesheet' href='../css/administrar.css'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='shortcut icon' href='../img/icon.ico' sizes="1000x1000">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -69,17 +69,34 @@
     </ul>
 
 
-    <div class="criacao">        
+    <div class="administracao">        
         <img class="img" onclick="imagemSala()" src='../img/classe.jpeg'>
-        <div class="criar" onclick="criar()">criar</div>
-        <div class="cancelar" onclick="cancelar()"><i class="far fa-times-circle"></i></div>
+        <div class="alterar" onclick="alterar()" title="Alterar"><i class="fas fa-check"></i></div>
+        <div class="comunicar" onclick="comunicar()" title="Escrever Comunicado" onclick="irParaComunicar()"><i class="fas fa-envelope-square"></i></div>
+        <div class="deletar" onclick="deletar()" title="Deletar Sala"><i class="fas fa-eraser"></i></div>        
         <div class="interno">
-            <p class="nomep">Nome da Classe: </p><input type="text" class="nome">
+            <p class="nomep">Nome da Classe: (nome da classe)</p>
             <p class="professor">Professor: (nome do professor)</p> 
-            <p class="alunos">Alunos: 0</p>      
+            <p class="alunos">Alunos: (quantidade de alunos)</p>  
+            <div class="select">
+                <ul>
+                    <li>                        
+                        <div class="p"><p class="nome">Britto</p></div><img src="../img/planosDeFundo/britto.png" class="img">                                          
+                    </li>
+                    <li>
+                        <div class="p"><p class="nome">Jão</p></div><img src="../img/planosDeFundo/jao.png" class="img">   
+                    </li>
+                </ul>                
+            </div>             
+            <div class="frequencia" title="Alterar Frequência"><i class="far fa-list-alt"></i></div>              
+            <div class="notas" title="Alterar Notas"><i class="fas fa-pen-alt"></i></div>  
+            <div class="adicionar" title="Adicionar Aluno"><i class="fas fa-user-plus"></i></div>  
+            <div class="remover" title="Remover Aluno"><i class="fas fa-user-times"></i></div>                                      
         </div>
     </div>
 
+    <!-- <p class="comunicado">Comunicado:</p>   
+    <input type="textarea" class="text"> -->
 
     <script type="text/javascript">
         var not = 0;

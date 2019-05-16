@@ -43,8 +43,7 @@
 
 .interno
 {
-    /* background-color: ghostwhite; */
-    background-image: url("../img/planosDeFundo/test.png");
+    background-color: ghostwhite;
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -57,7 +56,7 @@
     border: 5px solid midnightblue;
 }
 
-.nomep
+.titulop
 {  
     font-size: 35px;
     position: absolute;
@@ -69,11 +68,11 @@
     font-family: Cambria;    
 }
 
-.nome
+.titulo
 {  
     font-size: 30px;
     position: absolute;
-    left: 32%;
+    left: 18%;
     margin-top: 3%;
     float: left;
     text-align: center;
@@ -81,38 +80,38 @@
     font-family: Cambria;    
 }
 
-.professor
+.comunicadop
 {   
     position: absolute;      
     float: left;
     margin-left: 3%;
-    margin-top: 10%;
+    margin-top: 11%;
     max-width: 95%;
     color: Black;
     font-family: Cambria; 
     font-size: 35px;
 }
 
-.alunos
+.comunicado
 {   
     position: absolute;      
     float: left;
     margin-left: 3%;
     margin-top: 17%;
-    max-width: 95%;
     color: Black;
     font-family: Cambria; 
-    font-size: 35px;
+    font-size: 25px;
+    width: 95%;
+    height: 65%;
 }
 
-.criar
+.enviar
 {
     position: absolute;
     border: 5px solid midnightblue;
     border-radius: 5px;
     background-color: #4461DE;
     width: 250px;
-    /* height: 35px; */
     height: 70px;
     float: left;
     left: 2%;
@@ -121,11 +120,16 @@
     font-family: Cambria; 
     font-size: 24px;
     margin-top: 2%;
-    /* padding: 2% 0; */
     line-height: 2.5em;
 }
 
-.criar:hover
+.enviar i
+{
+    font-size: 40pt;
+    margin-top: 0.14em;
+}
+
+.enviar:hover
 {   
     border-color: #2C3F91;
 }

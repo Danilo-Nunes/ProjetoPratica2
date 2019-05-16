@@ -1,0 +1,88 @@
+body{
+    background-color: #586391;
+    color: white;
+    font-family: Arial;
+    overflow-y: hidden;
+}
+
+button{
+    position:absolute;
+    left: 800px;
+    text-align: center;
+    background-color: #10121f;
+    border: solid 4px white;
+    font-size: 25pt;
+    height: 90px;
+    border-radius:5px;
+    color: white;
+    width:140px;
+    bottom:50px;
+}
+
+.frmLogin{
+    background-color: #232944;
+    border: solid 4px #10121f;
+    width: 70%;
+    height: 96%;
+    position: absolute;
+    text-align: center;
+    left:15%;
+    top:2%;
+    font-size:48pt;
+}
+
+.info ul{
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style: none;
+}
+.info ul li{
+    margin-bottom:50px;
+}
+.info{
+    margin-top: 10%;
+    text-align: left;
+}
+.input{
+    width: 550px;
+    height: 70px;
+    margin-left: -120px;
+    border-radius: 15px;
+    background-color: #10121f;
+    border: solid 4px white;
+    font-size: 48pt;
+    color: white;
+
+}
+
+.butons{
+    position: absolute;
+    text-align:left;
+    font-size:15pt;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+button:hover{
+    background-color: #36406B;
+}
+
+.logo{
+   width:150px;
+   height: 150px;
+   position: fixed;
+   left: 75%;
+   top: 5%;
+}
+p{
+    position: fixed;
+    left:270px;
+    top:35px;
+    font-size:20px;
+}
+
+p a{
+    color:#D5BB6D;
+    text-decoration: none;
+}
