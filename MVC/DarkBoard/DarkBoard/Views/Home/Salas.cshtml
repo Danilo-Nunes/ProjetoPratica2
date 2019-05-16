@@ -9,7 +9,7 @@
     {
         foreach (var Sala in ViewBag.Salas)
         {
-            <ul>
+            <ul onclick="VaiPra('@Sala.Id')">
                 <li>
                     <div class="p">
                         <p class="nome">@Sala.Nome</p>
@@ -27,8 +27,13 @@
             </text>
     }
 
-<script type="text/javascript">
-        var menu = false;
+            <script type="text/javascript">
+    function VaiPra(id) {
+        location.href = "/Home/Sala/" + id;
+    }
+
+
+ var menu = false;
         localStorage.setItem("User", @ViewBag.Usu.Id);
         $(".menuIcon").click(function () {
             if (!menu) {
@@ -45,7 +50,7 @@
             }
         })
 
-        var not = 0;
+        var not = @ViewBag.Not;
 
         if (not == 0) {
             $("number").hide();
@@ -58,7 +63,7 @@
             $("number").css('padding-right', '5px');
             $("number").css('padding-left', '5px');
         }
-</script>
+            </script>
 
 
 

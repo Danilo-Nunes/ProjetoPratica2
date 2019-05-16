@@ -1,0 +1,69 @@
+﻿.mural {
+    position: absolute;
+    /* float: left; */
+    top: 15%;
+    left: 9.5%;
+    background-image: url("../img/planosDeFundo/3.jpg");
+    border: 10px double midnightblue;
+    overflow-y: scroll;
+    text-align:center;
+    color:midnightblue;
+    height: 74%;
+    width: 79%;
+}
+
+    .mural ul {
+        list-style: none;
+        margin-top: 8%;
+    }
+
+        .mural ul li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 80%;
+            margin-bottom: 140px;
+        }
+
+            .mural ul li .p .nome {
+                font-size: 16px;
+                position: relative;
+                top: 30%;
+                float: center;
+                text-align: center;
+                color: Black;
+                font-family: Baskerville Old Face;
+            }
+
+            .mural ul li .p {
+                border: 5px solid midnightblue;
+                background-color: ghostwhite;
+                border-right: none;
+                position: absolute;
+                height: 120px;
+                width: calc(95% - 120px);
+                float: left;
+                transition: 0.2s;
+            }
+
+            .mural ul li .img {
+                position: absolute;
+                border: 5px solid midnightblue;
+                float: left;
+                left: calc(95% - 120px);
+                background-size: cover;
+                background-repeat: no-repeat;
+                max-width: 120px;
+                min-width: 120px;
+                max-height: 120px;
+                min-height: 120px;
+                transition: 0.2s;
+            }
+
+                .mural ul li .img:hover {
+                    border-color: #4461DE;
+                }
+
+            .mural ul li .p:hover {
+                border-color: #4461DE;
+            }

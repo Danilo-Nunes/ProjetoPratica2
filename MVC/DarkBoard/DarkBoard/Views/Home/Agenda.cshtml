@@ -6,8 +6,8 @@
 <link href="~/Estilos/Agenda.css" rel="stylesheet" />
 <form method="post" action="/Compromisso/Adiciona"
 <ul class='inserc'>
-    <li>Evento: <input class='input' name="comp.Texto" type="text" id='evento'></li>
-    <li>Data:<input class='input' name="comp.DataComp" type='text' id='data' value='DD/MM/AAAA HH:MM'></li>
+    <li>Evento: <input required="required" class='input' name="comp.Texto" type="text" id='evento'></li>
+    <li>Data:<input required="required" class='input' name="comp.DataComp" type='text' id='data' value='DD/MM/AAAA HH:MM'></li>
     <input name="comp.CodUsuario" style="display:none" value="@ViewBag.Usu.Id" />
     <li><input type="submit" class='btnInsec' value="Inserir*"></li>
 </ul>
@@ -23,8 +23,8 @@
             <li>
                 <div class="textoEvento">@comp.Texto - @comp.DataComp.ToString()</div>
                 <form method="post" action="/Compromisso/Remove">
-                    <input name="comp.Id" value="@comp.Id" style="display:none;" />
-                    <input name="comp.CodUsuario" style="display:none" value="@ViewBag.Usu.Id" />
+                    <input required="required" name="comp.Id" value="@comp.Id" style="display:none;" />
+                    <input required="required" name="comp.CodUsuario" style="display:none" value="@ViewBag.Usu.Id" />
                     <div class="botao"><input type="submit" value="Concluída!" class='btn'></div>
                 </form>
             </li>
@@ -41,8 +41,6 @@
 
 
 <script type="text/javascript">
-    var not = 0;
-
     $('#data').focusin(function () {
         if (document.getElementById('data').value == "DD/MM/AAAA HH:MM")
             document.getElementById('data').value = "";
@@ -55,19 +53,9 @@
         }
     });
 
-    if (not == 0) {
-        $("number").hide();
-    }
-    else if (not < 10) {
-        $("number").html(not);
-    }
-    else {
-        $("number").html(not)
-        $("number").css('padding-right', '5px');
-        $("number").css('padding-left', '5px');
-    }
-    var menu = false;
-     $(".menuIcon").click(function () {
+     var menu = false;
+        localStorage.setItem("User", @ViewBag.Usu.Id);
+        $(".menuIcon").click(function () {
             if (!menu) {
                 $(".aba").css("margin-left", "-10");
                 $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
@@ -81,6 +69,20 @@
                 menu = false;
             }
         })
+
+        var not = @ViewBag.Not;
+
+        if (not == 0) {
+            $("number").hide();
+        }
+        else if (not < 10) {
+            $("number").html(not);
+        }
+        else {
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
+        }
 
 
     function Inserir() {

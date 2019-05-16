@@ -5,11 +5,11 @@ using System.Web;
 
 namespace DarkBoard.Models
 {
-    public class Sala
+    public class ComunicadoAluno
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public int CodProfessor { get; set; }
-        public int QtdAlunos { get; set; }
+        public int CodAluno { get; set; }
+        public int CodComunicado { get; set; }
+        public string Visto { get; set; }
     }
 }

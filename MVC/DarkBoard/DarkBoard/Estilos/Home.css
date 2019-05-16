@@ -9,7 +9,7 @@
     color:ghostwhite;
 }*/ 
 
-body {
+/*body {
     background-color: #586391;
     color: azure;
     font-family: Arial, Century Gothic, Baskerville Old Face;
@@ -67,7 +67,7 @@ body {
     background: #FFC51A;
     float: left;
     transition: 0.5s;
-    /* z-index: 99999; */
+    /* z-index: 99999; *//*
 }
 
 .pesquisa {
@@ -80,7 +80,7 @@ body {
     font-size: 20px;
     position: fixed;
     left: 27.5%;
-    /* background-image: url('img/search.png'); */
+    /* background-image: url('img/search.png'); *//*
     outline: none;
 }
 
@@ -145,7 +145,7 @@ body {
 
     .logo img {
         width: 17%;
-    }
+    }*/
 
 .carrosel, .carrosel ul {
     height: 400px;

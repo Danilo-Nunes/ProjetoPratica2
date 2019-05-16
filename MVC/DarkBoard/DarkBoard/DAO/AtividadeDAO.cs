@@ -1,65 +1,62 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using Microsoft.EntityFrameworkCore;
 using DarkBoard.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DarkBoard.DAO
 {
-    public class UsuarioDAO
+    public class AtividadeDAO
     {
-        public void Adiciona(Usuario prof)
+        public void Adiciona(Atividade comp)
         {
             using (var context = new SalaContext())
             {
-                context.Usuario.Add(prof);
+                context.Atividade.Add(comp);
                 context.SaveChanges();
             }
         }
-        public IList<Usuario> Lista()
+        public IList<Atividade> Lista()
         {
             using (var contexto = new SalaContext())
             {
-                return contexto.Usuario.ToList();
+                return contexto.Atividade.ToList();
             }
         }
 
-        public Usuario BuscaPorId(int codigo)
+        public Atividade BuscaPorId(int codigo)
         {
             using (var contexto = new SalaContext())
             {
-                return contexto.Usuario
+                return contexto.Atividade
                 .Where(p => p.Id == codigo)
                 .FirstOrDefault();
             }
         }
 
-        public Usuario BuscaPorNome(string usu)
+        public IList<Atividade> BuscaPorSala(int id)
         {
             using (var contexto = new SalaContext())
             {
-                return contexto.Usuario
-                .Where(p => p.NomeUsu == usu)
-                .FirstOrDefault();
+                return contexto.Atividade
+                .Where(p => p.CodSala == id)
+                .ToList();
+            }
+        }
+        public void Atualiza(Atividade Atividade)
+        {
+            using (var contexto = new SalaContext())
+            {
+                contexto.Entry(Atividade).State = EntityState.Modified;
+                contexto.SaveChanges();
             }
         }
 
-        public Usuario BuscaPorSala(int id)
+        public void Remove(Atividade Atividade)
         {
             using (var contexto = new SalaContext())
             {
-                return (from p in contexto.Usuario
-                        join e in contexto.Sala on p.Id equals e.CodProfessor
-                        where e.Id == id
-                        select p).First();
-            }
-        }
-        public void Atualiza(Usuario Usuario)
-        {
-            using (var contexto = new SalaContext())
-            {
-                contexto.Entry(Usuario).State = EntityState.Modified;
+                contexto.Remove(contexto.Atividade.Single(a => a.Id == Atividade.Id));
                 contexto.SaveChanges();
             }
         }

@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "Sala";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Estilos/Sala.css" rel="stylesheet" />
+<div class="mural">
+    @{
+        var base64Prof = Convert.ToBase64String(ViewBag.Professor.Img);
+        var imgSrcProf = String.Format("data:image/gif;base64,{0}", base64Prof);
+    }
+    @if (ViewBag.Comunicados.Count > 0)
+    {
+        <ul>
+            @foreach (var comun in ViewBag.Comunicados)
+            {
+                <li>
+                    <div class="p" onclick="location.href='/Home/Comunicado/@comun.Id'">
+                        <p class="nome">@comun.Assunto</p>
+                    </div>
+                    <img class="img" src="@imgSrcProf" style="position: absolute;
+                                                            border: 5px solid midnightblue;
+                                                            float: left;
+                                                            left: calc(95% - 120px);
+                                                            background-size: cover;
+                                                            background-repeat: no-repeat;
+                                                            max-width: 120px;
+                                                            min-width: 120px;
+                                                            max-height: 120px;
+                                                            min-height: 120px;
+                                                            transition: 0.2s;">
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <text>Nenhum Comunicado por Enquanto!</text>
+    }
+</div>
+
+<div class="classe">
+    <div class="img"></div>
+    <p class="nome">@ViewBag.Sala.Nome</p>
+    <p class="alunos">Alunos: @ViewBag.Sala.QtdAlunos</p>
+    <p class="professor">Professor: @ViewBag.Professor.Nome</p>
+    @{int n = 0;
+    foreach(var at in ViewBag.Atividades)
+    {
+        if (at.Concluida == "N")
+        {
+            n++;
+        }
+    }
+    }
+    <p class="trabalhos">Trabalhos pendentes: @n</p>
+</div>
+
+<script>
+     var menu = false;
+        localStorage.setItem("User", @ViewBag.Usu.Id);
+        $(".menuIcon").click(function () {
+            if (!menu) {
+                $(".aba").css("margin-left", "-10");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+                $(".menuIcon").css("margin-left", "150");
+                menu = true;
+            }
+            else {
+                $(".aba").css("margin-left", "-1000");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+                $(".menuIcon").css("margin-left", "15");
+                menu = false;
+            }
+        })
+
+        var not = @ViewBag.Not;
+
+        if (not == 0) {
+            $("number").hide();
+        }
+        else if (not < 10) {
+            $("number").html(not);
+        }
+        else {
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
+        }
+</script>
