@@ -1,10 +1,10 @@
 <html>
 
 <head>
-    <title>Comunicar</title>
+    <title>Atribuir</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel='stylesheet' href='../css/index.css'>
-    <link rel='stylesheet' href='../css/comunicar.css'>
+    <link rel='stylesheet' href='../css/atribuir.css'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='shortcut icon' href='../img/icon.ico' sizes="1000x1000">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -68,19 +68,43 @@
         </li>
     </ul>
 
-
     <div class="criacao">        
         <img class="img" onclick="imagemSala()" src='../img/classe.jpeg'>
         <div class="enviar" title="Enviar Comunicado" onclick="enviar()"><i class="fas fa-paper-plane"></i></div>
+        <div class="adicionar" title="Adicionar Arquivo" id="add"><i class="fas fa-folder-plus" id="i"></i></div>
         <div class="cancelar" onclick="cancelar()"><i class="far fa-times-circle"></i></div>
         <div class="interno">
-            <p class="titulop">Assunto: </p><input type="text" class="titulo">            
+            <p class="titulop">Atividade: </p><input type="text" class="titulo">            
             <p class="comunicadop">Comunicado: </p><textarea class="comunicado"></textarea>
         </div>
-    </div>
+    </div>   
+    <input type="file" class="add" onchange="troca(this.files)" id="in">
 
+    <script type="text/javascript"> // OLHA AQUI KARALHO EU COLOQUEI ESSA PORRA PARA FUNCIONAR!!!
+        var select = false;
 
-    <script type="text/javascript">
+        function troca(files)
+        {
+            if(files[0] != null)
+            {                
+                $('#i').prop('class', 'fas fa-folder-minus');  
+            }
+        }
+
+        $("#add").click(function() {
+            if(!select)
+                $("#in").click();
+            else   
+            {         
+                select = false;
+                $('#i').prop('class', 'fas fa-folder-plus');
+            }
+        })
+        
+        $("input[type=file]").on('input', function(){           
+            select = true;
+        });
+
         var not = 0;
 
         if (not == 0) {

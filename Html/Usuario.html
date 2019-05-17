@@ -33,17 +33,42 @@
         </ul>
 
         <div class='usuario'>
-            <p class='nome' id='nome'>(Nome)</p>
-            <img class='avatar' src='../img/icons/user.png'>
-
-            <ul class='Info'>
-                <li id='nomeComp'>Nome Completo</li>
-                <li id='email'>Email</li>
-            </ul>
-            <div class='desc'>
-                Descrição:
-                <p>(Insert uma linda descrição Aqui)</p>
-            </div>
+            <form action="/Usuario/Atualiza" id="form" method="post" enctype="multipart/form-data">
+                <p class='nome' id='nome'>@ViewBag.Usu.NomeUsu</p>
+                <div class='image-upload'>
+                    <label for='file-input'>
+                        <div id='imagemLocal'>
+                            <img style="margin-top: -20px;
+                             border-radius:150px;
+                             width: 210px;
+                             height:210px;
+                             margin-left: 20px;" src='@imgSrc'>
+                        </div>
+                    </label>
+                    <input type='file' disabled="disabled" accept="image/png, image/jpeg, image/gif" name="file" onchange='TrocaImg(this.files)' id='file-input'>
+                </div>
+    
+    
+                <ul class='Info'>
+                    <li id='nomeComp'>(@ViewBag.Usu.Nome)</li>
+                    <li id='email'>(@ViewBag.Usu.Email)</li>
+                </ul>
+    
+                <img class="Edit" src="@Url.Content("~/img/icons/edit.png")" />
+                <img class="Exit" src="@Url.Content("~/img/icons/logout.png")" />
+    
+                <textarea readonly="readonly" name="usuario.Descricao" id="desc" class='desc'>
+                    @if (ViewBag.Usu.Descricao != null)
+                    {
+                        @ViewBag.Usu.Descricao
+                    }
+                    else
+                    {
+                         <text>(Insert uma descrição aqui)</text>
+                    }
+                </textarea>
+                <input name="usuario.Id" style="display:none;" value="@ViewBag.Usu.Id" />
+            </form>
         </div>
 
         <script>

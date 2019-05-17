@@ -1,0 +1,15 @@
+.p{
+float: left;
+position: absolute;
+top: 18%;
+left: 22.5%;
+font-family: Cambria;
+font-size: 30px;
+}
+
+.i{
+    float: left;
+    position: absolute;
+    top: 28%;
+    left: 22.5%;
+}
