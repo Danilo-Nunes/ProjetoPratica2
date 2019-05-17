@@ -1,4 +1,4 @@
-.criacao
+.comunicado
 {
     position: absolute;
     /* float: left; */
@@ -26,7 +26,8 @@
     border: 5px solid midnightblue;
     float: left;
     left: 2%;
-    top: 4%;    
+    top: 14%;
+    background: url("../img/icons/user.png");
     background-size: cover; 
     background-repeat: no-repeat;
     max-width: 250px;
@@ -44,121 +45,86 @@
 .interno
 {
     background-color: ghostwhite;
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: hidden;
+    overflow-y: scroll;
     position: absolute;
-    top: 4%;    
+    top: 14%;    
     left: calc(250px + 5%);
     float: left;
     width: 72%;
-    height: 90%;
-    border: 5px solid midnightblue;
+    height: 80%;
+    border: 5px dashed midnightblue;
 }
 
-.titulop
+.professor
 {  
-    font-size: 35px;
-    position: absolute;
+    font-size: 20px;
+    position: relative;
     margin-left: 3%;
-    margin-top: 3%;
     float: left;
     text-align: center;
     color: Black;
     font-family: Cambria;    
 }
 
-.titulo
-{  
-    font-size: 30px;
-    position: absolute;
-    left: 19%;
-    margin-top: 3%;
-    float: left;
-    text-align: center;
-    color: Black;
-    font-family: Cambria;
-    width: 79%;    
-}
-
-.comunicadop
+.descricao
 {   
     position: absolute;      
     float: left;
     margin-left: 3%;
-    margin-top: 11%;
+    margin-top: 8%;
     max-width: 95%;
+    text-align: justify;
     color: Black;
-    font-family: Cambria; 
-    font-size: 35px;
+    font-family: Baskerville Old Face; 
+    font-size: 18px;
 }
 
-.comunicado
-{   
-    position: absolute;      
-    float: left;
-    margin-left: 3%;
-    margin-top: 17%;
-    color: Black;
-    font-family: Cambria; 
-    font-size: 25px;
-    width: 95%;
-    height: 65%;
-}
-
-.enviar
+.entregar
 {
     position: absolute;
     border: 5px solid midnightblue;
     border-radius: 5px;
     background-color: #4461DE;
     width: 250px;
+    /* height: 35px; */
     height: 70px;
     float: left;
     left: 2%;
-    top: calc(9% + 250px);
+    top: calc(16% + 250px);
     text-align: center;
     font-family: Cambria; 
     font-size: 24px;
     margin-top: 2%;
+    /* padding: 2% 0; */
     line-height: 2.5em;
 }
 
-.enviar i
-{
-    font-size: 40pt;
-    margin-top: 0.14em;
-}
-
-.enviar:hover
+.entregar:hover
 {   
     border-color: #2C3F91;
 }
 
-.cancelar
+.voltar
 {
     position: absolute;
     border: 5px solid midnightblue;
     border-radius: 5px;
     background-color: #4461DE;
     width: 250px;
+    /* height: 35px; */
     height: 70px;
     float: left;
     left: 2%;
-    top: calc(16% + 330px);    
+    top: calc(19% + 330px);    
     margin-top: 2%;
-    align-items: center;
-    display: flex;
-    flex-direction: column;   
+    /* padding: 2% 0; */
+    background-image: url("../img/icons/back-arrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
 }
 
-.cancelar i
-{
-    font-size: 42.5pt;
-    margin-top: 0.14em;
-}
-
-.cancelar:hover
+.entregar:voltar
 {   
     border-color: #2C3F91;
 }
