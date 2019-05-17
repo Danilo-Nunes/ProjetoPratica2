@@ -169,6 +169,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Estilos\Agenda.css" />
+    <Content Include="Estilos\AlterarSenha.css" />
     <Content Include="Estilos\Cadastro.css" />
     <Content Include="Estilos\Comunicado.css" />
     <Content Include="Estilos\Index.css" />
@@ -236,6 +237,7 @@
     <Content Include="Views\Home\Sala.cshtml" />
     <Content Include="Views\Home\Comunicado.cshtml" />
     <Content Include="Views\Home\Notificacoes.cshtml" />
+    <Content Include="Views\Home\AlterarSenha.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

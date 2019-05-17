@@ -154,6 +154,16 @@ namespace DarkBoard.Controllers
 
             return View();
         }
+
+        [AutorizacaoFilterAttribute]
+        public ActionResult AlterarSenha()
+        {
+            UsuarioDAO dao = new UsuarioDAO();
+            Usuario usuario = dao.BuscaPorId(((int)Session["usu"]));
+            ViewBag.Usu = usuario;
+
+            return View();
+        }
     }
 
 }
