@@ -70,13 +70,22 @@ namespace DarkBoard.Controllers
         [AutorizacaoFilterAttribute]
         public ActionResult Salas()
         {
-
+            SalaDAO s = new SalaDAO();
             UsuarioDAO dao = new UsuarioDAO();
             ViewBag.Not = Session["not"];
+
             Usuario usuario = dao.BuscaPorId((int)Session["usu"]);
             AlunoSalaDBO d = new AlunoSalaDBO();
 
-            IList<Sala> salas = d.BuscaPorSalas(usuario.Id);
+            IList<Sala> salas;
+            if (usuario.Cargo == 'A')
+            {
+                salas = d.BuscaPorSalas(usuario.Id);
+            }
+            else
+            {
+                salas = s.BuscaPorProfessor(usuario.Id);
+            }
 
             ViewBag.Salas = salas;
             ViewBag.Usu = usuario;
@@ -120,12 +129,16 @@ namespace DarkBoard.Controllers
 
             Usuario usuario = dao.BuscaPorId((int)Session["usu"]);
             Sala sala = d.BuscaPorId(comum.CodSala);
-            ComunicadoAluno aux = c.Busca(usuario.Id, comum.Id);
-            aux.Visto = "S";
-            c.Atualiza(aux);
-            Session["not"] = dAO.QtdPorUsuario(usuario.Id);
-            ViewBag.Not = Session["not"];
 
+            if (usuario.Cargo == 'A')
+            {
+                ComunicadoAluno aux = c.Busca(usuario.Id, comum.Id);
+                aux.Visto = "S";
+                c.Atualiza(aux);
+            }
+            Session["not"] = dAO.QtdPorUsuario(usuario.Id);
+
+            ViewBag.Not = Session["not"];
             ViewBag.Usu = usuario;
             ViewBag.Sala = sala;
             ViewBag.Professor = dao.BuscaPorId(sala.CodProfessor);
@@ -156,10 +169,45 @@ namespace DarkBoard.Controllers
         }
 
         [AutorizacaoFilterAttribute]
-        public ActionResult AlterarSenha()
+        public ActionResult AlterarSenha(string msg)
         {
             UsuarioDAO dao = new UsuarioDAO();
             Usuario usuario = dao.BuscaPorId(((int)Session["usu"]));
+            ViewBag.Not = Session["not"];
+            ViewBag.Usu = usuario;
+            ViewBag.Msg = msg;
+
+            return View();
+        }
+
+        public ActionResult Administrar(string id)
+        {
+            UsuarioDAO usuarioDao = new UsuarioDAO();
+            SalaDAO salaDAO = new SalaDAO();
+            AlunoSalaDBO alunoSalaDbo = new AlunoSalaDBO();
+
+            Usuario professor = usuarioDao.BuscaPorId(((int)Session["usu"]));
+            Sala sala = salaDAO.BuscaPorId(int.Parse(id));
+            IList<Usuario> alunos = alunoSalaDbo.BuscaPorAlunos(int.Parse(id));
+
+            ViewBag.Not = Session["not"];
+            ViewBag.Usu = professor;
+            ViewBag.Alunos = alunos;
+            ViewBag.Sala = sala;
+
+            return View();
+        }
+
+        public ActionResult Comunicar()
+        {
+            UsuarioDAO usuarioDao = new UsuarioDAO();
+            SalaDAO salaDAO = new SalaDAO();
+            AlunoSalaDBO alunoSalaDao = new AlunoSalaDBO();
+
+
+            Usuario usuario = usuarioDao.BuscaPorId(((int)Session["usu"]));
+
+            ViewBag.Not = Session["not"];
             ViewBag.Usu = usuario;
 
             return View();

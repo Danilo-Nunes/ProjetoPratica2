@@ -11,5 +11,6 @@ namespace DarkBoard.Models
         public string Nome { get; set; }
         public int CodProfessor { get; set; }
         public int QtdAlunos { get; set; }
+        public byte[] Img { get; set; }
     }
 }

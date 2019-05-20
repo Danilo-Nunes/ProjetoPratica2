@@ -1,0 +1,326 @@
+﻿.administracao {
+    position: absolute;
+    /* float: left; */
+    top: 15%;
+    left: 9.5%;
+    background-image: url("../img/planosDeFundo/3.jpg");
+    border: 10px double midnightblue;
+    height: 74%;
+    width: 80%;
+}
+
+.img {
+    position: absolute;
+    border: 5px solid midnightblue;
+    float: left;
+    left: 2%;
+    top: 4%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 250px;
+    min-width: 250px;
+    max-height: 250px;
+    min-height: 250px;
+    transition: 0.2s;
+}
+
+    .img:hover {
+        border-color: #4461DE;
+    }
+
+.interno {
+    background-color: ghostwhite;
+    overflow: hidden;
+    position: absolute;
+    top: 4%;
+    left: calc(250px + 5%);
+    float: left;
+    width: 72%;
+    height: 90%;
+    border: 5px solid midnightblue;
+}
+
+.nomep {
+    font-size: 35px;
+    position: absolute;
+    margin-left: 3%;
+    margin-top: 3%;
+    float: left;
+    text-align: center;
+    color: Black;
+    font-family: Cambria;
+}
+
+.professor {
+    position: absolute;
+    float: left;
+    margin-left: 3%;
+    margin-top: 10%;
+    max-width: 95%;
+    color: Black;
+    font-family: Cambria;
+    font-size: 35px;
+}
+
+.alunos {
+    position: absolute;
+    float: left;
+    margin-left: 3%;
+    margin-top: 17%;
+    max-width: 95%;
+    color: Black;
+    font-family: Cambria;
+    font-size: 35px;
+}
+
+.select {
+    position: absolute;
+    float: left;
+    margin-left: 3%;
+    margin-top: 24%;
+    color: Black;
+    font-family: Cambria;
+    font-size: 20px;
+    overflow-y: scroll;
+    background: ghostwhite;
+    border: 5px solid midnightblue;
+    height: 52.5%;
+    width: 65%;
+}
+
+.image-upload > input {
+    display: none;
+}
+
+    .select ul {
+        list-style: none;
+        margin-top: 5%;
+    }
+
+        .select ul li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 80%;
+            margin-bottom: 5%;
+        }
+
+            .select ul li .p .nome {
+                font-size: 25px;
+                position: relative;
+                top: 10%;
+                float: center;
+                text-align: center;
+                color: Black;
+                font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+            }
+
+            .select ul li .p {
+                border: 5px solid midnightblue;
+                border-right: none;
+                position: absolute;
+                height: 100px;
+                width: calc(85% - 100px);
+                float: left;
+            }
+
+            .select ul li .img {
+                position: relative;
+                border: 5px solid midnightblue;
+                float: left;
+                left: calc(68% + 100px);
+                /* background: url('../img/icons/user.png'); */
+                background-size: cover;
+                background-repeat: no-repeat;
+                max-width: 100px;
+                min-width: 100px;
+                max-height: 100px;
+                min-height: 100px;
+                transition: 0.2s;
+            }
+
+                .select ul li .img:hover {
+                    border-color: #4461DE;
+                }
+
+            .select ul li .p:hover {
+                border-color: #4461DE;
+            }
+
+.alterar {
+    position: absolute;
+    border: 5px solid midnightblue;
+    border-radius: 5px;
+    background-color: #4461DE;
+    width: 250px;
+    /* height: 35px; */
+    height: 60px;
+    float: left;
+    left: 2%;
+    top: calc(4% + 250px);
+    text-align: center;
+    font-family: Cambria;
+    font-size: 24px;
+    margin-top: 2%;
+    /* padding: 2% 0; */
+    line-height: 2.5em;
+}
+
+    .alterar i {
+        font-size: 35pt;
+        margin-top: 0.14em;
+    }
+
+    .alterar:hover {
+        border-color: #2C3F91;
+    }
+
+.comunicar {
+    position: absolute;
+    border: 5px solid midnightblue;
+    border-radius: 5px;
+    background-color: #4461DE;
+    width: 250px;
+    height: 60px;
+    float: left;
+    left: 2%;
+    top: calc(7% + 320px);
+    margin-top: 2%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+    .comunicar i {
+        font-size: 35pt;
+        margin-top: 0.14em;
+    }
+
+    .comunicar:hover {
+        border-color: #2C3F91;
+    }
+
+.deletar {
+    position: absolute;
+    border: 5px solid midnightblue;
+    border-radius: 5px;
+    background-color: #4461DE;
+    width: 250px;
+    height: 60px;
+    float: left;
+    left: 2%;
+    top: calc(10% + 390px);
+    margin-top: 2%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+    .deletar i {
+        font-size: 35pt;
+        margin-top: 0.14em;
+    }
+
+    .deletar:hover {
+        border-color: #2C3F91;
+    }
+
+.frequencia {
+    position: absolute;
+    border: 5px solid midnightblue;
+    border-left: none;
+    background-color: #4461DE;
+    width: 250px;
+    height: 12.4%;
+    float: left;
+    left: 69%;
+    top: 38.7%;
+    margin-top: 2%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+    .frequencia i {
+        font-size: 35pt;
+        margin-top: 0.14em;
+    }
+
+    .frequencia:hover {
+        border-color: #2C3F91;
+    }
+
+.notas {
+    position: absolute;
+    border: 5px solid midnightblue;
+    border-left: none;
+    background-color: #4461DE;
+    width: 250px;
+    height: 12.4%;
+    float: left;
+    left: 69%;
+    top: calc(39.2% + 12.2% + 5px);
+    margin-top: 2%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+    .notas i {
+        font-size: 35pt;
+        margin-top: 0.14em;
+    }
+
+    .notas:hover {
+        border-color: #2C3F91;
+    }
+
+.adicionar {
+    position: absolute;
+    border: 5px solid midnightblue;
+    border-left: none;
+    background-color: #4461DE;
+    width: 250px;
+    height: 12.4%;
+    float: left;
+    left: 69%;
+    top: calc(39.2% + 2*12.2% + 2*5px);
+    margin-top: 2%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+    .adicionar i {
+        font-size: 35pt;
+        margin-top: 0.14em;
+    }
+
+    .adicionar:hover {
+        border-color: #2C3F91;
+    }
+
+.remover {
+    position: absolute;
+    border: 5px solid midnightblue;
+    border-left: none;
+    background-color: #4461DE;
+    width: 250px;
+    height: 12.4%;
+    float: left;
+    left: 69%;
+    top: calc(39.2% + 3*12.2% + 3*5px);
+    margin-top: 2%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+    .remover i {
+        font-size: 35pt;
+        margin-top: 0.14em;
+    }
+
+    .remover:hover {
+        border-color: #2C3F91;
+    }

@@ -1,0 +1,133 @@
+﻿
+@{
+    ViewBag.Title = "Administrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link href="~/Estilos/Administrar.css" rel="stylesheet" />
+<div class="administracao">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <form action="/Sala/AlteraImg" id="form" method="post" enctype="multipart/form-data">
+        <div class='image-upload'>
+            <input name="id" value="@ViewBag.Sala.Id" style="display:none;" />
+            <label for='file-input'>
+                @{
+                    var base64Sala = Convert.ToBase64String(ViewBag.Sala.Img);
+                    var imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala);
+                }
+                <div id='imagemLocal'>
+                    <img style="position: absolute;
+                            border: 5px solid midnightblue;
+                            float: left;
+                            left: 2%;
+                            top: 4%;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            max-width: 250px;
+                            min-width: 250px;
+                            max-height: 250px;
+                            min-height: 250px;
+                            transition: 0.2s;" src='@imgSrcSala'>
+                </div>
+            </label>
+            <input type='file' accept="image/png, image/jpeg, image/gif" name="file" onchange='TrocaImg(this.files)' id='file-input'>
+        </div>
+        <div class="alterar" onclick='$("form").submit()' title="Alterar"><i class="fas fa-check"></i></div>
+    </form>
+    <div class="comunicar" onclick="comunicar()" title="Escrever Comunicado" onclick="irParaComunicar()"><i class="fas fa-envelope-square"></i></div>
+    <div class="deletar" onclick="deletar()" title="Deletar Sala"><i class="fas fa-eraser"></i></div>
+    <div class="interno">
+        <p class="nomep">Nome da Classe: @ViewBag.Sala.Nome</p>
+        <p class="professor">Professor: @ViewBag.Usu.Nome</p>
+        <p class="alunos">Alunos: @ViewBag.Sala.QtdAlunos</p>
+        <div class="select">
+            @if (ViewBag.Alunos.Count > 0)
+            {
+                <ul>
+                    @foreach (var Aluno in ViewBag.Alunos)
+                    {
+                        var base64 = Convert.ToBase64String(Aluno.Img);
+                        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                        <li>
+                            <div class="p"><p class="nome">@Aluno.Nome</p></div><img src="@imgSrc" class="img">
+                        </li>
+                    }
+                </ul>
+            }
+        </div>
+        <div class="frequencia" title="Alterar Frequência"><i class="far fa-list-alt"></i></div>
+        <div class="notas" title="Alterar Notas"><i class="fas fa-pen-alt"></i></div>
+        <div class="adicionar" title="Adicionar Aluno"><i class="fas fa-user-plus"></i></div>
+        <div class="remover" title="Remover Aluno"><i class="fas fa-user-times"></i></div>
+    </div>
+</div>
+
+<script>
+var menu = false;
+            localStorage.setItem("User", @ViewBag.Usu.Id);
+            $(".menuIcon").click(function () {
+            if (!menu) {
+            $(".aba").css("margin-left", "-10");
+            $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+            $(".menuIcon").css("margin-left", "150");
+            menu = true;
+            }
+            else {
+            $(".aba").css("margin-left", "-1000");
+            $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+            $(".menuIcon").css("margin-left", "15");
+            menu = false;
+            }
+            })
+
+            var not = @ViewBag.Not;
+
+            if (not == 0) {
+            $("number").hide();
+            }
+            else if (not < 10) {
+            $("number").html(not);
+            }
+            else {
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
+            }
+
+
+            $("#form").submit(function (e) {
+            var senha = $("#senhaNew").val();
+            var cSenha = $("#senhaRepeat").val();
+            if (senha != cSenha) {
+            e.preventDefault();
+            alert("Senhas não coincidem");
+            $("#senhaNew").val() = "";
+            $("#senhaRepeat").val() = "";
+            }
+            });
+
+            function TrocaImg(files) {
+                var imgLocal = document.getElementById('imagemLocal')
+                var file = files[0];
+
+                var form = document.getElementById('file-form');
+
+                img = document.createElement("img");
+
+                if (file != null) {
+                    img.file = file;
+                    var reader = new FileReader();
+                    reader.onload = (function (aImg) { return function (e) { aImg.src = e.target.result; }; })(img);
+                    reader.readAsDataURL(file);
+                }
+                else {
+                    img.src = "@Url.Content("~/img/classe.jpeg")";
+                }
+
+                img.style = "position: absolute;border: 5px solid midnightblue;float:left;left:2%;top:4%;background-size:cover;background-repeat:no-repeat;max-width:250px;min-width:250px;max-height:250px;min-height:250px;transition:0.2s;"
+                imgLocal.innerHTML = '';
+
+                imgLocal.appendChild(img);
+            }
+</script>

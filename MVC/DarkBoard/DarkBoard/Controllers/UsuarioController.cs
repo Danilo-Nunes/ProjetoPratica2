@@ -73,5 +73,19 @@ namespace DarkBoard.Controllers
             return RedirectToAction("Usuario", new RouteValueDictionary(new { controller = "Home", action = "Usuario", Id = usuario.Id.ToString() }));
 
         }
+
+        public ActionResult AlteraSenha(Usuario usu, string novaSenha)
+        {
+            usu.Senha = Criptografia.Criptografar(usu.Senha);
+            UsuarioDAO d = new UsuarioDAO();
+            Usuario usuario = d.BuscaPorId(usu.Id);
+            if(usuario.Senha == usu.Senha)
+            {
+                usuario.Senha = Criptografia.Criptografar(novaSenha);
+                d.Atualiza(usuario);
+                return RedirectToAction("Index", new RouteValueDictionary(new { controller = "Home", action = "Index"}));
+            }
+            return RedirectToAction("AlterarSenha", new RouteValueDictionary(new { controller = "Home", action = "AlterarSenha", msg = "Senha Incorreta" }));
+        }
     }
 }
