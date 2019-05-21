@@ -7,7 +7,7 @@ package br.metodista.modelo;
 
 /**
  *
- * @author u18203
+ * @author u18207
  */
 public class Filme implements Cloneable
 {

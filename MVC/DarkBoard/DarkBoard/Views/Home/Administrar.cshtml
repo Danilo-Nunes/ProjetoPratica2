@@ -35,7 +35,7 @@
         </div>
         <div class="alterar" onclick='$("form").submit()' title="Alterar"><i class="fas fa-check"></i></div>
     </form>
-    <div class="comunicar" onclick="comunicar()" title="Escrever Comunicado" onclick="irParaComunicar()"><i class="fas fa-envelope-square"></i></div>
+    <div class="comunicar" onclick="location.href='/Home/Comunicar/@ViewBag.Sala.Id'" title="Escrever Comunicado" onclick="irParaComunicar()"><i class="fas fa-envelope-square"></i></div>
     <div class="deletar" onclick="deletar()" title="Deletar Sala"><i class="fas fa-eraser"></i></div>
     <div class="interno">
         <p class="nomep">Nome da Classe: @ViewBag.Sala.Nome</p>

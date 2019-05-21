@@ -179,7 +179,7 @@ namespace DarkBoard.Controllers
 
             return View();
         }
-
+        [AutorizacaoFilterAttribute]
         public ActionResult Administrar(string id)
         {
             UsuarioDAO usuarioDao = new UsuarioDAO();
@@ -197,18 +197,20 @@ namespace DarkBoard.Controllers
 
             return View();
         }
-
-        public ActionResult Comunicar()
+        [AutorizacaoFilterAttribute]
+        public ActionResult Comunicar(string id)
         {
             UsuarioDAO usuarioDao = new UsuarioDAO();
             SalaDAO salaDAO = new SalaDAO();
             AlunoSalaDBO alunoSalaDao = new AlunoSalaDBO();
 
-
+            Sala sala = salaDAO.BuscaPorId(int.Parse(id));
             Usuario usuario = usuarioDao.BuscaPorId(((int)Session["usu"]));
 
             ViewBag.Not = Session["not"];
             ViewBag.Usu = usuario;
+            ViewBag.Sala = sala;
+            
 
             return View();
         }

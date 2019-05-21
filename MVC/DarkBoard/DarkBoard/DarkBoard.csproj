@@ -173,6 +173,7 @@
     <Content Include="Estilos\AlterarSenha.css" />
     <Content Include="Estilos\Cadastro.css" />
     <Content Include="Estilos\Comunicado.css" />
+    <Content Include="Estilos\Comunicar.css" />
     <Content Include="Estilos\Index.css" />
     <Content Include="Estilos\Login.css" />
     <Content Include="Estilos\Notificacoes.css" />

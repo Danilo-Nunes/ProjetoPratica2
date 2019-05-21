@@ -1,10 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package br.metodista.servicos;
 
+package br.metodista.servicos;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Produces;
@@ -18,13 +13,16 @@ import br.metodista.modelo.*;
 import java.util.ArrayList;
 import bd.dao.Filmes;
 import javax.ws.rs.PathParam;
+import java.util.ArrayList;
+import br.metodista.modelo.Filme;
 
 /**
  *
- * @author u18203
+ * @author u18207
  */
 @Path("filmes")
 public class FilmesResource {
+
     private static ArrayList<Filme> filmes; 
     
     /**
