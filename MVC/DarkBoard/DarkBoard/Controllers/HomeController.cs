@@ -38,14 +38,16 @@ namespace DarkBoard.Controllers
             return View();
         }
         [AutorizacaoFilterAttribute]
-        public ActionResult Usuario()
+        public ActionResult Usuario(string id)
         {
 
             UsuarioDAO dao = new UsuarioDAO();
             ViewBag.Not = Session["not"];
+
             Usuario usuario = dao.BuscaPorId(((int)Session["usu"]));
+            Usuario visitado = dao.BuscaPorId(int.Parse(id));
 
-
+            ViewBag.Visitado = visitado;          
             ViewBag.Usu = usuario;
 
             return View();
@@ -206,12 +208,13 @@ namespace DarkBoard.Controllers
 
             Sala sala = salaDAO.BuscaPorId(int.Parse(id));
             Usuario usuario = usuarioDao.BuscaPorId(((int)Session["usu"]));
+            IList<Usuario> alunos = alunoSalaDao.BuscaPorAlunos(sala.Id);
 
             ViewBag.Not = Session["not"];
             ViewBag.Usu = usuario;
             ViewBag.Sala = sala;
+            Session["Alunos"] = alunos;
             
-
             return View();
         }
     }

@@ -54,7 +54,15 @@ namespace DarkBoard.Controllers
             ComunicadoDAO d = new ComunicadoDAO();
             Session["usu"] = usuario.Id;
             Session["not"] = d.QtdPorUsuario(usuario.Id);
-            return Redirect((string)Session["Pagina"]);
+
+            try
+            {
+                return Redirect((string)Session["Pagina"]);
+            }
+            catch
+            {
+                return Redirect("/Home/Index");
+            }
         }
 
         public ActionResult Atualiza(Usuario usuario)

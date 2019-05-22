@@ -194,6 +194,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CompromissoController.cs" />
+    <Compile Include="Controllers\ComunicadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SalaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
@@ -254,6 +255,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="img\" />
     <Folder Include="Views\Compromisso\" />
+    <Folder Include="Views\Comunicado\" />
     <Folder Include="Views\Sala\" />
   </ItemGroup>
   <PropertyGroup>

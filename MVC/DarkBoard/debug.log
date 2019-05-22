@@ -1,1 +1,2 @@
 [0507/102317.783:ERROR:file_io.cc(134)] WriteFile: O pipe está sendo fechado. (0xE8)
+[0521/125610.808:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name metrics_client_id, discarding value fdc36f505ea4468caa71399290c71bb8

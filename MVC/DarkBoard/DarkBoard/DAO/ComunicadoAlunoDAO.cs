@@ -28,5 +28,14 @@ namespace DarkBoard.Models
                         select p).First();
             }
         }
+
+        public void Adiciona(ComunicadoAluno ca)
+        {
+            using (var contexto = new SalaContext())
+            {
+                contexto.ComunicadoAluno.Add(ca);
+                contexto.SaveChanges();
+            }
+        }
     }
 }
