@@ -44,6 +44,9 @@ namespace DarkBoard.Controllers
             UsuarioDAO dao = new UsuarioDAO();
             ViewBag.Not = Session["not"];
 
+            if(id == null)
+                id = ((int)Session["usu"]).ToString();
+
             Usuario usuario = dao.BuscaPorId(((int)Session["usu"]));
             Usuario visitado = dao.BuscaPorId(int.Parse(id));
 
@@ -215,6 +218,36 @@ namespace DarkBoard.Controllers
             ViewBag.Sala = sala;
             Session["Alunos"] = alunos;
             
+            return View();
+        }
+
+        public ActionResult Pesquisa()
+        {
+            UsuarioDAO usuarioDao = new UsuarioDAO();
+            SalaDAO salaDao = new SalaDAO();
+
+            Usuario usuario = usuarioDao.BuscaPorId(9);
+            IList<Usuario> usuariosBuscados = usuarioDao.Pesquisa("a");
+            IList<Sala> salasBuscadas = salaDao.Pesquisa("a");
+
+            var usuarios = (from u in usuariosBuscados
+                            select new Resultado
+                            {
+                                Id = u.Id,
+                                Nome = u.Nome,
+                                Img = u.Img
+                            }).ToList();
+
+            var busca = usuarios.Union(from s in salasBuscadas
+                                       select new Resultado
+                                       {
+                                           Id = s.Id,
+                                           Nome = s.Nome,
+                                           Img = s.Img
+                                       }).ToList().OrderBy(p => p.Nome);
+
+            ViewBag.Busca = busca;
+            ViewBag.Usu = usuario;
             return View();
         }
     }

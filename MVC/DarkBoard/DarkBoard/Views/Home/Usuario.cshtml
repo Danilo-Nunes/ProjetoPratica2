@@ -41,11 +41,11 @@
                 <li id='email'>@ViewBag.Visitado.Email</li>
             </ul>
             @if (ViewBag.Usu.Id == ViewBag.Visitado.Id)
-            {
-                <img class="Edit" src="@Url.Content("~/img/icons/edit.png")" />
-                <img class="Exit" src="@Url.Content("~/img/icons/logout.png")" />
-                <input name="usuario.Id" style="display:none;" value="@ViewBag.Visitado.Id" />
-            }
+        {
+            <img class="Edit" src="@Url.Content("~/img/icons/edit.png")" />
+            <img class="Exit" src="@Url.Content("~/img/icons/logout.png")" />
+            <input name="usuario.Id" style="display:none;" value="@ViewBag.Visitado.Id" />
+    }
 
             <textarea readonly="readonly" name="usuario.Descricao" id="desc" class='desc'>
                 @if (ViewBag.Visitado.Descricao != null)
@@ -59,6 +59,10 @@
             </textarea>
 
         </form>
+        @if (ViewBag.Usu.Id == ViewBag.Visitado.Id)
+        {
+        <button class="button" onclick="location.href='/Home/AlterarSenha'">Alterar Senha</button>
+        }
     </div>
 
     <script>

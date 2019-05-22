@@ -215,6 +215,7 @@
     <Compile Include="Models\Atividade.cs" />
     <Compile Include="Models\ComunicadoAluno.cs" />
     <Compile Include="DAO\ComunicadoAlunoDAO.cs" />
+    <Compile Include="Models\Resultado.cs" />
     <Compile Include="Models\UsuarioAtividade.cs" />
     <Compile Include="Models\Compromisso.cs" />
     <Compile Include="Models\Comunicado.cs" />
@@ -244,6 +245,7 @@
     <Content Include="Views\Home\AlterarSenha.cshtml" />
     <Content Include="Views\Home\Comunicar.cshtml" />
     <Content Include="Views\Home\Administrar.cshtml" />
+    <Content Include="Views\Home\Pesquisa.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

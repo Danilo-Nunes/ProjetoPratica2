@@ -63,5 +63,17 @@ namespace DarkBoard.DAO
                 contexto.SaveChanges();
             }
         }
+
+        public IList<Usuario> Pesquisa(string pesq)
+        {
+            using (var contexto = new SalaContext())
+            {
+                return (from p in contexto.Usuario
+                             where (p.Nome.Contains(pesq))
+                             select p).ToList();
+
+                
+            }
+        }
     }
 }
