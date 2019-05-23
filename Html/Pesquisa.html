@@ -1,10 +1,9 @@
 <html>
 
 <head>
-    <title>Atribuir</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Sala</title>
     <link rel='stylesheet' href='../css/index.css'>
-    <link rel='stylesheet' href='../css/atribuir.css'>
+    <link rel='stylesheet' href='../css/pesquisa.css'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='shortcut icon' href='../img/icon.ico' sizes="1000x1000">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -35,12 +34,12 @@
         </a>
         <a href='Home.html'>
             <li>
-                <img class='icon' src="../img/icons/Home.png" title='Home'>
+                <img class='icon' src="../img/icons/home.png" title='Home'>
             </li>
         </a>
         <a href='Agenda.html'>
             <li>
-                <img class='icon' src="../img/icons/checklist.png" title='Salas'>
+                <img class='icon' src="../img/icons/checklist.png" title='Tarefas'>
             </li>
         </a>
         <a href='Calendário.html'>
@@ -68,43 +67,25 @@
         </li>
     </ul>
 
-    <div class="criacao">        
-        <img class="img" onclick="imagemSala()" src='../img/classe.jpeg'>
-        <div class="enviar" title="Enviar Comunicado" onclick="enviar()"><i class="fas fa-paper-plane"></i></div>
-        <div class="adicionar" title="Adicionar Arquivo" id="add"><i class="fas fa-folder-plus" id="i"></i></div>
-        <div class="cancelar" onclick="cancelar()"><i class="far fa-times-circle"></i></div>
-        <div class="interno">
-            <p class="titulop">Atividade: </p><input type="text" class="titulo">            
-            <p class="pesop">Peso: </p><input type="text" class="peso">            
-            <p class="comunicadop">Comunicado: </p><textarea class="comunicado"></textarea>
-        </div>
+
+    <div class="resultados">
+        <ul>
+            <li>
+                <div class="p" onclick="location.href='Comunicado.html'">
+                    <p class="nome">Alguma coisa</p>
+                </div>
+                <img class="img" src="../img/icons/user.png">              
+            </li>
+            <li>
+                <div class="p" onclick="location.href='Comunicado.html'">
+                    <p class="nome">Alguma coisa</p>
+                </div>
+                <img class="img" src="../img/icons/user.png">               
+            </li>
+        </ul>
     </div>   
-    <input type="file" class="add" onchange="troca(this.files)" id="in">
 
-    <script type="text/javascript"> // OLHA AQUI KARALHO EU COLOQUEI ESSA PORRA PARA FUNCIONAR!!!
-        var select = false;
-
-        function troca(files)
-        {
-            if(files[0] != null)
-            {                
-                $('#i').prop('class', 'fas fa-folder-minus');  
-            }
-        }
-
-        $("#add").click(function() {
-            if(!select)
-                $("#in").click();
-            else   
-            {         
-                select = false;
-                $('#i').prop('class', 'fas fa-folder-plus');
-            }
-        })
-        
-        $("input[type=file]").on('input', function(){           
-            select = true;
-        });
+    <script type="text/javascript">
 
         var not = 0;
 
@@ -120,31 +101,23 @@
             $("number").css('padding-left', '5px');
         }
         var menu = false;
-        $(".menuIcon").click(function () {
-            if (!menu) {
+        $(".menuIcon").click(function () 
+        {
+            if (!menu)
+            {
                 $(".aba").css("margin-left", "-10");
                 $("#menu").attr('src', '../img/icons/exit.png');
                 $(".menuIcon").css("margin-left", "150");
                 menu = true;
             }
-            else {
+            else 
+            {
                 $(".aba").css("margin-left", "-1000");
                 $("#menu").attr('src', '../img/icons/menu.png');
                 $(".menuIcon").css("margin-left", "15");
                 menu = false;
             }
-        })         
-
-        nomeSala = $(".nome").val;
-
-        function voltar(){
-            window.location.href = "Home.html";
-        }
-
-        function criar()
-        {
-            //code
-        }
+        })
     </script>
 </body>
 

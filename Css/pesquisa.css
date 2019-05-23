@@ -1,0 +1,73 @@
+.resultados
+{
+    position: absolute;
+    /* float: left; */
+    top: 15%;
+    left: 9.5%;    
+    background: ghostwhite;
+    border: 10px double midnightblue;
+    overflow-y: scroll;
+    height: 74%;
+    width: 79%;
+}
+
+.resultados ul
+{    
+    list-style: none;
+    margin-top: 8%;
+}
+
+.resultados ul li
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: calc(140px + 2%); 
+}
+
+.resultados ul li .p .nome
+{  
+    font-size: 24px;
+    position: relative;
+    top: 20%;    
+    float: center;
+    text-align: center;
+    color: Black;
+    font-family: Baskerville Old Face;    
+}
+
+.resultados ul li .p
+{   
+    border: 5px solid midnightblue;
+    border-right: none;
+    position: absolute;
+    height: 120px;
+    width: calc(95% - 120px);
+    float: left;
+}
+
+.resultados ul li .img
+{
+    position: absolute;
+    border: 5px solid midnightblue;
+    float: left;
+    left: calc(95% - 120px);    
+    /* background-size: cover; 
+    background-repeat: no-repeat; */
+    max-width: 120px;
+    min-width: 120px;
+    max-height: 120px;
+    min-height: 120px;
+    transition:0.2s;
+}
+
+.resultados ul li .img:hover
+{   
+    border-color: #4461DE;
+}
+
+.resultados ul li .p:hover
+{   
+    border-color: #4461DE;
+}
