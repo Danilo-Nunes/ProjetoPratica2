@@ -1,4 +1,4 @@
-.criacao
+.notas
 {
     position: absolute;
     /* float: left; */
@@ -72,47 +72,21 @@
 {  
     font-size: 30px;
     position: absolute;
-    left: 21%;
-    width: 77%;
+    left: 19%;
     margin-top: 3%;
     float: left;
     text-align: center;
     color: Black;
-    font-family: Cambria;    
-}
-
-.pesop
-{  
-    font-size: 35px;
-    position: absolute;
-    margin-left: 3%;
-    margin-top: 9%;
-    float: left;
-    text-align: center;
-    color: Black;
-    font-family: Cambria;    
-}
-
-.peso
-{  
-    font-size: 30px;
-    position: absolute;
-    left: 21%;
-    margin-top: 9%;
-    float: left;
-    text-align: center;
-    color: Black;
     font-family: Cambria;
-    width: 8%;    
+    width: 79%;    
 }
-
 
 .comunicadop
 {   
     position: absolute;      
     float: left;
     margin-left: 3%;
-    margin-top: 15%;
+    margin-top: 11%;
     max-width: 95%;
     color: Black;
     font-family: Cambria; 
@@ -124,12 +98,12 @@
     position: absolute;      
     float: left;
     margin-left: 3%;
-    margin-top: 21%;
+    margin-top: 17%;
     color: Black;
     font-family: Cambria; 
     font-size: 25px;
     width: 95%;
-    height: 58%;
+    height: 65%;
 }
 
 .enviar
@@ -139,60 +113,26 @@
     border-radius: 5px;
     background-color: #4461DE;
     width: 250px;
-    height: 12%;
+    height: 70px;
     float: left;
     left: 2%;
-    top: calc(2.5% + 250px);
+    top: calc(9% + 250px);
     text-align: center;
+    font-family: Cambria; 
+    font-size: 24px;
     margin-top: 2%;
     line-height: 2.5em;
 }
 
 .enviar i
 {
-    font-size: 38pt;
+    font-size: 40pt;
     margin-top: 0.14em;
 }
 
 .enviar:hover
 {   
     border-color: #2C3F91;
-}
-
-.adicionar
-{
-    position: absolute;
-    border: 5px solid midnightblue;
-    border-radius: 5px;
-    background-color: #4461DE;
-    width: 250px;
-    height: 12%;
-    float: left;
-    left: 2%;
-    top: calc(3% + 260px + 13%);    
-    margin-top: 2%;
-    align-items: center;
-    display: flex;
-    flex-direction: column;       
-}
-
-.adicionar i
-{
-    font-size: 42.5pt;
-    margin-top: 0.14em;      
-}
-
-.adicionar:hover
-{   
-    border-color: #2C3F91;
-}
-
-.add
-{
-    width: 0.1px;
-	height: 0.1px;	
-    overflow: hidden;
-    left: -1000px;
 }
 
 .cancelar
@@ -202,10 +142,10 @@
     border-radius: 5px;
     background-color: #4461DE;
     width: 250px;
-    height: 12%;
+    height: 70px;
     float: left;
     left: 2%;
-    top: calc(5.5% + 260px + 26%);    
+    top: calc(16% + 330px);    
     margin-top: 2%;
     align-items: center;
     display: flex;
@@ -214,8 +154,8 @@
 
 .cancelar i
 {
-    font-size: 41pt;
-    margin-top: 0.13em;
+    font-size: 42.5pt;
+    margin-top: 0.14em;
 }
 
 .cancelar:hover
