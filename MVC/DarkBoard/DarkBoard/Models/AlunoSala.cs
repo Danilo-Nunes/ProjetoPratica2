@@ -14,8 +14,6 @@ namespace DarkBoard.Models
         public int CodSala{ get; set; }
         public int Media { get; set; }
         public int Faltas { get; set; }
-        [Key]
-        [Column(TypeName = "int")]
         public int Id { get; set; }
     }
 }

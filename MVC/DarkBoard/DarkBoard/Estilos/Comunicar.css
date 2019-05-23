@@ -65,13 +65,13 @@
 .titulo {
     font-size: 30px;
     position: absolute;
-    left: 19%;
+    left: 21%;
+    width: 77%;
     margin-top: 3%;
     float: left;
     text-align: center;
     color: Black;
     font-family: Cambria;
-    width: 79%;
 }
 
 .comunicadop {
@@ -103,19 +103,17 @@
     border-radius: 5px;
     background-color: #4461DE;
     width: 250px;
-    height: 70px;
+    height: 12%;
     float: left;
     left: 2%;
-    top: calc(9% + 250px);
+    top: calc(2.5% + 250px);
     text-align: center;
-    font-family: Cambria;
-    font-size: 24px;
     margin-top: 2%;
     line-height: 2.5em;
 }
 
     .enviar i {
-        font-size: 40pt;
+        font-size: 38pt;
         margin-top: 0.14em;
     }
 
@@ -123,16 +121,51 @@
         border-color: #2C3F91;
     }
 
+.adicionar {
+    position: absolute;
+    border: 5px solid midnightblue;
+    border-radius: 5px;
+    background-color: #4461DE;
+    width: 250px;
+    height: 12%;
+    float: left;
+    left: 2%;
+    top: calc(3% + 260px + 13%);
+    margin-top: 2%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+    .adicionar i {
+        font-size: 42.5pt;
+        margin-top: 0.14em;
+    }
+
+    .adicionar:hover {
+        border-color: #2C3F91;
+    }
+
+.add {
+    width: 0.1px;
+    height: 0.1px;
+    overflow: hidden;
+    left: -1000px;
+}
+.image-upload > input {
+    display: none;
+}
+
 .cancelar {
     position: absolute;
     border: 5px solid midnightblue;
     border-radius: 5px;
     background-color: #4461DE;
     width: 250px;
-    height: 70px;
+    height: 12%;
     float: left;
     left: 2%;
-    top: calc(16% + 330px);
+    top: calc(5.5% + 260px + 26%);
     margin-top: 2%;
     align-items: center;
     display: flex;
@@ -140,8 +173,8 @@
 }
 
     .cancelar i {
-        font-size: 42.5pt;
-        margin-top: 0.14em;
+        font-size: 41pt;
+        margin-top: 0.13em;
     }
 
     .cancelar:hover {

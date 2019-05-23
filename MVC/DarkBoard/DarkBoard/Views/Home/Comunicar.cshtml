@@ -22,8 +22,10 @@
                                                                 max-height: 250px;
                                                                 min-height: 250px;
                                                                 transition: 0.2s;">
-<form id="form" method="post" action="/Comunicado/Adiciona">
+<form id="form" method="post" enctype="multipart/form-data" action="/Comunicado/Adiciona">
     <div type="submit" class="enviar" title="Enviar" onclick="$('#form').submit();"><i class="fas fa-paper-plane"></i></div>
+     <div class="adicionar" onclick="$('#file').click();" title="Adicionar Arquivo" id="add"><i class="fas fa-folder-plus" id="i"></i></div>
+    <input type="file" name="file" style="display:none;" id="file" />
     <div class="cancelar" title="Excluir"><i class="far fa-times-circle"></i></div>
     <div class="interno">
         <p class="titulop">Assunto: </p><input type="text" name="com.Assunto" class="titulo">
