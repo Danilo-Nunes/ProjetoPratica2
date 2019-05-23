@@ -53,7 +53,62 @@
     float: left;
     width: 72%;
     height: 90%;
+    border: 5px solid midnightblue;    
+    overflow-y: scroll;
+}
+
+.interno ul
+{    
+    list-style: none;
+    margin-top: 8%;
+}
+
+.interno ul li
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    margin-bottom: calc(140px + 2%); 
+}
+
+.interno ul li .p .nome
+{  
+    font-size: 24px;
+    position: relative;
+    top: 20%;    
+    float: center;
+    text-align: center;
+    color: Black;
+    font-family: Baskerville Old Face;    
+}
+
+.interno ul li .p
+{   
     border: 5px solid midnightblue;
+    border-right: none;
+    position: absolute;
+    height: 120px;
+    width: calc(85% - 120px);
+    float: left;
+}
+
+.interno ul li .aluno
+{
+    position: absolute;
+    border: 5px solid midnightblue;
+    float: left;
+    left: calc(85% - 120px);    
+    max-width: 120px;
+    min-width: 120px;
+    max-height: 120px;
+    min-height: 120px;
+    transition:0.2s;
+}
+
+.interno ul li .img:aluno
+{   
+    border-color: #4461DE;
 }
 
 .titulop
