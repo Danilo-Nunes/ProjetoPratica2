@@ -41,7 +41,6 @@
         float: center;
         top: 4%;
         left: 5%;
-        background: url("https://cdna.artstation.com/p/assets/images/images/010/031/280/large/alexey-skorov-japanese-classroom-001-interior-044-3-1.jpg?1522180170");
         background-size: cover;
         background-repeat: no-repeat;
         max-width: 200px;
@@ -135,3 +134,26 @@
 .mural ul li .p:hover {
     border-color: #4461DE;
 }
+
+button {
+    position: absolute;
+    border: 5px solid midnightblue;
+    border-radius: 5px;
+    background-color: white;
+    width: 250px;
+    height: 60px;
+    color: midnightblue;
+    top:500px;
+    left: 6%;
+    /*top: calc(4% + 250px);*/
+    text-align: center;
+    font-family: Cambria;
+    font-size: 24px;
+    /*margin-top: 2%;*/
+    line-height: 1em;
+    transition:0.5s;
+}
+
+    button:hover {
+        border-color: #2C3F91;
+    }

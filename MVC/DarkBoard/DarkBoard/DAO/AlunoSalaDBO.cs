@@ -37,13 +37,15 @@ namespace DarkBoard.DAO
             }
         }
 
-        public IList<AlunoSala> BuscaPorAlunos(int id)
+        public IList<Usuario> BuscaPorAlunos(int id)
         {
             using (var contexto = new SalaContext())
             {
-                return contexto.AlunoSala
-                .Where(p => p.CodSala == id)
-                .ToList();
+                return (from p in contexto.Usuario
+                        join e in contexto.AlunoSala on p.Id equals e.CodAluno
+                        join q in contexto.Sala on e.CodSala equals q.Id
+                        where q.Id == id
+                        select p).ToList();
             }
         }
         public void Atualiza(AlunoSala AlunoSala)

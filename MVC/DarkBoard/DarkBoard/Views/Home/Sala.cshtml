@@ -38,22 +38,40 @@
         <text>Nenhum Comunicado por Enquanto!</text>
     }
 </div>
-
+@{
+    var base64Sala = Convert.ToBase64String(ViewBag.Sala.Img);
+    var imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala);
+}
 <div class="classe">
-    <div class="img"></div>
+    <img class="img" src="@imgSrcSala" style="position: absolute;
+                                            border: 5px solid midnightblue;
+                                            float: center;
+                                            top: 4%;
+                                            left: 5%;
+                                            background-size: cover;
+                                            background-repeat: no-repeat;
+                                            max-width: 200px;
+                                            min-width: 200px;
+                                            max-height: 200px;
+                                            min-height: 200px;
+                                            transition: 0.2s;">
     <p class="nome">@ViewBag.Sala.Nome</p>
     <p class="alunos">Alunos: @ViewBag.Sala.QtdAlunos</p>
     <p class="professor">Professor: @ViewBag.Professor.Nome</p>
     @{int n = 0;
-    foreach(var at in ViewBag.Atividades)
-    {
-        if (at.Concluida == "N")
+        foreach (var at in ViewBag.Atividades)
         {
-            n++;
+            if (at.Concluida == "N")
+            {
+                n++;
+            }
         }
     }
-    }
     <p class="trabalhos">Trabalhos pendentes: @n</p>
+    @if (ViewBag.Usu.Cargo == 'P')
+    {
+        <button onclick="location.href='/Home/Administrar/@ViewBag.Sala.Id'">Administrar</button>
+    }
 </div>
 
 <script>

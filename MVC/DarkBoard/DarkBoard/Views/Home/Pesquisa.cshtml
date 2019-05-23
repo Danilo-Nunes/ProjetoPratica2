@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Pesquisa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<select>
+    @foreach (var result in ViewBag.Busca)
+    {
+        <option>@result.Nome</option>
+    }
+   
+
+</select>
+

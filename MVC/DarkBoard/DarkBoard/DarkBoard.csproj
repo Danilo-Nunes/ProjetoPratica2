@@ -168,9 +168,12 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Estilos\Administrar.css" />
     <Content Include="Estilos\Agenda.css" />
+    <Content Include="Estilos\AlterarSenha.css" />
     <Content Include="Estilos\Cadastro.css" />
     <Content Include="Estilos\Comunicado.css" />
+    <Content Include="Estilos\Comunicar.css" />
     <Content Include="Estilos\Index.css" />
     <Content Include="Estilos\Login.css" />
     <Content Include="Estilos\Notificacoes.css" />
@@ -191,7 +194,9 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CompromissoController.cs" />
+    <Compile Include="Controllers\ComunicadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SalaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Criptografia.cs" />
     <Compile Include="DAO\AlunoSalaDBO.cs" />
@@ -210,6 +215,7 @@
     <Compile Include="Models\Atividade.cs" />
     <Compile Include="Models\ComunicadoAluno.cs" />
     <Compile Include="DAO\ComunicadoAlunoDAO.cs" />
+    <Compile Include="Models\Resultado.cs" />
     <Compile Include="Models\UsuarioAtividade.cs" />
     <Compile Include="Models\Compromisso.cs" />
     <Compile Include="Models\Comunicado.cs" />
@@ -236,6 +242,10 @@
     <Content Include="Views\Home\Sala.cshtml" />
     <Content Include="Views\Home\Comunicado.cshtml" />
     <Content Include="Views\Home\Notificacoes.cshtml" />
+    <Content Include="Views\Home\AlterarSenha.cshtml" />
+    <Content Include="Views\Home\Comunicar.cshtml" />
+    <Content Include="Views\Home\Administrar.cshtml" />
+    <Content Include="Views\Home\Pesquisa.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -247,6 +257,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="img\" />
     <Folder Include="Views\Compromisso\" />
+    <Folder Include="Views\Comunicado\" />
+    <Folder Include="Views\Sala\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
