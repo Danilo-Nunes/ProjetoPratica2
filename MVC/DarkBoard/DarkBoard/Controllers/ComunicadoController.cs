@@ -15,12 +15,16 @@ namespace DarkBoard.Controllers
         {
             ComunicadoDAO comunicadoDAO = new ComunicadoDAO();
             ComunicadoAlunoDAO comunicadoAlunoDAO = new ComunicadoAlunoDAO();
-          
-            byte[] arquivoBytes = new byte[file.InputStream.Length + 1];
 
-            file.InputStream.Read(arquivoBytes, 0, arquivoBytes.Length);
-            com.Arquivo = arquivoBytes;
+            if (file != null)
+            {
+                byte[] arquivoBytes = new byte[file.InputStream.Length + 1];
 
+                file.InputStream.Read(arquivoBytes, 0, arquivoBytes.Length);
+                com.Arquivo = arquivoBytes;
+                com.NomeArquivo = file.FileName;
+                com.TipoArquivo = file.ContentType;
+            }
             comunicadoDAO.Adiciona(com);
 
             foreach (var A in (IList<Usuario>)Session["Alunos"])
@@ -37,6 +41,15 @@ namespace DarkBoard.Controllers
 
 
             return RedirectToAction("Sala", new RouteValueDictionary(new { controller = "Home", action = "Sala", id = com.CodSala }));
+        }
+
+        public ActionResult Download(string id)
+        {
+            ComunicadoDAO comunicadoDAO = new ComunicadoDAO();
+
+            Comunicado c = comunicadoDAO.BuscaPorId(int.Parse(id));
+
+            return File(c.Arquivo, c.TipoArquivo, c.NomeArquivo);
         }
     }
 }

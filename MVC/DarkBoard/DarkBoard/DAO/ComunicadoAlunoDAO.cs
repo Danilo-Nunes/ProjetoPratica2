@@ -37,5 +37,18 @@ namespace DarkBoard.Models
                 contexto.SaveChanges();
             }
         }
+
+        public static void RemoveAluno(int idAluno, int idSala)
+        {
+            using (var contexto = new SalaContext())
+            {
+                contexto.RemoveRange(from a in contexto.ComunicadoAluno
+                                join c in contexto.Comunicado on a.CodComunicado equals c.Id
+                                where a.CodAluno == idAluno
+                                where c.CodSala == idSala
+                                select a);
+                contexto.SaveChanges();
+            }
+        }
     }
 }

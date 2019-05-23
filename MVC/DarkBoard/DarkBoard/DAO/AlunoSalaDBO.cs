@@ -65,5 +65,17 @@ namespace DarkBoard.DAO
                 contexto.SaveChanges();
             }
         }
+
+        public static void RemoveAluno(int idAluno, int idSala)
+        {
+            using (var contexto = new SalaContext())
+            {
+                contexto.RemoveRange(from a in contexto.AlunoSala
+                                where a.CodAluno == idAluno
+                                where a.CodSala == idSala
+                                select a);
+                contexto.SaveChanges();
+            }
+        }
     }
 }

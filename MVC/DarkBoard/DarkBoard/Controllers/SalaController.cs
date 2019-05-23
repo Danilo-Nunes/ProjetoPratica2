@@ -4,6 +4,7 @@ using DarkBoard.Models;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Collections.Generic;
 
 namespace DarkBoard.Controllers
 {
@@ -23,6 +24,16 @@ namespace DarkBoard.Controllers
             }
             s.Atualiza(salaFinal);
             return RedirectToAction("Administrar", new RouteValueDictionary(new { controller = "Home", action = "Administrar", id=salaFinal.Id}));
+        }
+
+        public ActionResult RemoveAluno(List<string> obj)
+        {
+            int idAluno = int.Parse(obj[0]);
+            int idSala = int.Parse(obj[1]);
+            ComunicadoAlunoDAO.RemoveAluno(idAluno,idSala);
+            UsuarioAtividadeDAO.RemoveAluno(idAluno,idSala);
+            AlunoSalaDBO.RemoveAluno(idAluno, idSala);
+            return View();
         }
     }
 }
