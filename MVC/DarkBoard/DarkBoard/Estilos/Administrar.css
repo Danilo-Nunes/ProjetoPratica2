@@ -9,7 +9,7 @@
     width: 80%;
 }
 
-.img {
+/*.img {
     position: absolute;
     border: 5px solid midnightblue;
     float: left;
@@ -22,7 +22,7 @@
     max-height: 250px;
     min-height: 250px;
     transition: 0.2s;
-}
+}*/
 
     .img:hover {
         border-color: #4461DE;
@@ -122,6 +122,7 @@
                 height: 100px;
                 width: calc(85% - 100px);
                 float: left;
+                transition:0.2s;
             }
 
             .select ul li .img {
@@ -136,16 +137,10 @@
                 min-width: 100px;
                 max-height: 100px;
                 min-height: 100px;
-                transition: 0.2s;
+                transition:0.2s;
             }
 
-                .select ul li .img:hover {
-                    border-color: #4461DE;
-                }
-
-            .select ul li .p:hover {
-                border-color: #4461DE;
-            }
+                
 
 .alterar {
     position: absolute;

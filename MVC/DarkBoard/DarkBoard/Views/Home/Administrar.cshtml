@@ -49,7 +49,7 @@
                     {
                         var base64 = Convert.ToBase64String(Aluno.Img);
                         var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
-                        <li onclick="location.href='/Home/Usuario/@Aluno.Id'">
+                        <li onclick="TrataClique(@Aluno.Id)">
                             <div class="p"><p class="nome">@Aluno.Nome</p></div><img src="@imgSrc" class="img">
                         </li>
                     }
@@ -64,7 +64,9 @@
 </div>
 
 <script>
-var menu = false;
+
+    var removendo;
+    var menu = false;
             localStorage.setItem("User", @ViewBag.Usu.Id);
             $(".menuIcon").click(function () {
             if (!menu) {
@@ -79,6 +81,19 @@ var menu = false;
             $(".menuIcon").css("margin-left", "15");
             menu = false;
             }
+            })
+
+            $(".remover").click(function () {
+                if (!removendo) {
+                    removendo = true;
+                    $(".p").css("border-color", "Crimson");
+                    $(".img").css("border-color", "Crimson");
+                }
+                else {
+                    removendo = false;
+                    $(".p").css("border-color", "midnightblue");
+                    $(".img").css("border-color", "midnightblue");
+                }
             })
 
             var not = @ViewBag.Not;
@@ -129,5 +144,27 @@ var menu = false;
                 imgLocal.innerHTML = '';
 
                 imgLocal.appendChild(img);
+            }
+
+            function TrataClique(id) {
+                if (removendo) {
+                    var obj = [id, "@ViewBag.Sala.Id"];
+
+                    //jQuery.ajax({
+                    //    type: 'POST',
+                    //    url: "/Sala/RemoveAluno/"+id,
+                    //    contentType: "application/json",
+                    //    datatype: 'json',
+                    //    data: JSON.stringify(obj),
+                    //    success: function (data) {},
+                    //    failure: function (errMsg) {
+                    //        alert(errMsg);
+                    //    }
+                    //});
+                    $(".remover").click();
+                }
+                else {
+                    location.href = '/Home/Usuario/' + id;
+                }
             }
 </script>

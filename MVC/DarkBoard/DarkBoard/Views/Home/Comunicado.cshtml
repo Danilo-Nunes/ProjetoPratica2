@@ -3,6 +3,7 @@
     ViewBag.Title = "Comunicado";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link href="~/Estilos/Comunicado.css" rel="stylesheet" />
 <div class="comunicado">
     @{
@@ -22,11 +23,14 @@
                             max-height: 250px;
                             min-height: 250px;
                             transition: 0.2s;">
-    <div class="entregar">Entregar</div>
+    @if (ViewBag.Comunicado.Arquivo != null)
+    {
+    <div class="arquivos" title="Receber Arquivos do Professor" onclick="window.open('/Comunicado/Download/@ViewBag.Comunicado.Id')"><i class="fas fa-folder-open"></i></div>
+    }
     <div class="voltar" onclick="location.href='/Home/Sala/@ViewBag.Sala.Id'"></div>
     <div class="interno">
         <p class="professor">Professor: @ViewBag.Professor.Nome</p>
-        <p class="descricao">@ViewBag.Comunicado.Texto</p>      
+        <p class="descricao">@ViewBag.Comunicado.Texto</p>
     </div>
 </div>
 <script>

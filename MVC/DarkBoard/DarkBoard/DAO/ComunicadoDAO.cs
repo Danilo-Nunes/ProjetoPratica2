@@ -75,7 +75,7 @@ namespace DarkBoard.DAO
             }
         }
 
-        public void Remove(Comunicado Comunicado)
+        public static void Remove(Comunicado Comunicado)
         {
             using (var contexto = new SalaContext())
             {

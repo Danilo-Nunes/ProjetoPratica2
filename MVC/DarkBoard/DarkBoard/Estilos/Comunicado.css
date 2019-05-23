@@ -72,7 +72,7 @@
     font-size: 30px;
 }
 
-.entregar {
+.arquivos {
     position: absolute;
     border: 5px solid midnightblue;
     border-radius: 5px;
@@ -91,7 +91,12 @@
     line-height: 2.5em;
 }
 
-    .entregar:hover {
+    .arquivos i {
+        font-size: 40pt;
+        margin-top: 0.14em;
+    }
+
+    .arquivos:hover {
         border-color: #2C3F91;
     }
 
