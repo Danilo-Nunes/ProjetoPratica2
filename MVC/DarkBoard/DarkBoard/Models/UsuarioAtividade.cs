@@ -13,6 +13,7 @@ namespace DarkBoard.Models
         public double Nota { get; set; }
         public int Peso { get; set; }
         public string Concluida { get; set; }
+        public byte[] Arquivo { get; set; }
 
     }
 }
