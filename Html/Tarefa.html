@@ -1,9 +1,10 @@
 <html>
 
 <head>
-    <title>Comunicado</title>
+    <title>Tarefa</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel='stylesheet' href='../css/index.css'>
-    <link rel='stylesheet' href='../css/comunicado.css'>
+    <link rel='stylesheet' href='../css/tarefa.css'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='shortcut icon' href='../img/icon.ico' sizes="1000x1000">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -69,21 +70,55 @@
 
 
     <div class="comunicado">
-        <p class="nome">(Nome da sala)</p>
+        <p class="nome">(Assunto)</p>
         <div class="img"></div>
-        <div class="entregar">entregar</div>
+        <div class="entregar">entregar</div>        
         <div class="voltar" onclick="voltar()"></div>
         <div class="interno">
-            <p class="professor">Professor: (nome do professor)</p> <!--Chico(não o bento)-->
-            <p class="descricao">(Comunicado a ser enviado para a sala)</p> <!--kk eae seus corno, hora de por essas bundas para trabalhar, aqui para vcs mais 700 exercícios, tudo para amanhã,
+            <p class="professor">Professor: (nome do professor)</p> 
+            <p class="descricao">(Comunicado a ser enviado para a sala) kk eae seus corno, hora de por essas bundas para trabalhar, aqui para vcs mais 700 exercícios, tudo para amanhã,
                 já sabem né, se não fizerem eu vou tiltar em geral, vou arrebentar o barraco, seus vagais, podem ir fazendo,
                 ou senão é dp (não por causa de nota, porquê os exercícios não valem nada, apenas se vc não fizê-los eu vou
-                ficar puto e por vcs de dp porquê eu quero) então bora seus merda kk.-->
+                ficar puto e por vcs de dp porquê eu quero) então bora seus merda kk</p>                     
+            <div class="adicionar" title="Adicionar Arquivo" id="add"><i class="fas fa-folder-plus" id="i"></i></div>
+            <div class="arquivos" title="Receber Arquivos do professor"><i class="fas fa-folder-open"></i></div>            
         </div>
     </div>
 
 
-    <script type="text/javascript">
+    <script type="text/javascript"> // OLHA AQUI KARALHO EU COLOQUEI ESSA PORRA PARA FUNCIONAR!!!
+        jQuery(document).ready(function($){ //wait for the document to load
+            $('.dynamic-height').each(function(){ //loop through each element with the .dynamic-height class
+                $(this).css({
+                    'margin-top' : $(this).outerHeight() - 10 + 'px' //adjust the css rule for margin-top to equal the element height - 10px and add the measurement unit "px" for valid CSS
+                });
+            });
+        });
+
+        var select = false;
+
+        function troca(files)
+        {
+            if(files[0] != null)
+            {                
+                $('#i').prop('class', 'fas fa-folder-minus');  
+            }
+        }
+
+        $("#add").click(function() {
+            if(!select)
+                $("#in").click();
+            else   
+            {         
+                select = false;
+                $('#i').prop('class', 'fas fa-folder-plus');
+            }
+        })
+        
+        $("input[type=file]").on('input', function(){           
+            select = true;
+        });
+
         var not = 0;
 
         if (not == 0) {

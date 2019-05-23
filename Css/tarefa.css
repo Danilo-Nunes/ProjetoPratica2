@@ -68,15 +68,77 @@
 
 .descricao
 {   
-    position: absolute;      
+
     float: left;
     margin-left: 3%;
-    margin-top: 8%;
     max-width: 95%;
     text-align: justify;
     color: Black;
     font-family: Baskerville Old Face; 
     font-size: 18px;
+}
+
+.adicionar
+{   
+    border: 5px solid midnightblue;
+    border-radius: 5px;
+    background-color: #4461DE;
+    width: 250px;
+    height: 14%;
+    float: left;
+    left: 2%;
+    bottom: 4%;
+    margin-left: 1.6em;
+    align-items: center;
+    display: flex;
+    flex-direction: column;       
+}
+
+.adicionar i
+{
+    font-size: 40pt;
+    margin-top: 0.14em;      
+}
+
+.adicionar:hover
+{   
+    border-color: #2C3F91;
+}
+
+.add
+{
+    width: 0.1px;
+	height: 0.1px;	
+    overflow: hidden;
+    left: -1000px;
+}
+
+.arquivos
+{
+    margin-left: 3em;
+    margin-bottom: 1em;
+    border: 5px solid midnightblue;
+    border-radius: 5px;
+    background-color: #4461DE;
+    width: 250px;
+    height: 14%;
+    float: left;
+    left: calc(3% + 260px + 4%);
+    bottom: 4%;     
+    align-items: center;
+    display: flex;
+    flex-direction: column;       
+}
+
+.arquivos i
+{
+    font-size: 40pt;
+    margin-top: 0.14em;      
+}
+
+.arquivos:hover
+{   
+    border-color: #2C3F91;
 }
 
 .entregar
