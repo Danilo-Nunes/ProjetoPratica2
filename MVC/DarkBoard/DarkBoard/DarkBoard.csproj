@@ -169,6 +169,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Estilos\Administrar.css" />
+    <Content Include="Estilos\AdministrarAtividades.css" />
     <Content Include="Estilos\Agenda.css" />
     <Content Include="Estilos\AlterarSenha.css" />
     <Content Include="Estilos\Cadastro.css" />
@@ -213,6 +214,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AlunoAux.cs" />
     <Compile Include="Models\AlunoSala.cs" />
     <Compile Include="Models\Atividade.cs" />
     <Compile Include="Models\ComunicadoAluno.cs" />
@@ -249,6 +251,8 @@
     <Content Include="Views\Home\Administrar.cshtml" />
     <Content Include="Views\Home\Pesquisa.cshtml" />
     <Content Include="Views\Home\CriarAtividade.cshtml" />
+    <Content Include="Views\Home\AdministrarAtividades.cshtml" />
+    <Content Include="Views\Home\Atividades.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "AdministrarAtividades";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link href="~/Estilos/AdministrarAtividades.css" rel="stylesheet" />
+<div class="notas">
+    <img class="img" onclick="imagemSala()" src='../img/classe.jpeg'>
+    <div class="enviar" title="Salvar Mudanças" onclick="enviar()">
+        <i class="fas fa-check"></i>
+    </div>
+    <div class="cancelar" onclick="cancelar()" title="Cancelar Mundanças">
+        <i class="far fa-times-circle"></i>
+    </div>
+    <div class="deletar" title="Cancelar Atividade"><i class="fas fa-trash-alt"></i></i></div>
+
+    <div class="interno">
+        <p class="datap">Data: </p><input type="text" class="data">
+        @if (ViewBag.Alunos.Count > 0)
+        {
+            <ul>
+                @for (int i = 0; i < ViewBag.Alunos.Count; i++)
+                {
+                    var base64 = Convert.ToBase64String(ViewBag.Alunos[i].Img);
+                    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                    <li>
+                        <div class="p">
+                            <p class="nome">@ViewBag.Alunos[i].Nome</p>
+                            <div class="notac"><p class="notap">Nota: </p><input type="text" value="@ViewBag.AlunosAux[i].Nota" class="nota"> </div>
+                            <div class="arquivos" onclick="window.open('/Atividade/Download/@ViewBag.AlunosAux[i].Id')" title="Receber Arquivos do Aluno"><i class="fas fa-folder-open"></i></div>
+                        </div>
+                        <img class="aluno" src="@imgSrc">
+                    </li>
+                }
+            </ul>
+        }
+        else
+        {
+            <div class="msg">Nenhum Aluno concluiu a tarefa!</div>
+        }
+    </div>
+</div>
+
+<script>
+     $(".menuIcon").click(function () {
+            if (!menu) {
+                $(".aba").css("margin-left", "-10");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+                $(".menuIcon").css("margin-left", "150");
+                menu = true;
+            }
+            else {
+                $(".aba").css("margin-left", "-1000");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+                $(".menuIcon").css("margin-left", "15");
+                menu = false;
+            }
+        })
+
+        var not = @ViewBag.Not;
+
+        if (not == 0) {
+            $("number").hide();
+        }
+        else if (not < 10) {
+            $("number").html(not);
+        }
+        else {
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
+        }
+
+        function LerArquivos(i) {
+
+        }
+</script>
+

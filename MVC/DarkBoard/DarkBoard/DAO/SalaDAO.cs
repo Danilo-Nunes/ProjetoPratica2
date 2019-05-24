@@ -34,6 +34,18 @@ namespace DarkBoard.DAO
             }
         }
 
+        public Usuario BuscaProfessor(int id)
+        {
+            using (var contexto = new SalaContext())
+            {
+                return (from p in contexto.Usuario
+                        join s in contexto.Sala on p.Id equals s.CodProfessor
+                        where s.Id == id
+                        select p).FirstOrDefault();
+                        
+            }
+        }
+
         public IList<Sala> BuscaPorProfessor(int id)
         {
             using (var contexto = new SalaContext())

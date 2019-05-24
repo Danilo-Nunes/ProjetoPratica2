@@ -8,6 +8,16 @@ namespace DarkBoard.DAO
 {
     public class UsuarioAtividadeDAO
     {
+
+        public UsuarioAtividade BuscaPorId(int codigo)
+        {
+            using (var contexto = new SalaContext())
+            {
+                return contexto.UsuarioAtividade
+                .Where(p => p.Id == codigo)
+                .FirstOrDefault();
+            }
+        }
         public void Adiciona(UsuarioAtividade comp)
         {
             using (var context = new SalaContext())
@@ -54,6 +64,43 @@ namespace DarkBoard.DAO
                 return contexto.UsuarioAtividade
                 .Where(p => p.CodAtividade == id)
                 .ToList();
+            }
+        }
+
+        public IList<UsuarioAtividade> BuscaPorAlunosAux(int id)
+        {
+            using (var contexto = new SalaContext())
+            {
+                return (from ua in contexto.UsuarioAtividade
+                        where ua.Concluida == "N"
+                        where ua.CodAtividade == id
+                        select ua).ToList();
+            }
+        }
+
+        public IList<Usuario> BuscaPorAlunosIncompleto(int id)
+        {
+            using (var contexto = new SalaContext())
+            {
+                return (from u in contexto.Usuario
+                        join ua in contexto.UsuarioAtividade on u.Id equals ua.CodUsuario
+                        where ua.Concluida == "N"
+                        where ua.CodAtividade == id
+                        select u).ToList();
+            }
+        }
+
+        public IList<Atividade> BuscaPorAtividadesIncompletas(int idAluno, int idSala)
+        {
+            using (var contexto = new SalaContext())
+            {
+                return (from u in contexto.Atividade
+                        join ua in contexto.UsuarioAtividade on u.Id equals ua.CodAtividade
+                        join a in contexto.Atividade on ua.CodAtividade equals a.Id
+                        where ua.Concluida == "N"
+                        where u.Id == idAluno
+                        where a.CodSala == idSala
+                        select u).ToList();
             }
         }
         public void Atualiza(UsuarioAtividade UsuarioAtividade)

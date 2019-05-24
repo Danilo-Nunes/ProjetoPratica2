@@ -269,6 +269,42 @@ namespace DarkBoard.Controllers
 
             return View();
         }
+
+        public ActionResult AdministrarAtividades(string id, string idAtividade)
+        {
+            id = "2";
+            idAtividade = "1";
+            UsuarioDAO usuarioDao = new UsuarioDAO();
+            SalaDAO salaDAO = new SalaDAO();
+            AlunoSalaDBO alunoSalaDbo = new AlunoSalaDBO();
+            AtividadeDAO atividadeDAO = new AtividadeDAO();
+            UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
+
+            Usuario professor = usuarioDao.BuscaPorId(11);
+            Sala sala = salaDAO.BuscaPorId(int.Parse(id));
+            IList<Usuario> alunos = usuarioAtividadeDAO.BuscaPorAlunosIncompleto(int.Parse(idAtividade));
+            IList<UsuarioAtividade> alunoAux = usuarioAtividadeDAO.BuscaPorAlunosAux(int.Parse(idAtividade));
+            Atividade atividade = atividadeDAO.BuscaPorId(int.Parse(id));
+
+            ViewBag.Not = Session["not"];
+            ViewBag.Usu = professor;
+            ViewBag.Alunos = alunos;
+            ViewBag.AlunosAux = alunoAux;
+            ViewBag.Sala = sala;
+            ViewBag.Atividade = atividade;
+
+            return View();
+
+        }
+
+        public ActionResult Atividades(string id)
+        {
+            AtividadeDAO atividadeDAO = new AtividadeDAO();
+            SalaDAO salaDAO = new SalaDAO();
+            ViewBag.Atividades = atividadeDAO.BuscaPorSala(int.Parse(id));
+            ViewBag.Professor = salaDAO.BuscaProfessor(int.Parse(id));
+            return View();
+        }
     }
 
 }
