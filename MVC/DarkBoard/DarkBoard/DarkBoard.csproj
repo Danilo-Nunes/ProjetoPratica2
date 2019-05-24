@@ -172,6 +172,7 @@
     <Content Include="Estilos\AdministrarAtividades.css" />
     <Content Include="Estilos\Agenda.css" />
     <Content Include="Estilos\AlterarSenha.css" />
+    <Content Include="Estilos\Atividades.css" />
     <Content Include="Estilos\Cadastro.css" />
     <Content Include="Estilos\Comunicado.css" />
     <Content Include="Estilos\Comunicar.css" />

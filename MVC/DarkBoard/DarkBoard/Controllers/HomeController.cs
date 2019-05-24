@@ -299,10 +299,17 @@ namespace DarkBoard.Controllers
 
         public ActionResult Atividades(string id)
         {
+            id = "2";
+
             AtividadeDAO atividadeDAO = new AtividadeDAO();
             SalaDAO salaDAO = new SalaDAO();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+
             ViewBag.Atividades = atividadeDAO.BuscaPorSala(int.Parse(id));
             ViewBag.Professor = salaDAO.BuscaProfessor(int.Parse(id));
+            ViewBag.Usu = usuarioDAO.BuscaPorId(9);
+            ViewBag.Sala = salaDAO.BuscaPorId(int.Parse(id));
+
             return View();
         }
     }
