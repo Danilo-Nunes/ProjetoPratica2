@@ -250,6 +250,25 @@ namespace DarkBoard.Controllers
             ViewBag.Usu = usuario;
             return View();
         }
+
+
+        public ActionResult CriarAtividade(string id)
+        {
+            UsuarioDAO usuarioDao = new UsuarioDAO();
+            SalaDAO salaDAO = new SalaDAO();
+            AlunoSalaDBO alunoSalaDao = new AlunoSalaDBO();
+
+            Sala sala = salaDAO.BuscaPorId(int.Parse(id));
+            Usuario usuario = usuarioDao.BuscaPorId(((int)Session["usu"]));
+            IList<Usuario> alunos = alunoSalaDao.BuscaPorAlunos(sala.Id);
+
+            ViewBag.Not = Session["not"];
+            ViewBag.Usu = usuario;
+            ViewBag.Sala = sala;
+            Session["Alunos"] = alunos;
+
+            return View();
+        }
     }
 
 }

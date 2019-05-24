@@ -246,6 +246,7 @@
     <Content Include="Views\Home\Comunicar.cshtml" />
     <Content Include="Views\Home\Administrar.cshtml" />
     <Content Include="Views\Home\Pesquisa.cshtml" />
+    <Content Include="Views\Home\CriarAtividade.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
