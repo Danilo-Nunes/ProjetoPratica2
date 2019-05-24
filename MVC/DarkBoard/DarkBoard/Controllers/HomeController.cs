@@ -251,7 +251,7 @@ namespace DarkBoard.Controllers
             return View();
         }
 
-
+        [AutorizacaoFilterAttribute]
         public ActionResult CriarAtividade(string id)
         {
             UsuarioDAO usuarioDao = new UsuarioDAO();
@@ -259,7 +259,7 @@ namespace DarkBoard.Controllers
             AlunoSalaDBO alunoSalaDao = new AlunoSalaDBO();
 
             Sala sala = salaDAO.BuscaPorId(int.Parse(id));
-            Usuario usuario = usuarioDao.BuscaPorId(((int)Session["usu"]));
+            Usuario usuario = usuarioDao.BuscaPorId((int)Session["usu"]);
             IList<Usuario> alunos = alunoSalaDao.BuscaPorAlunos(sala.Id);
 
             ViewBag.Not = Session["not"];
