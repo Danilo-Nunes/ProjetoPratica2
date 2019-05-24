@@ -9,6 +9,7 @@ namespace DarkBoard.Models
     public class Atividade
     {
         public int Id { get; set; }
+        public string Nome { get; set; }
         public int CodSala { get; set; }
         public DateTime DataAtividade { get; set; }
     }

@@ -4,15 +4,24 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <link href="~/Estilos/CriarAtividade.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <div class="criacao">
-    <img class="img" onclick="imagemSala()" src='../img/classe.jpeg'>
-    <div class="enviar" title="Enviar Comunicado" onclick="enviar()"><i class="fas fa-paper-plane"></i></div>
-    <div class="adicionar" title="Adicionar Arquivo" id="add"><i class="fas fa-folder-plus" id="i"></i></div>
-    <div class="cancelar" onclick="cancelar()"><i class="far fa-times-circle"></i></div>
-    <div class="interno">
-        <p class="titulop">Atividade: </p><input type="text" class="titulo">
-        <p class="pesop">Peso: </p><input type="text" class="peso">
-        <p class="comunicadop">Comunicado: </p><textarea class="comunicado"></textarea>
-    </div>
+
+    @{
+        var base64Sala = Convert.ToBase64String(ViewBag.Sala.Img);
+        var imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala);
+    }
+    <form action="/Atividade/Adiciona" method="post" enctype="multipart/form-data">
+        <img class="img" onclick="imagemSala()" src='@imgSrcSala'>
+        <div class="enviar" title="Enviar Comunicado" onclick="enviar()"><i class="fas fa-paper-plane"></i></div>
+        <div class="adicionar" title="Adicionar Arquivo" onclick="$('#file').click();" id="add"><i class="fas fa-folder-plus" id="i"></i></div>
+        <input type="file" name="file" style="display:none;" id="file" />
+        <div class="cancelar" onclick="cancelar()"><i class="far fa-times-circle"></i></div>
+        <div class="interno">
+            <p class="titulop">Atividade: </p><input type="text" class="titulo">
+            <p class="pesop">Peso: </p><input type="text" class="peso">
+            <p class="comunicadop">Comunicado: </p><textarea class="comunicado"></textarea>
+        </div>
+    </form>
 </div>
 
