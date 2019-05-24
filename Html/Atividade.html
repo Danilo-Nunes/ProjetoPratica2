@@ -1,11 +1,11 @@
 <html>
 
 <head>
-    <title>Administrar Atividades</title>
+    <title>Administrar Atividade</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
         crossorigin="anonymous">
     <link rel='stylesheet' href='../css/index.css'>
-    <link rel='stylesheet' href='../css/atividades.css'>
+    <link rel='stylesheet' href='../css/atividade.css'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='shortcut icon' href='../img/icon.ico' sizes="1000x1000">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -75,11 +75,13 @@
         <div class="enviar" title="Salvar Mudanças" onclick="enviar()">
             <i class="fas fa-check"></i>
         </div>
-        <div class="cancelar" onclick="cancelar()">
+        <div class="cancelar" onclick="cancelar()" title="Cancelar Mundanças">
             <i class="far fa-times-circle"></i>
         </div>
+        <div class="deletar" title="Cancelar Atividade"><i class="fas fa-trash-alt"></i></i></div>
 
         <div class="interno">
+            <p class="datap">Data: </p><input type="text" class="data"> 
             <ul>
                 <li>
                     <div class="p">
