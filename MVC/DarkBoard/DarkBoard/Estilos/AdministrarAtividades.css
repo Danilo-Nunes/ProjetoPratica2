@@ -78,7 +78,7 @@
         text-align: center;
         color: Black;
         font-family: Cambria;
-        width: 20%;
+        width: 40%;
     }
 
     .interno ul {
@@ -155,6 +155,7 @@
                 border-radius: 5px;
                 background-color: #4461DE;
                 width: 250px;
+				color:ghostwhite;
                 height: 25%;
                 float: left;
                 left: 15%;

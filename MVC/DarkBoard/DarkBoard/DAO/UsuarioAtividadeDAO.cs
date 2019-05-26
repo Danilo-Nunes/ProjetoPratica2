@@ -18,7 +18,18 @@ namespace DarkBoard.DAO
                 .FirstOrDefault();
             }
         }
-        public void Adiciona(UsuarioAtividade comp)
+
+		public UsuarioAtividade BuscaPorIds(int aluno, int atividade)
+		{
+			using (var contexto = new SalaContext())
+			{
+				return (from ua in contexto.UsuarioAtividade
+						where ua.CodUsuario == aluno
+						where ua.CodAtividade == atividade
+						select ua).FirstOrDefault();
+			}
+		}
+		public void Adiciona(UsuarioAtividade comp)
         {
             using (var context = new SalaContext())
             {
@@ -72,19 +83,19 @@ namespace DarkBoard.DAO
             using (var contexto = new SalaContext())
             {
                 return (from ua in contexto.UsuarioAtividade
-                        where ua.Concluida == "N"
+                        where ua.Concluida == "S"
                         where ua.CodAtividade == id
                         select ua).ToList();
             }
         }
 
-        public IList<Usuario> BuscaPorAlunosIncompleto(int id)
+        public IList<Usuario> BuscaPorAlunosCompleto(int id)
         {
             using (var contexto = new SalaContext())
             {
                 return (from u in contexto.Usuario
                         join ua in contexto.UsuarioAtividade on u.Id equals ua.CodUsuario
-                        where ua.Concluida == "N"
+                        where ua.Concluida == "S"
                         where ua.CodAtividade == id
                         select u).ToList();
             }

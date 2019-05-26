@@ -20,12 +20,20 @@
             <ul>
                 @foreach (var atividade in ViewBag.Atividades)
                 {
-                    <li>
+                <li>
+                    <form method="post" enctype="multipart/form-data" id="@atividade.Id" action="/Atividade/Entregar">
                         <div class="p">
                             <p class="nome">@atividade.Nome</p>
+                            <input name="idAtividade" value="@atividade.Id" style="display:none;" />
+                            <input name="idAluno" value="@ViewBag.Usu.Id" style="display:none;" />
+                            <input type="file" name="arquivo" style="display:none;" id="file" />
+                            <div class="entregar" onclick="$('#@atividade.Id').submit();">Concluída</div>
+                            <div class="arquivos" title="Adicionar Arquivo" onclick="$('#file').click();"><i class="fas fa-folder-plus"></i></div>
                         </div>
-                        <img class="at" src="@imgSrcProf">
-                    </li>
+                    </form>
+                    
+                    <img class="at" src="@imgSrcProf">
+                </li>
                 }
             </ul>
         }

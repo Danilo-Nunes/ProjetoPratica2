@@ -65,5 +65,27 @@ namespace DarkBoard.Controllers
 
             return File(u.Arquivo, u.TipoArquivo, u.NomeArquivo);
         }
+
+		public ActionResult Entregar(int idAtividade, int idAluno, HttpPostedFileBase arquivo)
+		{
+			UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
+
+			UsuarioAtividade ua = usuarioAtividadeDAO.BuscaPorIds(idAluno, idAtividade);
+
+			if (arquivo != null)
+			{
+				byte[] arquivoBytes = new byte[arquivo.InputStream.Length + 1];
+
+				arquivo.InputStream.Read(arquivoBytes, 0, arquivoBytes.Length);
+				ua.Arquivo = arquivoBytes;
+				ua.NomeArquivo = arquivo.FileName;
+				ua.TipoArquivo = arquivo.ContentType;
+			}
+
+			ua.Concluida = "S";
+			usuarioAtividadeDAO.Atualiza(ua);
+
+			return Redirect(Request.UrlReferrer.ToString());
+		}
     }
 }
