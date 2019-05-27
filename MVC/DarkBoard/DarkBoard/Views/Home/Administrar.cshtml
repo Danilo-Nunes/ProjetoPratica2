@@ -56,8 +56,8 @@
                 </ul>
             }
         </div>
-        <div class="frequencia" title="Alterar Frequência"><i class="far fa-list-alt"></i></div>
-        <div class="notas" title="Administrar Atividades"><i class="fas fa-pen-alt"></i></div>
+        <div class="frequencia" onclick="location.href = '/Home/EditarFrequencia/@ViewBag.Sala.Id'" title="Alterar Frequência"><i class="far fa-list-alt"></i></div>
+        <div class="notas" onclick="location.href = '/Home/Atividades/@ViewBag.Sala.Id'" title="Administrar Atividades"><i class="fas fa-pen-alt"></i></div>
         <div class="adicionar" title="Adicionar Aluno"><i class="fas fa-user-plus"></i></div>
         <div class="remover" title="Remover Aluno"><i class="fas fa-user-times"></i></div>
     </div>

@@ -177,9 +177,11 @@
     <Content Include="Estilos\Comunicado.css" />
     <Content Include="Estilos\Comunicar.css" />
     <Content Include="Estilos\CriarAtividade.css" />
+    <Content Include="Estilos\Frequencia.css" />
     <Content Include="Estilos\Index.css" />
     <Content Include="Estilos\Login.css" />
     <Content Include="Estilos\Notificacoes.css" />
+    <Content Include="Estilos\Pesquisa.css" />
     <Content Include="Estilos\Sala.css" />
     <Content Include="Estilos\Salas.css" />
     <Content Include="Estilos\Usuario.css" />
@@ -254,6 +256,7 @@
     <Content Include="Views\Home\CriarAtividade.cshtml" />
     <Content Include="Views\Home\AdministrarAtividades.cshtml" />
     <Content Include="Views\Home\Atividades.cshtml" />
+    <Content Include="Views\Home\EditarFrequencia.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
