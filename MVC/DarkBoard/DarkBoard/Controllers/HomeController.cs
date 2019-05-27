@@ -200,6 +200,7 @@ namespace DarkBoard.Controllers
             ViewBag.Usu = professor;
             ViewBag.Alunos = alunos;
             ViewBag.Sala = sala;
+            ViewBag.ControllerVariable = sala;
 
             return View();
         }
