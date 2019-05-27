@@ -42,6 +42,12 @@
     </div>
 </div>
 <script>
+    //document.getElementById("demo").addEventListener("keydown", myFunction);
+
+    function keyPress(e) {
+        if (e.keyCode == 13)
+            location.href = '/Home/Pesquisa';
+    }
 
     function Salvar() {
          for (i = 0; i < @ViewBag.Alunos.Count; i++) {
