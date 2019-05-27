@@ -19,7 +19,7 @@ namespace DarkBoard.DAO
         public DbSet<ComunicadoAluno> ComunicadoAluno { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=regulus;Initial Catalog=PR118207;User ID=PR118207;Password=PR118207");
+            optionsBuilder.UseSqlServer("Data Source=regulus.cotuca.unicamp.br;Initial Catalog=PR118207;User ID=PR118207;Password=PR118207");
         }
     }
 }

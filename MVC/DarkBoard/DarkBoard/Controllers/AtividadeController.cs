@@ -47,7 +47,8 @@ namespace DarkBoard.Controllers
                 {
                     CodUsuario = A.Id,
                     CodAtividade = a.Id,
-                    Nota = 0
+                    Nota = 0,
+                    Concluida = "N"
                 };
 
                 comunicadoAlunoDAO.Adiciona(c);
@@ -56,5 +57,35 @@ namespace DarkBoard.Controllers
 
             return RedirectToAction("Sala", new RouteValueDictionary(new { controller = "Home", action = "Sala", id = com.CodSala }));
         }
+
+        public ActionResult Download(string id)
+        {
+            UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
+            UsuarioAtividade u = usuarioAtividadeDAO.BuscaPorId(int.Parse(id));
+
+            return File(u.Arquivo, u.TipoArquivo, u.NomeArquivo);
+        }
+
+		public ActionResult Entregar(int idAtividade, int idAluno, HttpPostedFileBase arquivo)
+		{
+			UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
+
+			UsuarioAtividade ua = usuarioAtividadeDAO.BuscaPorIds(idAluno, idAtividade);
+
+			if (arquivo != null)
+			{
+				byte[] arquivoBytes = new byte[arquivo.InputStream.Length + 1];
+
+				arquivo.InputStream.Read(arquivoBytes, 0, arquivoBytes.Length);
+				ua.Arquivo = arquivoBytes;
+				ua.NomeArquivo = arquivo.FileName;
+				ua.TipoArquivo = arquivo.ContentType;
+			}
+
+			ua.Concluida = "S";
+			usuarioAtividadeDAO.Atualiza(ua);
+
+			return Redirect(Request.UrlReferrer.ToString());
+		}
     }
 }

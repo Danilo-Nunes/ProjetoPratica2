@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Atividades";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link href="~/Estilos/Atividades.css" rel="stylesheet" />
+<div class="criacao">
+    @{var base64 = Convert.ToBase64String(ViewBag.Sala.Img);
+        var imgSrc = String.Format("data:image/gif;base64,{0}", base64); }
+    <img class="img" onclick="imagemSala()" src='@imgSrc'>
+    <div class="criar" title="Criar Atividade" onclick="location.href='/Home/CriarAtividade/@ViewBag.Sala.Id'"><i class="far fa-calendar-plus"></i></div>
+    <div class="voltar" title="Voltar"></div>
+    <div class="interno">
+
+        @if (ViewBag.Atividades.Count > 0)
+        {
+            var base64Prof = Convert.ToBase64String(ViewBag.Professor.Img);
+            var imgSrcProf = String.Format("data:image/gif;base64,{0}", base64Prof);
+            <ul>
+                @foreach (var atividade in ViewBag.Atividades)
+                {
+                <li>
+                    <form method="post" enctype="multipart/form-data" id="@atividade.Id" action="/Atividade/Entregar">
+                        <div class="p">
+                            <p class="nome">@atividade.Nome</p>
+                            <input name="idAtividade" value="@atividade.Id" style="display:none;" />
+                            <input name="idAluno" value="@ViewBag.Usu.Id" style="display:none;" />
+                            <input type="file" name="arquivo" style="display:none;" id="file" />
+                            <div class="entregar" onclick="$('#@atividade.Id').submit();">Concluída</div>
+                            <div class="arquivos" title="Adicionar Arquivo" onclick="$('#file').click();"><i class="fas fa-folder-plus"></i></div>
+                        </div>
+                    </form>
+                    
+                    <img class="at" src="@imgSrcProf">
+                </li>
+                }
+            </ul>
+        }
+        else
+        {
+            <text>Nenhuma Atividade</text>
+        }
+    </div>
+</div>
+
+

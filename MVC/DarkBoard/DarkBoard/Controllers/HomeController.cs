@@ -269,6 +269,48 @@ namespace DarkBoard.Controllers
 
             return View();
         }
+
+        public ActionResult AdministrarAtividades(string id, string idAtividade)
+        {
+            id = "2";
+            idAtividade = "3";
+            UsuarioDAO usuarioDao = new UsuarioDAO();
+            SalaDAO salaDAO = new SalaDAO();
+            AlunoSalaDBO alunoSalaDbo = new AlunoSalaDBO();
+            AtividadeDAO atividadeDAO = new AtividadeDAO();
+            UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
+
+            Usuario professor = usuarioDao.BuscaPorId(11);
+            Sala sala = salaDAO.BuscaPorId(int.Parse(id));
+            IList<Usuario> alunos = usuarioAtividadeDAO.BuscaPorAlunosCompleto(int.Parse(idAtividade));
+            IList<UsuarioAtividade> alunoAux = usuarioAtividadeDAO.BuscaPorAlunosAux(int.Parse(idAtividade));
+            Atividade atividade = atividadeDAO.BuscaPorId(int.Parse(idAtividade));
+
+            ViewBag.Not = Session["not"];
+            ViewBag.Usu = professor;
+            ViewBag.Alunos = alunos;
+            ViewBag.AlunosAux = alunoAux;
+            ViewBag.Sala = sala;
+            ViewBag.Atividade = atividade;
+
+            return View();
+
+        }
+
+        public ActionResult Atividades(string id)
+        {
+
+            AtividadeDAO atividadeDAO = new AtividadeDAO();
+            SalaDAO salaDAO = new SalaDAO();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+
+            ViewBag.Atividades = atividadeDAO.BuscaPorSala(int.Parse(id));
+            ViewBag.Professor = salaDAO.BuscaProfessor(int.Parse(id));
+            ViewBag.Usu = usuarioDAO.BuscaPorId((int)Session["usu"]);
+            ViewBag.Sala = salaDAO.BuscaPorId(int.Parse(id));
+
+            return View();
+        }
     }
 
 }

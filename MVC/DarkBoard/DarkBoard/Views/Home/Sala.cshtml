@@ -67,9 +67,14 @@
             }
         }
     }
-    <p class="trabalhos">Trabalhos pendentes: @n</p>
-    @if (ViewBag.Usu.Cargo == 'P')
+    @if (ViewBag.Usu.Cargo == 'A')
     {
+        <p class="trabalhos" onclick="location.href ='/Home/Atividades/@ViewBag.Sala.Id'">Trabalhos pendentes: @n</p>
+
+    }
+    else
+    {
+        <p class="trabalhos" >Atividades</p>
         <button onclick="location.href='/Home/Administrar/@ViewBag.Sala.Id'">Administrar</button>
     }
 </div>

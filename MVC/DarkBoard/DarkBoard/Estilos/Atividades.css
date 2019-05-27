@@ -1,0 +1,251 @@
+﻿.criacao {
+    position: absolute;
+    /* float: left; */
+    top: 15%;
+    left: 9.5%;
+    background-image: url("../img/planosDeFundo/3.jpg");
+    border: 10px double midnightblue;
+    height: 74%;
+    width: 80%;
+}
+
+.nome {
+    font-size: 24px;
+    position: relative;
+    float: center;
+    text-align: center;
+    color: midnightblue;
+    font-family: 'Franklin Gothic Medium';
+}
+
+
+.img {
+    position: absolute;
+    border: 5px solid midnightblue;
+    float: left;
+    left: 2%;
+    top: 4%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 250px;
+    min-width: 250px;
+    max-height: 250px;
+    min-height: 250px;
+    transition: 0.2s;
+}
+
+    .img:hover {
+        border-color: #4461DE;
+    }
+
+.interno {
+    background-color: ghostwhite;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: absolute;
+    text-align:center;
+    color:midnightblue;
+    top: 4%;
+    left: calc(250px + 5%);
+    float: left;
+    width: 72%;
+    height: 90%;
+    border: 5px solid midnightblue;
+}
+
+    .interno ul {
+        list-style: none;
+        margin-top: 10%;
+    }
+
+        .interno ul li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 80%;
+            margin-bottom: calc(2% + 130px);
+        }
+
+            .interno ul li .p .nome {
+                font-size: 24px;
+                position: relative;
+                top: 20%;
+				left:10%;
+                float: center;
+                text-align: center;
+                color: Black;
+                font-family: Cambria;
+            }
+
+            .interno ul li .p {
+                border: 5px solid midnightblue;
+                border-right: none;
+                position: absolute;
+                height: 120px;
+                width: calc(95% - 120px);
+                float: left;
+				bottom:286px;
+            }
+
+				.interno ul li .p .arquivos {
+					position: relative;
+					border: 5px solid midnightblue;
+					border-radius: 5px;
+					background-color: #4461DE;
+					width: 100px;
+					height: 40%;
+					float: left;
+					left: 22%;
+					top: -35%;
+					color: ghostwhite;
+					align-items: center;
+					display: flex;
+					flex-direction: column;
+				}
+
+					.interno ul li .p .arquivos i {
+						font-size: 30pt;
+						margin-top: 0.14em;
+					}
+
+					.interno ul li .p .arquivos:hover {
+						border-color: #2C3F91;
+					}
+
+            .interno ul li .at {
+                position: absolute;
+                border: 5px solid midnightblue;
+                float: left;
+                left: calc(95% - 120px);
+                max-width: 120px;
+                min-width: 120px;
+                max-height: 120px;
+                min-height: 120px;
+                transition: 0.2s;
+            }
+
+                .interno ul li .at:hover, .interno ul li .p:hover {
+                    border-color: #4461DE;
+                }
+
+
+.entregar {
+	position: absolute;
+	border: 5px solid midnightblue;
+	border-radius: 5px;
+	background-color: #4461DE;
+	width: 110px;
+	margin-right:20px;
+	/* height: 35px; */
+	height: 40%;
+	float: left;
+	color:ghostwhite;
+	left: 2%;
+	top: 18%;
+	text-align: center;
+	font-family: Cambria;
+	font-size: 24px;
+	margin-top: 2%;
+	/* padding: 2% 0; */
+	line-height: 2em;
+}
+
+	.entregar:hover {
+		border-color: #2C3F91;
+	}
+
+.titulop {
+    font-size: 35px;
+    position: absolute;
+    margin-left: 3%;
+    margin-top: 3%;
+    float: left;
+    text-align: center;
+    color: Black;
+    font-family: Cambria;
+}
+
+.titulo {
+    font-size: 30px;
+    position: absolute;
+    left: 19%;
+    margin-top: 3%;
+    float: left;
+    text-align: center;
+    color: Black;
+    font-family: Cambria;
+    width: 79%;
+}
+
+.comunicadop {
+    position: absolute;
+    float: left;
+    margin-left: 3%;
+    margin-top: 11%;
+    max-width: 95%;
+    color: Black;
+    font-family: Cambria;
+    font-size: 35px;
+}
+
+.comunicado {
+    position: absolute;
+    float: left;
+    margin-left: 3%;
+    margin-top: 17%;
+    color: Black;
+    font-family: Cambria;
+    font-size: 25px;
+    width: 95%;
+    height: 65%;
+}
+
+.criar {
+    position: absolute;
+    border: 5px solid midnightblue;
+    border-radius: 5px;
+    background-color: #4461DE;
+    width: 250px;
+    height: 70px;
+    float: left;
+    left: 2%;
+    top: calc(9% + 250px);
+    text-align: center;
+    font-family: Cambria;
+    font-size: 24px;
+    margin-top: 2%;
+    line-height: 2.5em;
+}
+
+    .criar i {
+        font-size: 40pt;
+        margin-top: 0.14em;
+    }
+
+    .criar:hover {
+        border-color: #2C3F91;
+    }
+
+.voltar {
+    position: absolute;
+    border: 5px solid midnightblue;
+    border-radius: 5px;
+    background-color: #4461DE;
+    width: 250px;
+    /* height: 35px; */
+    height: 70px;
+    float: left;
+    left: 2%;
+    top: calc(16% + 330px);
+    margin-top: 2%;
+    /* padding: 2% 0; */
+    background-image: url("../img/icons/back-arrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+}
+
+    .voltar:hover {
+        border-color: #2C3F91;
+    }
