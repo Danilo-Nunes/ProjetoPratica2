@@ -221,7 +221,7 @@ namespace DarkBoard.Controllers
             
             return View();
         }
-
+        [AutorizacaoFilterAttribute]
         public ActionResult Pesquisa()
         {
             UsuarioDAO usuarioDao = new UsuarioDAO();
@@ -236,7 +236,8 @@ namespace DarkBoard.Controllers
                             {
                                 Id = u.Id,
                                 Nome = u.Nome,
-                                Img = u.Img
+                                Img = u.Img,
+                                Eh = "Usuario"
                             }).ToList();
 
             var busca = usuarios.Union(from s in salasBuscadas
@@ -244,7 +245,8 @@ namespace DarkBoard.Controllers
                                        {
                                            Id = s.Id,
                                            Nome = s.Nome,
-                                           Img = s.Img
+                                           Img = s.Img,
+                                           Eh = "Sala"
                                        }).ToList().OrderBy(p => p.Nome);
 
             ViewBag.Busca = busca;
@@ -270,22 +272,21 @@ namespace DarkBoard.Controllers
 
             return View();
         }
-
-        public ActionResult AdministrarAtividades(string id, string idAtividade)
+        [AutorizacaoFilterAttribute]
+        public ActionResult AdministrarAtividades(string id)
         {
-            id = "2";
-            idAtividade = "3";
             UsuarioDAO usuarioDao = new UsuarioDAO();
             SalaDAO salaDAO = new SalaDAO();
             AlunoSalaDBO alunoSalaDbo = new AlunoSalaDBO();
             AtividadeDAO atividadeDAO = new AtividadeDAO();
             UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
 
-            Usuario professor = usuarioDao.BuscaPorId(11);
-            Sala sala = salaDAO.BuscaPorId(int.Parse(id));
-            IList<Usuario> alunos = usuarioAtividadeDAO.BuscaPorAlunosCompleto(int.Parse(idAtividade));
-            IList<UsuarioAtividade> alunoAux = usuarioAtividadeDAO.BuscaPorAlunosAux(int.Parse(idAtividade));
-            Atividade atividade = atividadeDAO.BuscaPorId(int.Parse(idAtividade));
+            Atividade atividade = atividadeDAO.BuscaPorId(int.Parse(id));
+            Sala sala = salaDAO.BuscaPorId(atividade.CodSala);
+            Usuario professor = usuarioDao.BuscaPorId(sala.CodProfessor); 
+            IList<Usuario> alunos = usuarioAtividadeDAO.BuscaPorAlunosCompleto(atividade.Id);
+            IList<UsuarioAtividade> alunoAux = usuarioAtividadeDAO.BuscaPorAlunosAux(atividade.Id);
+           
 
             ViewBag.Not = Session["not"];
             ViewBag.Usu = professor;
@@ -297,7 +298,7 @@ namespace DarkBoard.Controllers
             return View();
 
         }
-
+        [AutorizacaoFilterAttribute]
         public ActionResult Atividades(string id)
         {
 
@@ -305,10 +306,27 @@ namespace DarkBoard.Controllers
             SalaDAO salaDAO = new SalaDAO();
             UsuarioDAO usuarioDAO = new UsuarioDAO();
 
+            ViewBag.Not = Session["not"];
             ViewBag.Atividades = atividadeDAO.BuscaPorSala(int.Parse(id));
             ViewBag.Professor = salaDAO.BuscaProfessor(int.Parse(id));
             ViewBag.Usu = usuarioDAO.BuscaPorId((int)Session["usu"]);
             ViewBag.Sala = salaDAO.BuscaPorId(int.Parse(id));
+
+            return View();
+        }
+
+        public ActionResult EditarFrequencia(string id)
+        {
+            SalaDAO salaDAO = new SalaDAO();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            AlunoSalaDBO alunoSalaDBO = new AlunoSalaDBO();
+
+
+            ViewBag.AlunosAux = alunoSalaDBO.BuscaPorAlunosAux(int.Parse(id));
+            ViewBag.Alunos = alunoSalaDBO.BuscaPorAlunos(int.Parse(id));
+            ViewBag.Sala = salaDAO.BuscaPorId(int.Parse(id));
+            ViewBag.Not = Session["not"];
+            ViewBag.Usu = usuarioDAO.BuscaPorId((int)Session["usu"]);
 
             return View();
         }
