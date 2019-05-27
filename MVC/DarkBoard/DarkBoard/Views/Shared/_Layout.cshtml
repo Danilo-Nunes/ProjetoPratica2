@@ -57,10 +57,10 @@
         </li>
         <br>
         <li>
-            <input id='pesq' type='text' class='pesquisa' value=' '>
+            <input id='pesq' type='text' class='pesquisa' value=' ' onkeydown="keyPress(event)">
         </li>
         <li>
-            <img id='pesqIcon' class='pesquisaIcon' src='@Url.Content("~/img/icons/search.png")' title="Pesquisar">
+            <img id='pesqIcon' class='pesquisaIcon' onclick="location.href='/Home/Pesquisa'" src='@Url.Content("~/img/icons/search.png")' title="Pesquisar">
         </li>
         <li class='logo'>
             <a href='/Home/Index'>
@@ -69,7 +69,15 @@
         </li>
     </ul>
 
+    <script>
+        //document.getElementById("demo").addEventListener("keydown", myFunction);
 
+        function keyPress(e)
+        {
+            if (e.keyCode == 13)
+                location.href = '/Home/Pesquisa';
+        }
+    </script>
 
     <div id="content">
         @RenderBody()
