@@ -20,20 +20,30 @@
             <ul>
                 @foreach (var atividade in ViewBag.Atividades)
                 {
-                <li>
-                    <form method="post" enctype="multipart/form-data" id="@atividade.Id" action="/Atividade/Entregar">
-                        <div class="p">
-                            <p class="nome">@atividade.Nome</p>
-                            <input name="idAtividade" value="@atividade.Id" style="display:none;" />
-                            <input name="idAluno" value="@ViewBag.Usu.Id" style="display:none;" />
-                            <input type="file" name="arquivo" style="display:none;" id="file" />
-                            <div class="entregar" onclick="$('#@atividade.Id').submit();">Concluída</div>
-                            <div class="arquivos" title="Adicionar Arquivo" onclick="$('#file').click();"><i class="fas fa-folder-plus"></i></div>
-                        </div>
-                    </form>
-                    
-                    <img class="at" src="@imgSrcProf">
-                </li>
+                    <li>
+                        <form method="post" enctype="multipart/form-data" id="@atividade.Id" action="/Atividade/Entregar">
+                            @if (ViewBag.Usu.Cargo == 'A')
+                            {
+                                <div class="p">
+                                    <p class="nome">@atividade.Nome</p>
+                                    <input name="idAtividade" value="@atividade.Id" style="display:none;" />
+                                    <input name="idAluno" value="@ViewBag.Usu.Id" style="display:none;" />
+                                    <input type="file" name="arquivo" style="display:none;" id="file" />
+                                    <div class="entregar" onclick="$('#@atividade.Id').submit();">Concluída</div>
+                                    <div class="arquivos" title="Adicionar Arquivo" onclick="$('#file').click();"><i class="fas fa-folder-plus"></i></div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="p" onclick="location.href='/Home/AdministrarAtividades/3'">
+                                    <p class="nome">@atividade.Nome</p>
+                                </div>
+                            }
+
+                        </form>
+
+                        <img class="at" src="@imgSrcProf">
+                    </li>
                 }
             </ul>
         }
@@ -43,5 +53,35 @@
         }
     </div>
 </div>
+<script>
+$(".menuIcon").click(function () {
+            if (!menu) {
+                $(".aba").css("margin-left", "-10");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+                $(".menuIcon").css("margin-left", "150");
+                menu = true;
+                }
+                else {
+                $(".aba").css("margin-left", "-1000");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+                $(".menuIcon").css("margin-left", "15");
+                menu = false;
+                }
+                })
+
+                var not = @ViewBag.Not;
+
+                if (not == 0) {
+                $("number").hide();
+                }
+                else if (not < 10) {
+                $("number").html(not);
+                }
+                else {
+                $("number").html(not)
+                $("number").css('padding-right', '5px');
+                $("number").css('padding-left', '5px');
+                }
+</script>
 
 

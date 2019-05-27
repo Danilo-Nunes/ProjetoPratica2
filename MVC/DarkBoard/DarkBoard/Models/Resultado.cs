@@ -10,5 +10,6 @@ namespace DarkBoard.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public byte[] Img { get; set; }
+        public string Eh { get; set; }
     }
 }

@@ -95,5 +95,15 @@ namespace DarkBoard.Controllers
             }
             return RedirectToAction("AlterarSenha", new RouteValueDictionary(new { controller = "Home", action = "AlterarSenha", msg = "Senha Incorreta" }));
         }
+
+        public ActionResult AtualizaFrequencia(AlunoSala alu)
+        {
+            AlunoSalaDBO alunoSalaDBO = new AlunoSalaDBO();
+            AlunoSala aux = alunoSalaDBO.BuscaPorId(alu.Id);
+            aux.Faltas = alu.Faltas;
+            alunoSalaDBO.Atualiza(aux);
+
+            return Redirect(Request.UrlReferrer.ToString());
+        }
     }
 }

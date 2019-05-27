@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "EditarFrequencia";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link href="~/Estilos/Frequencia.css" rel="stylesheet" />
+<div class="frequencias">
+    @{var base64Sala = Convert.ToBase64String(ViewBag.Sala.Img);
+        var imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala); }
+    <img class="img" onclick="imagemSala()" src='@imgSrcSala'>
+    <div class="salvar" title="Salvar Mudanças" onclick="Salvar()">
+        <i class="fas fa-check"></i>
+    </div>
+    <div class="cancelar" onclick="cancelar()" title="Cancelar Mundanças">
+        <i class="far fa-times-circle"></i>
+    </div>
+
+    <div class="interno">
+        @if (ViewBag.Alunos.Count > 0)
+        {
+        <ul>
+            @for (int i = 0; i < ViewBag.Alunos.Count; i++)
+             {
+
+            var base64 = Convert.ToBase64String(ViewBag.Alunos[i].Img);
+            var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+
+            <form id="@i" method="post" action="/Usuario/AtualizaFrequencia">
+                <li>
+                    <div class="p">
+                        <p class="nome">@ViewBag.Alunos[i].Nome</p>
+                        <input name="alu.Id" value=" @ViewBag.AlunosAux[i].Id" style="display:none;">
+                        <div class="faltac"><p class="faltap">Faltas: </p><input name="alu.Faltas" type="text" value="@ViewBag.AlunosAux[i].Faltas" class="falta"> </div>
+                    </div>
+                    <img class="aluno" src="@imgSrc">
+                </li>
+             </form>
+            }
+        </ul>
+        }
+    </div>
+</div>
+<script>
+
+    function Salvar() {
+         for (i = 0; i < @ViewBag.Alunos.Count; i++) {
+                $("#" + i).submit();
+         }
+    }
+</script>

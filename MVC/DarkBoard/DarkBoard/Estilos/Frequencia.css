@@ -1,4 +1,4 @@
-﻿.criacao {
+﻿.frequencias {
     position: absolute;
     /* float: left; */
     top: 15%;
@@ -17,7 +17,6 @@
     color: midnightblue;
     font-family: 'Franklin Gothic Medium';
 }
-
 
 .img {
     position: absolute;
@@ -44,14 +43,13 @@
     background-repeat: no-repeat;
     overflow: hidden;
     position: absolute;
-    text-align:center;
-    color:midnightblue;
     top: 4%;
     left: calc(250px + 5%);
     float: left;
     width: 72%;
     height: 90%;
     border: 5px solid midnightblue;
+    overflow-y: scroll;
 }
 
     .interno ul {
@@ -63,57 +61,68 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 80%;
-            margin-bottom: calc(2% + 130px);
+            width: 95%;
+            margin-bottom: calc(130px + 2%);
         }
 
             .interno ul li .p .nome {
                 font-size: 24px;
                 position: relative;
-                top: 20%;
-				left:2.5%;
+                top: 15%;
                 float: center;
                 text-align: center;
                 color: Black;
                 font-family: Cambria;
             }
 
+            .interno ul li .p .faltac {
+                padding: 0.8%;
+                height: 35%;
+                width: 20%;
+                border: 5px solid midnightblue;
+                border-radius: 5px;
+                position: absolute;
+                left: 2%;
+                top: 25%;
+                float: left;
+                text-align: left;
+                color: Black;
+                font-family: Cambria;
+            }
+
+                .interno ul li .p .faltac .faltap {
+                    font-size: 24px;
+                    position: relative;
+                    top: -45%;
+                    left: 5%;
+                    float: left;
+                    text-align: left;
+                    color: Black;
+                    font-family: Cambria;
+                }
+
+                .interno ul li .p .faltac .falta {
+                    font-size: 24px;
+                    position: relative;
+                    left: 10%;
+                    top: 10%;
+                    width: 35%;
+                    float: left;
+                    text-align: center;
+                    color: Black;
+                    font-family: Cambria;
+                }
+
             .interno ul li .p {
                 border: 5px solid midnightblue;
                 border-right: none;
                 position: absolute;
                 height: 120px;
-                width: calc(95% - 120px);
+                width: calc(90% - 120px);
                 float: left;
-				bottom:360px;
             }
 
-				.interno ul li .p .arquivos {
-					position: relative;
-					border: 5px solid midnightblue;
-					border-radius: 5px;
-					background-color: #4461DE;
-					width: 100px;
-					height: 40%;
-					float: left;
-					left: 22%;
-					top: -35%;
-					color: ghostwhite;
-					align-items: center;
-					display: flex;
-					flex-direction: column;
-				}
-
-					.interno ul li .p .arquivos i {
-						font-size: 30pt;
-						margin-top: 0.14em;
-					}
-
-					.interno ul li .p .arquivos:hover {
-						border-color: #2C3F91;
-					}
-
-            .interno ul li .at {
+            .interno ul li .aluno {
                 position: absolute;
                 border: 5px solid midnightblue;
                 float: left;
@@ -125,35 +134,9 @@
                 transition: 0.2s;
             }
 
-                .interno ul li .at:hover, .interno ul li .p:hover {
-                    border-color: #4461DE;
-                }
-
-
-.entregar {
-	position: absolute;
-	border: 5px solid midnightblue;
-	border-radius: 5px;
-	background-color: #4461DE;
-	width: 110px;
-	margin-right:20px;
-	/* height: 35px; */
-	height: 40%;
-	float: left;
-	color:ghostwhite;
-	left: 2%;
-	top: 15%;
-	text-align: center;
-	font-family: Cambria;
-	font-size: 24px;
-	margin-top: 2%;
-	/* padding: 2% 0; */
-	line-height: 2em;
-}
-
-	.entregar:hover {
-		border-color: #2C3F91;
-	}
+            .interno ul li .img:aluno {
+                border-color: #4461DE;
+            }
 
 .titulop {
     font-size: 35px;
@@ -201,7 +184,7 @@
     height: 65%;
 }
 
-.criar {
+.salvar {
     position: absolute;
     border: 5px solid midnightblue;
     border-radius: 5px;
@@ -218,34 +201,36 @@
     line-height: 2.5em;
 }
 
-    .criar i {
+    .salvar i {
         font-size: 40pt;
         margin-top: 0.14em;
     }
 
-    .criar:hover {
+    .salvar:hover {
         border-color: #2C3F91;
     }
 
-.voltar {
+.cancelar {
     position: absolute;
     border: 5px solid midnightblue;
     border-radius: 5px;
     background-color: #4461DE;
     width: 250px;
-    /* height: 35px; */
     height: 70px;
     float: left;
     left: 2%;
     top: calc(16% + 330px);
     margin-top: 2%;
-    /* padding: 2% 0; */
-    background-image: url("../img/icons/back-arrow.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: 50%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
-    .voltar:hover {
+    .cancelar i {
+        font-size: 42.5pt;
+        margin-top: 0.14em;
+    }
+
+    .cancelar:hover {
         border-color: #2C3F91;
     }

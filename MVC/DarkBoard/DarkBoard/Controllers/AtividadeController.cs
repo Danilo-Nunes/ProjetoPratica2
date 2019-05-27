@@ -58,6 +58,15 @@ namespace DarkBoard.Controllers
             return RedirectToAction("Sala", new RouteValueDictionary(new { controller = "Home", action = "Sala", id = com.CodSala }));
         }
 
+        public ActionResult Atualiza(UsuarioAtividade alu)
+        {
+            UsuarioAtividadeDAO ua = new UsuarioAtividadeDAO();
+            UsuarioAtividade aux = ua.BuscaPorId(alu.Id);
+            aux.Nota = alu.Nota;
+            ua.Atualiza(aux);
+            return Redirect(Request.UrlReferrer.ToString());
+        }
+
         public ActionResult Download(string id)
         {
             UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();

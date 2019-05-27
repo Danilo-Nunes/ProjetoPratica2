@@ -4,12 +4,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<select>
-    @foreach (var result in ViewBag.Busca)
-    {
-        <option>@result.Nome</option>
-    }
-   
-
-</select>
+<link href="~/Estilos/Pesquisa.css" rel="stylesheet" />
+<div class="resultados">
+    <ul>
+        @foreach (var Pesq in ViewBag.Busca)
+        {
+            var base64 = Convert.ToBase64String(Pesq.Img);
+            var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+        <li>
+            <div class="p" onclick="location.href = '/Home/@Pesq.Eh/@Pesq.Id'">
+                <p class="nome">@Pesq.Nome</p>
+            </div>
+            <img class="img" src="@imgSrc">
+        </li>
+        }
+    </ul>
+</div>
 
