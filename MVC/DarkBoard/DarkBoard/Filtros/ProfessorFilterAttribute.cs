@@ -1,7 +1,7 @@
 ﻿using DarkBoard.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using DarkBoard.DAO;
 using System.Web;
 using System.Web.Mvc;
 
@@ -12,7 +12,8 @@ namespace DarkBoard.Filtros
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             //base.OnActionExecuting(filterContext);
-            Usuario usuario = (Usuario)filterContext.HttpContext.Session["usu"];
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            Usuario usuario = usuarioDAO.BuscaPorId((int)filterContext.HttpContext.Session["usu"]);
             filterContext.HttpContext.Session.Add("Pagina", filterContext.HttpContext.Request.Url.OriginalString);
             var viewBag = filterContext.Controller.ViewBag;
             // se o usuario não for professor
