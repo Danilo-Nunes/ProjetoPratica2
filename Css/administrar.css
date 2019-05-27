@@ -356,3 +356,94 @@
 {   
     border-color: #2C3F91;
 }
+
+.modal
+{
+    display: none;
+    position: absolute;
+    width: 30%;
+    height: 20%;
+    top: 40%;
+    left: 35%;
+}
+
+.modal .header 
+{
+    position: relative;
+    width: 102.125%;
+    height: 20%;
+    background-color: midnightblue;
+}
+
+.modal .header .close
+{
+    float: right;
+    position: relative;
+    width: 4%;
+    height: 60%;
+    border: 3px solid #2C3F91;
+    background-color: midnightblue;
+    right: 1.5%;
+    top: 20%;
+}
+
+.modal .header .close:hover 
+{
+	filter: invert(100%);
+}
+
+.modal .header .close i
+{
+    font-size: 16pt;
+    margin-left: 0.1em;
+    margin-top: -0.05em;
+}
+
+.modal .content
+{
+    position: relative;
+    width: 100%;
+    height: 80%;
+    border: 5px solid midnightblue;
+    background-color: #4461DE;
+}
+
+.modal .content .sp
+{
+    position: relative;
+    font-family: Cambria;
+    font-size: 18pt;
+    left: 8%;
+}
+
+.modal .content .pesquisa
+{
+    position: relative;
+    background-color: ghostwhite;
+    border-radius: 20px;
+    height: 38%;
+    width: 60%;
+    border: 4px solid #2C3F91;
+    color: black;
+    font-size: 18pt;
+    left: 2%;
+    outline: none;
+}
+
+.modal .content .pesquisaIcon
+{
+    position: relative;
+    width:8%;
+    height: 30%;
+    left: -6%;
+    background:#4461DE;
+    border: 4px solid #2C3F91;
+    border-radius: 15px;
+    transition:0.7s;
+    pointer-events: auto;
+}
+
+.modal .content .pesquisaIcon:hover 
+{
+	filter: invert(100%);
+}

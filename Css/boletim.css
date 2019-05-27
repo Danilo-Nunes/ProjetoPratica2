@@ -1,4 +1,4 @@
-.frequencias
+.boletim
 {
     position: absolute;
     /* float: left; */
@@ -46,21 +46,20 @@
     background-color: ghostwhite;
     background-size: cover;
     background-repeat: no-repeat;
-    overflow: hidden;
+    overflow-y: scroll;
     position: absolute;
     top: 4%;    
     left: calc(250px + 5%);
     float: left;
     width: 72%;
     height: 90%;
-    border: 5px solid midnightblue;    
-    overflow-y: scroll;
+    border: 5px solid midnightblue;
 }
 
 .interno ul
 {    
     list-style: none;
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
 .interno ul li
@@ -69,58 +68,78 @@
     flex-direction: column;
     justify-content: center;
     width: 95%;
-    margin-bottom: calc(130px + 2%); 
+    margin-bottom: calc(210px + 2%); 
 }
 
 .interno ul li .p .nome
 {  
     font-size: 24px;
     position: relative;
-    top: 15%;    
+    top: 10%;    
     float: center;
     text-align: center;
     color: Black;
     font-family: Cambria;    
 }
 
-.interno ul li .p .faltac
+.interno ul li .p .notac
 {  
-    padding: 0.8%;
-    height: 35%;
-    width:  20%;
+    height: 25%;
+    width:  30%;
     border: 5px solid midnightblue;
     border-radius: 5px;    
-    position: absolute;
-    left: 2%;
-    top:  25%;     
-    float: left;
-    text-align: left;
-    color: Black;
-    font-family: Cambria;    
-}
-
-.interno ul li .p .faltac .faltap
-{  
-    font-size: 24px;
-    position: relative;
-    top: -45%;
-    left: 5%;
-    float: left;
-    text-align: left;
-    color: Black;
-    font-family: Cambria;    
-}
-
-.interno ul li .p .faltac .falta
-{  
-    font-size: 24px;
     position: relative;
     left: 10%;
-    top: 10%;
-    width: 35%;
+    top: 17.25%;    
     float: left;
-    text-align: center;
+    text-align: left;
     color: Black;
+    font-family: Cambria;    
+}
+
+.interno ul li .p .notac .notap
+{  
+    font-size: 24px;
+    position: relative;
+    /* left: 12%;
+    top: 12%;     */
+    top: -30%;
+    left: 12.5%;
+    float: left;
+    text-align: left;
+    color: Black;
+    font-family: Cambria;    
+}
+
+.interno ul li .p .frequenciac
+{
+    position: relative;
+    /* margin-left: 3em;
+    margin-bottom: 1em; */
+    border: 5px solid midnightblue;
+    border-radius: 5px;
+    background-color: #4461DE;
+    width: 250px;
+    height: 25%;
+    float: left;
+    left: 15%;
+    top: 17%;     
+    align-items: center;
+    display: flex;
+    flex-direction: column;       
+}
+
+.interno ul li .p .frequenciac .frequenciap
+{  
+    font-size: 16pt;
+    position: relative;
+    /* left: 12%;
+    top: 12%;     */
+    top: -20%;
+    left: 2.5%;
+    float: left;
+    text-align: left;
+    color: ghostwhite;
     font-family: Cambria;    
 }
 
@@ -129,8 +148,8 @@
     border: 5px solid midnightblue;
     border-right: none;
     position: absolute;
-    height: 120px;
-    width: calc(90% - 120px);
+    height: 200px;
+    width: calc(90% - 200px);
     float: left;
 }
 
@@ -139,11 +158,11 @@
     position: absolute;
     border: 5px solid midnightblue;
     float: left;
-    left: calc(95% - 120px);    
-    max-width: 120px;
-    min-width: 120px;
-    max-height: 120px;
-    min-height: 120px;
+    left: calc(95% - 200px);    
+    max-width: 200px;
+    min-width: 200px;
+    max-height: 200px;
+    min-height: 200px;
     transition:0.2s;
 }
 
@@ -202,59 +221,27 @@
     height: 65%;
 }
 
-.salvar
+.voltar
 {
     position: absolute;
     border: 5px solid midnightblue;
     border-radius: 5px;
     background-color: #4461DE;
     width: 250px;
+    /* height: 35px; */
     height: 70px;
     float: left;
     left: 2%;
-    top: calc(9% + 250px);
-    text-align: center;
-    font-family: Cambria; 
-    font-size: 24px;
+    top: calc(16% + 330px);    
     margin-top: 2%;
-    line-height: 2.5em;
+    /* padding: 2% 0; */
+    background-image: url("../img/icons/back-arrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
 }
 
-.salvar i
-{
-    font-size: 40pt;
-    margin-top: 0.14em;
-}
-
-.salvar:hover
-{   
-    border-color: #2C3F91;
-}
-
-.cancelar
-{
-    position: absolute;
-    border: 5px solid midnightblue;
-    border-radius: 5px;
-    background-color: #4461DE;
-    width: 250px;
-    height: 70px;
-    float: left;
-    left: 2%;
-    top: calc(16% + 330px);     
-    margin-top: 2%;
-    align-items: center;
-    display: flex;
-    flex-direction: column;   
-}
-
-.cancelar i
-{
-    font-size: 42.5pt;
-    margin-top: 0.14em;
-}
-
-.cancelar:hover
+.voltar:hover
 {   
     border-color: #2C3F91;
 }
