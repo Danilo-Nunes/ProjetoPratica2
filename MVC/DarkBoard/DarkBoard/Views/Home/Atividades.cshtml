@@ -54,7 +54,14 @@
     </div>
 </div>
 <script>
-$(".menuIcon").click(function () {
+        //document.getElementById("demo").addEventListener("keydown", myFunction);
+
+        function keyPress(e) {
+            if (e.keyCode == 13)
+                location.href = '/Home/Pesquisa';
+        }
+
+        $(".menuIcon").click(function () {
             if (!menu) {
                 $(".aba").css("margin-left", "-10");
                 $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');

@@ -34,7 +34,14 @@
     </div>
 </div>
 <script>
-  var menu = false;
+        //document.getElementById("demo").addEventListener("keydown", myFunction);
+
+        function keyPress(e) {
+            if (e.keyCode == 13)
+                location.href = '/Home/Pesquisa';
+        }
+
+        var menu = false;
         localStorage.setItem("User", @ViewBag.Usu.Id);
         $(".menuIcon").click(function () {
             if (!menu) {

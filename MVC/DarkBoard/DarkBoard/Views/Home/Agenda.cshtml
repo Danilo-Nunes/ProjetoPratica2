@@ -41,6 +41,13 @@
 
 
 <script type="text/javascript">
+    //document.getElementById("demo").addEventListener("keydown", myFunction);
+
+    function keyPress(e) {
+        if (e.keyCode == 13)
+            location.href = '/Home/Pesquisa';
+    }
+
     $('#data').focusin(function () {
         if (document.getElementById('data').value == "DD/MM/AAAA HH:MM")
             document.getElementById('data').value = "";
