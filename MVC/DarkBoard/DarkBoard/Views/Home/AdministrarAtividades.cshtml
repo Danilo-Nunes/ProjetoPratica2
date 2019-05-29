@@ -17,7 +17,7 @@
     <div class="cancelar" onclick="cancelar()" title="Cancelar Mundanças">
         <i class="far fa-times-circle"></i>
     </div>
-    <div class="deletar" title="Cancelar Atividade"><i class="fas fa-trash-alt"></i></i></div>
+    <div class="deletar" onclick="Excluir()" title="Cancelar Atividade"><i class="fas fa-trash-alt"></i></i></div>
 
     <div class="interno">
         <p class="datap">Data: </p><input type="text" value="@ViewBag.Atividade.DataAtividade" name="at.Data" class="data">
@@ -55,6 +55,15 @@
     function keyPress(e) {
         if (e.keyCode == 13)
             location.href = '/Home/Pesquisa';
+    }
+
+    function Excluir() {
+           $.ajax({
+          url: '/Atividade/Excluir',
+          data: { idAtividade: @ViewBag.Atividade.Id }
+           }).done(function () {
+               location.href = '/Home/Salas'
+       });
     }
 
      $(".menuIcon").click(function () {

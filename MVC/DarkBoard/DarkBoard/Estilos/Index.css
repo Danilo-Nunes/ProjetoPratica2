@@ -84,6 +84,10 @@ body {
     transition: 0.5s;
     /* z-index: 99999; */
 }
+.aba a{
+    text-decoration:none;
+    color:white;
+}
 .aba li{
    margin-top:20px;
 }
@@ -174,5 +178,6 @@ number {
     padding-left: 8px;
     position: relative;
     left: 75px;
+    text-decoration:none;
     bottom: 100px;
 }

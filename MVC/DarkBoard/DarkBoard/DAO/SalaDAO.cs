@@ -64,11 +64,20 @@ namespace DarkBoard.DAO
             }
         }
 
-        public void Remove(Sala Sala)
+        public static void Remove(Sala Sala)
         {
             using (var contexto = new SalaContext())
             {
                 contexto.Remove(contexto.Sala.Single(a => a.Id == Sala.Id));
+                contexto.SaveChanges();
+            }
+        }
+
+        public static void Remove(int Sala)
+        {
+            using (var contexto = new SalaContext())
+            {
+                contexto.Remove(contexto.Sala.Single(a => a.Id == Sala));
                 contexto.SaveChanges();
             }
         }

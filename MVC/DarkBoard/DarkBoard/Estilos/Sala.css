@@ -157,3 +157,7 @@ button {
     button:hover {
         border-color: #2C3F91;
     }
+
+    .trabalhos:hover{
+        color:purple;
+    }

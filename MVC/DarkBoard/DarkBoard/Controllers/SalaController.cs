@@ -35,5 +35,15 @@ namespace DarkBoard.Controllers
             AlunoSalaDBO.RemoveAluno(idAluno, idSala);
             return View();
         }
+
+        public ActionResult Excluir(int id)
+        {
+            AlunoSalaDBO.RemoveSala(id);
+            AtividadeDAO.RemoveSala(id);
+            ComunicadoAlunoDAO.RemoveSala(id);
+            ComunicadoDAO.RemoveSala(id);
+            SalaDAO.Remove(id);
+            return View();
+        }
     }
 }

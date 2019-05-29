@@ -44,90 +44,146 @@
     background-repeat: no-repeat;
     overflow: hidden;
     position: absolute;
+    top: 4%;
     text-align:center;
     color:midnightblue;
-    top: 4%;
     left: calc(250px + 5%);
     float: left;
     width: 72%;
     height: 90%;
     border: 5px solid midnightblue;
+    overflow-y: scroll;
 }
 
+    .interno .msg {
+        color: midnightblue;
+        position: relative;
+        left: 325px;
+        top: 80px;
+    }
     .interno ul {
         list-style: none;
-        margin-top: 10%;
+        text-align: center;
+        color: midnightblue;
     }
 
         .interno ul li {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 80%;
-            margin-bottom: calc(2% + 130px);
+            width: 95%;
+            margin-bottom: calc(210px + 2%);
         }
 
             .interno ul li .p .nome {
                 font-size: 24px;
                 position: relative;
-                top: 20%;
-				left:2.5%;
+                top: 10%;
                 float: center;
                 text-align: center;
                 color: Black;
-                font-family: Cambria;
+                font-family: Baskerville Old Face;
             }
+
+            .interno ul li .p .notac {
+                height: 25%;
+                width: 30%;
+                border: 5px solid midnightblue;
+                background-color: #4461DE;
+                border-radius: 5px;
+                position: relative;
+                left: 10%;
+                color:snow;
+                top: 17.25%;
+                float: left;
+                text-align: left;
+                font-family: Cambria;
+                font-size: 24px;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                line-height: 2em;
+            }
+
+                .interno ul li .p .notac .notap {
+                    font-size: 24px;
+                    position: relative;
+                    /* left: 12%;
+    top: 12%;     */
+                    top: -25%;
+                    left: 5%;
+                    float: left;
+                    text-align: left;
+                    color: Black;
+                    font-family: Cambria;
+                }
+
+                .interno ul li .p .notac .nota {
+                    font-size: 24px;
+                    position: relative;
+                    /* top: 24%;     13*/
+                    left: 10%;
+                    /* width: 15%; */
+                    top: 15%;
+                    width: 50%;
+                    float: left;
+                    text-align: left;
+                    color: Black;
+                    font-family: Cambria;
+
+                }
+
+            .interno ul li .p .arquivos {
+                position: relative;
+                /* margin-left: 3em;
+    margin-bottom: 1em; */
+                border: 5px solid midnightblue;
+                border-radius: 5px;
+                background-color: #4461DE;
+                width: 250px;
+                color: ghostwhite;
+                height: 25%;
+                float: left;
+                left: 15%;
+                top: 17%;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+                .interno ul li .p .arquivos i {
+                    font-size: 30pt;
+                    margin-top: 0.14em;
+                }
+
+                .interno ul li .p .arquivos:hover {
+                    border-color: #2C3F91;
+                }
 
             .interno ul li .p {
                 border: 5px solid midnightblue;
                 border-right: none;
                 position: absolute;
-                height: 120px;
-                width: calc(95% - 120px);
+                height: 200px;
+                width: calc(90% - 200px);
                 float: left;
-				bottom:360px;
             }
-
-				.interno ul li .p .arquivos {
-					position: relative;
-					border: 5px solid midnightblue;
-					border-radius: 5px;
-					background-color: #4461DE;
-					width: 100px;
-					height: 40%;
-					float: left;
-					left: 22%;
-					top: -35%;
-					color: ghostwhite;
-					align-items: center;
-					display: flex;
-					flex-direction: column;
-				}
-
-					.interno ul li .p .arquivos i {
-						font-size: 30pt;
-						margin-top: 0.14em;
-					}
-
-					.interno ul li .p .arquivos:hover {
-						border-color: #2C3F91;
-					}
 
             .interno ul li .at {
                 position: absolute;
                 border: 5px solid midnightblue;
                 float: left;
-                left: calc(95% - 120px);
-                max-width: 120px;
-                min-width: 120px;
-                max-height: 120px;
-                min-height: 120px;
+                left: calc(95% - 201px);
+                max-width: 200px;
+                min-width: 200px;
+                max-height: 200px;
+                min-height: 200px;
                 transition: 0.2s;
             }
 
-                .interno ul li .at:hover, .interno ul li .p:hover {
-                    border-color: #4461DE;
-                }
+            .interno ul li .img:aluno {
+                border-color: #4461DE;
+            }
 
 
 .entregar {

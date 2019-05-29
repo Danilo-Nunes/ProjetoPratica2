@@ -9,50 +9,52 @@
     @{var base64 = Convert.ToBase64String(ViewBag.Sala.Img);
         var imgSrc = String.Format("data:image/gif;base64,{0}", base64); }
     <img class="img" onclick="imagemSala()" src='@imgSrc'>
-    <div class="criar" title="Criar Atividade" onclick="location.href='/Home/CriarAtividade/@ViewBag.Sala.Id'"><i class="far fa-calendar-plus"></i></div>
-    <div class="voltar" title="Voltar"></div>
-    <div class="interno">
+    @if (ViewBag.Usu.Cargo == 'P')
+    {
+        <div class="criar" title="Criar Atividade" onclick="location.href='/Home/CriarAtividade/@ViewBag.Sala.Id'"><i class="far fa-calendar-plus"></i></div>
+    }
+        <div class="voltar" onclick="location.href='/Home/Administrar/@ViewBag.Sala.Id'" title="Voltar"></div>
+        <div class="interno">
 
-        @if (ViewBag.Atividades.Count > 0)
-        {
-            var base64Prof = Convert.ToBase64String(ViewBag.Professor.Img);
-            var imgSrcProf = String.Format("data:image/gif;base64,{0}", base64Prof);
-            <ul>
-                @foreach (var atividade in ViewBag.Atividades)
-                {
-                    <li>
-                        <form method="post" enctype="multipart/form-data" id="@atividade.Id" action="/Atividade/Entregar">
-                            @if (ViewBag.Usu.Cargo == 'A')
-                            {
+            @if (ViewBag.Atividades.Count > 0)
+            {
+                var base64Prof = Convert.ToBase64String(ViewBag.Professor.Img);
+                var imgSrcProf = String.Format("data:image/gif;base64,{0}", base64Prof);
+                <ul>
+                    @foreach (var atividade in ViewBag.Atividades)
+                    {
+                        <li>
+                            <form method="post" enctype="multipart/form-data" id="@atividade.Id" action="/Atividade/Entregar">
+                                @if (ViewBag.Usu.Cargo == 'A')
+                                {
                                 <div class="p">
                                     <p class="nome">@atividade.Nome</p>
                                     <input name="idAtividade" value="@atividade.Id" style="display:none;" />
                                     <input name="idAluno" value="@ViewBag.Usu.Id" style="display:none;" />
-                                    <input type="file" name="arquivo" style="display:none;" id="file" />
-                                    <div class="entregar" onclick="$('#@atividade.Id').submit();">Concluída</div>
+                                    <input type="file" name="arquivo" style="display:none;" id="file" />     
+                                    <div class="notac" onclick="$('#@atividade.Id').submit();">Salvar</div>
                                     <div class="arquivos" title="Adicionar Arquivo" onclick="$('#file').click();"><i class="fas fa-folder-plus"></i></div>
                                 </div>
-                            }
-                            else
-                            {
-                                <div class="p" onclick="location.href='/Home/AdministrarAtividades/3'">
-                                    <p class="nome">@atividade.Nome</p>
-                                </div>
-                            }
-
-                        </form>
-
-                        <img class="at" src="@imgSrcProf">
-                    </li>
-                }
-            </ul>
-        }
-        else
-        {
-            <text>Nenhuma Atividade</text>
-        }
+                                }
+                                else
+                                {
+                                    <div class="p" onclick="location.href='/Home/AdministrarAtividades/@atividade.Id'">
+                                        <p class="nome">@atividade.Nome</p>
+                                    </div>
+                                }
+                                <img class="at" src="@imgSrcProf">
+                            </form>
+                            
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <text>Nenhuma Atividade</text>
+            }
+        </div>
     </div>
-</div>
 <script>
         //document.getElementById("demo").addEventListener("keydown", myFunction);
 

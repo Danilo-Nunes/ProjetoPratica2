@@ -9,7 +9,7 @@ namespace DarkBoard.Filtros
 {
     public class ProfessorFilterAttribute : ActionFilterAttribute
     {
-        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        public override void OnActionExecuted(ActionExecutedContext filterContext)
         {
             //base.OnActionExecuting(filterContext);
             UsuarioDAO usuarioDAO = new UsuarioDAO();

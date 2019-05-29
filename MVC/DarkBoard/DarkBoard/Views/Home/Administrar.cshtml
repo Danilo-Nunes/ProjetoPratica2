@@ -70,7 +70,18 @@
     {
         if (e.keyCode == 13)
             location.href = '/Home/Pesquisa';
-    }    
+    }
+
+    function deletar() {
+        if (confirm("Are you sure about that?")) {
+            $.ajax({
+                url: '/Sala/Excluir',
+                data: { id: @ViewBag.Sala.Id }
+            }).done(function () {
+                location.href = '/Home/Salas';
+            });
+        }
+    }
 
     var removendo;
     var menu = false;

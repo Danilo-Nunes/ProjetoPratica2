@@ -52,11 +52,29 @@ namespace DarkBoard.DAO
             }
         }
 
-        public void Remove(Atividade Atividade)
+        public static void Remove(Atividade Atividade)
         {
             using (var contexto = new SalaContext())
             {
                 contexto.Remove(contexto.Atividade.Single(a => a.Id == Atividade.Id));
+                contexto.SaveChanges();
+            }
+        }
+
+        public static void Remove(int Atividade)
+        {
+            using (var contexto = new SalaContext())
+            {
+                contexto.Remove(contexto.Atividade.Single(a => a.Id == Atividade));
+                contexto.SaveChanges();
+            }
+        }
+
+        public static void RemoveSala(int sala)
+        {
+            using (var contexto = new SalaContext())
+            {
+                contexto.RemoveRange(contexto.Atividade.Where(a => a.CodSala == sala).ToList());
                 contexto.SaveChanges();
             }
         }

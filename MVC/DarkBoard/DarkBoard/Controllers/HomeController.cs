@@ -205,6 +205,7 @@ namespace DarkBoard.Controllers
             return View();
         }
         [AutorizacaoFilterAttribute]
+        [ProfessorFilterAttribute]
         public ActionResult Comunicar(string id)
         {
             UsuarioDAO usuarioDao = new UsuarioDAO();
@@ -256,6 +257,7 @@ namespace DarkBoard.Controllers
         }
 
         [AutorizacaoFilterAttribute]
+        [ProfessorFilterAttribute]
         public ActionResult CriarAtividade(string id)
         {
             UsuarioDAO usuarioDao = new UsuarioDAO();
@@ -274,6 +276,7 @@ namespace DarkBoard.Controllers
             return View();
         }
         [AutorizacaoFilterAttribute]
+        [ProfessorFilterAttribute]
         public ActionResult AdministrarAtividades(string id)
         {
             UsuarioDAO usuarioDao = new UsuarioDAO();
@@ -315,7 +318,8 @@ namespace DarkBoard.Controllers
 
             return View();
         }
-
+        [AutorizacaoFilterAttribute]
+        [ProfessorFilterAttribute]
         public ActionResult EditarFrequencia(string id)
         {
             SalaDAO salaDAO = new SalaDAO();

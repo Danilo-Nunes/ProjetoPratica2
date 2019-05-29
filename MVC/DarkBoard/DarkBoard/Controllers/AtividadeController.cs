@@ -96,5 +96,13 @@ namespace DarkBoard.Controllers
 
 			return Redirect(Request.UrlReferrer.ToString());
 		}
+
+        public ActionResult Excluir(int idAtividade)
+        {
+            UsuarioAtividadeDAO.RemoveAtividade(idAtividade);
+            AtividadeDAO.Remove(idAtividade);
+
+            return RedirectToAction("Salas", new RouteValueDictionary(new { controller = "Home", action = "Salas"}));
+        }
     }
 }
