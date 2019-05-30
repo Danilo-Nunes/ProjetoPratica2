@@ -58,8 +58,22 @@
         </div>
         <div class="frequencia" onclick="location.href = '/Home/EditarFrequencia/@ViewBag.Sala.Id'" title="Alterar Frequência"><i class="far fa-list-alt"></i></div>
         <div class="notas" onclick="location.href = '/Home/Atividades/@ViewBag.Sala.Id'" title="Administrar Atividades"><i class="fas fa-pen-alt"></i></div>
-        <div class="adicionar" title="Adicionar Aluno"><i class="fas fa-user-plus"></i></div>
+        <div class="adicionar" onclick="document.getElementById('id01').style.display='block'" title="Adicionar Aluno"><i class="fas fa-user-plus"></i></div>
         <div class="remover" title="Remover Aluno"><i class="fas fa-user-times"></i></div>
+    </div>
+
+    <div class="modal" id="id01">
+        <div class="header">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"><i class="fas fa-times"></i></span> <!--&times;-->
+        </div>
+        <div class="content">
+            <p class="sp">
+                <form action="Usuario/AdicionaNaSala" method="post">
+                    Aluno: <input id='pesq' type='text' class='pesquisa' value=' '>
+                    <img id='pesqIcon' class='pesquisaIcon' src='../img/icons/search.png'>
+                </form>
+            </p>
+        </div>
     </div>
 </div>
 
