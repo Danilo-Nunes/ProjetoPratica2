@@ -58,6 +58,16 @@ namespace DarkBoard.DAO
             }
         }
 
+        public IList<Atividade> BuscaPorSala(int id)
+        {
+            using (var contexto = new SalaContext())
+            {
+                return (from p in contexto.Atividade
+                        where p.CodSala == id
+                        select p).ToList();
+            }
+        }
+
         public IList<UsuarioAtividade> BuscaPorAtividade(int id)
         {
             using (var contexto = new SalaContext())

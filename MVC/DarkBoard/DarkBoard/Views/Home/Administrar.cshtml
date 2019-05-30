@@ -68,9 +68,10 @@
         </div>
         <div class="content">
             <p class="sp">
-                <form action="Usuario/AdicionaNaSala" method="post">
-                    Aluno: <input id='pesq' type='text' class='pesquisa' value=' '>
-                    <img id='pesqIcon' class='pesquisaIcon' src='../img/icons/search.png'>
+                <form id="form2" action="/Usuario/AdicionaNaSala" method="post">
+                   <p class="label">Aluno:</p> <input id='pesq' name="Nome" type='text' class='pesquisa'>
+                    <input name="id"style="display:none;" value="@ViewBag.Sala.Id"  />
+                    <img id='pesqIcon'  class='pesquisaIcon' onclick="$('#form2').submit()" src='@Url.Content("~/img/icons/search.png")'>
                 </form>
             </p>
         </div>

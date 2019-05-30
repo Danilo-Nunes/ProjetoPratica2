@@ -105,5 +105,54 @@ namespace DarkBoard.Controllers
 
             return Redirect(Request.UrlReferrer.ToString());
         }
+
+        public ActionResult AdicionaNaSala(string nome, int id)
+        {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            ComunicadoAlunoDAO comunicadoAlunoDAO = new ComunicadoAlunoDAO();
+            UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
+            AlunoSalaDBO alunoSalaDBO = new AlunoSalaDBO();
+
+
+            var comunicados = comunicadoAlunoDAO.BuscaSala(id);
+            var atividades = usuarioAtividadeDAO.BuscaPorSala(id);
+            Usuario usuario = usuarioDAO.BuscaPorNomeCompleto(nome);
+
+            foreach(var comunicado in comunicados)
+            {
+                ComunicadoAluno c = new ComunicadoAluno
+                {
+                    CodAluno = usuario.Id,
+                    CodComunicado = comunicado.Id,
+                    Visto = "N"
+                    
+                };
+
+                comunicadoAlunoDAO.Adiciona(c);
+            }
+
+            foreach (var at in atividades)
+            {
+                UsuarioAtividade u = new UsuarioAtividade
+                {
+                    CodUsuario = usuario.Id,
+                    CodAtividade = at.Id,
+                    Concluida = "N"
+                };
+            }
+
+
+            AlunoSala a = new AlunoSala
+            {
+                CodAluno = usuario.Id,
+                CodSala = id,
+                Faltas = 0,
+                Media = 0
+            };
+
+            alunoSalaDBO.Adiciona(a);
+
+            return Redirect(Request.UrlReferrer.ToString());
+        }
     }
 }

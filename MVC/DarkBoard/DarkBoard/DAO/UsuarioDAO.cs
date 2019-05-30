@@ -45,6 +45,16 @@ namespace DarkBoard.DAO
             }
         }
 
+        public Usuario BuscaPorNomeCompleto(string usu)
+        {
+            using (var contexto = new SalaContext())
+            {
+                return contexto.Usuario
+                .Where(p => p.Nome == usu)
+                .FirstOrDefault();
+            }
+        }
+
         public Usuario BuscaPorSala(int id)
         {
             using (var contexto = new SalaContext())

@@ -29,6 +29,16 @@ namespace DarkBoard.Models
             }
         }
 
+        public IList<Comunicado> BuscaSala(int id)
+        {
+            using (var contexto = new SalaContext())
+            {
+                return (from c in contexto.Comunicado
+                        where c.CodSala == id                       
+                        select c).ToList();
+            }
+        }
+
         public void Adiciona(ComunicadoAluno ca)
         {
             using (var contexto = new SalaContext())
