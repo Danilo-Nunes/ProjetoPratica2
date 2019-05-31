@@ -57,10 +57,12 @@
         </li>
         <br>
         <li>
-            <input id='pesq' type='text' class='pesquisa' value=' ' onkeydown="keyPress(event)">
+            <form id="fr" method="post" action="/Home/Pesquisa">
+                <input id='pesq' type='text' name="pesq" class='pesquisa' onkeydown="keyPress(event)">
+            </form>
         </li>
         <li>
-            <img id='pesqIcon' class='pesquisaIcon' onclick="location.href='/Home/Pesquisa'" src='@Url.Content("~/img/icons/search.png")' title="Pesquisar">
+            <img id='pesqIcon' onclick="$('#fr').submit();" class='pesquisaIcon' onclick="location.href='/Home/Pesquisa'" src='@Url.Content("~/img/icons/search.png")' title="Pesquisar">
         </li>
         <li class='logo'>
             <a href='/Home/Index'>

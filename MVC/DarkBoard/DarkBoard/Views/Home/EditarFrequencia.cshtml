@@ -26,12 +26,11 @@
             var base64 = Convert.ToBase64String(ViewBag.Alunos[i].Img);
             var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
 
-            <form id="@i" method="post" action="/Usuario/AtualizaFrequencia">
+            <form id="form" method="post" action="/Usuario/AtualizaFrequencia">
                 <li>
                     <div class="p">
                         <p class="nome">@ViewBag.Alunos[i].Nome</p>
-                        <input name="alu.Id" value=" @ViewBag.AlunosAux[i].Id" style="display:none;">
-                        <div class="faltac"><p class="faltap">Faltas: </p><input name="alu.Faltas" type="text" value="@ViewBag.AlunosAux[i].Faltas" class="falta"> </div>
+                        <div class="faltac"><p class="faltap">Faltas: </p><input id="@i" name="alu.Faltas" type="text" value="@ViewBag.AlunosAux[i].Faltas" class="falta"> </div>
                     </div>
                     <img class="aluno" src="@imgSrc">
                 </li>
@@ -43,15 +42,33 @@
 </div>
 <script>
     //document.getElementById("demo").addEventListener("keydown", myFunction);
-
+    var Alunos = [];
     function keyPress(e) {
         if (e.keyCode == 13)
             location.href = '/Home/Pesquisa';
     }
 
     function Salvar() {
-         for (i = 0; i < @ViewBag.Alunos.Count; i++) {
-                $("#" + i).submit();
+         @for(int i = 0; i < ViewBag.Alunos.Count; i++)
+         {
+             <text>
+                Alunos.push({
+                    Id: @ViewBag.AlunosAux[i].Id,
+                    Faltas: $('#@i').val()
+                });
+            </text>
          }
+
+                jQuery.ajax({
+                    type: 'POST',
+                    url: "/Usuario/AtualizaFrequencia",
+                    contentType: "application/json",
+                    datatype: 'json',
+                    data: JSON.stringify(Alunos),
+                    success: function (data) { },
+                    failure: function (errMsg) {
+                        alert(errMsg);
+                    }
+                });
     }
 </script>

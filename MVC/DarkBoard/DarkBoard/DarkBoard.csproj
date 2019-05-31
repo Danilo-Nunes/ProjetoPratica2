@@ -173,6 +173,7 @@
     <Content Include="Estilos\Agenda.css" />
     <Content Include="Estilos\AlterarSenha.css" />
     <Content Include="Estilos\Atividades.css" />
+    <Content Include="Estilos\Boletim.css" />
     <Content Include="Estilos\Cadastro.css" />
     <Content Include="Estilos\Comunicado.css" />
     <Content Include="Estilos\Comunicar.css" />
@@ -205,7 +206,7 @@
     <Compile Include="Controllers\SalaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Criptografia.cs" />
-    <Compile Include="DAO\AlunoSalaDBO.cs" />
+    <Compile Include="DAO\AlunoSalaDAO.cs" />
     <Compile Include="DAO\AtividadeDAO.cs" />
     <Compile Include="DAO\CompromissoDAO.cs" />
     <Compile Include="DAO\ComunicadoDAO.cs" />
@@ -258,6 +259,7 @@
     <Content Include="Views\Home\AdministrarAtividades.cshtml" />
     <Content Include="Views\Home\Atividades.cshtml" />
     <Content Include="Views\Home\EditarFrequencia.cshtml" />
+    <Content Include="Views\Home\Boletim.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -48,7 +48,8 @@ namespace DarkBoard.Controllers
                     CodUsuario = A.Id,
                     CodAtividade = a.Id,
                     Nota = 0,
-                    Concluida = "N"
+                    Concluida = "N",
+                    Peso = a.Peso
                 };
 
                 comunicadoAlunoDAO.Adiciona(c);
@@ -58,12 +59,16 @@ namespace DarkBoard.Controllers
             return RedirectToAction("Sala", new RouteValueDictionary(new { controller = "Home", action = "Sala", id = com.CodSala }));
         }
 
-        public ActionResult Atualiza(UsuarioAtividade alu)
+        public ActionResult Atualiza(List<UsuarioAtividade> usu)
         {
             UsuarioAtividadeDAO ua = new UsuarioAtividadeDAO();
-            UsuarioAtividade aux = ua.BuscaPorId(alu.Id);
-            aux.Nota = alu.Nota;
-            ua.Atualiza(aux);
+
+            foreach (var alu in usu)
+            {
+                UsuarioAtividade aux = ua.BuscaPorId(alu.Id);
+                aux.Nota = alu.Nota;
+                ua.Atualiza(aux);               
+            }
             return Redirect(Request.UrlReferrer.ToString());
         }
 
