@@ -32,8 +32,10 @@
     //document.getElementById("demo").addEventListener("keydown", myFunction);
 
     function keyPress(e) {
-        if (e.keyCode == 13)
+        if (e.keyCode == 13) {
+            $('#fr').submit();
             location.href = '/Home/Pesquisa';
-    }
+        }
+    }    
 </script>
 

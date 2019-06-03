@@ -81,11 +81,12 @@
 <script>
     //document.getElementById("demo").addEventListener("keydown", myFunction);
 
-    function keyPress(e)
-    {
-        if (e.keyCode == 13)
+    function keyPress(e) {
+        if (e.keyCode == 13) {
+            $('#fr').submit();
             location.href = '/Home/Pesquisa';
-    }
+        }
+    }    
 
     function deletar() {
         if (confirm("Are you sure about that?")) {
