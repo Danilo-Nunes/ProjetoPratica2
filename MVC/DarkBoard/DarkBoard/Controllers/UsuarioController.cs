@@ -31,15 +31,14 @@ namespace DarkBoard.Controllers
                 file.InputStream.Read(imageBytes, 0, imageBytes.Length);
                 usu.Img = imageBytes;
             }
-            else
-            {
-                MemoryStream ms = new MemoryStream();
-                Image img = Image.FromFile("/Img/Icons/user.png");
-                img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-            }
             usu.Senha = Criptografia.Criptografar(usu.Senha);            
             dao.Adiciona(usu);
-            return RedirectToAction("Login", new RouteValueDictionary(new { controller = "Home", action = "Login", msg = "" }));
+
+            ComunicadoDAO d = new ComunicadoDAO();
+            Session["usu"] = usu.Id;
+            Session["not"] = d.QtdPorUsuario(usu.Id);
+
+            return RedirectToAction("Index", new RouteValueDictionary(new { controller = "Home", action = "Index"}));
         }
 
         public ActionResult Logar(Usuario usu)
@@ -126,48 +125,64 @@ namespace DarkBoard.Controllers
             ComunicadoAlunoDAO comunicadoAlunoDAO = new ComunicadoAlunoDAO();
             UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
             AlunoSalaDAO alunoSalaDBO = new AlunoSalaDAO();
+            SalaDAO salaDAO = new SalaDAO();
 
 
             var comunicados = comunicadoAlunoDAO.BuscaSala(id);
             var atividades = usuarioAtividadeDAO.BuscaPorSala(id);
-            Usuario usuario = usuarioDAO.BuscaPorNomeCompleto(nome);
 
-            foreach(var comunicado in comunicados)
+            Usuario usuario = usuarioDAO.BuscaPorNomeCompleto(nome);
+            Sala sala = salaDAO.BuscaPorId(id);
+
+            if (usuario != null && usuario.Cargo == 'A')
             {
-                ComunicadoAluno c = new ComunicadoAluno
+
+
+                foreach (var comunicado in comunicados)
+                {
+                    ComunicadoAluno c = new ComunicadoAluno
+                    {
+                        CodAluno = usuario.Id,
+                        CodComunicado = comunicado.Id,
+                        Visto = "N"
+
+                    };
+
+                    comunicadoAlunoDAO.Adiciona(c);
+                }
+
+                foreach (var at in atividades)
+                {
+                    UsuarioAtividade u = new UsuarioAtividade
+                    {
+                        CodUsuario = usuario.Id,
+                        CodAtividade = at.Id,
+                        Concluida = "N",
+                        Peso = at.Peso
+                    };
+                }
+
+
+                AlunoSala a = new AlunoSala
                 {
                     CodAluno = usuario.Id,
-                    CodComunicado = comunicado.Id,
-                    Visto = "N"
-                    
+                    CodSala = id,
+                    Faltas = 0,
+                    Media = 0
                 };
 
-                comunicadoAlunoDAO.Adiciona(c);
+                alunoSalaDBO.Adiciona(a);
+
+                sala.QtdAlunos++;
+                salaDAO.Atualiza(sala);
+
+                return Redirect(Request.UrlReferrer.ToString());
             }
-
-            foreach (var at in atividades)
+            else
             {
-                UsuarioAtividade u = new UsuarioAtividade
-                {
-                    CodUsuario = usuario.Id,
-                    CodAtividade = at.Id,
-                    Concluida = "N",
-                    Peso = at.Peso
-                };
+                Session["msg"] = "Usuário Inválido";
+                return Redirect(Request.UrlReferrer.ToString());
             }
-
-
-            AlunoSala a = new AlunoSala
-            {
-                CodAluno = usuario.Id,
-                CodSala = id,
-                Faltas = 0,
-                Media = 0
-            };
-
-            alunoSalaDBO.Adiciona(a);
-
-            return Redirect(Request.UrlReferrer.ToString());
         }
     }
 }

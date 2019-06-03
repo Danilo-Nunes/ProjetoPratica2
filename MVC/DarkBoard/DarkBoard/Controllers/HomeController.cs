@@ -200,7 +200,7 @@ namespace DarkBoard.Controllers
             ViewBag.Usu = professor;
             ViewBag.Alunos = alunos;
             ViewBag.Sala = sala;
-            ViewBag.ControllerVariable = sala;
+            ViewBag.Msg = Session["msg"];
 
             return View();
         }
@@ -370,6 +370,22 @@ namespace DarkBoard.Controllers
             ViewBag.Usu = usuarioDAO.BuscaPorId((int)Session["usu"]);
 
             return View();
+        }
+
+        [AutorizacaoFilterAttribute]
+        public ActionResult CriaSala()
+        {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+
+            Usuario usuario = usuarioDAO.BuscaPorId((int)Session["usu"]);
+
+            ViewBag.Usu = usuario;
+            ViewBag.Not = Session["not"];
+
+            if (usuario.Cargo == 'P')
+                return View();
+            else
+                return Redirect("/Home/Index");
         }
     }
 

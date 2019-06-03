@@ -29,14 +29,22 @@
         </a>
         <a href="/Home/Usuario/@ViewBag.Usu.Id">
             <li>
-                @{
-                    var base64 = Convert.ToBase64String(ViewBag.Usu.Img);
-                    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
-                }
+
+
+                    @if (ViewBag.Usu.Img != null)
+                    {
+                        var base64 = Convert.ToBase64String(ViewBag.Usu.Img);
+                        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+
                 <img class='icon' src="@imgSrc" style="border-radius: 50%;
                                                        height: 90px;
                                                        width: 90px;"
-                     title='Usuario'>
+                     title='@ViewBag.Usu.NomeUsu'>
+                    }
+                    else
+                    {
+                        <img class='icon' src="@Url.Content("~/img/icons/user.png")" title="@ViewBag.Usu.NomeUsu" />
+                    }
             </li>
         </a>
         <a href='/Home/Agenda'>

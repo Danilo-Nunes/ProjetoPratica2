@@ -30,9 +30,13 @@ namespace DarkBoard.Controllers
         {
             int idAluno = int.Parse(obj[0]);
             int idSala = int.Parse(obj[1]);
+            SalaDAO salaDAO = new SalaDAO();
+            Sala sala = salaDAO.BuscaPorId(idSala);
             ComunicadoAlunoDAO.RemoveAluno(idAluno,idSala);
             UsuarioAtividadeDAO.RemoveAluno(idAluno,idSala);
             AlunoSalaDAO.RemoveAluno(idAluno, idSala);
+            sala.QtdAlunos--;
+            salaDAO.Atualiza(sala);
             return View();
         }
 
@@ -44,6 +48,27 @@ namespace DarkBoard.Controllers
             ComunicadoDAO.RemoveSala(id);
             SalaDAO.Remove(id);
             return View();
+        }
+
+        public ActionResult Cria(string nome, int id, HttpPostedFileBase file)
+        {
+            SalaDAO salaDao = new SalaDAO();
+            Sala sala = new Sala()
+            {
+                Nome = nome,
+                CodProfessor = id
+            };
+
+            if (file != null)
+            {
+                byte[] imageBytes = new byte[file.InputStream.Length + 1];
+                file.InputStream.Read(imageBytes, 0, imageBytes.Length);
+                sala.Img = imageBytes;
+            }
+
+            salaDao.Adiciona(sala);
+
+            return Redirect("/Home/Sala/"+sala.Id);
         }
     }
 }

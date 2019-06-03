@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "CriaSala";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link href="~/Estilos/Criar.css" rel="stylesheet" />
+<form method="post" action="/Sala/Cria" id="frm" class="criacao" enctype = "multipart/form-data">
+    <div class='image-upload'>
+        <label for='file-input'>
+            <div id='imagemLocal'>
+                <img id="img" onchange="TrocaImg(this.files)" src='../img/classe.jpeg'>
+            </div>
+        </label>
+        <input type='file' accept="image/png, image/jpeg, image/gif" name="file" onchange='TrocaImg(this.files)' id='file-input'>
+    </div>
+    <input type="file" id="fi" style="display:none;" />
+    <div class="criar" onclick="$('#frm').submit();">Criar</div>
+    <div class="cancelar" onclick="cancelar()"><i class="far fa-times-circle"></i></div>
+    <div class="interno">
+        <p class="nomep">Nome da Classe: </p><input type="text" name="nome" class="nome">
+        <input value="@ViewBag.Usu.Id" name="id" style="display:none;"/>
+        <p class="professor">Professor: @ViewBag.Usu.Nome</p>
+    </div>
+</form>
+
+<script>
+    function TrocaImg(files) {
+        var imgLocal = document.getElementById('imagemLocal')
+        var file = files[0];
+
+        var form = document.getElementById('file-form');
+
+        img = document.createElement("img");
+
+        if (file != null) {
+            img.file = file;
+            var reader = new FileReader();
+            reader.onload = (function (aImg) { return function (e) { aImg.src = e.target.result; }; })(img);
+            reader.readAsDataURL(file);
+        }
+        else {
+            img.src = "../img/icons/user.png";
+        }
+
+        img.id = 'img';
+
+
+        imgLocal.innerHTML = '';
+
+        imgLocal.appendChild(img);
+    }
+
+    var menu = false;
+        localStorage.setItem("User", @ViewBag.Usu.Id);
+        $(".menuIcon").click(function () {
+            if (!menu) {
+                $(".aba").css("margin-left", "-10");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+                $(".menuIcon").css("margin-left", "150");
+                menu = true;
+            }
+            else {
+                $(".aba").css("margin-left", "-1000");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+                $(".menuIcon").css("margin-left", "15");
+                menu = false;
+            }
+        })
+
+        var not = @ViewBag.Not;
+
+        if (not == 0) {
+            $("number").hide();
+        }
+        else if (not < 10) {
+            $("number").html(not);
+        }
+        else {
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
+        }
+</script>
+

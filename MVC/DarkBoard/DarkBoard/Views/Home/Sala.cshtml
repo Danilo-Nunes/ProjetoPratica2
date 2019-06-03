@@ -6,8 +6,12 @@
 <link href="~/Estilos/Sala.css" rel="stylesheet" />
 <div class="mural">
     @{
-        var base64Prof = Convert.ToBase64String(ViewBag.Professor.Img);
-        var imgSrcProf = String.Format("data:image/gif;base64,{0}", base64Prof);
+        var imgSrcProf = Url.Content("~/img/icons/user.png");
+        if (ViewBag.Professor.Img != null)
+        {
+            var base64Prof = Convert.ToBase64String(ViewBag.Professor.Img);
+            imgSrcProf = String.Format("data:image/gif;base64,{0}", base64Prof);
+        }
     }
     @if (ViewBag.Comunicados.Count > 0)
     {
@@ -39,8 +43,12 @@
     }
 </div>
 @{
-    var base64Sala = Convert.ToBase64String(ViewBag.Sala.Img);
-    var imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala);
+    var imgSrcSala = Url.Content("~/img/classe.JPEG");
+    if (ViewBag.Sala.Img != null)
+    {
+        var base64Sala = Convert.ToBase64String(ViewBag.Sala.Img);
+        imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala);
+    }
 }
 <div class="classe">
     <img class="img" src="@imgSrcSala" style="position: absolute;

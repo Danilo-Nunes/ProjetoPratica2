@@ -177,6 +177,7 @@
     <Content Include="Estilos\Cadastro.css" />
     <Content Include="Estilos\Comunicado.css" />
     <Content Include="Estilos\Comunicar.css" />
+    <Content Include="Estilos\Criar.css" />
     <Content Include="Estilos\CriarAtividade.css" />
     <Content Include="Estilos\Frequencia.css" />
     <Content Include="Estilos\Index.css" />
@@ -260,6 +261,7 @@
     <Content Include="Views\Home\Atividades.cshtml" />
     <Content Include="Views\Home\EditarFrequencia.cshtml" />
     <Content Include="Views\Home\Boletim.cshtml" />
+    <Content Include="Views\Home\CriaSala.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

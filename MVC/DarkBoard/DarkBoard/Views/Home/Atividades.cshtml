@@ -6,9 +6,13 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link href="~/Estilos/Atividades.css" rel="stylesheet" />
 <div class="criacao">
-    @{var base64 = Convert.ToBase64String(ViewBag.Sala.Img);
-        var imgSrc = String.Format("data:image/gif;base64,{0}", base64); }
-    <img class="img" onclick="imagemSala()" src='@imgSrc'>
+    @{var imgSrcSala = Url.Content("~/img/classe.JPEG");
+        if (ViewBag.Sala.Img != null)
+        {
+            var base64Sala = Convert.ToBase64String(ViewBag.Sala.Img);
+            imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala);
+        } }
+    <img class="img" onclick="imagemSala()" src='@imgSrcSala'>
     @if (ViewBag.Usu.Cargo == 'P')
     {
         <div class="criar" title="Criar Atividade" onclick="location.href='/Home/CriarAtividade/@ViewBag.Sala.Id'"><i class="far fa-calendar-plus"></i></div>

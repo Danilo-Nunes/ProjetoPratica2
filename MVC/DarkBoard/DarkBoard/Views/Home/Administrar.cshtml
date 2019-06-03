@@ -8,13 +8,17 @@
 <link href="~/Estilos/Administrar.css" rel="stylesheet" />
 <div class="administracao">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <form action="/Sala/AlteraImg" id="form" method="post" enctype="multipart/form-data">
+    <form action="/Sala/AlteraImg" id="sala" method="post" enctype="multipart/form-data">
         <div class='image-upload'>
             <input name="id" value="@ViewBag.Sala.Id" style="display:none;" />
             <label for='file-input'>
                 @{
-                    var base64Sala = Convert.ToBase64String(ViewBag.Sala.Img);
-                    var imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala);
+                    var imgSrcSala = Url.Content("~/img/classe.JPEG");
+                    if (ViewBag.Sala.Img != null)
+                    {
+                        var base64Sala = Convert.ToBase64String(ViewBag.Sala.Img);
+                        imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala);
+                    }
                 }
                 <div id='imagemLocal'>
                     <img style="position: absolute;
@@ -33,7 +37,7 @@
             </label>
             <input type='file' accept="image/png, image/jpeg, image/gif" name="file" onchange='TrocaImg(this.files)' id='file-input'>
         </div>
-        <div class="alterar" onclick='$("form").submit()' title="Alterar"><i class="fas fa-check"></i></div>
+        <div class="alterar" onclick='$("#sala").submit()' title="Alterar"><i class="fas fa-check"></i></div>
     </form>
     <div class="comunicar" onclick="location.href='/Home/Comunicar/@ViewBag.Sala.Id'" title="Escrever Comunicado" onclick="irParaComunicar()"><i class="fas fa-envelope-square"></i></div>
     <div class="deletar" onclick="deletar()" title="Deletar Sala"><i class="fas fa-eraser"></i></div>
@@ -47,8 +51,12 @@
                 <ul>
                     @foreach (var Aluno in ViewBag.Alunos)
                     {
-                        var base64 = Convert.ToBase64String(Aluno.Img);
-                        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                        var imgSrc = Url.Content("~/img/icons/user.png");
+                        if (Aluno.Img != null)
+                        {
+                            var base64 = Convert.ToBase64String(Aluno.Img);
+                            imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                        }
                         <li onclick="TrataClique(@Aluno.Id)">
                             <div class="p"><p class="nome">@Aluno.Nome</p></div><img src="@imgSrc" class="img">
                         </li>
@@ -179,6 +187,12 @@
                 imgLocal.appendChild(img);
             }
 
+             $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+                });
+
             function TrataClique(id) {
                 if (removendo) {
                     var obj = [id, "@ViewBag.Sala.Id"];
@@ -195,6 +209,7 @@
                                 alert(errMsg);
                             }
                         });
+                        location.reload();
                     }
                     $(".remover").click();
                 }

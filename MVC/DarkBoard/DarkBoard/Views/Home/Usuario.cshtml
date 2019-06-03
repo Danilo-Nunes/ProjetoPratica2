@@ -16,9 +16,13 @@
 <body>
     
     @{
-        var base64 = Convert.ToBase64String(ViewBag.Visitado.Img);
-        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
-    }
+        var imgSrc = Url.Content("~/img/icons/user.png");
+        if (ViewBag.Visitado.Img != null)
+        {
+            var base64 = Convert.ToBase64String(ViewBag.Visitado.Img);
+            imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+        }
+     }
     <div class='usuario'>
         <form action="/Usuario/Atualiza" id="form" method="post" enctype="multipart/form-data">
             <p class='nome' id='nome'>@ViewBag.Visitado.NomeUsu</p>
@@ -41,11 +45,11 @@
                 <li id='email'>@ViewBag.Visitado.Email</li>
             </ul>
             @if (ViewBag.Usu.Id == ViewBag.Visitado.Id)
-        {
+            {
             <img class="Edit" src="@Url.Content("~/img/icons/edit.png")" />
             <img class="Exit" src="@Url.Content("~/img/icons/logout.png")" />
             <input name="usuario.Id" style="display:none;" value="@ViewBag.Visitado.Id" />
-    }
+            }
 
             <textarea readonly="readonly" name="usuario.Descricao" id="desc" class='desc'>
                 @if (ViewBag.Visitado.Descricao != null)
