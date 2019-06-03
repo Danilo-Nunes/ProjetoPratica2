@@ -61,10 +61,10 @@ body {
     border-radius: 20px;
 }
 
-    .menu li img:hover {
-        background-color: #2C3F91;
-        border-color: white;
-    }
+.menu li img:hover {
+    background-color: #2C3F91;
+    border-color: white;
+}
 
 .icon:hover {
     transform: rotate(36deg);
@@ -92,13 +92,14 @@ body {
    margin-top:20px;
 }
     .pesquisa {
+    top: 3%;
     background-color: #4461DE;
     border-radius: 20px;
     height: 50px;
     width: 39%;
     border: 4px solid #2C3F91;
     color: ghostwhite;
-    font-size: 20px;
+    font-size: 24px;
     position: fixed;
     left: 27.5%;
     /* background-image: url('img/search.png'); */
@@ -125,14 +126,14 @@ body {
     border: 4px solid #2C3F91;
     padding: 1px;
     border-radius: 25px;
-    top: 15px;
+    top: 2.75%;
     transition: 0.7s;
     pointer-events: auto;
 }
 
     .pesquisaIcon:hover {
         filter: invert(100%);
-    }
+    }    
 
 .texto {
     position: relative;
@@ -162,7 +163,7 @@ body {
 .logo {
     position: fixed;
     right: -350px;
-    margin-top: -15px;
+    top: 0.4%;
 }
 
     .logo img {

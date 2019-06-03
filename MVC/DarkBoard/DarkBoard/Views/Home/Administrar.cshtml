@@ -78,7 +78,7 @@
             <p class="sp">
                 <form id="form2" action="/Usuario/AdicionaNaSala" method="post">
                    <p class="label">Aluno:</p> <input id='pesq' name="Nome" type='text' class='pesquisa'>
-                    <input name="id"style="display:none;" value="@ViewBag.Sala.Id"  />
+                    <input name="id"style="display:none;" value="@ViewBag.Sala.Id"/>
                     <img id='pesqIcon'  class='pesquisaIcon' onclick="$('#form2').submit()" src='@Url.Content("~/img/icons/search.png")'>
                 </form>
             </p>
@@ -89,11 +89,12 @@
 <script>
     //document.getElementById("demo").addEventListener("keydown", myFunction);
 
-    function keyPress(e)
-    {
-        if (e.keyCode == 13)
+    function keyPress(e) {
+        if (e.keyCode == 13) {
+            $('#fr').submit();
             location.href = '/Home/Pesquisa';
-    }
+        }
+    }    
 
     function deletar() {
         if (confirm("Are you sure about that?")) {

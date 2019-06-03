@@ -62,10 +62,12 @@
 <script>
         //document.getElementById("demo").addEventListener("keydown", myFunction);
 
-        function keyPress(e) {
-            if (e.keyCode == 13)
-                location.href = '/Home/Pesquisa';
+    function keyPress(e) {
+        if (e.keyCode == 13) {
+            $('#fr').submit();
+            location.href = '/Home/Pesquisa';
         }
+    }    
 
         $(".menuIcon").click(function () {
             if (!menu) {

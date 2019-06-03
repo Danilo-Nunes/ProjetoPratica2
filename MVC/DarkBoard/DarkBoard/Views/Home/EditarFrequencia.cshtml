@@ -52,9 +52,11 @@
     //document.getElementById("demo").addEventListener("keydown", myFunction);
     var Alunos = [];
     function keyPress(e) {
-        if (e.keyCode == 13)
+        if (e.keyCode == 13) {
+            $('#fr').submit();
             location.href = '/Home/Pesquisa';
-    }
+        }
+    }    
 
     function Salvar() {
          @for(int i = 0; i < ViewBag.Alunos.Count; i++)

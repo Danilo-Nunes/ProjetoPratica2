@@ -4,14 +4,18 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <link href="~/Estilos/Salas.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <div class="salas">
+    <div class="criarc">
+        <div class="criar" title="Criar Sala" onclick="location.href='/Home/Criar/'"><i class="fas fa-plus-square"></i></div>
+    </div>
     @if (ViewBag.Salas.Count > 0)
     {
         foreach (var Sala in ViewBag.Salas)
         {
 
-                var base64 = Convert.ToBase64String(Sala.Img);
-                var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+            var base64 = Convert.ToBase64String(Sala.Img);
+            var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
             <ul onclick="VaiPra('@Sala.Id')">
                 <li>
                     <div class="p">
@@ -38,8 +42,9 @@
             Você não está em nenhuma Sala
         </text>
     }
+</div>
 
-    <script type="text/javascript">
+<script type="text/javascript">
     function VaiPra(id) {
         location.href = "/Home/Sala/" + id;
     }
@@ -47,8 +52,10 @@
         //document.getElementById("demo").addEventListener("keydown", myFunction);
 
         function keyPress(e) {
-            if (e.keyCode == 13)
+            if (e.keyCode == 13) {
+                $('#fr').submit();
                 location.href = '/Home/Pesquisa';
+            }
         }
 
         var menu = false;
@@ -81,7 +88,7 @@
             $("number").css('padding-right', '5px');
             $("number").css('padding-left', '5px');
         }
-    </script>
+</script>
 
 
 
