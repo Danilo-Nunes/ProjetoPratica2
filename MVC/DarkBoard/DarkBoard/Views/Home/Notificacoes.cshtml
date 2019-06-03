@@ -18,7 +18,7 @@
                         <div class="p" onclick="location.href='/Home/Comunicado/@c[i].Id'">
                             <p class="nome">@c[i].Assunto</p>
                         </div>
-                        <img class="img" src ="@imgSrc">
+                        <img class="img" onclick="location.href='/Home/Usuario/@ViewBag.Prof[i].Id'" src ="@imgSrc">
                     </li>
                 </ul>
            }
