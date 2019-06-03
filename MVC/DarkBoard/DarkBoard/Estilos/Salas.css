@@ -12,9 +12,43 @@
     width: 80%;
 }
 
+.criarc {
+    position: absolute;
+    left: calc(2px + 3%);
+    top: 3%;
+    width: 91%;
+    height: 20%;
+    border: 10px double midnightblue;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: ghostwhite;
+}
+
+    .criarc .criar {
+        position: relative;
+        margin-top: 2.2%;
+        margin-bottom: 2%;
+        width: 20%;
+        height: 60%;
+        border: 5px solid midnightblue;
+        border-radius: 5px;
+        background-color: #4461DE;
+    }
+
+            .criarc .criar i {
+                color: ghostwhite;
+                font-size: 35pt;
+                margin-top: 0.14em;
+            }
+
+            .criarc .criar:hover {
+                border-color: #2C3F91;
+            }
+
     .salas ul {
         list-style: none;
-        margin-top: 14%;
+        margin-top: 24%;
     }
 
         .salas ul li {
