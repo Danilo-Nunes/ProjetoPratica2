@@ -82,9 +82,10 @@
     }
     else
     {
-        <p class="trabalhos" >Atividades</p>
+        <p onclick="location.href ='/Home/Atividades/@ViewBag.Sala.Id'" class="trabalhos">Atividades</p>
         <button onclick="location.href='/Home/Administrar/@ViewBag.Sala.Id'">Administrar</button>
     }
+    <p onclick="location.href ='/Home/Boletim/@ViewBag.Sala.Id'" class="boletim">Boletim</p>
 </div>
 
 <script>

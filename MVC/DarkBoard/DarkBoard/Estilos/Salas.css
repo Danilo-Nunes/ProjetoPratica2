@@ -46,12 +46,12 @@
                 border-color: #2C3F91;
             }
 
-    .salasA ul {
+    .salas .A {
         list-style: none;
-        margin-top: 10%;
+        margin-top: 12%;
     }
 
-        .salasA ul li {
+        .salas .A li {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -59,12 +59,12 @@
             margin-bottom: 270px;
         }
 
-.salasP ul {
+.salas .P {
     list-style: none;
     margin-top: 24%;
 }
 
-    .salasP ul li {
+    .salas .P li {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -82,7 +82,7 @@
     font-family: Baskerville Old Face;
 }
 
-.p {
+.paragrafo {
     border: 5px solid midnightblue;
     background-color: ghostwhite;
     border-right: none;

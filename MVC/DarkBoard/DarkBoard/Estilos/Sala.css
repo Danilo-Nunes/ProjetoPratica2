@@ -94,6 +94,20 @@
         left: 6%;
     }
 
+    .classe .boletim {
+        font-family: 'Baskerville Old Face';
+        color: black;
+        font-size: 20px;
+        position: absolute;
+        float: left;
+        top: 430px;
+        left: 6%;
+    }
+
+    .classe .boletim:hover{
+        color:purple;
+    }
+
 .mural ul li .p .nome {
     font-size: 16px;
     position: relative;

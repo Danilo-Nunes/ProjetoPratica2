@@ -35,9 +35,9 @@
                                     <p class="nome">@atividade.Nome</p>
                                     <input name="idAtividade" value="@atividade.Id" style="display:none;" />
                                     <input name="idAluno" value="@ViewBag.Usu.Id" style="display:none;" />
-                                    <input type="file" name="arquivo" style="display:none;" id="file" />     
+                                    <input type="file" name="arquivo" style="display:none;" id="@atividade.Id-file" />     
                                     <div class="notac" onclick="$('#@atividade.Id').submit();">Salvar</div>
-                                    <div class="arquivos" title="Adicionar Arquivo" onclick="$('#file').click();"><i class="fas fa-folder-plus"></i></div>
+                                    <div class="arquivos" title="Adicionar Arquivo" onclick="$('#@atividade.Id-file').click();"><i class="fas fa-folder-plus"></i></div>
                                 </div>
                                 }
                                 else
