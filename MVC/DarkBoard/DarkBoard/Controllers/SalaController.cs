@@ -32,13 +32,13 @@ namespace DarkBoard.Controllers
             int idSala = int.Parse(obj[1]);
             ComunicadoAlunoDAO.RemoveAluno(idAluno,idSala);
             UsuarioAtividadeDAO.RemoveAluno(idAluno,idSala);
-            AlunoSalaDBO.RemoveAluno(idAluno, idSala);
+            AlunoSalaDAO.RemoveAluno(idAluno, idSala);
             return View();
         }
 
         public ActionResult Excluir(int id)
         {
-            AlunoSalaDBO.RemoveSala(id);
+            AlunoSalaDAO.RemoveSala(id);
             AtividadeDAO.RemoveSala(id);
             ComunicadoAlunoDAO.RemoveSala(id);
             ComunicadoDAO.RemoveSala(id);

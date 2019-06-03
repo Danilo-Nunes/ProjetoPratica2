@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DarkBoard.DAO
 {
-    public class AlunoSalaDBO
+    public class AlunoSalaDAO
     {
         public void Adiciona(AlunoSala comp)
         {

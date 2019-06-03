@@ -80,7 +80,7 @@ namespace DarkBoard.Controllers
             ViewBag.Not = Session["not"];
 
             Usuario usuario = dao.BuscaPorId((int)Session["usu"]);
-            AlunoSalaDBO d = new AlunoSalaDBO();
+            AlunoSalaDAO d = new AlunoSalaDAO();
 
             IList<Sala> salas;
             if (usuario.Cargo == 'A')
@@ -190,7 +190,7 @@ namespace DarkBoard.Controllers
         {
             UsuarioDAO usuarioDao = new UsuarioDAO();
             SalaDAO salaDAO = new SalaDAO();
-            AlunoSalaDBO alunoSalaDbo = new AlunoSalaDBO();
+            AlunoSalaDAO alunoSalaDbo = new AlunoSalaDAO();
 
             Usuario professor = usuarioDao.BuscaPorId(((int)Session["usu"]));
             Sala sala = salaDAO.BuscaPorId(int.Parse(id));
@@ -210,7 +210,7 @@ namespace DarkBoard.Controllers
         {
             UsuarioDAO usuarioDao = new UsuarioDAO();
             SalaDAO salaDAO = new SalaDAO();
-            AlunoSalaDBO alunoSalaDao = new AlunoSalaDBO();
+            AlunoSalaDAO alunoSalaDao = new AlunoSalaDAO();
 
             Sala sala = salaDAO.BuscaPorId(int.Parse(id));
             Usuario usuario = usuarioDao.BuscaPorId(((int)Session["usu"]));
@@ -224,14 +224,14 @@ namespace DarkBoard.Controllers
             return View();
         }
         [AutorizacaoFilterAttribute]
-        public ActionResult Pesquisa()
+        public ActionResult Pesquisa(string pesq)
         {
             UsuarioDAO usuarioDao = new UsuarioDAO();
             SalaDAO salaDao = new SalaDAO();
 
             Usuario usuario = usuarioDao.BuscaPorId(9);
-            IList<Usuario> usuariosBuscados = usuarioDao.Pesquisa("a");
-            IList<Sala> salasBuscadas = salaDao.Pesquisa("a");
+            IList<Usuario> usuariosBuscados = usuarioDao.Pesquisa(pesq);
+            IList<Sala> salasBuscadas = salaDao.Pesquisa(pesq);
 
             var usuarios = (from u in usuariosBuscados
                             select new Resultado
@@ -262,7 +262,7 @@ namespace DarkBoard.Controllers
         {
             UsuarioDAO usuarioDao = new UsuarioDAO();
             SalaDAO salaDAO = new SalaDAO();
-            AlunoSalaDBO alunoSalaDao = new AlunoSalaDBO();
+            AlunoSalaDAO alunoSalaDao = new AlunoSalaDAO();
 
             Sala sala = salaDAO.BuscaPorId(int.Parse(id));
             Usuario usuario = usuarioDao.BuscaPorId((int)Session["usu"]);
@@ -281,7 +281,7 @@ namespace DarkBoard.Controllers
         {
             UsuarioDAO usuarioDao = new UsuarioDAO();
             SalaDAO salaDAO = new SalaDAO();
-            AlunoSalaDBO alunoSalaDbo = new AlunoSalaDBO();
+            AlunoSalaDAO alunoSalaDbo = new AlunoSalaDAO();
             AtividadeDAO atividadeDAO = new AtividadeDAO();
             UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
 
@@ -324,13 +324,49 @@ namespace DarkBoard.Controllers
         {
             SalaDAO salaDAO = new SalaDAO();
             UsuarioDAO usuarioDAO = new UsuarioDAO();
-            AlunoSalaDBO alunoSalaDBO = new AlunoSalaDBO();
+            AlunoSalaDAO alunoSalaDBO = new AlunoSalaDAO();
 
 
             ViewBag.AlunosAux = alunoSalaDBO.BuscaPorAlunosAux(int.Parse(id));
             ViewBag.Alunos = alunoSalaDBO.BuscaPorAlunos(int.Parse(id));
             ViewBag.Sala = salaDAO.BuscaPorId(int.Parse(id));
             ViewBag.Not = Session["not"];
+            ViewBag.Usu = usuarioDAO.BuscaPorId((int)Session["usu"]);
+
+            return View();
+        }
+        [AutorizacaoFilterAttribute]
+        [ProfessorFilterAttribute]
+        public ActionResult Boletim(string id)
+        {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            SalaDAO salaDAO = new SalaDAO();
+            AlunoSalaDAO alunoSalaDAO = new AlunoSalaDAO();
+            UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
+
+            List<double> Medias = new List<double>();
+
+            foreach(var Aluno in alunoSalaDAO.BuscaPorAlunos(int.Parse(id)))
+            {
+                double media = 0;
+                int pesos = 0;
+
+                foreach(var at in usuarioAtividadeDAO.BuscaPorAtividadesAux(Aluno.Id))
+                {
+                    media += at.Nota * at.Peso;
+                    pesos += at.Peso;
+                }
+
+                if(pesos != 0)
+                    media = Math.Round(media / pesos, 1);
+                Medias.Add(media);
+            }
+
+            ViewBag.Alunos = alunoSalaDAO.BuscaPorAlunos(int.Parse(id));
+            ViewBag.Sala = salaDAO.BuscaPorId(int.Parse(id));
+            ViewBag.Medias = Medias;
+            ViewBag.Not = Session["not"];
+            ViewBag.AlunosAux = alunoSalaDAO.BuscaPorAlunosAux(int.Parse(id));
             ViewBag.Usu = usuarioDAO.BuscaPorId((int)Session["usu"]);
 
             return View();

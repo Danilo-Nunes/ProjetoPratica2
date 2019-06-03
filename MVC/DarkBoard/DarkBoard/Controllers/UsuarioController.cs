@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using DarkBoard.Models;
 using DarkBoard.DAO;
 using System.Web.Routing;
+using System.IO;
+using System.Drawing;
 
 namespace DarkBoard.Controllers
 {
@@ -17,15 +19,24 @@ namespace DarkBoard.Controllers
             return View();
         }
 
-        public ActionResult Adiciona(Usuario usu)
+        public ActionResult Adiciona(Usuario usu, HttpPostedFileBase file)
         {
             UsuarioDAO dao = new UsuarioDAO();
             if(dao.BuscaPorNome(usu.NomeUsu) != null)
                 return RedirectToAction("Cadastro", new RouteValueDictionary(new { controller = "Home", action = "Cadastro", msg = "Nome indisponivel" }));
-            var file = Request.Files[0];
-            byte[] imageBytes = new byte[file.InputStream.Length + 1];          
-            file.InputStream.Read(imageBytes, 0, imageBytes.Length);
-            usu.Img = imageBytes;
+
+            if (file != null)
+            {
+                byte[] imageBytes = new byte[file.InputStream.Length + 1];
+                file.InputStream.Read(imageBytes, 0, imageBytes.Length);
+                usu.Img = imageBytes;
+            }
+            else
+            {
+                MemoryStream ms = new MemoryStream();
+                Image img = Image.FromFile("/Img/Icons/user.png");
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
             usu.Senha = Criptografia.Criptografar(usu.Senha);            
             dao.Adiciona(usu);
             return RedirectToAction("Login", new RouteValueDictionary(new { controller = "Home", action = "Login", msg = "" }));
@@ -96,12 +107,15 @@ namespace DarkBoard.Controllers
             return RedirectToAction("AlterarSenha", new RouteValueDictionary(new { controller = "Home", action = "AlterarSenha", msg = "Senha Incorreta" }));
         }
 
-        public ActionResult AtualizaFrequencia(AlunoSala alu)
+        public ActionResult AtualizaFrequencia(List<AlunoSala> no)
         {
-            AlunoSalaDBO alunoSalaDBO = new AlunoSalaDBO();
-            AlunoSala aux = alunoSalaDBO.BuscaPorId(alu.Id);
-            aux.Faltas = alu.Faltas;
-            alunoSalaDBO.Atualiza(aux);
+            AlunoSalaDAO alunoSalaDBO = new AlunoSalaDAO();
+            foreach (var alu in no)
+            {
+                AlunoSala aux = alunoSalaDBO.BuscaPorId(alu.Id);
+                aux.Faltas = alu.Faltas;
+                alunoSalaDBO.Atualiza(aux);
+            }
 
             return Redirect(Request.UrlReferrer.ToString());
         }
@@ -111,7 +125,7 @@ namespace DarkBoard.Controllers
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             ComunicadoAlunoDAO comunicadoAlunoDAO = new ComunicadoAlunoDAO();
             UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
-            AlunoSalaDBO alunoSalaDBO = new AlunoSalaDBO();
+            AlunoSalaDAO alunoSalaDBO = new AlunoSalaDAO();
 
 
             var comunicados = comunicadoAlunoDAO.BuscaSala(id);
@@ -137,7 +151,8 @@ namespace DarkBoard.Controllers
                 {
                     CodUsuario = usuario.Id,
                     CodAtividade = at.Id,
-                    Concluida = "N"
+                    Concluida = "N",
+                    Peso = at.Peso
                 };
             }
 

@@ -1,4 +1,4 @@
-﻿
+﻿@model DarkBoard.Models.UsuarioAtividade
 @{
     ViewBag.Title = "AdministrarAtividades";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link href="~/Estilos/AdministrarAtividades.css" rel="stylesheet" />
 <div class="notas">
-    @{ 
+    @{
         var base64Sala = Convert.ToBase64String(ViewBag.Sala.Img);
         var imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala);
     }
@@ -24,22 +24,27 @@
         @if (ViewBag.Alunos.Count > 0)
         {
             <ul>
-                @for (int i = 0; i < ViewBag.Alunos.Count; i++)
-                {
-                    var base64 = Convert.ToBase64String(ViewBag.Alunos[i].Img);
-                    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
-                    <li>
-                        <form id="@i" method="post" action="/Atividade/Atualiza">
+                <form id="form" method="post" action="/Atividade/Atualiza">
+                    @for (int i = 0; i < ViewBag.Alunos.Count; i++)
+                    {
+                        var base64 = Convert.ToBase64String(ViewBag.Alunos[i].Img);
+                        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                        <li>
+
                             <div class="p">
                                 <p class="nome">@ViewBag.Alunos[i].Nome</p>
-                                <input name="alu.Id" style="display:none;" value="@ViewBag.AlunosAux[i].Id" />
-                                <div class="notac"><p class="notap">Nota: </p><input type="text" name="alu.Nota" value="@ViewBag.AlunosAux[i].Nota" class="nota"> </div>
-                                <div class="arquivos" onclick="window.open('/Atividade/Download/@ViewBag.AlunosAux[i].Id')" title="Receber Arquivos do Aluno"><i class="fas fa-folder-open"></i></div>
+                                <input  name="usu[i].Id" style="display:none;" value="@ViewBag.AlunosAux[i].Id" />
+                                <div class="notac"><p class="notap">Nota: </p><input type="text" id="@i" name="usu[i].Nota" value="@ViewBag.AlunosAux[i].Nota" class="nota"> </div>
+                                @if (ViewBag.AlunosAux[i].Arquivo != null)
+                                {
+                                    <div class="arquivos" onclick="window.open('/Atividade/Download/@ViewBag.AlunosAux[i].Id')" title="Receber Arquivos do Aluno"><i class="fas fa-folder-open"></i></div>
+                                }       
                             </div>
                             <img class="aluno" src="@imgSrc">
-                        </form>
-                    </li>
-                }
+
+                        </li>
+                    }
+                </form>
             </ul>
         }
         else
@@ -51,35 +56,37 @@
 
 <script>
     //document.getElementById("demo").addEventListener("keydown", myFunction);
+    var Alunos = [];
 
-    function keyPress(e) {
-        if (e.keyCode == 13)
-            location.href = '/Home/Pesquisa';
-    }
 
-    function Excluir() {
+        function keyPress(e) {
+            if (e.keyCode == 13)
+                location.href = '/Home/Pesquisa';
+        }
+
+        function Excluir() {
            $.ajax({
-          url: '/Atividade/Excluir',
+                url: '/Atividade/Excluir',
           data: { idAtividade: @ViewBag.Atividade.Id }
-           }).done(function () {
-               location.href = '/Home/Salas'
-       });
+            }).done(function () {
+            location.href = '/Home/Salas'
+        });
     }
 
      $(".menuIcon").click(function () {
-            if (!menu) {
+        if (!menu) {
                 $(".aba").css("margin-left", "-10");
                 $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
                 $(".menuIcon").css("margin-left", "150");
-                menu = true;
-            }
-            else {
+            menu = true;
+        }
+        else {
                 $(".aba").css("margin-left", "-1000");
                 $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
                 $(".menuIcon").css("margin-left", "15");
-                menu = false;
-            }
-        })
+            menu = false;
+        }
+    })
 
         var not = @ViewBag.Not;
 
@@ -96,9 +103,26 @@
         }
 
         function Salvar() {
-            for (i = 0; i < @ViewBag.Alunos.Count; i++) {
-                $("#" + i).submit();
-            }
+            @for(int i =0; i < ViewBag.Alunos.Count;i++)
+             {
+                <text>
+                    Alunos.push({
+                        id: @ViewBag.AlunosAux[i].Id,
+                        nota: $('#@i').val()
+                    })
+                </text>
+             }
+                    jQuery.ajax({
+                        type: 'POST',
+                        url: "/Atividade/Atualiza",
+                        contentType: "application/json",
+                        datatype: 'json',
+                        data: JSON.stringify(Alunos),
+                        success: function (data) { },
+                        failure: function (errMsg) {
+                            alert(errMsg);
+                        }
+                    });
         }
 </script>
 

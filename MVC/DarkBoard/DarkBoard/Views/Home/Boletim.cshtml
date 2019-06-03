@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Boletim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Estilos/Boletim.css" rel="stylesheet" />
+<div class="boletim">
+
+    @{
+        var base64Sala = Convert.ToBase64String(ViewBag.Sala.Img);
+        var imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala);
+    }
+    <img class="img" onclick="imagemSala()" src='@imgSrcSala'>
+    <div class="voltar" title="Voltar"></div>
+    <div class="interno">
+        @if (ViewBag.Alunos.Count > 0)
+        {
+            <ul>
+                @for (int i = 0; i < ViewBag.Alunos.Count; i++)
+                {
+                    var base64 = Convert.ToBase64String(ViewBag.Alunos[i].Img);
+                    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                    <li>
+                        <div class="p">
+                            <p class="nome">@ViewBag.Alunos[i].Nome</p>
+                            <div class="notac">
+                                <p class="notap">Média: @ViewBag.Medias[i]</p>
+                            </div>
+                            <div class="frequenciac">
+                                <p class="frequenciap">Faltas: @ViewBag.AlunosAux[i].Faltas</p>
+                            </div>
+                        </div>
+                        <img class="aluno" src="@imgSrc">
+                    </li>
+                }
+            </ul>
+        }
+        else
+        {
+            <text>Não tem alunos nessa sala.</text>
+        }
+    </div>
+</div>
+

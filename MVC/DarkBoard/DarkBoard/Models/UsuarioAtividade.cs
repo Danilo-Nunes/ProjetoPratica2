@@ -11,6 +11,7 @@ namespace DarkBoard.Models
         public int CodUsuario { get; set; }
         public int CodAtividade { get; set; }
         public double Nota { get; set; }
+        public int Peso { get; set; }
         public string Concluida { get; set; }
         public byte[] Arquivo { get; set; }
         public string TipoArquivo { get; set; }
