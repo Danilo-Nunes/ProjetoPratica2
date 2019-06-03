@@ -46,18 +46,31 @@
                 border-color: #2C3F91;
             }
 
-    .salas ul {
+    .salasA ul {
         list-style: none;
-        margin-top: 24%;
+        margin-top: 10%;
     }
 
-        .salas ul li {
+        .salasA ul li {
             display: flex;
             flex-direction: column;
             justify-content: center;
             width: 80%;
             margin-bottom: 270px;
         }
+
+.salasP ul {
+    list-style: none;
+    margin-top: 24%;
+}
+
+    .salasP ul li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        margin-bottom: 270px;
+    }
 
 .nome {
     font-size: 25px;
