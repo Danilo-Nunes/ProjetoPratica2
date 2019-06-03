@@ -93,8 +93,7 @@
 }
 
 .img {
-    position: absolute;
-    border: 5px solid midnightblue;
+    position: absolute;    
     float: left;
     left: calc(95% - 250px);
     background-size: cover;
@@ -106,6 +105,3 @@
     transition: 0.2s;
 }
 
-    .img:hover {
-        border-color: #4461DE;
-    }
