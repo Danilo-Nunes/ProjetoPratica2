@@ -14,8 +14,14 @@
         foreach (var Sala in ViewBag.Salas)
         {
 
-            var base64 = Convert.ToBase64String(Sala.Img);
-            var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+
+            var imgSrc = Url.Content("~/img/classe.JPEG");
+            if (Sala.Img != null)
+            {
+                var base64Sala = Convert.ToBase64String(Sala.Img);
+                imgSrc = String.Format("data:image/gif;base64,{0}", base64Sala);
+            }
+
             <ul onclick="VaiPra('@Sala.Id')">
                 <li>
                     <div class="p">
