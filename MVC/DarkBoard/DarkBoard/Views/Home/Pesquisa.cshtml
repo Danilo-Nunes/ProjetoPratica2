@@ -10,10 +10,6 @@
         @foreach (var Pesq in ViewBag.Busca)
         {
             var imgSrc = Url.Content("~/img/icons/user.png");
-            if (Pesq.Eh == "Sala")
-            {
-                imgSrc = Url.Content("~/img/classe.JPEG");
-            }
 
             if (Pesq.Img != null)
             {
@@ -21,7 +17,7 @@
                 imgSrc = String.Format("data:image/gif;base64,{0}", base64);
             }
         <li>
-            <div class="p" onclick="location.href = '/Home/@Pesq.Eh/@Pesq.Id'">
+            <div class="p" onclick="location.href = '/Home/Usuario/@Pesq.Id'">
                 <p class="nome">@Pesq.Nome</p>
             </div>
             <img class="img" src="@imgSrc">
@@ -40,7 +36,6 @@
         }
     }
      var menu = false;
-        localStorage.setItem("User", @ViewBag.Usu.Id);
         $(".menuIcon").click(function () {
             if (!menu) {
                 $(".aba").css("margin-left", "-10");

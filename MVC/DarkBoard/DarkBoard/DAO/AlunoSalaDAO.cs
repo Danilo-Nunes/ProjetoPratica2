@@ -59,6 +59,19 @@ namespace DarkBoard.DAO
             }
         }
 
+        public IList<Usuario> BuscaPorAlunosOrdenado(int id)
+        {
+            using (var contexto = new SalaContext())
+            {
+                return (from p in contexto.Usuario
+                        join e in contexto.AlunoSala on p.Id equals e.CodAluno
+                        join q in contexto.Sala on e.CodSala equals q.Id
+                        where q.Id == id
+                        select p).OrderBy(a => a.Nome).ToList();
+            }
+        }
+
+
 
         public IList<AlunoSala> BuscaPorAlunosAux(int id)
         {
@@ -66,6 +79,17 @@ namespace DarkBoard.DAO
             {
                 return (from e in contexto.AlunoSala 
                         where e.CodSala == id
+                        select e).ToList();
+            }
+        }
+
+        public IList<AlunoSala> BuscaPorAlunosAuxOrdenado(int id)
+        {
+            using (var contexto = new SalaContext())
+            {
+                return (from e in contexto.AlunoSala
+                        join a in contexto.Usuario on e.CodAluno equals a.Id
+                        where e.CodSala == id orderby a.Nome
                         select e).ToList();
             }
         }

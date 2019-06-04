@@ -81,6 +81,7 @@
 .input {
     border-radius: 10px;
     font-size: 30px;
+    outline:none;
     background-color: #A0F0EC;
     border-color: #7EBDBA;
 }

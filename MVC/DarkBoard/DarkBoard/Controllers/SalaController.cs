@@ -43,6 +43,7 @@ namespace DarkBoard.Controllers
         public ActionResult Excluir(int id)
         {
             AlunoSalaDAO.RemoveSala(id);
+            UsuarioAtividadeDAO.RemoveSala(id);
             AtividadeDAO.RemoveSala(id);
             ComunicadoAlunoDAO.RemoveSala(id);
             ComunicadoDAO.RemoveSala(id);

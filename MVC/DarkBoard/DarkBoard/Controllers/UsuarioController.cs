@@ -180,7 +180,7 @@ namespace DarkBoard.Controllers
             }
             else
             {
-                Session["msg"] = "Usuário Inválido";
+                Session["msg"] = "Aluno inexistente";
                 return Redirect(Request.UrlReferrer.ToString());
             }
         }

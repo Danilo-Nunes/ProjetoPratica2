@@ -201,6 +201,7 @@ namespace DarkBoard.Controllers
             ViewBag.Alunos = alunos;
             ViewBag.Sala = sala;
             ViewBag.Msg = Session["msg"];
+            Session["msg"] = "";
 
             return View();
         }
@@ -229,29 +230,13 @@ namespace DarkBoard.Controllers
             UsuarioDAO usuarioDao = new UsuarioDAO();
             SalaDAO salaDao = new SalaDAO();
 
-            Usuario usuario = usuarioDao.BuscaPorId(9);
+            Usuario usuario = usuarioDao.BuscaPorId((int)Session["usu"]);
             IList<Usuario> usuariosBuscados = usuarioDao.Pesquisa(pesq);
-            IList<Sala> salasBuscadas = salaDao.Pesquisa(pesq);
 
-            var usuarios = (from u in usuariosBuscados
-                            select new Resultado
-                            {
-                                Id = u.Id,
-                                Nome = u.Nome,
-                                Img = u.Img,
-                                Eh = "Usuario"
-                            }).ToList();
 
-            var busca = usuarios.Union(from s in salasBuscadas
-                                       select new Resultado
-                                       {
-                                           Id = s.Id,
-                                           Nome = s.Nome,
-                                           Img = s.Img,
-                                           Eh = "Sala"
-                                       }).ToList().OrderBy(p => p.Nome);
 
-            ViewBag.Busca = busca;
+            ViewBag.Not = Session["not"];
+            ViewBag.Busca = usuariosBuscados;
             ViewBag.Usu = usuario;
             return View();
         }
@@ -327,8 +312,8 @@ namespace DarkBoard.Controllers
             AlunoSalaDAO alunoSalaDBO = new AlunoSalaDAO();
 
 
-            ViewBag.AlunosAux = alunoSalaDBO.BuscaPorAlunosAux(int.Parse(id));
-            ViewBag.Alunos = alunoSalaDBO.BuscaPorAlunos(int.Parse(id));
+            ViewBag.AlunosAux = alunoSalaDBO.BuscaPorAlunosAuxOrdenado(int.Parse(id));
+            ViewBag.Alunos = alunoSalaDBO.BuscaPorAlunosOrdenado(int.Parse(id));
             ViewBag.Sala = salaDAO.BuscaPorId(int.Parse(id));
             ViewBag.Not = Session["not"];
             ViewBag.Usu = usuarioDAO.BuscaPorId((int)Session["usu"]);

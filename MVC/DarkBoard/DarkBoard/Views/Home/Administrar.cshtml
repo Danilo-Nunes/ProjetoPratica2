@@ -97,13 +97,14 @@
     }    
 
     function deletar() {
-        if (confirm("Are you sure about that?")) {
+        if (confirm("Tem certeza que quer Excluir a Sala?")) {
             $.ajax({
                 url: '/Sala/Excluir',
                 data: { id: @ViewBag.Sala.Id }
             }).done(function () {
                 location.href = '/Home/Salas';
-            });
+                });
+            location.href = '/Home/Salas';
         }
     }
 

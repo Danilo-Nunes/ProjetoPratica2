@@ -74,7 +74,9 @@ namespace DarkBoard.DAO
         {
             using (var contexto = new SalaContext())
             {
-                contexto.RemoveRange(contexto.Atividade.Where(a => a.CodSala == sala).ToList());
+                contexto.RemoveRange((from a in contexto.Atividade
+                                     where a.CodSala == sala
+                                     select a).ToList());
                 contexto.SaveChanges();
             }
         }

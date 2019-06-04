@@ -31,7 +31,7 @@
                             <form method="post" enctype="multipart/form-data" id="@atividade.Id" action="/Atividade/Entregar">
                                 @if (ViewBag.Usu.Cargo == 'A')
                                 {
-                                <div class="p">
+                                <div class="pAluno">
                                     <p class="nome">@atividade.Nome</p>
                                     <input name="idAtividade" value="@atividade.Id" style="display:none;" />
                                     <input name="idAluno" value="@ViewBag.Usu.Id" style="display:none;" />

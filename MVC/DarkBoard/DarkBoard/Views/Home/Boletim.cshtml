@@ -11,7 +11,7 @@
         var imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala);
     }
     <img class="img" onclick="imagemSala()" src='@imgSrcSala'>
-    <div class="voltar" title="Voltar"></div>
+    <div class="voltar" onclick="location.href='/Home/Sala/@ViewBag.Sala.Id'" title="Voltar"></div>
     <div class="interno">
         @if (ViewBag.Alunos.Count > 0)
         {
