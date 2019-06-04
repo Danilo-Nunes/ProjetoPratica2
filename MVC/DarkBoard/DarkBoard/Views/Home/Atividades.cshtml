@@ -17,7 +17,7 @@
     {
         <div class="criar" title="Criar Atividade" onclick="location.href='/Home/CriarAtividade/@ViewBag.Sala.Id'"><i class="far fa-calendar-plus"></i></div>
     }
-        <div class="voltar" onclick="location.href='/Home/Administrar/@ViewBag.Sala.Id'" title="Voltar"></div>
+        <div class="voltar" onclick="location.href='/Home/Sala/@ViewBag.Sala.Id'" title="Voltar"></div>
         <div class="interno">
 
             @if (ViewBag.Atividades.Count > 0)
@@ -39,14 +39,16 @@
                                     <div class="notac" onclick="$('#@atividade.Id').submit();">Salvar</div>
                                     <div class="arquivos" title="Adicionar Arquivo" onclick="$('#@atividade.Id-file').click();"><i class="fas fa-folder-plus"></i></div>
                                 </div>
+                                <img class="atAluno" onclick="location.href='/Home/Usuario/@ViewBag.Professor.Id'" src="@imgSrcProf">
                                 }
                                 else
                                 {
                                     <div class="p" onclick="location.href='/Home/AdministrarAtividades/@atividade.Id'">
                                         <p class="nome">@atividade.Nome</p>
                                     </div>
+                                    <img class="atProfessor" onclick="location.href='/Home/Usuario/@ViewBag.Professor.Id'" src="@imgSrcProf">
                                 }
-                                <img class="at" onclick="location.href='/Home/Usuario/@ViewBag.Professor.Id'" src="@imgSrcProf">
+                                
                             </form>
                             
                         </li>

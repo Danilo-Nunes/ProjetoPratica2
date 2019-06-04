@@ -112,7 +112,10 @@ namespace DarkBoard.Controllers
             foreach (var alu in no)
             {
                 AlunoSala aux = alunoSalaDBO.BuscaPorId(alu.Id);
-                aux.Faltas = alu.Faltas;
+                if (alu.Faltas > 0)
+                    aux.Faltas = alu.Faltas;
+                else
+                    aux.Faltas = 0;
                 alunoSalaDBO.Atualiza(aux);
             }
 

@@ -34,15 +34,13 @@
                     imgSrc = String.Format("data:image/gif;base64,{0}", base64);
                 }
 
-            <form id="form" method="post" action="/Usuario/AtualizaFrequencia">
                 <li>
                     <div class="p">
                         <p class="nome">@ViewBag.Alunos[i].Nome</p>
-                        <div class="faltac"><p class="faltap">Faltas: </p><input id="@i" name="alu.Faltas" type="text" value="@ViewBag.AlunosAux[i].Faltas" class="falta"> </div>
+                        <div class="faltac"><p class="faltap">Faltas: </p><input id="@i" name="alu.Faltas" type="number" value="@ViewBag.AlunosAux[i].Faltas" class="falta"> </div>
                     </div>
                     <img class="aluno" src="@imgSrc">
                 </li>
-             </form>
             }
         </ul>
         }
