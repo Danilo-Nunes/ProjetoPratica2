@@ -25,6 +25,13 @@
 </form>
 
 <script>
+
+         $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+    });
+
     function TrocaImg(files) {
         var imgLocal = document.getElementById('imagemLocal')
         var file = files[0];

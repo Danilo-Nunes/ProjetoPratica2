@@ -68,7 +68,13 @@
             $('#fr').submit();
             location.href = '/Home/Pesquisa';
         }
-    }    
+    }
+
+     $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+                });
 
         function Excluir() {
            $.ajax({

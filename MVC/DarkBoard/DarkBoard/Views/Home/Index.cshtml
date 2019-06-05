@@ -63,6 +63,12 @@
     </div>
 
     <script type="text/javascript">
+
+             $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+                });
         var menu = false;
         localStorage.setItem("User", @ViewBag.Usu.Id);
         $(".menuIcon").click(function () {

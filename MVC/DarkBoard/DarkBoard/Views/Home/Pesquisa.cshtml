@@ -64,4 +64,10 @@
             $("number").css('padding-right', '5px');
             $("number").css('padding-left', '5px');
         }
+
+         $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+                });
 </script>
