@@ -345,7 +345,6 @@ namespace DarkBoard.Controllers
             return View();
         }
         [AutorizacaoFilterAttribute]
-        [ProfessorFilterAttribute]
         public ActionResult Boletim(string id)
         {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
@@ -353,34 +352,36 @@ namespace DarkBoard.Controllers
             AlunoSalaDAO alunoSalaDAO = new AlunoSalaDAO();
             UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
 
-            List<double> Medias = new List<double>();
+            Usuario usuario = usuarioDAO.BuscaPorId((int)Session["usu"]);
 
-            foreach(var Aluno in alunoSalaDAO.BuscaPorAlunos(int.Parse(id)))
-            {
-                double media = 0;
-                int pesos = 0;
+                List<double> Medias = new List<double>();
 
-                foreach(var at in usuarioAtividadeDAO.BuscaPorAtividadesAux(Aluno.Id))
+                foreach (var Aluno in alunoSalaDAO.BuscaPorAlunos(int.Parse(id)))
                 {
-                    media += at.Nota * at.Peso;
-                    pesos += at.Peso;
+                    double media = 0;
+                    int pesos = 0;
+
+                    foreach (var at in usuarioAtividadeDAO.BuscaPorAtividadesAux(Aluno.Id, int.Parse(id)))
+                    {
+                        media += at.Nota * at.Peso;
+                        pesos += at.Peso;
+                    }
+
+                    if (pesos != 0)
+                        media = Math.Round(media / pesos, 1);
+                    Medias.Add(media);
                 }
 
-                if(pesos != 0)
-                    media = Math.Round(media / pesos, 1);
-                Medias.Add(media);
-            }
+                ViewBag.Alunos = alunoSalaDAO.BuscaPorAlunos(int.Parse(id));
+                ViewBag.Sala = salaDAO.BuscaPorId(int.Parse(id));
+                ViewBag.Medias = Medias;
+                ViewBag.Not = Session["not"];
+                ViewBag.AlunosAux = alunoSalaDAO.BuscaPorAlunosAux(int.Parse(id));
+                ViewBag.Usu = usuarioDAO.BuscaPorId((int)Session["usu"]);
+                ViewBag.Msg = Session["msg"];
+                Session["msg"] = "";
 
-            ViewBag.Alunos = alunoSalaDAO.BuscaPorAlunos(int.Parse(id));
-            ViewBag.Sala = salaDAO.BuscaPorId(int.Parse(id));
-            ViewBag.Medias = Medias;
-            ViewBag.Not = Session["not"];
-            ViewBag.AlunosAux = alunoSalaDAO.BuscaPorAlunosAux(int.Parse(id));
-            ViewBag.Usu = usuarioDAO.BuscaPorId((int)Session["usu"]);
-            ViewBag.Msg = Session["msg"];
-            Session["msg"] = "";
-
-            return View();
+                return View();           
         }
 
         [AutorizacaoFilterAttribute]

@@ -10,10 +10,22 @@ namespace DarkBoard.DAO
     {
         public void Adiciona(AlunoSala comp)
         {
+            if (!Existe(comp))
+            {
+                using (var context = new SalaContext())
+                {
+
+                    context.AlunoSala.Add(comp);
+                    context.SaveChanges();
+                }
+            }
+        }
+
+        public bool Existe(AlunoSala a)
+        {
             using (var context = new SalaContext())
             {
-                context.AlunoSala.Add(comp);
-                context.SaveChanges();
+                return (context.AlunoSala.Any(o => o.CodAluno == a.CodAluno && o.CodSala == a.CodSala));
             }
         }
         public IList<AlunoSala> Lista()
