@@ -21,6 +21,17 @@ namespace DarkBoard.DAO
             }
         }
 
+        public AlunoSala BuscaPorIds(int alu, int sala)
+        {
+            using (var contexto = new SalaContext())
+            {
+                return (from c in contexto.AlunoSala
+                        where c.CodAluno == alu
+                        where c.CodSala == sala
+                        select c).FirstOrDefault();
+            }
+        }
+
         public bool Existe(AlunoSala a)
         {
             using (var context = new SalaContext())
