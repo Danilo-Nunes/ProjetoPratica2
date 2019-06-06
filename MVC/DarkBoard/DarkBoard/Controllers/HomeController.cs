@@ -22,6 +22,8 @@ namespace DarkBoard.Controllers
             ViewBag.Not = Session["not"];
 
             ViewBag.Usu = usuario;
+            ViewBag.Msg = Session["msg"];
+            Session["msg"] = "";
 
             return View();
         }
@@ -52,6 +54,8 @@ namespace DarkBoard.Controllers
 
             ViewBag.Visitado = visitado;          
             ViewBag.Usu = usuario;
+            ViewBag.Msg = Session["msg"];
+            Session["msg"] = "";
 
             return View();
 
@@ -69,6 +73,8 @@ namespace DarkBoard.Controllers
 
             ViewBag.Usu = usuario;
             ViewBag.Compromissos = d.BuscaPorUsuario(usuario.Id);
+            ViewBag.Msg = Session["msg"];
+            Session["msg"] = "";
 
             return View();
         }
@@ -94,6 +100,8 @@ namespace DarkBoard.Controllers
 
             ViewBag.Salas = salas;
             ViewBag.Usu = usuario;
+            ViewBag.Msg = Session["msg"];
+            Session["msg"] = "";
 
             return View();
         }
@@ -117,6 +125,8 @@ namespace DarkBoard.Controllers
             ViewBag.Sala = sala;
             ViewBag.Professor = dao.BuscaPorId(sala.CodProfessor);
             ViewBag.Comunicados = dAO.BuscaPorSala(sala.Id);
+            ViewBag.Msg = Session["msg"];
+            Session["msg"] = "";
 
             return View();
         }
@@ -148,6 +158,8 @@ namespace DarkBoard.Controllers
             ViewBag.Sala = sala;
             ViewBag.Professor = dao.BuscaPorId(sala.CodProfessor);
             ViewBag.Comunicado = comum;
+            ViewBag.Msg = Session["msg"];
+            Session["msg"] = "";
 
             return View();
         }
@@ -169,6 +181,8 @@ namespace DarkBoard.Controllers
             ViewBag.Comuns = c;
             ViewBag.Prof = professores;
             ViewBag.Usu = usuario;
+            ViewBag.Msg = Session["msg"];
+            Session["msg"] = "";
 
             return View();
         }
@@ -221,7 +235,9 @@ namespace DarkBoard.Controllers
             ViewBag.Usu = usuario;
             ViewBag.Sala = sala;
             Session["Alunos"] = alunos;
-            
+            ViewBag.Msg = Session["msg"];
+            Session["msg"] = "";
+
             return View();
         }
         [AutorizacaoFilterAttribute]
@@ -233,11 +249,12 @@ namespace DarkBoard.Controllers
             Usuario usuario = usuarioDao.BuscaPorId((int)Session["usu"]);
             IList<Usuario> usuariosBuscados = usuarioDao.Pesquisa(pesq);
 
-
-
             ViewBag.Not = Session["not"];
             ViewBag.Busca = usuariosBuscados;
             ViewBag.Usu = usuario;
+            ViewBag.Msg = Session["msg"];
+            Session["msg"] = "";
+
             return View();
         }
 
@@ -257,6 +274,8 @@ namespace DarkBoard.Controllers
             ViewBag.Usu = usuario;
             ViewBag.Sala = sala;
             Session["Alunos"] = alunos;
+            ViewBag.Msg = Session["msg"];
+            Session["msg"] = "";
 
             return View();
         }
@@ -282,6 +301,8 @@ namespace DarkBoard.Controllers
             ViewBag.AlunosAux = alunoAux;
             ViewBag.Sala = sala;
             ViewBag.Atividade = atividade;
+            ViewBag.Msg = Session["msg"];
+            Session["msg"] = "";
 
             return View();
 
@@ -299,6 +320,8 @@ namespace DarkBoard.Controllers
             ViewBag.Professor = salaDAO.BuscaProfessor(int.Parse(id));
             ViewBag.Usu = usuarioDAO.BuscaPorId((int)Session["usu"]);
             ViewBag.Sala = salaDAO.BuscaPorId(int.Parse(id));
+            ViewBag.Msg = Session["msg"];
+            Session["msg"] = "";
 
             return View();
         }
@@ -316,6 +339,8 @@ namespace DarkBoard.Controllers
             ViewBag.Sala = salaDAO.BuscaPorId(int.Parse(id));
             ViewBag.Not = Session["not"];
             ViewBag.Usu = usuarioDAO.BuscaPorId((int)Session["usu"]);
+            ViewBag.Msg = Session["msg"];
+            Session["msg"] = "";
 
             return View();
         }
@@ -352,6 +377,8 @@ namespace DarkBoard.Controllers
             ViewBag.Not = Session["not"];
             ViewBag.AlunosAux = alunoSalaDAO.BuscaPorAlunosAux(int.Parse(id));
             ViewBag.Usu = usuarioDAO.BuscaPorId((int)Session["usu"]);
+            ViewBag.Msg = Session["msg"];
+            Session["msg"] = "";
 
             return View();
         }
@@ -365,6 +392,8 @@ namespace DarkBoard.Controllers
 
             ViewBag.Usu = usuario;
             ViewBag.Not = Session["not"];
+            ViewBag.Msg = Session["msg"];
+            Session["msg"] = "";
 
             if (usuario.Cargo == 'P')
                 return View();

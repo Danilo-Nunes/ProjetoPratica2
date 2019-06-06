@@ -13,43 +13,59 @@ namespace DarkBoard.Controllers
         // GET: Comunicado
         public ActionResult Adiciona(Comunicado com, HttpPostedFileBase file)
         {
-            ComunicadoDAO comunicadoDAO = new ComunicadoDAO();
-            ComunicadoAlunoDAO comunicadoAlunoDAO = new ComunicadoAlunoDAO();
-
-            if (file != null)
+            try
             {
-                byte[] arquivoBytes = new byte[file.InputStream.Length + 1];
+                ComunicadoDAO comunicadoDAO = new ComunicadoDAO();
+                ComunicadoAlunoDAO comunicadoAlunoDAO = new ComunicadoAlunoDAO();
 
-                file.InputStream.Read(arquivoBytes, 0, arquivoBytes.Length);
-                com.Arquivo = arquivoBytes;
-                com.NomeArquivo = file.FileName;
-                com.TipoArquivo = file.ContentType;
-            }
-            comunicadoDAO.Adiciona(com);
-
-            foreach (var A in (IList<Usuario>)Session["Alunos"])
-            {
-                ComunicadoAluno c = new ComunicadoAluno
+                if (file != null)
                 {
-                    CodAluno = A.Id,
-                    CodComunicado = com.Id,
-                    Visto = "N"
-                };
+                    byte[] arquivoBytes = new byte[file.InputStream.Length + 1];
 
-                comunicadoAlunoDAO.Adiciona(c);
+                    file.InputStream.Read(arquivoBytes, 0, arquivoBytes.Length);
+                    com.Arquivo = arquivoBytes;
+                    com.NomeArquivo = file.FileName;
+                    com.TipoArquivo = file.ContentType;
+                }
+                comunicadoDAO.Adiciona(com);
+
+                foreach (var A in (IList<Usuario>)Session["Alunos"])
+                {
+                    ComunicadoAluno c = new ComunicadoAluno
+                    {
+                        CodAluno = A.Id,
+                        CodComunicado = com.Id,
+                        Visto = "N"
+                    };
+
+                    comunicadoAlunoDAO.Adiciona(c);
+                }
+
+
+                return RedirectToAction("Sala", new RouteValueDictionary(new { controller = "Home", action = "Sala", id = com.CodSala }));
             }
-
-
-            return RedirectToAction("Sala", new RouteValueDictionary(new { controller = "Home", action = "Sala", id = com.CodSala }));
+            catch (Exception e)
+            {
+                Session["msg"] = "Erro: " + e.Message;
+                return Redirect(Request.UrlReferrer.ToString());
+            }
         }
 
         public ActionResult Download(string id)
         {
-            ComunicadoDAO comunicadoDAO = new ComunicadoDAO();
+            try
+            {
+                ComunicadoDAO comunicadoDAO = new ComunicadoDAO();
 
-            Comunicado c = comunicadoDAO.BuscaPorId(int.Parse(id));
+                Comunicado c = comunicadoDAO.BuscaPorId(int.Parse(id));
 
-            return File(c.Arquivo, c.TipoArquivo, c.NomeArquivo);
+                return File(c.Arquivo, c.TipoArquivo, c.NomeArquivo);
+            }
+            catch (Exception e)
+            {
+                Session["msg"] = "Erro: " + e.Message;
+                return Redirect(Request.UrlReferrer.ToString());
+            }
         }
     }
 }

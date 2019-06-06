@@ -54,7 +54,13 @@
             $('#fr').submit();
             location.href = '/Home/Pesquisa';
         }
-    }    
+    }
+
+         $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+                });
 
     function Salvar() {
          @for(int i = 0; i < ViewBag.Alunos.Count; i++)
@@ -78,5 +84,7 @@
                         alert(errMsg);
                     }
                 });
+
+                location.reload();
     }
 </script>
