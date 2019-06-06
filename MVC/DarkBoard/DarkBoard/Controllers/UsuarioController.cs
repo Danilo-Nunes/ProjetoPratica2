@@ -173,69 +173,59 @@ namespace DarkBoard.Controllers
                 SalaDAO salaDAO = new SalaDAO();
 
 
+                var comunicados = comunicadoAlunoDAO.BuscaSala(id);
+                var atividades = usuarioAtividadeDAO.BuscaPorSala(id);
+
                 Usuario usuario = usuarioDAO.BuscaPorNomeCompleto(nome);
-                AlunoSala a = new AlunoSala
-                {
-                    CodAluno = usuario.Id,
-                    CodSala = id,
-                    Faltas = 0,
-                    Media = 0
-                };
-                if (!alunoSalaDBO.Existe(a))
+                Sala sala = salaDAO.BuscaPorId(id);
+
+                if (usuario != null && usuario.Cargo == 'A')
                 {
 
-                    var comunicados = comunicadoAlunoDAO.BuscaSala(id);
-                    var atividades = usuarioAtividadeDAO.BuscaPorSala(id);
 
-
-                    Sala sala = salaDAO.BuscaPorId(id);
-
-                    if (usuario != null && usuario.Cargo == 'A')
+                    foreach (var comunicado in comunicados)
                     {
-
-
-                        foreach (var comunicado in comunicados)
+                        ComunicadoAluno c = new ComunicadoAluno
                         {
-                            ComunicadoAluno c = new ComunicadoAluno
-                            {
-                                CodAluno = usuario.Id,
-                                CodComunicado = comunicado.Id,
-                                Visto = "N"
+                            CodAluno = usuario.Id,
+                            CodComunicado = comunicado.Id,
+                            Visto = "N"
 
-                            };
+                        };
 
-                            comunicadoAlunoDAO.Adiciona(c);
-                        }
-
-                        foreach (var at in atividades)
-                        {
-                            UsuarioAtividade u = new UsuarioAtividade
-                            {
-                                CodUsuario = usuario.Id,
-                                CodAtividade = at.Id,
-                                Concluida = "N",
-                                Peso = at.Peso
-                            };
-                        }
-
-
-
-
-                        alunoSalaDBO.Adiciona(a);
-
-                        sala.QtdAlunos++;
-                        salaDAO.Atualiza(sala);
-
-                        return Redirect(Request.UrlReferrer.ToString());
+                        comunicadoAlunoDAO.Adiciona(c);
                     }
-                    else
+
+                    foreach (var at in atividades)
                     {
-                        Session["msg"] = "Aluno inexistente";
-                        return Redirect(Request.UrlReferrer.ToString());
+                        UsuarioAtividade u = new UsuarioAtividade
+                        {
+                            CodUsuario = usuario.Id,
+                            CodAtividade = at.Id,
+                            Concluida = "N",
+                            Peso = at.Peso
+                        };
                     }
+
+
+                    AlunoSala a = new AlunoSala
+                    {
+                        CodAluno = usuario.Id,
+                        CodSala = id,
+                        Faltas = 0,
+                        Media = 0
+                    };
+
+                    alunoSalaDBO.Adiciona(a);
+
+                    sala.QtdAlunos++;
+                    salaDAO.Atualiza(sala);
+
+                    return Redirect(Request.UrlReferrer.ToString());
                 }
                 else
                 {
+                    Session["msg"] = "Aluno inexistente";
                     return Redirect(Request.UrlReferrer.ToString());
                 }
             }
