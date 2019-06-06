@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "CriarAtividade";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Estilos/CriarAtividade.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<div class="criacao">
+
+    @{
+        var base64Sala = Convert.ToBase64String(ViewBag.Sala.Img);
+        var imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala);
+    }
+    <form id="frm" action="/Atividade/Adiciona" method="post" enctype="multipart/form-data">
+        <img class="img" onclick="imagemSala()" src='@imgSrcSala'>
+        <div class="enviar" title="Enviar Comunicado" onclick="$('#frm').submit();"><i class="fas fa-paper-plane"></i></div>
+        <div class="adicionar" title="Adicionar Arquivo" onclick="$('#file').click();" id="add"><i class="fas fa-folder-plus" id="i"></i></div>
+        <input type="file" name="file" style="display:none;" id="file" />
+        <div class="cancelar" onclick="cancelar()"><i class="far fa-times-circle"></i></div>
+        <div class="interno">
+            <p class="titulop">Atividade: </p><input name="com.Assunto" type="text" class="titulo">
+            <p class="pesop">Peso: </p><input type="text" name="a.Peso" class="peso">
+            <p class="datap">Data: </p><input type="text" name="a.DataAtividade" class="data">
+            <p class="comunicadop">Comunicado: </p><textarea name="com.Texto" class="comunicado"></textarea>
+            <input name="com.CodSala" style="display:none" value="@ViewBag.Sala.Id" />
+            <input name="a.CodSala" style="display:none" value="@ViewBag.Sala.Id" />
+        </div>
+    </form>
+</div>
+
+<script>
+    //document.getElementById("demo").addEventListener("keydown", myFunction);
+
+         $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+                });
+
+    function keyPress(e) {
+        if (e.keyCode == 13) {
+            $('#fr').submit();
+            location.href = '/Home/Pesquisa';
+        }
+    }
+</script>
+

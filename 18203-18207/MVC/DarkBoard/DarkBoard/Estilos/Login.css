@@ -1,0 +1,101 @@
+﻿body {
+    background-color: #586391;
+    color: white;
+    font-family: Arial;
+}
+
+.button {
+    position: absolute;
+    left: 800px;
+    text-align: center;
+    background-color: #10121f;
+    border: solid 4px white;
+    font-size: 25pt;
+    height: 90px;
+    border-radius: 5px;
+    color: white;
+    width: 140px;
+    bottom:50px;
+}
+
+.frmLogin {
+    background-color: #232944;
+    border: solid 4px #10121f;
+    width: 1000px;
+    ;
+    height: 620px;
+    position: absolute;
+    text-align: center;
+    left: 270px;
+    top: 80px;
+    font-size: 48pt;
+}
+
+.info ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style: none;
+}
+
+    .info ul li {
+        margin-bottom: 50px;
+    }
+
+.info {
+    margin-top: 150px;
+    text-align: left;
+}
+
+.input {
+    width: 550px;
+    height: 70px;
+    margin-left: -120px;
+    border-radius: 15px;
+    background-color: #10121f;
+    border: solid 4px white;
+    font-size: 48pt;
+    color: white;
+    outline: none;
+}
+
+.butons {
+    text-align: left;
+    font-size: 25pt;
+    position:static;
+    margin-left: 100px;
+}
+.lemn{
+    position:fixed;
+}
+#lembrar {
+    position:static;
+    height: 25px;
+    font-size: 150%;
+    border-left:50px;
+}
+
+
+.button:hover {
+    background-color: #36406B;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    left: 70%;
+    bottom: 70%;
+}
+
+p {
+    position: fixed;
+    left: 270px;
+    top: 35px;
+    font-size: 20px;
+}
+
+    p a {
+        color: #D5BB6D;
+        text-decoration: none;
+    }

@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "EditarFrequencia";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link href="~/Estilos/Frequencia.css" rel="stylesheet" />
+<div class="frequencias">
+    @{var imgSrcSala = Url.Content("~/img/classe.JPEG");
+        if (ViewBag.Sala.Img != null)
+        {
+            var base64Sala = Convert.ToBase64String(ViewBag.Sala.Img);
+            imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala);
+        } }
+    <img class="img" onclick="imagemSala()" src='@imgSrcSala'>
+    <div class="salvar" title="Salvar Mudanças" onclick="Salvar()">
+        <i class="fas fa-check"></i>
+    </div>
+    <div class="cancelar" onclick="location.reload();" title="Cancelar Mundanças">
+        <i class="far fa-times-circle"></i>
+    </div>
+
+    <div class="interno">
+        @if (ViewBag.Alunos.Count > 0)
+        {
+        <ul>
+            @for (int i = 0; i < ViewBag.Alunos.Count; i++)
+            {
+
+                var imgSrc = Url.Content("~/img/icons/user.png");
+                if (ViewBag.Alunos[i].Img != null)
+                {
+                    var base64 = Convert.ToBase64String(ViewBag.Alunos[i].Img);
+                    imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                }
+
+                <li>
+                    <div class="p">
+                        <p class="nome">@ViewBag.Alunos[i].Nome</p>
+                        <div class="faltac"><p class="faltap">Faltas: </p><input id="@i" name="alu.Faltas" type="number" value="@ViewBag.AlunosAux[i].Faltas" class="falta"> </div>
+                    </div>
+                    <img class="aluno" src="@imgSrc">
+                </li>
+            }
+        </ul>
+        }
+    </div>
+</div>
+<script>
+    //document.getElementById("demo").addEventListener("keydown", myFunction);
+    var Alunos = [];
+    function keyPress(e) {
+        if (e.keyCode == 13) {
+            $('#fr').submit();
+            location.href = '/Home/Pesquisa';
+        }
+    }
+
+         $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+                });
+
+    function Salvar() {
+         @for(int i = 0; i < ViewBag.Alunos.Count; i++)
+         {
+             <text>
+                Alunos.push({
+                    Id: @ViewBag.AlunosAux[i].Id,
+                    Faltas: $('#@i').val()
+                });
+            </text>
+         }
+
+                jQuery.ajax({
+                    type: 'POST',
+                    url: "/Usuario/AtualizaFrequencia",
+                    contentType: "application/json",
+                    datatype: 'json',
+                    data: JSON.stringify(Alunos),
+                    success: function (data) { },
+                    failure: function (errMsg) {
+                        alert(errMsg);
+                    }
+                });
+
+                location.reload();
+    }
+</script>

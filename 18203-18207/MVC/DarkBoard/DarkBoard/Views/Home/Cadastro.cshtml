@@ -1,0 +1,125 @@
+﻿<html>
+<head>
+    <link href="~/Estilos/Cadastro.css" rel="stylesheet" />
+    <title>Cadastro - Darkboard</title>
+    <link rel='shortcut icon' href='@Url.Content("~/img/icon.ico")' sizes="1000x1000">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src='../JavaScript/cripto.js'></script>
+<body>
+    <form action="/Usuario/Adiciona" id="form1" method="post" enctype = "multipart/form-data">
+        Já está cadastrado? <a href='Login'>Logue-se Aqui!</a>
+
+        <div id='Cadastro'>
+            <ul>
+                <li> Nome Completo:</li>
+                <li><input class='input' type='text' name="usu.Nome" id='nome'></li>
+                <li> Nome de Usuário:</li>
+                <li><input class='input' type='text' name="usu.NomeUsu" id='usuario'></li>
+                <li>Senha</li>
+                <li><input class='input' type='password' name="usu.Senha" id='senha'></li>
+                <li>Confirme a Senha</li>
+                <li><input class='input' type='password' id='Csenha'></li>
+                <li>Email:</li>
+                <li><input class='input' type='text' name="usu.Email" id='email'></li>
+                <li><input type="submit" id="cadastrar" class="button" value="Cadastre-se!"></li>
+            </ul>
+
+        </div>
+
+
+        <div id='CadastroSuper'>
+            <input type='radio' onchange='Animacao("A")' name='usu.Cargo' id='aluno' class='rbA' value='A'><label class='lbA'>Aluno</label>
+            <input type='radio' onchange='Animacao("P")' name='usu.Cargo' id='professor' class='rbP' value='P'><label class='lbP'>Professor</label>
+            <div class='image-upload'>
+                <label for='file-input'>
+                    <div id='imagemLocal'>
+                        <img src='../img/icons/user.png' id='avatar' title='Escolha sua Imagem'>
+                    </div>
+                </label>
+                <input type='file' accept="image/png, image/jpeg, image/gif" name="file" onchange='TrocaImg(this.files)' id='file-input'>
+            </div>
+    </form>
+
+    </div>
+    <script>
+        //document.getElementById("demo").addEventListener("keydown", myFunction);
+
+        function keyPress(e) {
+            if (e.keyCode == 13) {
+                $('#fr').submit();
+                location.href = '/Home/Pesquisa';
+            }
+        }    
+
+        var show = false;
+        function Animacao(Letra) {
+            Limpar();
+            if (Letra == "A")
+                $("#Cadastro").css("margin-left", "20px")
+            else
+                $("#Cadastro").css("margin-left", "1040px")
+
+            $("#Cadastro").css("opacity", "100")
+        }
+
+        $(window).ready(function () {
+
+            if ("@ViewBag.msg" != "")
+                alert("@ViewBag.msg");
+        });
+
+        function Limpar() {
+            $(".input").val("");
+        }
+
+        function TrocaImg(files) {
+            var imgLocal = document.getElementById('imagemLocal')
+            var file = files[0];
+
+            var form = document.getElementById('file-form');
+
+            img = document.createElement("img");
+
+            if (file != null) {
+                img.file = file;
+                var reader = new FileReader();
+                reader.onload = (function (aImg) { return function (e) { aImg.src = e.target.result; }; })(img);
+                reader.readAsDataURL(file);
+            }
+            else {
+                img.src = "../img/icons/user.png";
+            }
+
+            img.id = 'avatar';
+
+
+            imgLocal.innerHTML = '';
+
+            imgLocal.appendChild(img);
+        }
+
+       function AdicionaImagem() {
+            var input = $("<input>")
+                .attr("type", "hidden")
+                .attr("name", "files").val(document.getElementById("file").files[0]);
+
+            $('#form1').append(input);
+        }
+
+        $("#form1").submit(function (e) {
+            var senha = $("#senha").val();
+            var cSenha = $("#Csenha").val();
+            if (senha != cSenha) {
+                e.preventDefault();
+                alert("Senhas não coincidem");
+                $("#senha").val() = "";
+                $("#Csenha").val() = "";
+            }
+
+
+        });
+    </script>
+
+</body>
+</html>

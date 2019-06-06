@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Boletim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Estilos/Boletim.css" rel="stylesheet" />
+<div class="boletim">
+
+    @{
+        var base64Sala = Convert.ToBase64String(ViewBag.Sala.Img);
+        var imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala);
+    }
+    <img class="img" onclick="imagemSala()" src='@imgSrcSala'>
+    <div class="voltar" onclick="location.href='/Home/Sala/@ViewBag.Sala.Id'" title="Voltar"></div>
+    <div class="interno">
+        @if (ViewBag.Alunos.Count > 0)
+        {
+            <ul>
+                @for (int i = 0; i < ViewBag.Alunos.Count; i++)
+                {
+                    var imgSrc = Url.Content("~/img/icons/user.png");
+                    if (ViewBag.Alunos[i].Img != null)
+                    {
+                        var base64 = Convert.ToBase64String(ViewBag.Alunos[i].Img);
+                        imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                    }
+                    <li>
+                        <div class="p">
+                            <p class="nome">@ViewBag.Alunos[i].Nome</p>
+                            <div class="notac">
+                                <p class="notap">Média: @ViewBag.Medias[i]</p>
+                            </div>
+                            <div class="frequenciac">
+                                <p class="frequenciap">Faltas: @ViewBag.AlunosAux[i].Faltas</p>
+                            </div>
+                        </div>
+                        <img class="aluno" src="@imgSrc">
+                    </li>
+                }
+            </ul>
+        }
+        else
+        {
+            <text>Não tem alunos nessa sala.</text>
+        }
+    </div>
+</div>
+
+<script>
+    function keyPress(e) {
+        if (e.keyCode == 13) {
+            $('#fr').submit();
+            location.href = '/Home/Pesquisa';
+        }
+    }
+
+     $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+    });
+
+    $(".menuIcon").click(function () {
+            if (!menu) {
+                $(".aba").css("margin-left", "-10");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+                $(".menuIcon").css("margin-left", "150");
+                menu = true;
+                }
+                else {
+                $(".aba").css("margin-left", "-1000");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+                $(".menuIcon").css("margin-left", "15");
+                menu = false;
+                }
+                })
+
+                var not = @ViewBag.Not;
+
+                if (not == 0) {
+                $("number").hide();
+                }
+                else if (not < 10) {
+                $("number").html(not);
+                }
+                else {
+                $("number").html(not)
+                $("number").css('padding-right', '5px');
+                $("number").css('padding-left', '5px');
+                }
+</script>

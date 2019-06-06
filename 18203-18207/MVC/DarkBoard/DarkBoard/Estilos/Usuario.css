@@ -1,0 +1,98 @@
+﻿.usuario {
+    text-align: center;
+    border: solid black 4px;
+    border-radius: 15px;
+    width: 40%;
+    height: 75.7%;
+    position: fixed;
+    top: 110px;
+    left: 27.5%;
+    background-color: #101633;
+    font-family: DejaVu Sans Light;
+}
+
+    .usuario ul {
+        font-size: 20px;
+        text-align: center;
+        list-style: none;
+    }
+
+        .usuario ul li {
+            margin-bottom: 35px;
+        }
+
+.avatar {
+    margin-top: -20px;
+    border-radius:50px;
+    width: 136px;
+    height:136px;
+    margin-left: 20px;
+}
+
+.usuario .nome {
+    margin-top: 0px;
+    margin-left: 15px;
+    font-family: Freestyle Script;
+    font-size: 40px;
+    text-decoration: none;
+}
+.button {
+    position: absolute;
+    border: 5px solid black;
+    border-radius: 5px;
+    background-color: #4E5680;
+    width: 250px;
+    height: 60px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    color: snow;
+    top: 400px;
+    right: 180px;
+    text-align: center;
+    font-family: Cambria;
+    font-size: 24px;
+    line-height: 1em;
+    transition: 0.5s;
+}
+
+.desc {
+    font-family: DejaVu Sans Light;
+    text-align: left;
+    background-color: #17365c;
+    border-radius: 15px;
+    border: black 3px solid;
+    height: 183px;
+    height: 125px;
+    font-size: 20px;
+    position: relative;
+    left: -5px;
+    top: 60px;
+    width: 650px;
+    color: white;
+    outline: none;
+}
+.image-upload > input {
+    display: none;
+}
+
+
+.Edit {
+    z-index: 1;
+    filter: invert(100%);
+    height: 6%;
+    margin-top: -10px;
+    position: fixed;
+    bottom: 625px;
+    left: 1030px;
+}
+
+.Exit {
+    z-index: 1;
+    filter: invert(100%);
+    height: 6%;
+    margin-top: -10px;
+    position: fixed;
+    bottom: 625px;
+    left: 450px;
+}
+

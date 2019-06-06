@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "AlterarSenha";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Estilos/AlterarSenha.css" rel="stylesheet" />
+<form id="form" method="post" action="/Usuario/AlteraSenha" class='frm'>
+    <label>Change Password</label><br>
+    <img class='logo2' src='../img/logo.png'>
+    <div class='info'>
+        <br />
+        <span>Senha Antiga:<input type='password' name="usu.Senha" id='senha' class='input'></span>
+        <br />
+        <span>Nova Senha:<input type='password' name="novaSenha" id='senhaNew' class='input'></span>
+        <br />
+        <span>Repetir Senha:<input type='password' id='senhaRepeat' class='input'></span>
+        <input name="usu.Id" value="@ViewBag.Usu.Id" style="display:none;"/>
+    </div>
+    <div class='butons'>
+        <input class="button" type="submit" onclick="TrocarSenha()" value="Trocar">
+    </div>
+</form>
+<script>
+         $(window).ready(function () {
+            if ("@ViewBag.msg" != "")
+                alert("@ViewBag.msg");
+        });
+            var menu = false;
+            localStorage.setItem("User", @ViewBag.Usu.Id);
+            $(".menuIcon").click(function () {
+            if (!menu) {
+            $(".aba").css("margin-left", "-10");
+            $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+            $(".menuIcon").css("margin-left", "150");
+            menu = true;
+            }
+            else {
+            $(".aba").css("margin-left", "-1000");
+            $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+            $(".menuIcon").css("margin-left", "15");
+            menu = false;
+            }
+            })
+
+            var not = @ViewBag.Not;
+
+            if (not == 0) {
+            $("number").hide();
+            }
+            else if (not < 10) {
+            $("number").html(not);
+            }
+            else {
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
+            }
+
+
+            $("#form").submit(function (e) {
+                var senha = $("#senhaNew").val();
+                var cSenha = $("#senhaRepeat").val();
+                if (senha != cSenha) {
+                    e.preventDefault();
+                    alert("Senhas não coincidem");
+                    $("#senhaNew").val() = "";
+                    $("#senhaRepeat").val() = "";
+                }
+            });
+</script>
+
+

@@ -1,0 +1,117 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home";
+}
+
+<html>
+
+<head>
+    <title>Darkboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='../JavaScript/Index.js'></script>
+    <link href="~/Estilos/Home.css" rel="stylesheet" />
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body>
+
+    <div class="carrosel">
+        <ul>
+            <li>
+                <div class="carrosel-container">
+                    <img src="@Url.Content("~/img/1.png")" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="carrosel-container">
+                    <img src="@Url.Content("~/img/2.png")" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="carrosel-container">
+                    <img src="@Url.Content("~/img/3.png")" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="carrosel-container">
+                    <img src="@Url.Content("~/img/4.png")" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="carrosel-container">
+                    <img src="@Url.Content("~/img/5.png")" alt="">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="infoBox">
+        <h1>O que é DarkBoard?</h1>
+        <p>
+            Darkboard é um projeto desenvolvido para acabar com vários problemas que os
+            <br> alunos e professores de hoje em dia enfrentam,como a falta de organização,
+            <br> planejamento e informação. Desta forma esse site visa facilitar a comunicação
+            <br> entre o professor e o aluno e resolver tais dilemas. Ajudar o professor no
+            <br> cálculo de notas e anunciar atividades como projetos, provas, exercícios e
+            <br> comunicados.
+            <br> Ambos terão acesso a uma agenda onde poderão anotar seus
+            <br> afazeres e quando completados, remove-los e dá-los como concluidos. poderão
+            <br> participar de mais de uma classe, poderão procurar classes para participarem.
+            <br> Por fim terão acesso a um calendário, onde as datas importantes ficarão
+            <br> destacadas, indicando o afazer e o horário que terá naquele dia.
+        </p>
+    </div>
+
+    <script type="text/javascript">
+
+             $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+                });
+        var menu = false;
+        localStorage.setItem("User", @ViewBag.Usu.Id);
+        $(".menuIcon").click(function () {
+            if (!menu) {
+                $(".aba").css("margin-left", "-10");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+                $(".menuIcon").css("margin-left", "150");
+                menu = true;
+            }
+            else {
+                $(".aba").css("margin-left", "-1000");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+                $(".menuIcon").css("margin-left", "15");
+                menu = false;
+            }
+        })
+
+        var not = @ViewBag.Not;
+
+        if (not == 0) {
+            $("number").hide();
+        }
+        else if (not < 10) {
+            $("number").html(not);
+        }
+        else {
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
+        }
+    </script>
+</body>
+
+</html>
+<script>
+        //document.getElementById("demo").addEventListener("keydown", myFunction);
+
+        function keyPress(e) {
+            if (e.keyCode == 13)
+            {
+                $('#fr').submit();
+                location.href = '/Home/Pesquisa';
+            }               
+        }    
+</script>

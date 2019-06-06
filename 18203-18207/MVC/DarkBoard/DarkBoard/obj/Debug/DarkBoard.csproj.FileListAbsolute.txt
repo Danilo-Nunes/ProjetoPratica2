@@ -1,0 +1,689 @@
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\obj\Debug\DarkBoard.csprojResolveAssemblyReference.cache
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\obj\Debug\DarkBoard.csproj.CoreCompileInputs.cache
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\DarkBoard.dll.config
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\DarkBoard.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\DarkBoard.pdb
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Win32.Primitives.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\netstandard.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.AppContext.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.Concurrent.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.NonGeneric.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.Specialized.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.EventBasedAsync.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.Primitives.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.TypeConverter.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Console.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Data.Common.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Contracts.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Debug.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.FileVersionInfo.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Process.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.StackTrace.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.TextWriterTraceListener.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Tools.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.TraceSource.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Tracing.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Drawing.Primitives.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Dynamic.Runtime.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Globalization.Calendars.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Globalization.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Globalization.Extensions.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.Compression.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.Compression.ZipFile.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.FileSystem.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.FileSystem.DriveInfo.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.FileSystem.Primitives.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.FileSystem.Watcher.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.IsolatedStorage.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.MemoryMappedFiles.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.Pipes.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.UnmanagedMemoryStream.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Linq.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Linq.Expressions.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Linq.Parallel.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Linq.Queryable.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Http.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.NameResolution.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.NetworkInformation.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Ping.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Primitives.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Requests.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Security.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Sockets.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.WebHeaderCollection.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.WebSockets.Client.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.WebSockets.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ObjectModel.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Reflection.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Reflection.Extensions.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Reflection.Primitives.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Resources.Reader.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Resources.ResourceManager.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Resources.Writer.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.CompilerServices.VisualC.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Extensions.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Handles.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.InteropServices.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Numerics.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Serialization.Formatters.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Serialization.Json.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Serialization.Primitives.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Serialization.Xml.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Claims.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.Algorithms.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.Csp.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.Encoding.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.Primitives.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.X509Certificates.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Principal.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.SecureString.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Text.Encoding.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Text.Encoding.Extensions.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Text.RegularExpressions.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Overlapped.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Tasks.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Tasks.Parallel.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Thread.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.ThreadPool.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Timer.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ValueTuple.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.ReaderWriter.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XDocument.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XmlDocument.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XmlSerializer.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XPath.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XPath.XDocument.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Logging.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Options.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Remotion.Linq.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Buffers.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.Immutable.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.Annotations.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Data.SqlClient.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Interactive.Async.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Memory.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Numerics.Vectors.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Helpers.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Mvc.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Razor.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.Deployment.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.Razor.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.Relational.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.SqlServer.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Logging.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Options.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Remotion.Linq.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Buffers.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.Immutable.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Interactive.Async.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Memory.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Numerics.Vectors.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Razor.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.Deployment.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.Razor.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Helpers.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Mvc.xml
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Razor.resources.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Webpages.resources.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Webpages.Deployment.resources.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Webpages.Razor.resources.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Helpers.resources.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\obj\Debug\DarkBoard.dll
+C:\Users\u18207\Documents\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\obj\Debug\DarkBoard.pdb
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\DarkBoard.dll.config
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\DarkBoard.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\DarkBoard.pdb
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Win32.Primitives.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\netstandard.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.AppContext.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.Concurrent.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.NonGeneric.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.Specialized.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.EventBasedAsync.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.Primitives.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.TypeConverter.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Console.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Data.Common.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Contracts.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Debug.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.FileVersionInfo.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Process.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.StackTrace.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.TextWriterTraceListener.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Tools.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.TraceSource.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Tracing.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Drawing.Primitives.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Dynamic.Runtime.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Globalization.Calendars.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Globalization.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Globalization.Extensions.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.Compression.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.Compression.ZipFile.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.FileSystem.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.FileSystem.DriveInfo.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.FileSystem.Primitives.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.FileSystem.Watcher.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.IsolatedStorage.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.MemoryMappedFiles.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.Pipes.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.UnmanagedMemoryStream.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Linq.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Linq.Expressions.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Linq.Parallel.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Linq.Queryable.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Http.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.NameResolution.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.NetworkInformation.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Ping.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Primitives.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Requests.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Security.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Sockets.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.WebHeaderCollection.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.WebSockets.Client.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.WebSockets.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ObjectModel.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Reflection.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Reflection.Extensions.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Reflection.Primitives.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Resources.Reader.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Resources.ResourceManager.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Resources.Writer.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.CompilerServices.VisualC.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Extensions.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Handles.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.InteropServices.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Numerics.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Serialization.Formatters.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Serialization.Json.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Serialization.Primitives.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Serialization.Xml.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Claims.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.Algorithms.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.Csp.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.Encoding.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.Primitives.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.X509Certificates.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Principal.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.SecureString.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Text.Encoding.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Text.Encoding.Extensions.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Text.RegularExpressions.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Overlapped.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Tasks.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Tasks.Parallel.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Thread.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.ThreadPool.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Timer.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ValueTuple.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.ReaderWriter.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XDocument.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XmlDocument.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XmlSerializer.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XPath.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XPath.XDocument.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Caching.Abstractions.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Caching.Memory.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.Binder.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.DependencyInjection.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Logging.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Options.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Primitives.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Web.Infrastructure.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Remotion.Linq.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Buffers.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.Immutable.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.Annotations.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Data.SqlClient.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.DiagnosticSource.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Interactive.Async.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Memory.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Numerics.Vectors.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Helpers.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Mvc.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Razor.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.Deployment.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.Razor.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.Abstractions.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.Relational.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.SqlServer.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Caching.Abstractions.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Caching.Memory.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.Binder.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.DependencyInjection.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Logging.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Logging.Abstractions.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Options.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Primitives.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Remotion.Linq.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Buffers.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.Immutable.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.DiagnosticSource.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Interactive.Async.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Memory.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Numerics.Vectors.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Razor.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.Deployment.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.Razor.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Helpers.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Mvc.xml
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Razor.resources.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Webpages.resources.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Webpages.Deployment.resources.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Webpages.Razor.resources.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Helpers.resources.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Mvc.resources.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\obj\Debug\DarkBoard.csprojAssemblyReference.cache
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\obj\Debug\DarkBoard.csproj.CoreCompileInputs.cache
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\obj\Debug\DarkBoard.csproj.CopyComplete
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\obj\Debug\DarkBoard.dll
+E:\Joao\Documentos\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\obj\Debug\DarkBoard.pdb
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\DarkBoard.dll.config
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\DarkBoard.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\DarkBoard.pdb
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Win32.Primitives.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\netstandard.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.AppContext.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.Concurrent.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.NonGeneric.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.Specialized.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.EventBasedAsync.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.Primitives.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.TypeConverter.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Console.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Data.Common.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Contracts.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Debug.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.FileVersionInfo.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Process.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.StackTrace.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.TextWriterTraceListener.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Tools.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.TraceSource.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Tracing.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Drawing.Primitives.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Dynamic.Runtime.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Globalization.Calendars.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Globalization.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Globalization.Extensions.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.Compression.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.Compression.ZipFile.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.FileSystem.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.FileSystem.DriveInfo.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.FileSystem.Primitives.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.FileSystem.Watcher.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.IsolatedStorage.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.MemoryMappedFiles.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.Pipes.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.UnmanagedMemoryStream.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Linq.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Linq.Expressions.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Linq.Parallel.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Linq.Queryable.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Http.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.NameResolution.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.NetworkInformation.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Ping.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Primitives.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Requests.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Security.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Sockets.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.WebHeaderCollection.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.WebSockets.Client.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.WebSockets.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ObjectModel.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Reflection.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Reflection.Extensions.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Reflection.Primitives.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Resources.Reader.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Resources.ResourceManager.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Resources.Writer.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.CompilerServices.VisualC.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Extensions.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Handles.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.InteropServices.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Numerics.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Serialization.Formatters.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Serialization.Json.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Serialization.Primitives.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Serialization.Xml.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Claims.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.Algorithms.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.Csp.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.Encoding.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.Primitives.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.X509Certificates.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Principal.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.SecureString.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Text.Encoding.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Text.Encoding.Extensions.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Text.RegularExpressions.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Overlapped.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Tasks.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Tasks.Parallel.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Thread.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.ThreadPool.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Timer.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ValueTuple.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.ReaderWriter.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XDocument.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XmlDocument.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XmlSerializer.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XPath.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XPath.XDocument.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Caching.Memory.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.Binder.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.DependencyInjection.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Logging.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Options.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Primitives.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Web.Infrastructure.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Remotion.Linq.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Buffers.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.Immutable.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.Annotations.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Data.SqlClient.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Interactive.Async.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Memory.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Numerics.Vectors.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Helpers.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Mvc.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Razor.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.Deployment.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.Razor.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.Abstractions.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.Relational.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.SqlServer.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Caching.Abstractions.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Caching.Memory.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.Binder.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.DependencyInjection.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Logging.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Options.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Primitives.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Remotion.Linq.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Buffers.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.Immutable.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Interactive.Async.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Memory.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Numerics.Vectors.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Razor.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.Deployment.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.Razor.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Helpers.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Mvc.xml
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Razor.resources.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Webpages.resources.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Webpages.Deployment.resources.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Webpages.Razor.resources.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Helpers.resources.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Mvc.resources.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\obj\Debug\DarkBoard.csprojResolveAssemblyReference.cache
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\obj\Debug\DarkBoard.csproj.CoreCompileInputs.cache
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\obj\Debug\DarkBoard.dll
+D:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\obj\Debug\DarkBoard.pdb
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\DarkBoard.dll.config
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\DarkBoard.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\DarkBoard.pdb
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Win32.Primitives.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\netstandard.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.AppContext.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.Concurrent.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.NonGeneric.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.Specialized.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.EventBasedAsync.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.Primitives.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.TypeConverter.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Console.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Data.Common.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Contracts.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Debug.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.FileVersionInfo.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Process.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.StackTrace.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.TextWriterTraceListener.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Tools.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.TraceSource.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.Tracing.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Drawing.Primitives.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Dynamic.Runtime.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Globalization.Calendars.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Globalization.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Globalization.Extensions.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.Compression.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.Compression.ZipFile.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.FileSystem.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.FileSystem.DriveInfo.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.FileSystem.Primitives.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.FileSystem.Watcher.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.IsolatedStorage.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.MemoryMappedFiles.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.Pipes.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.IO.UnmanagedMemoryStream.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Linq.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Linq.Expressions.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Linq.Parallel.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Linq.Queryable.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Http.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.NameResolution.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.NetworkInformation.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Ping.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Primitives.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Requests.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Security.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.Sockets.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.WebHeaderCollection.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.WebSockets.Client.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Net.WebSockets.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ObjectModel.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Reflection.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Reflection.Extensions.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Reflection.Primitives.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Resources.Reader.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Resources.ResourceManager.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Resources.Writer.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.CompilerServices.VisualC.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Extensions.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Handles.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.InteropServices.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Numerics.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Serialization.Formatters.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Serialization.Json.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Serialization.Primitives.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.Serialization.Xml.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Claims.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.Algorithms.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.Csp.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.Encoding.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.Primitives.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Cryptography.X509Certificates.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.Principal.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Security.SecureString.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Text.Encoding.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Text.Encoding.Extensions.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Text.RegularExpressions.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Overlapped.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Tasks.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Tasks.Parallel.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Thread.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.ThreadPool.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Threading.Timer.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ValueTuple.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.ReaderWriter.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XDocument.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XmlDocument.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XmlSerializer.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XPath.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Xml.XPath.XDocument.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.Abstractions.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.Relational.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.SqlServer.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Caching.Abstractions.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Caching.Memory.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.Binder.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.DependencyInjection.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Logging.Abstractions.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Logging.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Options.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Primitives.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Web.Infrastructure.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Remotion.Linq.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Buffers.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.Immutable.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.ComponentModel.Annotations.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Data.SqlClient.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.DiagnosticSource.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Interactive.Async.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Memory.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Numerics.Vectors.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.CompilerServices.Unsafe.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Helpers.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Mvc.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Razor.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.Deployment.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.Razor.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.Abstractions.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.Relational.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.EntityFrameworkCore.SqlServer.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Caching.Abstractions.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Caching.Memory.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Configuration.Binder.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.DependencyInjection.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Logging.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Logging.Abstractions.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Options.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Microsoft.Extensions.Primitives.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\Remotion.Linq.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Buffers.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Collections.Immutable.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Diagnostics.DiagnosticSource.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Interactive.Async.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Memory.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Numerics.Vectors.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Runtime.CompilerServices.Unsafe.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Razor.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.Deployment.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Webpages.Razor.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Helpers.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\System.Web.Mvc.xml
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Razor.resources.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Webpages.resources.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Webpages.Deployment.resources.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Webpages.Razor.resources.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Helpers.resources.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\bin\pt-br\System.Web.Mvc.resources.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\obj\Debug\DarkBoard.csprojResolveAssemblyReference.cache
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\obj\Debug\DarkBoard.csproj.CoreCompileInputs.cache
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\obj\Debug\DarkBoard.dll
+F:\Informática 2018\GitHub\ProjetoPratica2\MVC\DarkBoard\DarkBoard\obj\Debug\DarkBoard.pdb

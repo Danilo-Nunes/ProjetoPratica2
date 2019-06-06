@@ -1,0 +1,129 @@
+﻿
+@{
+    ViewBag.Title = "Sala";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Estilos/Sala.css" rel="stylesheet" />
+<div class="mural">
+    @{
+        var imgSrcProf = Url.Content("~/img/icons/user.png");
+        if (ViewBag.Professor.Img != null)
+        {
+            var base64Prof = Convert.ToBase64String(ViewBag.Professor.Img);
+            imgSrcProf = String.Format("data:image/gif;base64,{0}", base64Prof);
+        }
+    }
+    @if (ViewBag.Comunicados.Count > 0)
+    {
+        <ul>
+            @foreach (var comun in ViewBag.Comunicados)
+            {
+                <li>
+                    <div class="p" onclick="location.href='/Home/Comunicado/@comun.Id'">
+                        <p class="nome">@comun.Assunto</p>
+                    </div>
+                    <img class="img" onclick="location.href='/Home/Usuario/@ViewBag.Professor.Id'" src="@imgSrcProf" style="position: absolute;
+                                                            border: 5px solid midnightblue;
+                                                            float: left;
+                                                            left: calc(95% - 120px);
+                                                            background-size: cover;
+                                                            background-repeat: no-repeat;
+                                                            max-width: 120px;
+                                                            min-width: 120px;
+                                                            max-height: 120px;
+                                                            min-height: 120px;
+                                                            transition: 0.2s;">
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <text>Nenhum Comunicado por Enquanto!</text>
+    }
+</div>
+@{
+    var imgSrcSala = Url.Content("~/img/classe.JPEG");
+    if (ViewBag.Sala.Img != null)
+    {
+        var base64Sala = Convert.ToBase64String(ViewBag.Sala.Img);
+        imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala);
+    }
+}
+<div class="classe">
+    <div class="img" style="overflow:hidden;">
+    <img src="@imgSrcSala" style="max-width:270px;
+                                  min-height:270px;">
+        </div>
+    <p class="nome">@ViewBag.Sala.Nome</p>
+    <p class="alunos">Alunos: @ViewBag.Sala.QtdAlunos</p>
+    <p class="professor">Professor: @ViewBag.Professor.Nome</p>
+    @{int n = 0;
+        foreach (var at in ViewBag.Atividades)
+        {
+            if (at.Concluida == "N")
+            {
+                n++;
+            }
+        }
+    }
+    @if (ViewBag.Usu.Cargo == 'A')
+    {
+        <p class="trabalhos" onclick="location.href ='/Home/Atividades/@ViewBag.Sala.Id'">Trabalhos pendentes: @n</p>
+
+    }
+    else
+    {
+        <p onclick="location.href ='/Home/Atividades/@ViewBag.Sala.Id'" class="trabalhos">Atividades</p>
+        <button onclick="location.href='/Home/Administrar/@ViewBag.Sala.Id'">Administrar</button>
+        <p onclick="location.href ='/Home/Boletim/@ViewBag.Sala.Id'" class="boletim">Boletim</p>
+    }
+    
+</div>
+
+<script>
+
+    function keyPress(e) {
+        if (e.keyCode == 13) {
+            $('#fr').submit();
+            location.href = '/Home/Pesquisa';
+        }
+    }
+
+         $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+                });
+
+         var menu = false;
+        localStorage.setItem("User", @ViewBag.Usu.Id);
+        $(".menuIcon").click(function () {
+            if (!menu) {
+                $(".aba").css("margin-left", "-10");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+                $(".menuIcon").css("margin-left", "150");
+                menu = true;
+            }
+            else {
+                $(".aba").css("margin-left", "-1000");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+                $(".menuIcon").css("margin-left", "15");
+                menu = false;
+            }
+        })
+
+        var not = @ViewBag.Not;
+
+        if (not == 0) {
+            $("number").hide();
+        }
+        else if (not < 10) {
+            $("number").html(not);
+        }
+        else {
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
+        }
+</script>
