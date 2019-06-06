@@ -51,18 +51,9 @@
     }
 }
 <div class="classe">
-    <img class="img" src="@imgSrcSala" style="position: absolute;
-                                            border: 5px solid midnightblue;
-                                            float: center;
-                                            top: 4%;
-                                            left: 5%;
-                                            background-size: cover;
-                                            background-repeat: no-repeat;
-                                            max-width: 200px;
-                                            min-width: 200px;
-                                            max-height: 200px;
-                                            min-height: 200px;
-                                            transition: 0.2s;">
+    <div class="img" style="overflow:hidden;">
+    <img src="@imgSrcSala" style="max-width:270px;">
+        </div>
     <p class="nome">@ViewBag.Sala.Nome</p>
     <p class="alunos">Alunos: @ViewBag.Sala.QtdAlunos</p>
     <p class="professor">Professor: @ViewBag.Professor.Nome</p>
