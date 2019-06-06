@@ -12,8 +12,11 @@ namespace DarkBoard.DAO
         {
             using (var context = new SalaContext())
             {
-                context.AlunoSala.Add(comp);
-                context.SaveChanges();
+                if (!context.AlunoSala.Any(o => o.CodAluno == comp.CodAluno && o.CodSala == comp.CodSala))
+                {
+                    context.AlunoSala.Add(comp);
+                    context.SaveChanges();
+                }
             }
         }
         public IList<AlunoSala> Lista()
@@ -31,6 +34,14 @@ namespace DarkBoard.DAO
                 return (from c in contexto.AlunoSala
                         where c.Id == id
                         select c).FirstOrDefault();
+            }
+        }
+
+        public bool Existe(AlunoSala a)
+        {
+            using (var context = new SalaContext())
+            {
+                return (context.AlunoSala.Any(o => o.CodAluno == a.CodAluno && o.CodSala == a.CodSala));
             }
         }
 
