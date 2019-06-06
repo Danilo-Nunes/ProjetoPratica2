@@ -14,100 +14,140 @@ namespace DarkBoard.Controllers
         // GET: Atividade
         public ActionResult Adiciona(Comunicado com, Atividade a, HttpPostedFileBase file)
         {
-            a.Nome = com.Assunto;
-
-            ComunicadoDAO comunicadoDAO = new ComunicadoDAO();
-            ComunicadoAlunoDAO comunicadoAlunoDAO = new ComunicadoAlunoDAO();
-            AtividadeDAO atividadeDAO = new AtividadeDAO();
-            UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
-
-            if (file != null)
+            try
             {
-                byte[] arquivoBytes = new byte[file.InputStream.Length + 1];
+                a.Nome = com.Assunto;
 
-                file.InputStream.Read(arquivoBytes, 0, arquivoBytes.Length);
-                com.Arquivo = arquivoBytes;
-                com.NomeArquivo = file.FileName;
-                com.TipoArquivo = file.ContentType;
+                ComunicadoDAO comunicadoDAO = new ComunicadoDAO();
+                ComunicadoAlunoDAO comunicadoAlunoDAO = new ComunicadoAlunoDAO();
+                AtividadeDAO atividadeDAO = new AtividadeDAO();
+                UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
+
+                if (file != null)
+                {
+                    byte[] arquivoBytes = new byte[file.InputStream.Length + 1];
+
+                    file.InputStream.Read(arquivoBytes, 0, arquivoBytes.Length);
+                    com.Arquivo = arquivoBytes;
+                    com.NomeArquivo = file.FileName;
+                    com.TipoArquivo = file.ContentType;
+                }
+
+                atividadeDAO.Adiciona(a);
+                comunicadoDAO.Adiciona(com);
+
+                foreach (var A in (IList<Usuario>)Session["Alunos"])
+                {
+                    ComunicadoAluno c = new ComunicadoAluno
+                    {
+                        CodAluno = A.Id,
+                        CodComunicado = com.Id,
+                        Visto = "N"
+                    };
+
+                    UsuarioAtividade u = new UsuarioAtividade
+                    {
+                        CodUsuario = A.Id,
+                        CodAtividade = a.Id,
+                        Nota = 0,
+                        Concluida = "N",
+                        Peso = a.Peso
+                    };
+
+                    comunicadoAlunoDAO.Adiciona(c);
+                    usuarioAtividadeDAO.Adiciona(u);
+                }
+
+                return RedirectToAction("Sala", new RouteValueDictionary(new { controller = "Home", action = "Sala", id = com.CodSala }));
             }
-
-            atividadeDAO.Adiciona(a);
-            comunicadoDAO.Adiciona(com);
-
-            foreach (var A in (IList<Usuario>)Session["Alunos"])
+            catch(Exception e)
             {
-                ComunicadoAluno c = new ComunicadoAluno
-                {
-                    CodAluno = A.Id,
-                    CodComunicado = com.Id,
-                    Visto = "N"
-                };
-
-                UsuarioAtividade u =  new UsuarioAtividade
-                {
-                    CodUsuario = A.Id,
-                    CodAtividade = a.Id,
-                    Nota = 0,
-                    Concluida = "N",
-                    Peso = a.Peso
-                };
-
-                comunicadoAlunoDAO.Adiciona(c);
-                usuarioAtividadeDAO.Adiciona(u);
+                Session["msg"] = "Erro: " + e.Message;
+                return Redirect(Request.UrlReferrer.ToString());
             }
-
-            return RedirectToAction("Sala", new RouteValueDictionary(new { controller = "Home", action = "Sala", id = com.CodSala }));
         }
 
         public ActionResult Atualiza(List<UsuarioAtividade> usu)
         {
-            UsuarioAtividadeDAO ua = new UsuarioAtividadeDAO();
-
-            foreach (var alu in usu)
+            try
             {
-                UsuarioAtividade aux = ua.BuscaPorId(alu.Id);
-                aux.Nota = alu.Nota;
-                ua.Atualiza(aux);               
+                UsuarioAtividadeDAO ua = new UsuarioAtividadeDAO();
+
+                foreach (var alu in usu)
+                {
+                    UsuarioAtividade aux = ua.BuscaPorId(alu.Id);
+                    aux.Nota = alu.Nota;
+                    ua.Atualiza(aux);
+                }
+                return Redirect(Request.UrlReferrer.ToString());
             }
-            return Redirect(Request.UrlReferrer.ToString());
+            catch (Exception e)
+            {
+                Session["msg"] = "Erro: " + e.Message;
+                return Redirect(Request.UrlReferrer.ToString());
+            }
         }
 
         public ActionResult Download(string id)
         {
-            UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
-            UsuarioAtividade u = usuarioAtividadeDAO.BuscaPorId(int.Parse(id));
+            try
+            {
+                UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
+                UsuarioAtividade u = usuarioAtividadeDAO.BuscaPorId(int.Parse(id));
 
-            return File(u.Arquivo, u.TipoArquivo, u.NomeArquivo);
+                return File(u.Arquivo, u.TipoArquivo, u.NomeArquivo);
+            }
+            catch (Exception e)
+            {
+                Session["msg"] = "Erro: " + e.Message;
+                return Redirect(Request.UrlReferrer.ToString());
+            }
         }
 
 		public ActionResult Entregar(int idAtividade, int idAluno, HttpPostedFileBase arquivo)
 		{
-			UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
+            try
+            {
+                UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
 
-			UsuarioAtividade ua = usuarioAtividadeDAO.BuscaPorIds(idAluno, idAtividade);
+                UsuarioAtividade ua = usuarioAtividadeDAO.BuscaPorIds(idAluno, idAtividade);
 
-			if (arquivo != null)
-			{
-				byte[] arquivoBytes = new byte[arquivo.InputStream.Length + 1];
+                if (arquivo != null)
+                {
+                    byte[] arquivoBytes = new byte[arquivo.InputStream.Length + 1];
 
-				arquivo.InputStream.Read(arquivoBytes, 0, arquivoBytes.Length);
-				ua.Arquivo = arquivoBytes;
-				ua.NomeArquivo = arquivo.FileName;
-				ua.TipoArquivo = arquivo.ContentType;
-			}
+                    arquivo.InputStream.Read(arquivoBytes, 0, arquivoBytes.Length);
+                    ua.Arquivo = arquivoBytes;
+                    ua.NomeArquivo = arquivo.FileName;
+                    ua.TipoArquivo = arquivo.ContentType;
+                }
 
-			ua.Concluida = "S";
-			usuarioAtividadeDAO.Atualiza(ua);
+                ua.Concluida = "S";
+                usuarioAtividadeDAO.Atualiza(ua);
 
-			return Redirect(Request.UrlReferrer.ToString());
-		}
+                return Redirect(Request.UrlReferrer.ToString());
+            }
+            catch (Exception e)
+            {
+                Session["msg"] = "Erro: " + e.Message;
+                return Redirect(Request.UrlReferrer.ToString());
+            }
+        }
 
         public ActionResult Excluir(int idAtividade)
         {
-            UsuarioAtividadeDAO.RemoveAtividade(idAtividade);
-            AtividadeDAO.Remove(idAtividade);
+            try
+            {
+                UsuarioAtividadeDAO.RemoveAtividade(idAtividade);
+                AtividadeDAO.Remove(idAtividade);
 
-            return RedirectToAction("Salas", new RouteValueDictionary(new { controller = "Home", action = "Salas"}));
+                return RedirectToAction("Salas", new RouteValueDictionary(new { controller = "Home", action = "Salas" }));
+            }
+            catch (Exception e)
+            {
+                Session["msg"] = "Erro: " + e.Message;
+                return Redirect(Request.UrlReferrer.ToString());
+            }
         }
     }
 }

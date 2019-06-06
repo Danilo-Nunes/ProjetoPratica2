@@ -18,7 +18,7 @@
             }
         <li>
             <div class="p" onclick="location.href = '/Home/Usuario/@Pesq.Id'">
-                <p class="nome">@Pesq.Nome</p>
+                <p class="nome">@Pesq.NomeUsu</p>
             </div>
             <img class="img" src="@imgSrc">
         </li>
@@ -64,4 +64,10 @@
             $("number").css('padding-right', '5px');
             $("number").css('padding-left', '5px');
         }
+
+         $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+                });
 </script>
