@@ -260,8 +260,7 @@ namespace DarkBoard.Controllers
 
             return View();
         }
-        [AutorizacaoFilterAttribute]
-        [ProfessorFilterAttribute]
+        [AutorizacaoFilterAttribute, ProfessorFilterAttribute]
         public ActionResult AdministrarAtividades(string id)
         {
             UsuarioDAO usuarioDao = new UsuarioDAO();
