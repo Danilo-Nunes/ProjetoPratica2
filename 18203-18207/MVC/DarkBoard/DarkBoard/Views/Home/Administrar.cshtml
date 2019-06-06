@@ -1,0 +1,222 @@
+﻿
+@{
+    ViewBag.Title = "Administrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link href="~/Estilos/Administrar.css" rel="stylesheet" />
+<div class="administracao">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <form action="/Sala/AlteraImg" id="sala" method="post" enctype="multipart/form-data">
+        <div class='image-upload'>
+            <input name="id" value="@ViewBag.Sala.Id" style="display:none;" />
+            <label for='file-input'>
+                @{
+                    var imgSrcSala = Url.Content("~/img/classe.JPEG");
+                    if (ViewBag.Sala.Img != null)
+                    {
+                        var base64Sala = Convert.ToBase64String(ViewBag.Sala.Img);
+                        imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala);
+                    }
+                }
+                <div id='imagemLocal'>
+                    <img style="position: absolute;
+                            border: 5px solid midnightblue;
+                            float: left;
+                            left: 2%;
+                            top: 4%;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            max-width: 250px;
+                            min-width: 250px;
+                            max-height: 250px;
+                            min-height: 250px;
+                            transition: 0.2s;" src='@imgSrcSala'>
+                </div>
+            </label>
+            <input type='file' accept="image/png, image/jpeg, image/gif" name="file" onchange='TrocaImg(this.files)' id='file-input'>
+        </div>
+        <div class="alterar" onclick='$("#sala").submit()' title="Alterar"><i class="fas fa-check"></i></div>
+    </form>
+    <div class="comunicar" onclick="location.href='/Home/Comunicar/@ViewBag.Sala.Id'" title="Escrever Comunicado" onclick="irParaComunicar()"><i class="fas fa-envelope-square"></i></div>
+    <div class="deletar" onclick="deletar()" title="Deletar Sala"><i class="fas fa-eraser"></i></div>
+    <div class="interno">
+        <p class="nomep">Nome da Classe: @ViewBag.Sala.Nome</p>
+        <p class="professor">Professor: @ViewBag.Usu.Nome</p>
+        <p class="alunos">Alunos: @ViewBag.Sala.QtdAlunos</p>
+        <div class="select">
+            @if (ViewBag.Alunos.Count > 0)
+            {
+                <ul>
+                    @foreach (var Aluno in ViewBag.Alunos)
+                    {
+                        var imgSrc = Url.Content("~/img/icons/user.png");
+                        if (Aluno.Img != null)
+                        {
+                            var base64 = Convert.ToBase64String(Aluno.Img);
+                            imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                        }
+                        <li onclick="TrataClique(@Aluno.Id)">
+                            <div class="p"><p class="nome">@Aluno.Nome</p></div><img src="@imgSrc" class="img">
+                        </li>
+                    }
+                </ul>
+            }
+        </div>
+        <div class="frequencia" onclick="location.href = '/Home/EditarFrequencia/@ViewBag.Sala.Id'" title="Alterar Frequência"><i class="far fa-list-alt"></i></div>
+        <div class="notas" onclick="location.href = '/Home/Atividades/@ViewBag.Sala.Id'" title="Administrar Atividades"><i class="fas fa-pen-alt"></i></div>
+        <div class="adicionar" onclick="document.getElementById('id01').style.display='block'" title="Adicionar Aluno"><i class="fas fa-user-plus"></i></div>
+        <div class="remover" title="Remover Aluno"><i class="fas fa-user-times"></i></div>
+    </div>
+
+    <div class="modal" id="id01">
+        <div class="header">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"><i class="fas fa-times"></i></span> <!--&times;-->
+        </div>
+        <div class="content">
+            <p class="sp">
+                <form id="form2" action="/Usuario/AdicionaNaSala" method="post">
+                   <p class="label">Aluno:</p> <input id='pesq' name="Nome" type='text' class='pesquisa'>
+                    <input name="id"style="display:none;" value="@ViewBag.Sala.Id"/>
+                    <img id='pesqIcon'  class='pesquisaIcon' onclick="$('#form2').submit()" src='@Url.Content("~/img/icons/search.png")'>
+                </form>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    //document.getElementById("demo").addEventListener("keydown", myFunction);
+
+    function keyPress(e) {
+        if (e.keyCode == 13) {
+            $('#fr').submit();
+            location.href = '/Home/Pesquisa';
+        }
+    }    
+
+    function deletar() {
+        if (confirm("Tem certeza que quer Excluir a Sala?")) {
+            $.ajax({
+                url: '/Sala/Excluir',
+                data: { id: @ViewBag.Sala.Id }
+            }).done(function () {
+                location.href = '/Home/Salas';
+                });
+            location.href = '/Home/Salas';
+        }
+    }
+
+    var removendo;
+    var menu = false;
+            localStorage.setItem("User", @ViewBag.Usu.Id);
+            $(".menuIcon").click(function () {
+            if (!menu) {
+            $(".aba").css("margin-left", "-10");
+            $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+            $(".menuIcon").css("margin-left", "150");
+            menu = true;
+            }
+            else {
+            $(".aba").css("margin-left", "-1000");
+            $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+            $(".menuIcon").css("margin-left", "15");
+            menu = false;
+            }
+            })
+
+            $(".remover").click(function () {
+                if (!removendo) {
+                    removendo = true;
+                    $(".p").css("border-color", "Crimson");
+                    $(".img").css("border-color", "Crimson");
+                }
+                else {
+                    removendo = false;
+                    $(".p").css("border-color", "midnightblue");
+                    $(".img").css("border-color", "midnightblue");
+                }
+            })
+
+            var not = @ViewBag.Not;
+
+            if (not == 0) {
+            $("number").hide();
+            }
+            else if (not < 10) {
+            $("number").html(not);
+            }
+            else {
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
+            }
+
+
+            $("#form").submit(function (e) {
+            var senha = $("#senhaNew").val();
+            var cSenha = $("#senhaRepeat").val();
+            if (senha != cSenha) {
+            e.preventDefault();
+            alert("Senhas não coincidem");
+            $("#senhaNew").val() = "";
+            $("#senhaRepeat").val() = "";
+            }
+            });
+
+            function TrocaImg(files) {
+                var imgLocal = document.getElementById('imagemLocal')
+                var file = files[0];
+
+                var form = document.getElementById('file-form');
+
+                img = document.createElement("img");
+
+                if (file != null) {
+                    img.file = file;
+                    var reader = new FileReader();
+                    reader.onload = (function (aImg) { return function (e) { aImg.src = e.target.result; }; })(img);
+                    reader.readAsDataURL(file);
+                }
+                else {
+                    img.src = "@Url.Content("~/img/classe.jpeg")";
+                }
+
+                img.style = "position: absolute;border: 5px solid midnightblue;float:left;left:2%;top:4%;background-size:cover;background-repeat:no-repeat;max-width:250px;min-width:250px;max-height:250px;min-height:250px;transition:0.2s;"
+                imgLocal.innerHTML = '';
+
+                imgLocal.appendChild(img);
+            }
+
+             $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+                });
+
+            function TrataClique(id) {
+                if (removendo) {
+                    var obj = [id, "@ViewBag.Sala.Id"];
+
+                    if (confirm("Deseja mesmo remover este aluno?")) {
+                        jQuery.ajax({
+                            type: 'POST',
+                            url: "/Sala/RemoveAluno/" + id,
+                            contentType: "application/json",
+                            datatype: 'json',
+                            data: JSON.stringify(obj),
+                            success: function (data) { },
+                            failure: function (errMsg) {
+                                alert(errMsg);
+                            }
+                        });
+                        location.reload();
+                    }
+                    $(".remover").click();
+                }
+                else {
+                    location.href = '/Home/Usuario/' + id;
+                }
+            }
+</script>

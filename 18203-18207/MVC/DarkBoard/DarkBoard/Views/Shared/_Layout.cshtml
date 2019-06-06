@@ -1,0 +1,86 @@
+﻿<html>
+<head>
+    <title>@ViewBag.Title - Darkboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='shortcut icon' href='@Url.Content("~/img/icon.ico")' sizes="1000x1000">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="~/Estilos/Index.css" rel="stylesheet" />
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body>
+
+    <footer class='footer'>
+        <div>
+            Icons from
+            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
+            <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+               target="_blank">CC 3.0 BY</a>
+        </div>
+        <br> Criado por João Victor Javitti Alves e Danilo de Oliveira Nunes, Direitos Reservados
+    </footer>
+
+    <ul class='aba'>
+        <a href="/Home/Notificacoes">
+            <li>
+                <img class='icon' src="@Url.Content("~/img/icons/bell.png")" title='Notificacoes'>
+                <number></number>
+            </li>
+        </a>
+        <a href="/Home/Usuario/@ViewBag.Usu.Id">
+            <li>
+
+
+                    @if (ViewBag.Usu.Img != null)
+                    {
+                        var base64 = Convert.ToBase64String(ViewBag.Usu.Img);
+                        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+
+                <img class='icon' src="@imgSrc" style="border-radius: 50%;
+                                                       height: 90px;
+                                                       width: 90px;"
+                     title='@ViewBag.Usu.NomeUsu'>
+                    }
+                    else
+                    {
+                        <img class='icon' src="@Url.Content("~/img/icons/user.png")" title="@ViewBag.Usu.NomeUsu" />
+                    }
+            </li>
+        </a>
+        <a href='/Home/Agenda'>
+            <li>
+                <img class='icon' src="@Url.Content("~/img/icons/checklist.png")" title='Tarefas'>
+            </li>
+        </a>
+        <a href='/Home/Salas'>
+            <li>
+                <img class='icon' src="@Url.Content("~/img/icons/classroom.png")" title='Salas'>
+            </li>
+        </a>
+    </ul>
+
+    <ul class='menu'>
+        <li>
+            <img id='menu' class='menuIcon' src='@Url.Content("~/img/icons/menu.png")' title='Menu'>
+        </li>
+        <br>
+        <li>
+            <form id="fr" method="post" action="/Home/Pesquisa">
+                <input id='pesq' type='text' name="pesq" class='pesquisa' onkeydown="keyPress(this)">
+            </form>
+        </li>
+        <li>
+            <img id='pesqIcon' onclick="$('#fr').submit();" class='pesquisaIcon' onclick="location.href='/Home/Pesquisa'" src='@Url.Content("~/img/icons/search.png")' title="Pesquisar">
+        </li>
+        <li class='logo'>
+            <a href='/Home/Index'>
+                <img src='@Url.Content("~/img/logo.png")'>
+            </a>
+        </li>
+    </ul>    
+
+    <div id="content">
+        @RenderBody()
+    </div>
+</body>
+</html>

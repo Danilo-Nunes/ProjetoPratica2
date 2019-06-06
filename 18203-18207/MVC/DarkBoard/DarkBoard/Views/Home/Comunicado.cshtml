@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Comunicado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link href="~/Estilos/Comunicado.css" rel="stylesheet" />
+<div class="comunicado">
+    @{
+        var base64Prof = Convert.ToBase64String(ViewBag.Professor.Img);
+        var imgSrcProf = String.Format("data:image/gif;base64,{0}", base64Prof);
+    }
+    <p class="nome">@ViewBag.Sala.Nome</p>
+    <img class="img" src="@imgSrcProf" style=" position: absolute;
+                            border: 5px solid midnightblue;
+                            float: left;
+                            left: 2%;
+                            top: 14%;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            max-width: 250px;
+                            min-width: 250px;
+                            max-height: 250px;
+                            min-height: 250px;
+                            transition: 0.2s;">
+    @if (ViewBag.Comunicado.Arquivo != null)
+    {
+    <div class="arquivos" title="Receber Arquivos do Professor" onclick="window.open('/Comunicado/Download/@ViewBag.Comunicado.Id')"><i class="fas fa-folder-open"></i></div>
+    }
+    <div class="voltar" onclick="location.href='/Home/Sala/@ViewBag.Sala.Id'"></div>
+    <div class="interno">
+        <p class="professor">Professor: @ViewBag.Professor.Nome</p>
+        <p class="descricao">@ViewBag.Comunicado.Texto</p>
+    </div>
+</div>
+<script>
+        //document.getElementById("demo").addEventListener("keydown", myFunction);
+
+    function keyPress(e) {
+        if (e.keyCode == 13) {
+            $('#fr').submit();
+            location.href = '/Home/Pesquisa';
+        }
+    }
+
+         $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+                });
+
+        var menu = false;
+        localStorage.setItem("User", @ViewBag.Usu.Id);
+        $(".menuIcon").click(function () {
+            if (!menu) {
+                $(".aba").css("margin-left", "-10");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+                $(".menuIcon").css("margin-left", "150");
+                menu = true;
+            }
+            else {
+                $(".aba").css("margin-left", "-1000");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+                $(".menuIcon").css("margin-left", "15");
+                menu = false;
+            }
+        })
+
+        var not = @ViewBag.Not;
+
+        if (not == 0) {
+            $("number").hide();
+        }
+        else if (not < 10) {
+            $("number").html(not);
+        }
+        else {
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
+        }
+</script>
+

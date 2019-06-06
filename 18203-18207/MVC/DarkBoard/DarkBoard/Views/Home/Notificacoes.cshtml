@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Notificacoes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Estilos/Notificacoes.css" rel="stylesheet" />
+<div class="mural">
+    @{    
+        var c = ViewBag.Comuns;
+        if (c.Count > 0)
+        {
+            for (int i = 0; i < c.Count; i++)
+            {
+                var base64 = Convert.ToBase64String(ViewBag.Prof[i].Img);
+                var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                <ul>
+                    <li>
+                        <div class="p" onclick="location.href='/Home/Comunicado/@c[i].Id'">
+                            <p class="nome">@c[i].Assunto</p>
+                        </div>
+                        <img class="img" onclick="location.href='/Home/Usuario/@ViewBag.Prof[i].Id'" src ="@imgSrc">
+                    </li>
+                </ul>
+           }
+       }
+       else
+       {
+            <text>Nenhuma Notificação</text>
+       }
+     }
+</div>
+
+<script>
+    //document.getElementById("demo").addEventListener("keydown", myFunction);
+
+    function keyPress(e) {
+        if (e.keyCode == 13) {
+            $('#fr').submit();
+            location.href = '/Home/Pesquisa';
+        }
+    }
+
+             var menu = false;
+        localStorage.setItem("User", @ViewBag.Usu.Id);
+        $(".menuIcon").click(function () {
+            if (!menu) {
+                $(".aba").css("margin-left", "-10");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+                $(".menuIcon").css("margin-left", "150");
+                menu = true;
+            }
+            else {
+                $(".aba").css("margin-left", "-1000");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+                $(".menuIcon").css("margin-left", "15");
+                menu = false;
+            }
+        })
+
+        var not = @ViewBag.Not;
+
+        if (not == 0) {
+            $("number").hide();
+        }
+        else if (not < 10) {
+            $("number").html(not);
+        }
+        else {
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
+        }
+
+         $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+                });
+
+</script>

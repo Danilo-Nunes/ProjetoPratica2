@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "Comunicar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link href="~/Estilos/Comunicar.css" rel="stylesheet" />
+@{
+    var base64 = Convert.ToBase64String(ViewBag.Sala.Img);
+    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+}
+<div class="criacao">
+    <img class="img" onclick="imagemSala()" src='@imgSrc' style="position: absolute;
+                                                                border: 5px solid midnightblue;
+                                                                float: left;
+                                                                left: 2%;
+                                                                top: 4%;
+                                                                background-size: cover;
+                                                                background-repeat: no-repeat;
+                                                                max-width: 250px;
+                                                                min-width: 250px;
+                                                                max-height: 250px;
+                                                                min-height: 250px;
+                                                                transition: 0.2s;">
+<form id="form" method="post" enctype="multipart/form-data" action="/Comunicado/Adiciona">
+    <div type="submit" class="enviar" title="Enviar" onclick="$('#form').submit();"><i class="fas fa-paper-plane"></i></div>
+     <div class="adicionar" onclick="$('#file').click();" title="Adicionar Arquivo" id="add"><i class="fas fa-folder-plus" id="i"></i></div>
+    <input type="file" name="file" style="display:none;" id="file" />
+    <div class="cancelar" onclick="location.reload()" title="Excluir"><i class="far fa-times-circle"></i></div>
+    <div class="interno">
+        <p class="titulop">Assunto: </p><input type="text" name="com.Assunto" class="titulo">
+        <p class="comunicadop">Comunicado: </p><textarea name="com.Texto" class="comunicado"></textarea>
+        <input value="@ViewBag.Sala.Id" name="com.CodSala" style="display:none;" />
+    </div>
+</form>
+</div>
+<script>
+            //document.getElementById("demo").addEventListener("keydown", myFunction);
+
+    function keyPress(e) {
+        if (e.keyCode == 13) {
+            $('#fr').submit();
+            location.href = '/Home/Pesquisa';
+        }
+    }
+
+         $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+                });
+
+            var menu = false;
+            localStorage.setItem("User", @ViewBag.Usu.Id);
+            $(".menuIcon").click(function () {
+            if (!menu) {
+            $(".aba").css("margin-left", "-10");
+            $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+            $(".menuIcon").css("margin-left", "150");
+            menu = true;
+            }
+            else {
+            $(".aba").css("margin-left", "-1000");
+            $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+            $(".menuIcon").css("margin-left", "15");
+            menu = false;
+            }
+            })
+
+            var not = @ViewBag.Not;
+
+            if (not == 0) {
+            $("number").hide();
+            }
+            else if (not < 10) {
+            $("number").html(not);
+            }
+            else {
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
+            }
+
+
+            $("#form").submit(function (e) {
+            var senha = $("#senhaNew").val();
+            var cSenha = $("#senhaRepeat").val();
+            if (senha != cSenha) {
+            e.preventDefault();
+            alert("Senhas não coincidem");
+            $("#senhaNew").val() = "";
+            $("#senhaRepeat").val() = "";
+            }
+            });
+</script>
+

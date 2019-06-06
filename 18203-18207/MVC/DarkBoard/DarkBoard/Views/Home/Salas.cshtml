@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "Salas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Estilos/Salas.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<div class="salas">
+    @if (ViewBag.Usu.Cargo == 'P')
+    {
+    <div class="criarc">
+        <div class="criar" title="Criar Sala" onclick="location.href='/Home/CriaSala'"><i class="fas fa-plus-square"></i></div>
+    </div>
+    }
+    @if (ViewBag.Salas.Count > 0)
+    {
+        foreach (var Sala in ViewBag.Salas)
+        {
+            var imgSrc = Url.Content("~/img/classe.JPEG");
+            if (Sala.Img != null)
+            {
+                var base64Sala = Convert.ToBase64String(Sala.Img);
+                imgSrc = String.Format("data:image/gif;base64,{0}", base64Sala);
+            }
+            <ul class="@ViewBag.Usu.Cargo" onclick="VaiPra('@Sala.Id')">
+                <li>
+                    <div class="paragrafo">
+                        <p class="nome">@Sala.Nome</p>
+                    </div>
+                    <img class="img" src="@imgSrc" style="position: absolute;
+                                                        border: 5px solid midnightblue;
+                                                        float: left;
+                                                        left: calc(95% - 250px);
+                                                        background-size: cover;
+                                                        background-repeat: no-repeat;
+                                                        max-width: 250px;
+                                                        min-width: 250px;
+                                                        max-height: 250px;
+                                                        min-height: 250px;
+                                                        transition: 0.2s;">
+                </li>
+            </ul>
+        }
+    }
+    else
+    {
+        <text>
+            Você não está em nenhuma Sala
+        </text>
+    }
+</div>
+
+<script type="text/javascript">
+    function VaiPra(id) {
+        location.href = "/Home/Sala/" + id;
+    }
+
+        //document.getElementById("demo").addEventListener("keydown", myFunction);
+
+        function keyPress(e) {
+            if (e.keyCode == 13) {
+                $('#fr').submit();
+                location.href = '/Home/Pesquisa';
+            }
+    }
+
+         $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+                });
+        var menu = false;
+        localStorage.setItem("User", @ViewBag.Usu.Id);
+        $(".menuIcon").click(function () {
+            if (!menu) {
+                $(".aba").css("margin-left", "-10");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+                $(".menuIcon").css("margin-left", "150");
+                menu = true;
+            }
+            else {
+                $(".aba").css("margin-left", "-1000");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+                $(".menuIcon").css("margin-left", "15");
+                menu = false;
+            }
+        })
+
+        var not = @ViewBag.Not;
+
+        if (not == 0) {
+            $("number").hide();
+        }
+        else if (not < 10) {
+            $("number").html(not);
+        }
+        else {
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
+        }
+</script>
+
+
+

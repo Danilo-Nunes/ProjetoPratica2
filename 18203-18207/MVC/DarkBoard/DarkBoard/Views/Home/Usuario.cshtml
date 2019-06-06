@@ -1,0 +1,175 @@
+﻿@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = ViewBag.Usu.NomeUsu;
+}
+
+<html>
+<head>
+    <title>Usuario - Darkboard</title>
+    <link href="~/Estilos/Home.css" rel="stylesheet" />
+    <link href="~/Estilos/Usuario.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body>
+    
+    @{
+        var imgSrc = Url.Content("~/img/icons/user.png");
+        if (ViewBag.Visitado.Img != null)
+        {
+            var base64 = Convert.ToBase64String(ViewBag.Visitado.Img);
+            imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+        }
+     }
+    <div class='usuario'>
+        <form action="/Usuario/Atualiza" id="form" method="post" enctype="multipart/form-data">
+            <p class='nome' id='nome'>@ViewBag.Visitado.NomeUsu</p>
+            <div class='image-upload'>
+                <label for='file-input'>
+                    <div id='imagemLocal'>
+                        <img style="margin-top: -20px;
+                         border-radius:150px;
+                         width: 210px;
+                         height:210px;
+                         margin-left: 20px;" src='@imgSrc'>
+                    </div>
+                </label>
+                <input type='file' disabled="disabled" accept="image/png, image/jpeg, image/gif" name="file" onchange='TrocaImg(this.files)' id='file-input'>
+            </div>
+
+
+            <ul class='Info'>
+                <li id='nomeComp'>@ViewBag.Visitado.Nome</li>
+                <li id='email'>@ViewBag.Visitado.Email</li>
+            </ul>
+            @if (ViewBag.Usu.Id == ViewBag.Visitado.Id)
+            {
+            <img class="Edit" src="@Url.Content("~/img/icons/edit.png")" />
+            <img class="Exit" src="@Url.Content("~/img/icons/logout.png")" />
+            <input name="usuario.Id" style="display:none;" value="@ViewBag.Visitado.Id" />
+            }
+
+            <textarea readonly="readonly" name="usuario.Descricao" id="desc" class='desc'>
+                @if (ViewBag.Visitado.Descricao != null)
+                {
+                    @ViewBag.Visitado.Descricao;
+                }
+                else
+                {
+                     <text>(Insert uma descrição aqui)</text>
+                }
+            </textarea>
+
+        </form>
+        @if (ViewBag.Usu.Id == ViewBag.Visitado.Id)
+        {
+        <button class="button" onclick="location.href='/Home/AlterarSenha'">Alterar Senha</button>
+        }
+    </div>
+
+    <script>
+        //document.getElementById("demo").addEventListener("keydown", myFunction);
+
+        function keyPress(e) {
+            if (e.keyCode == 13) {
+                $('#fr').submit();
+                location.href = '/Home/Pesquisa';
+            }
+        }
+
+             $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+                });
+
+        var default_value = document.getElementById("desc").defaultValue;
+        var editando = false;
+        $(".Edit").click(function () {
+            if (!editando) {
+                $("#desc").prop("readonly", false);
+                $('#file-input').removeAttr('disabled');
+                $(".Edit").attr('src', '@Url.Content("~/img/icons/save.png")');
+                editando = true;
+            }
+            else {
+                console.log($("#desc").val());
+                $("#form").submit();
+            }
+        })
+        $("#desc").focus(function () {
+            if(editando)
+            $("#desc").val("");
+        })
+
+        $("#desc").focusout(function () {
+            if ($("#desc").val() == "")
+                $("#desc").val(default_value);
+        })
+        $(".Exit").click(function () {
+            window.location = "/Home/Login/"
+        })
+        $(".menuIcon").click(function () {
+            if (!menu) {
+                $(".aba").css("margin-left", "-10");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+                $(".menuIcon").css("margin-left", "150");
+                menu = true;
+            }
+            else {
+                $(".aba").css("margin-left", "-1000");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+                $(".menuIcon").css("margin-left", "15");
+                menu = false;
+            }
+        })
+
+        var not = @ViewBag.Not;
+
+        if (not == 0) {
+            $("number").hide();
+        }
+        else if (not < 10) {
+            $("number").html(not);
+        }
+        else {
+            $("number").html(not)
+            $("number").css('padding-right', '5px');
+            $("number").css('padding-left', '5px');
+        }
+
+        function TrocaImg(files) {
+            var imgLocal = document.getElementById('imagemLocal')
+            var file = files[0];
+
+            var form = document.getElementById('file-form');
+
+            img = document.createElement("img");
+
+            if (file != null) {
+                img.file = file;
+                var reader = new FileReader();
+                reader.onload = (function (aImg) { return function (e) { aImg.src = e.target.result; }; })(img);
+                reader.readAsDataURL(file);
+            }
+            else {
+                img.src = "../img/icons/user.png";
+            }
+
+            img.id = 'avatar';
+
+            img.style = 'margin-top: -20px;border-radius:150px;width: 210px;height: 210px;margin - left: 20px;';
+
+            imgLocal.innerHTML = '';
+
+            imgLocal.appendChild(img);
+        }
+
+
+    </script>
+</body>
+</html>
+

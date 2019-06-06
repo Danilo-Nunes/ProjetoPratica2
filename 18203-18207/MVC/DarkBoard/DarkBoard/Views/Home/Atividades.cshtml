@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewBag.Title = "Atividades";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link href="~/Estilos/Atividades.css" rel="stylesheet" />
+<div class="criacao">
+    @{var imgSrcSala = Url.Content("~/img/classe.JPEG");
+        if (ViewBag.Sala.Img != null)
+        {
+            var base64Sala = Convert.ToBase64String(ViewBag.Sala.Img);
+            imgSrcSala = String.Format("data:image/gif;base64,{0}", base64Sala);
+        } }
+    <img class="img" onclick="imagemSala()" src='@imgSrcSala'>
+    @if (ViewBag.Usu.Cargo == 'P')
+    {
+        <div class="criar" title="Criar Atividade" onclick="location.href='/Home/CriarAtividade/@ViewBag.Sala.Id'"><i class="far fa-calendar-plus"></i></div>
+    }
+        <div class="voltar" onclick="location.href='/Home/Sala/@ViewBag.Sala.Id'" title="Voltar"></div>
+        <div class="interno">
+
+            @if (ViewBag.Atividades.Count > 0)
+            {
+                var base64Prof = Convert.ToBase64String(ViewBag.Professor.Img);
+                var imgSrcProf = String.Format("data:image/gif;base64,{0}", base64Prof);
+                <ul>
+                    @foreach (var atividade in ViewBag.Atividades)
+                    {
+                        <li>
+                            <form method="post" enctype="multipart/form-data" id="@atividade.Id" action="/Atividade/Entregar">
+                                @if (ViewBag.Usu.Cargo == 'A')
+                                {
+                                <div class="pAluno">
+                                    <p class="nome">@atividade.Nome</p>
+                                    <input name="idAtividade" value="@atividade.Id" style="display:none;" />
+                                    <input name="idAluno" value="@ViewBag.Usu.Id" style="display:none;" />
+                                    <input type="file" name="arquivo" style="display:none;" id="@atividade.Id-file" />     
+                                    <div class="notac" onclick="$('#@atividade.Id').submit();">Salvar</div>
+                                    <div class="arquivos" title="Adicionar Arquivo" onclick="$('#@atividade.Id-file').click();"><i class="fas fa-folder-plus"></i></div>
+                                </div>
+                                <img class="atAluno" onclick="location.href='/Home/Usuario/@ViewBag.Professor.Id'" src="@imgSrcProf">
+                                }
+                                else
+                                {
+                                    <div class="p" onclick="location.href='/Home/AdministrarAtividades/@atividade.Id'">
+                                        <p class="nome">@atividade.Nome</p>
+                                    </div>
+                                    <img class="atProfessor" onclick="location.href='/Home/Usuario/@ViewBag.Professor.Id'" src="@imgSrcProf">
+                                }
+                                
+                            </form>
+                            
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <text>Nenhuma Atividade</text>
+            }
+        </div>
+    </div>
+<script>
+        //document.getElementById("demo").addEventListener("keydown", myFunction);
+
+    function keyPress(e) {
+        if (e.keyCode == 13) {
+            $('#fr').submit();
+            location.href = '/Home/Pesquisa';
+        }
+    }
+
+     $(window).ready(function () {
+
+                    if ("@ViewBag.msg" != "")
+                        alert("@ViewBag.msg");
+                });
+
+        $(".menuIcon").click(function () {
+            if (!menu) {
+                $(".aba").css("margin-left", "-10");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/exit.png")');
+                $(".menuIcon").css("margin-left", "150");
+                menu = true;
+                }
+                else {
+                $(".aba").css("margin-left", "-1000");
+                $("#menu").attr('src', '@Url.Content("~/img/icons/menu.png")');
+                $(".menuIcon").css("margin-left", "15");
+                menu = false;
+                }
+                })
+
+                var not = @ViewBag.Not;
+
+                if (not == 0) {
+                $("number").hide();
+                }
+                else if (not < 10) {
+                $("number").html(not);
+                }
+                else {
+                $("number").html(not)
+                $("number").css('padding-right', '5px');
+                $("number").css('padding-left', '5px');
+                }
+</script>
+
+
