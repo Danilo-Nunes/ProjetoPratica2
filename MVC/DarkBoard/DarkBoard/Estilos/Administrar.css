@@ -125,6 +125,11 @@
                 transition:0.5s;
             }
 
+                .select ul li .p:hover {
+                    border-color: #2C3F91;
+                    cursor: pointer;
+                }
+
             .select ul li .img {
                 position: relative;
                 border: 5px solid midnightblue;
@@ -139,8 +144,9 @@
                 min-height: 100px;
                 transition:0.5s;
             }
-
-                
+            .select ul li .img:hover {
+                cursor:pointer;
+            }
 
 .alterar {
     position: absolute;

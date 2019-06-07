@@ -16,7 +16,7 @@
     <div class="salvar" title="Salvar Mudanças" onclick="Salvar()">
         <i class="fas fa-check"></i>
     </div>
-    <div class="cancelar" onclick="location.reload();" title="Cancelar Mundanças">
+    <div class="cancelar" onclick="location.href = '/Home/Administrar/' + @ViewBag.Sala.Id;" title="Cancelar Mundanças">
         <i class="far fa-times-circle"></i>
     </div>
 
@@ -39,7 +39,7 @@
                         <p class="nome">@ViewBag.Alunos[i].Nome</p>
                         <div class="faltac"><p class="faltap">Faltas: </p><input id="@i" name="alu.Faltas" type="number" value="@ViewBag.AlunosAux[i].Faltas" class="falta"> </div>
                     </div>
-                    <img class="aluno" src="@imgSrc">
+                    <img class="aluno" src="@imgSrc" onclick="location.href = '/Home/Usuario/' + @ViewBag.Alunos[i].Id;">
                 </li>
             }
         </ul>

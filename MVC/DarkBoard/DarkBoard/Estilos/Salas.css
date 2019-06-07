@@ -92,6 +92,10 @@
     float: left;
 }
 
+    .paragrafo:hover {
+        border-color: #4461DE;
+    }
+
 .img {
     position: absolute;    
     float: left;

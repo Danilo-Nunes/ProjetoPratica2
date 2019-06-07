@@ -188,6 +188,11 @@
                 float: left;
             }
 
+                .interno ul li .p:hover {
+                    border-color: #4461DE;
+                    cursor: pointer;
+                }
+
             .interno ul li .atAluno {
                 position: absolute;
                 border: 5px solid midnightblue;
@@ -211,7 +216,7 @@
                 transition: 0.2s;
             }
 
-            .interno ul li .img:aluno {
+            .interno ul li .img:hover {
                 border-color: #4461DE;
             }
 

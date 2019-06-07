@@ -34,7 +34,7 @@
                                 <p class="frequenciap">Faltas: @ViewBag.AlunosAux[i].Faltas</p>
                             </div>
                         </div>
-                        <img class="aluno" src="@imgSrc">
+                        <img class="aluno" src="@imgSrc" onclick="location.href = '/Home/Usuario/@ViewBag.Alunos[i].Id'">
                     </li>
                 }
             </ul>

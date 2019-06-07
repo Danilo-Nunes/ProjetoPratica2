@@ -16,7 +16,7 @@
         <div class="enviar" title="Enviar Comunicado" onclick="$('#frm').submit();"><i class="fas fa-paper-plane"></i></div>
         <div class="adicionar" title="Adicionar Arquivo" onclick="$('#file').click();" id="add"><i class="fas fa-folder-plus" id="i"></i></div>
         <input type="file" name="file" style="display:none;" id="file" />
-        <div class="cancelar" onclick="cancelar()"><i class="far fa-times-circle"></i></div>
+        <div class="cancelar" onclick="location.href = '/Home/Atividades/' + @ViewBag.Sala.Id"><i class="far fa-times-circle"></i></div>
         <div class="interno">
             <p class="titulop">Atividade: </p><input name="com.Assunto" type="text" class="titulo">
             <p class="pesop">Peso: </p><input type="text" name="a.Peso" class="peso">

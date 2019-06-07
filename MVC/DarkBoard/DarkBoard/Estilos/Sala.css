@@ -107,6 +107,7 @@
 
     .classe .boletim:hover{
         color:purple;
+        cursor: pointer;
     }
 
 .mural ul li .p .nome {
@@ -184,6 +185,7 @@ button {
 
     .trabalhos:hover{
         color:purple;
+        cursor: pointer;
     }
 
 .modal {

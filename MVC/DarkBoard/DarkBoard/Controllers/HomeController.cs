@@ -355,8 +355,7 @@ namespace DarkBoard.Controllers
             SalaDAO salaDAO = new SalaDAO();
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             AlunoSalaDAO alunoSalaDBO = new AlunoSalaDAO();
-
-
+            
             ViewBag.AlunosAux = alunoSalaDBO.BuscaPorAlunosAuxOrdenado(int.Parse(id));
             ViewBag.Alunos = alunoSalaDBO.BuscaPorAlunosOrdenado(int.Parse(id));
             ViewBag.Sala = salaDAO.BuscaPorId(int.Parse(id));

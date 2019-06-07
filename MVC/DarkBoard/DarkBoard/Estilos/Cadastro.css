@@ -99,6 +99,14 @@
     left: 960px;
 }
 
+.rbA:hover {
+    cursor:pointer;
+}
+
+.rbP:hover {
+    cursor: pointer;
+}
+
 .image-upload > input {
     display: none;
 }
@@ -108,6 +116,10 @@
     border-radius: 50%;
     height: 512px;
     width: 512px;
+}
+
+#avatar:hover {
+    cursor: pointer;
 }
 
 a {
