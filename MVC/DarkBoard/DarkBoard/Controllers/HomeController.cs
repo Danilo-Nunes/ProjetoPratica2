@@ -115,18 +115,41 @@ namespace DarkBoard.Controllers
             SalaDAO d = new SalaDAO();
             ViewBag.Not = Session["not"];
             ComunicadoDAO dAO = new ComunicadoDAO();
-            UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
+            
 
             Sala sala = d.BuscaPorId(int.Parse(id));
             Usuario usuario = dao.BuscaPorId((int)Session["usu"]);
 
             ViewBag.Usu = usuario;
-            ViewBag.Atividades = usuarioAtividadeDAO.BuscaPorAtividade(usuario.Id);
+           
             ViewBag.Sala = sala;
             ViewBag.Professor = dao.BuscaPorId(sala.CodProfessor);
             ViewBag.Comunicados = dAO.BuscaPorSala(sala.Id);
             ViewBag.Msg = Session["msg"];
             Session["msg"] = "";
+
+            if(usuario.Cargo == 'A')
+            {
+                AlunoSalaDAO alunoSalaDAO = new AlunoSalaDAO();
+                UsuarioAtividadeDAO usuarioAtividadeDAO = new UsuarioAtividadeDAO();
+                double media = 0;
+                double pesos = 0;
+                int qtd = 0;
+
+                foreach(var at in usuarioAtividadeDAO.BuscaPorAtividadesAux(usuario.Id, int.Parse(id)))
+                {
+                    media += at.Nota*at.Peso;
+                    pesos += at.Peso;
+                    if(at.Concluida == "N")
+                        qtd++;
+                }
+                if (pesos != 0)
+                    media = media / pesos;
+
+                ViewBag.Media = media;
+                ViewBag.Atividades = qtd;
+                ViewBag.Faltas = alunoSalaDAO.BuscaPorIds(usuario.Id, int.Parse(id)).Faltas;
+            }
 
             return View();
         }
